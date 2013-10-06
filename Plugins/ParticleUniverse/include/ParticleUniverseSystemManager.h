@@ -53,6 +53,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "OgreRenderTargetListener.h"
 #include "ParticleUniverseSingleton.h"
 
+#include <OgreOverlayContainer.h>
+#include <OgreOverlay.h>
+
 namespace ParticleUniverse
 {
 	class ParticleSystemFactory;

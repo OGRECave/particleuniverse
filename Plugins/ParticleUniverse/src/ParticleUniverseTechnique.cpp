@@ -481,7 +481,11 @@ namespace ParticleUniverse
 	const Ogre::MaterialPtr ParticleTechnique::getMaterial(void) const
 	{
 		String resourceGroupName = mParentSystem ? mParentSystem->getResourceGroupName() : Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME;
+		#if OGRE_VERSION >= (1 << 16 | 9 << 8 | 0)
+		return Ogre::MaterialManager::getSingleton().load(mMaterialName, resourceGroupName).staticCast<Ogre::Material>();
+		#else
 		return Ogre::MaterialManager::getSingleton().load(mMaterialName, resourceGroupName);
+		#endif
 	}
 	//-----------------------------------------------------------------------
 	void ParticleTechnique::setMaterialName(const String& materialName)
@@ -492,7 +496,11 @@ namespace ParticleUniverse
 			if (ParticleSystemManager::getSingletonPtr()->isAutoLoadMaterials())
 			{
 				String resourceGroupName = mParentSystem ? mParentSystem->getResourceGroupName() : Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME;
+				#if OGRE_VERSION >= (1 << 16 | 9 << 8 | 0)
+				Ogre::MaterialPtr mat = Ogre::MaterialManager::getSingleton().load(mMaterialName, resourceGroupName).staticCast<Ogre::Material>();
+				#else
 				Ogre::MaterialPtr mat = Ogre::MaterialManager::getSingleton().load(mMaterialName, resourceGroupName);
+				#endif
 				mRenderer->_setMaterialName(mMaterialName); // V1.5: If materials not auto loaded, then DIY
 			}
 		}

@@ -35,7 +35,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "OgreOverlayManager.h"
 #include "OgreOverlayContainer.h"
 
-template<> ParticleUniverse::ParticleSystemManager* ParticleUniverse::Singleton<ParticleUniverse::ParticleSystemManager>::msSingleton = 0;
+template<> ParticleUniverse::ParticleSystemManager* Ogre::Singleton<ParticleUniverse::ParticleSystemManager>::msSingleton = 0;
 namespace ParticleUniverse
 {
 	ParticleSystemManager::ParticleSystemManager (void) :
@@ -788,7 +788,7 @@ namespace ParticleUniverse
 			// Not defined, so delete the old template
 			destroyParticleSystemTemplate(expName);
 			LogManager::getSingleton().logMessage(message + "old template deleted.");
-#elif
+#else
 			LogManager::getSingleton().logMessage(message + "create copy.");
 			expName = String("CopyOf") + expName;
 #endif
