@@ -33,4 +33,5 @@ endif()
 
 add_subdirectory(Plugins/ParticleUniverse)
 add_subdirectory(Samples/ParticleUniverseDemo)
+add_subdirectory(Tools/AtlasImageTool)
 
