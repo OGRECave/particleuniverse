@@ -1,4 +1,4 @@
-set(PROJECT_NAME "particleuniverse")
+set(PROJECT_NAME "ParticleUniverse")
 
 project(${PROJECT_NAME} CXX C)
 cmake_minimum_required(VERSION 2.8)
@@ -13,6 +13,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
 
 # We want the binaries to be easily accessible
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
+set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 
 # Add the libraries
 # OGRE
@@ -21,6 +22,9 @@ link_directories(${OGRE_LIBRARY_DIRS})
 include_directories(${OGRE_INCLUDE_DIRS})
 list(APPEND LIBS ${OGRE_LIBRARIES})
 
+add_definitions(-DOGRE_PLUGIN_DIR_REL="${OGRE_PLUGIN_DIR_REL}")
+add_definitions(-DOGRE_PLUGIN_DIR_DBG="${OGRE_PLUGIN_DIR_DBG}")
+
 #OGRE-Overlay
 if (OGRE_VERSION_MAJOR GREATER 1 OR OGRE_VERSION_MINOR GREATER 8)
 	include_directories(${OGRE_Overlay_INCLUDE_DIRS})
@@ -28,4 +32,5 @@ if (OGRE_VERSION_MAJOR GREATER 1 OR OGRE_VERSION_MINOR GREATER 8)
 endif()
 
 add_subdirectory(Plugins/ParticleUniverse)
+add_subdirectory(Samples/ParticleUniverseDemo)
 

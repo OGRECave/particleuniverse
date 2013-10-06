@@ -1,74 +1,44 @@
 #ifndef __ParticleUniverseDemo_H__
 #define __ParticleUniverseDemo_H__
 
-#include "SdkSample.h"
 #include "ParticleUniverseSystemManager.h"
 
+#include "BaseApplication.h"
+
+#include <OgreSceneManager.h>
+#include <OgreCamera.h>
+#include <OgreRenderWindow.h>
+#include <OgreRoot.h>
+
 using namespace Ogre;
-using namespace OgreBites;
 
-/** -----------------------------------------------------------------------------------------------------------------
-	This class represents a demo for the SampleBrowser. Perform the following actions to run this demo:
-
-	1. 
-	Add the resources needed for this demo to bin/release/resources.cfg and to bin/debug/resources.cfg. Add the following 
-	settings (asume that the Particle Universe Editor is installed):
-        FileSystem=../../ParticleUniverseEditor/media/examples/scripts
-        FileSystem=../../ParticleUniverseEditor/media/examples/materials
-        FileSystem=../../ParticleUniverseEditor/media/examples/models
-        FileSystem=../../ParticleUniverseEditor/media/examples/textures
-	
-	2.
-	Add the entry
-	    Plugin=ParticleUniverse
-	to bin/release/plugins.cfg
-	
-	3.
-	Add the entry
-	    Plugin=ParticleUniverse_d
-	to bin/debug/plugins.cfg
-
-	4.
-	Add the entry
-	    SamplePlugin=Sample_ParticleUniverseDemo
-	to bin/release/samples.cfg
-
-	5.
-	Add the entry
-	    SamplePlugin=Sample_ParticleUniverseDemo_d
-	to bin/debug/samples.cfg
-
-	6.
-	Compile the Sample_ParticleUniverseDemo (in debug and/or release). Make sure you compiled the ParticleUniverse project first.
-
-	7.
-	Run the SampleBrowser_d.exe and/or SampleBrowser.exe.
-	-----------------------------------------------------------------------------------------------------------------*/
-class _OgreSampleClassExport Sample_ParticleUniverseDemo : public SdkSample
+class Sample_ParticleUniverseDemo : public BaseApplication
 {
-public:
-
-	Sample_ParticleUniverseDemo()
-	{
-		mInfo["Title"] = "Particle Universe Demo";
-		mInfo["Description"] = "Demo to create, start and destroy a Particle Universe particle system.";
-		mInfo["Thumbnail"] = "thumb_particles.png";
-		mInfo["Category"] = "Particle Universe";
-	}
-
 protected:
+	Ogre::SceneManager* mSceneMgr;
+	Ogre::Viewport* mViewport;
+	Ogre::Camera* mCamera;
 
 /** -----------------------------------------------------------------------
 	Create some particle systems
 	-----------------------------------------------------------------------*/
-	void setupContent()
-	{     
+	void createScene()
+	{		
+		mSceneMgr = Root::getSingleton().createSceneManager(ST_GENERIC);
+		mCamera = mSceneMgr->createCamera("Camera");
+		mCamera->setPosition(320,0,40);
+		mCamera->lookAt(0,0,-50);
+		mCamera->setFarClipDistance(10000);
+		mCamera->setNearClipDistance(0.1);
+		mViewport = mWindow->addViewport(mCamera);
+
+		
 		// setup some basic lighting for our scene
         mSceneMgr->setAmbientLight(ColourValue(0.3, 0.3, 0.3));
         mSceneMgr->createLight()->setPosition(20, 80, 50);
         
 		// create a skyplane 5000 units away, facing down, 10000 square units large, with 3x texture tiling
-        mSceneMgr->setSkyPlane(true, Plane(0, -1, 0, 5000), "Examples/SpaceSkyPlane", 10000, 3);
+        //mSceneMgr->setSkyPlane(true, Plane(0, -1, 0, 5000), "Examples/SpaceSkyPlane", 10000, 3);
 
 		// Create the particle systems and attach them to a SceneNode
 		ParticleUniverse::ParticleSystemManager* pManager = ParticleUniverse::ParticleSystemManager::getSingletonPtr();
@@ -98,10 +68,36 @@ protected:
 		mCamera->lookAt(mSceneMgr->getRootSceneNode()->_getDerivedPosition());
 	}
 
+	virtual bool frameRenderingQueued (const Ogre::FrameEvent& evt)
+	{
+		Ogre::Vector3 movementVector (0,0,0);
+		if (mOISKeyboard->isKeyDown(OIS::KC_W))
+			movementVector.z = -1;
+		else if (mOISKeyboard->isKeyDown(OIS::KC_S))
+			movementVector.z = 1;
+		if (mOISKeyboard->isKeyDown(OIS::KC_A))
+			movementVector.x = -1;
+		else if (mOISKeyboard->isKeyDown(OIS::KC_D))
+			movementVector.x = 1;
+		movementVector *= evt.timeSinceLastFrame * 200;
+
+		mCamera->moveRelative(movementVector);
+
+		return BaseApplication::frameRenderingQueued(evt);
+	}
+
+	virtual bool mouseMoved(const OIS::MouseEvent& event)
+	{
+		mCamera->yaw(Ogre::Radian(-event.state.X.rel)*0.01);
+		mCamera->pitch(Ogre::Radian(-event.state.Y.rel)*0.01);
+
+		return true;
+	}
+
 /** -----------------------------------------------------------------------
 	Delete the particle systems
 	-----------------------------------------------------------------------*/
-	void cleanupContent()
+	void destroyScene()
 	{
 		mSceneMgr->getRootSceneNode()->detachAllObjects();
 		ParticleUniverse::ParticleSystemManager::getSingletonPtr()->destroyAllParticleSystems(mSceneMgr);
@@ -112,7 +108,12 @@ protected:
 	-----------------------------------------------------------------------*/
 	virtual bool keyPressed(const OIS::KeyEvent& evt)
 	{
-		SdkSample::keyPressed(evt);
+		if (evt.key == OIS::KC_ESCAPE)
+		{
+			mShutdown = true;
+			return true;
+		}
+		
 		ParticleUniverse::ParticleSystemManager* pManager = ParticleUniverse::ParticleSystemManager::getSingletonPtr();
 		ParticleUniverse::ParticleSystem* pSys1 = pManager->getParticleSystem("pSys1");
 		ParticleUniverse::ParticleSystem* pSys2 = pManager->getParticleSystem("pSys2");
