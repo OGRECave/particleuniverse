@@ -1,0 +1,727 @@
+=================================================================================================================
+Release > 1.6:
+--------------------------------------------------
+- Gather runtime statistics (memory)
+- Support for CMake
+- Invert render order
+- Threading.
+- GPU rendering.
+- ElectricBeamEmitter for creation of lightning bolts, etc.
+- TextEmitter: Emits particles from a (3D) text.
+- Create ExtendedScaleAffector (derives from ScaleAffector): This one includes several specific scale options. One option is that it uses the angle 
+  between collision normal and direction.
+- Change ScaleAffector: Change step value so it calculates the real size the particle has in a time point.
+- OnProximityObserver: Checks wheter a particle is near a certain position (in worldspace), using a radius.
+- LOD change observer
+- ParticleSystemManager::createDepthMap uses viewport dimensions. This must be made variable, with setDepthWidth and setDepthHeight
+- Add setTrailNode and getTrailNode. See http://www.fxpression.com/phpBB3/viewtopic.php?f=6&t=173
+- (Box-, Plane- and Sphere- Colliders): Add PhysicsActor to a particle if it doesn't exist and set the collision attributes, including collision normal. Also add function
+  deriveOrientationAfterCollision(), that sets the orientation of the particle based on the collision normal (optional). This can be used when a particle acts as a sort of decal
+  (the renderer must take that into account, so in case of a Billboard Renderer, BBT_ORIENTED_SHAPE must be set (the renderer will make use of the orientation).
+- Change GravityAffector: Implement scaling (also other affectors?). How?
+- Volumetric Particles
+- Customer feedback: http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=460
+- ParticleEmitter: Delay - just delays once after start for a certain period.
+- CustomEventHandler that submits an event + flag value to the ParticleSystemListener. This makes it possible to use the inner events in the listener, without generating 
+  an event for each individual particle ([color=#FF0000]0 %[/color]).
+- TextureEmitter: Emit from exture, defined by width, height, normal and texturename.
+- TextureScalar: Scales the texture (only non-shader materials)
+- ColourAffector: Add mRMultiplier, mGMultiplier, mBMultiplier and mAMultiplier attributes to multiply the colours' rgba values. Because these attributes
+  are dynamic attributes, it is possible to oscillate the colours.
+- Scaling of LOD
+- ColourPulsator: Used for pulsating the colour of a particle.
+- ParticleSystemManager::createDepthMap(): Make it possible to set DepthCheckEnabled, DepthWriteEnabled and LightingEnabled from outside.
+- CustomEventHandler that submits an event + flag value to the ParticleSystemListener. This makes it possible to use the inner events in the listener, 
+  without generating an event for each individual particle
+- Demo.
+:arrow: Plugin: Particle System pooling. Particle systems that are stopped are automatically added to the pool again, or automatically deleted ([color=#00BF00]Moves to 1.5[/color])
+- ParticleSystemPool:
+     o Creation by means of ParticleSystemManager.
+     o Precreates an arbritrary number of ParticleSystems, based on template name.
+     o Precreates an arbritrary number of ParticleSystems, based on other ParticleSystem as input.
+     o ParticleSystemPool has a name. This is the same as the template name or the name of the ParticleSystem that is added as a blueprint.
+     o ParticleSystems in the pool have an automatically generated name.
+     o ParticleSystemManager is used to manage the pools. Search is by means of name or index.
+     o ParticleSystemPool implements isEmpty() and getSize()
+     o ParticleSystemPool implements getParticleSystem(). This returns a 'free' ParticleSystem.
+     o ParticleSystemPool implements setAutoDelete(bool). This means that a ParticleSystem is deleted as soon it is stopped (after it was started).
+       Note, that it must be detached from the node first. A precondition is, that it may not have ParticleSystemListeners, because they are not 
+       automatically deleted.
+     o The ParticleSystemPool iterates over the first 'x' ParticleSystems every update. The value of 'x' is configurable per ParticleSystemPool.
+       During the iterations it checks which ParticleSystems are stopped, detaches them from the node, and either locks them or deletes them
+       (which requires a Pool::deleteLatestElement()).
+     o removeAndDestroyDanglingSceneNodes() is called optionally if a ParticleSystem is locked again.
+     o Deletion of a pool also deletes all ParticleSystems in the pool. Deletion can only be done by the ParticleSystemManager.
+     o ParticleSystemManager::destroyAllParticleSystems also destroys all the pools.
+     o Uses Pool (ParticleUniversePool.h) to store ParticleSystems.
+     o If a ParticleSystem is destroyed by means of ParticleSystemManager::destroyParticleSystem, it is also removed from the pool that contains it.
+ :arrow: Plugin: Customer feedback: http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=460 ([color=#00BF00]Moves to 1.5[/color]).
+ :arrow: Plugin: VelocityAffector: Influencing the velocity of particles over the lifetime of a particle becomes easier. This makes it possible to gradually slow down the velocity of individual particles over its lifetime ([color=#00BF00]Moves to 1.5[/color]).
+ :arrow: Plugin: CustomEventHandler that submits an event + flag value to the ParticleSystemListener. This makes it possible to use the inner events in the listener, without generating an event for each individual particle ([color=#00BF00]Moves to 1.5[/color]).
+ :arrow: Plugin: ParticleFollower: Replace Min and Max with dynamic attributes, so min/max distance changes in time (so the 'follow' effect gradually increases/decreases) ([color=#00BF00]Moves to 1.5[/color])
+ :arrow: Plugin: DoPlacementParticleEventHandler: Improvements ([color=#00BF00]Moves to 1.5[/color])
+ :arrow: Plugin: Sample for samplebrowser ([color=#00BF00]Moves to 1.5[/color])
+ :arrow: Plugin: During parsing, any mesh required for a script is already loaded.
+ 
+
+=================================================================================================================
+Release 1.6:
+--------------------------------------------------
+:arrow: When PU prepared particle vertices for vertex buffer it`s transformed from local to world space. This is a problem for large scenes.
+See http://www.fxpression.com/phpBB3/viewtopic.php?f=5&t=567&sid=bdba56414a4638423b59109da27d6a72
+:arrow: Particle System pooling. Particle systems that are stopped are automatically added to the pool again.
+:arrow: Share a Renderer between Techniques. This way multiple renderers can share the same vertexbuffer. This is memory efficient.
+:arrow: 
+
+=================================================================================================================
+Release 1.5.1:
+--------------------------------------------------
+:arrow: Plugin: Porting to Ogre 1.8 ([color=#00BF00]DONE[/color]).
+
+
+=================================================================================================================
+Release 1.5:
+--------------------------------------------------
+:arrow: Plugin: Add a sample for the SampleBrowser ([color=#00BF00]DONE[/color]).
+
+=================================================================================================================
+Release 1.4:
+--------------------------------------------------
+ :arrow: Plugin: GCC patches. See http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=490 ([color=#00BF00]DONE (partly)[/color]).
+ :arrow: Plugin: Patch http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=489 ([color=#00BF00]DONE[/color]).
+ :arrow: Plugin: Abstract Ogre classes and data types. For now this means that Ogre classes and datatypes are typedef-ed, extended, etc. and isolated in specific .h files. The reason is to split the ParticleUniverse code from the the Ogre code, so that migration to another rendering system becomes easier ([color=#00BF00]DONE[/color]).
+
+=================================================================================================================
+Release 1.3.1:
+--------------------------------------------------
+- (DONE) Applied changes that makes it easier to port to GCC (removed inline, changed >> into > >, ...). Thanks to TaeHyungKim.
+- (DONE) Remove end() from loops
+- (DONE) Implement scaling for other components:
+             PlaneCollider, 
+             OnPositionObserver, 
+             RibbontrailRenderer, 
+             ParticleFollower,
+             SphereCollider,
+             BoxCollider,
+             OnVelocityObserver,
+             GravityAffector,
+             ParticleTechnique (to apply scaling on emitted techniques)
+- (DONE) Extend VisualParticle with rotationAxis, so each particle can rotate independently (use for GeometryRotator).
+- (DONE) Extend ComparisionOperator with CO_EQUALS. This makes it for instance possible to fire an event on a specific moment (OnTimeObserver can be
+  specified in such a way, that the event for each particle occurs on one specific moment).
+- (DONE) DoPlacementParticleEventHandler: Besides position, also the direction, orientation, colour, etc. can be inherited from 
+  the particle for which the event occurs.
+- (DONE) ScaleAffector: Set 'since start system' indication, so that scaling can be different for older particles
+  (if control points are used). This gives a bit more control over particle scaling.
+- (DONE) VelocityAffector (NEW): Influencing the velocity of particles over the lifetime. 
+  This makes it possible to gradually slow down the velocity of individual particles over its lifetime, without changing the direction.
+
+=================================================================================================================
+Release 1.3:
+--------------------------------------------------
+- (DONE) Add ParticleSystemManager::removeAndDestroyDanglingSceneNodes(), which deletes all dangling SceneNodes that are made by PU. 
+         This is to prevent that all childnodes of a parentnode are destroyed
+- (DONE) ParticleSystemListener that handles different events (particle system started, stopped, deleting, particles emitted, lod transition, ...). 
+         Where the Observer/Event Handler components have their use internally inside the particle system, has the ParticleSystemListener an 
+         important function outside the plugin (client application)
+- (DONE) Renamed Collider to BaseCollider
+- (DONE) Renamed ForceAffector to BaseForceAffector
+- (DONE) ForceFieldAffector: Creation of a force field based on noise generation, including multithreaded force field generation
+- (DONE) Minimize compiler warnings
+- (DONE) Add ParticleSystem::start(Real stopTime)
+- (DONE) LightRenderer: Removed diffuse light, because the colour is received from the particle itself.
+- (DONE) Added FlashFrequency, FlashLength and FlashRandom to the LightRenderer.
+
+=================================================================================================================
+Release 1.2:
+--------------------------------------------------
+- (DONE) Migration to Ogre version 1.7
+- (DONE) Changing STL container definition; (most) containers are using nedmalloc now
+- (DONE) Implement PhysX Fluid properly (including script parsing).
+- (DONE) Realisation of BeamRenderer.
+- (DONE) Added inner-collision flag to BoxCollisionAffector and the SphereCollisionAffector to define whether particles collide with the inner 
+         surface or the outer surface of the box/sphere (this is not realized for the BoxColliderExtern and the SphereColliderExtern). This makes 
+         it possible to include particles in a Box or Sphere.
+- (DONE) Use precompiled headers. Compilation is must faster now.
+- (DONE) Deleted Ogre.h from ParticleUniversePrerequisites.h to reduce the size of the obj files.
+- (DONE) Added ParticleSystem::setUseController(). This can be used in cases where a Particle System must be updated by another timer function 
+         than the build-in ControllerValue.
+- (DONE) Added ParticleUniverseManager::_getAliasMap()
+- (DONE) Migration to new script compiler. This requires some changes in the existing scripts, but also offers more possibilites. Summarised:
+         o The use of $ prefixes in names isn't allowed. All alias names in the example scripts now have names without the $
+         o The new compiler makes it possible to simplify some properties. Many property names have been changed. This also deprecates 
+           several existing property names, but the deprecated property names can still be used in a script (backwards compatibility). 
+           The manual is updated with the new property names.
+         o The 'exclude_emitter' (of affector) now takes a list of names without double quotes.
+         o The camera_dependency structure is somewhat changed. Instead of:
+    
+           attribute_name value << camera_dependency {...}
+   
+           the new layout is:
+   
+           attribute_name      value
+           camera_dependency   attribute_name
+           {...}
+         See particle system 'lodSystem' in the example scripts. 
+         o The 'camera_dependency' settings are also written to script.
+- (DONE) Removed UserDefinedObject / OgreUserDefinedObject.h. The mUserDefinedObject attribute is of type Any now.
+- (DONE) Added ParticleSystemManager::isAutoLoadMaterials() and ParticleSystemManager::setAutoLoadMaterials() to define whether loading the 
+         material is done automatically or whether this must be done manually on a later stage. Note, that there is no similar function for 
+         loading the meshes.
+- (DONE) Add collision normal to physics actor; each particle with physics capabilities has a physics actor object with a contact point (was already
+         implemented) and a contact normal (new), which are set when the particle collides with another particle (only in case a physics engine 
+         (PhysX) is used).
+- (DONE) Renamed ParticleTechnique::setSpatialHashing() into ParticleTechnique::setSpatialHashingUsed(). Added 
+         ParticleTechnique::isSpatialHashingUsed().
+- (DONE) ParticleSystem::startFade() function to start the particle system for a specific time and gradually stop the Particle System 
+         until there are no particles left.
+- (DONE) ParticleSystem::stopFade() function to stop the particle system after a specific time and gradually stop the Particle System 
+         until there are no particles left.
+
+=================================================================================================================
+Release 1.1:
+--------------------------------------------------
+
+- (DONE) A few default settings are changed. This concerns attributes of the emitter: Velocity, Angle and Direction. Beware that previous scripts may
+         behave different because of these changes.
+- (DONE) Allow parsing scripts with the same name. This doesn't result in an exception anymore, but a copy is created.
+- (DONE) Replace isEnabled() with _getOriginalEnabled() in the Tokens classes, because the mEnabled value changes; writing the
+         'enabled' value to the script was wrong.
+- (DONE) Various small changes (mainly addition of new functions used by the editor).
+- (DONE) Small updates on ParticleTechnique::removeEmitter, ParticleTechnique::removeAffector, etc. and added 
+         ParticleTechnique::_removeBehaviourTemplate() and ParticleObserver::removeEventHandler().
+- (DONE) Implemented ParticleSystem::getFastForwardInterval().
+- (DONE) ParticleEmitter: New signature for setDynDuration, setDynRepeatDelay, setDynParticleAllDimensions, setDynParticleWidth, setDynParticleHeight, 
+         setDynParticleDepth. Bool is passed as argument to force the use of the attribute. This was needed for the editor.
+- (DONE) ParticleUniverse::ParticleEmitterTokens writes the direction with getParticleDirection(). This was not the original value; replaced with
+         getOrginalParticleDirection().
+- (DONE) Add copyParentAttributeTo() to all major components (emitter, affector, etc.). This makes it possible to copy attributes to components of 
+         a different sub type (i.e. attributes from BoxEmitter to PointEmitter).
+
+Release 1.01:
+--------------------------------------------------
+- (DONE) Add ParticleUniverseManager::destroyTemplate() and rename removeAllParticleSystemTemplates() with 
+         destroyAllParticleSystemTemplates()
+
+=================================================================================================================
+Release 1.0: Scheduled for end of 2008
+--------------------------------------------------
+- (DONE) Soft particles.
+- (DONE) PhysX support added as part of the core: Both rigid body as fluid based particles are supported. PhysX support is optional
+         and can be included/excluded by means of a preprocessor directive.
+- (DONE) TextureAnimator added, which makes it possible to 'play' a different texture animation for each particle 
+         individually, using an Atlas texture.
+- (DONE) Added recording option to the Viewer. Every x milliseconds, the particle system is paused and an image file is 
+         written to disk. These image files can be concatenated to create a video file or added to an atlas file 
+         (with the AtlasImageTool) and played as a 'video' with the TextureAnimator. Settings are included in the 
+         puviewer.cfg file.
+- (DONE) Commandline tool (AtlasImageTool) for creating atlas images:
+            1. Create one atlas image from multiple images.
+            2. Create one atlas image from multiple images, where intermediate images are interpolated.
+- (DONE) Overall orientation/rotation changes, so it is possible to rotate all particles if the node to which the particle system is
+         attached, rotates.
+- (DONE) Debug logging with runtime attributes added. The maximum number of emitted particles is calculated, for example. This way it is 
+         possible to set quota right and allocate no more memory than needed.
+- (DONE) Serializer added, which generates a particle universe script from a particle system. The script can be written to 
+         a string or written to a file. This is usable for editors.
+- (DONE) SceneDecorator realised. The SceneDecorator is used to add additional scene elements to the scene for fast prototyping.
+- (DONE) ParticleSystem::stopFade() added, which disables all emitters and stops the whole particle system when the 
+         last particle is expired.
+- (DONE) ParticleSystem::stop(Real stopTime) added, which stops the particle system after a certain period 
+         (this is the same as setFixedTimeout())
+- (DONE) ParticleSystem::pause(Real pauseTime) added, which pauses the particle system for a specific time. This 
+         was also needed for the recording option in the viewer.
+- (DONE) ParticleSystemManager::getParticleSystem() added; Particle Systems are now truly managed by the ParticleSystemManager, 
+         although they have to be explicitly destroyed by the user.
+- (DONE) Allocate memory with PU_NEW and PU_NEW_T to benefit from the memory tracker.
+- (DONE) ParticleSystem::setRenderQueueGroup() and ParticleTechnique::setRenderQueueGroup() added. This way the renderqueue group 
+         can be set on a particle system level, for every renderer in all particle techniques.
+- (DONE) ParticleEmitter: Added 'orientation', 'range_start_orientation' and 'range_end_orientation'.
+- (DONE) ParticleEmitter: Added 'texture_coords' and 'start_texture_coords'/'end_texture_coords', to allow emitted 
+         particles to use a fixed texture coordinate or a random one within a range.
+- (DONE) DynamicAttribute is not pure virtual anymore.
+- (DONE) Added AtlasImage class to support the new atlas tool.
+- (DONE) Added ParticleSystem listeners with callback functions started() and stopped(). Paused() and Resumed() are not implemented,
+         because this creates more overhead and the question is whether anyone uses it.
+- (DONE) Added remove-functions to ParticleTechnique for Emitters, Affectors, Externs and Observers, which only 
+         removes them from the ParticleTechnique, but doesn´t delete them. This makes it possible to create 
+         for example, just one SphereColliderExtern and let it affect particles of multiple ParticleTechniques 
+         (in different Particle Systems).
+- (DONE) Find performance bottlenecks in code. Use VTune, etc.
+- (DONE) Added ColourAffector::clearColourMap().
+- (DONE) Cleanup non/licensed textures.
+- (DONE) VC8 (2005) and VC9 (2008) .sln file.
+- (DONE) Create Mediapack.
+- (DONE) Finish all loose ends.
+- (DONE) Add Commercial license.
+
+
+=================================================================================================================
+Release 0.8: Scheduled for April, 2008
+--------------------------------------------------
+- (DONE) GeometryRotator: Add 'geom_rot_axis'. If the rotation axis is set, all particles are rotating around this
+         vector, otherwise the particles are rotating random.
+- (DONE) VortexAffector: change 'vortex_aff_speed' into dynamic attribute.
+- (DONE) ParticleSystem: Added option 'tight_bounding_box' to wrap the bounding box tight around the particle 
+         system instead of let it grow and never shrink (which is default).
+- (DONE) Make ParticleEmitter::mAngle a DynamicAttribute. This makes it for instance possible to let the angle 
+         increase over time.
+- (DONE) SlaveEmitter: Makes it possible to emit a particle on the same location and with the same direction 
+         as a just emitted particle from another emitter (of another technique).
+- (DONE) SlaveBehaviour: Expands the SlaveEmitter. If you add both to your ParticleTechnique, the particle will not only
+         start at the same location as another emitter particle, but it also follows that particle.
+- (DONE) Replace IPipe with TechniqueListener, which allows multiple listeners per ParticleTechnique. 
+         Callback functions are particleEmitted() and particleExpired().
+- (DONE) 'enabled' can also be used in an observer script.
+- (DONE) Add 'keep_local' to Particle System, Technique and Emitter. This makes particles move relative to the
+         system, technique or emitter. Only useful if system, technique or emitter itself are moving/emitted.
+- (DONE) ColourAffector: Add 'colour_operation' to define operations on particle colour and ColourAffector.
+- (DONE) ParticleEmitter: Add 'start_colour_range', 'end_colour_range' and 'colour', to initialise a particle with a
+         colour.
+- (DONE) Create SphereRenderer and SphereSet, which is similar to the BoxRenderer. This renderer used a SphereSet, which
+         can also be use stand-alone, just as a BillboardSet.
+- (DONE) Validate in all Observers whether the particle is null (if it is used).
+- (DONE) DynamicAttibute in ScaleAffector, TextureRotator, JetAffector and GeometryRotator must receive the particle 
+         time-to-live fraction instead of the time since the start of the particle system. This is needed to define 
+         dynamic_curved_... in such a way, that it enables control points between begin..end of the particles' 
+         time to live.
+
+=================================================================================================================
+Release 0.7: Scheduled for February, 2008
+--------------------------------------------------
+- (DONE) ParticleAffector: Add attribute 'affect_specialisation', with options 'default', 'ttl_increase' and 
+         'ttl_decrease'. This means that affection is normal or based on the time to live (resp. just emitted 
+         particles are more affected (ttl_increase) or nearly expired particle are more affected (ttl_decrease)). 
+         This has to be implemented for ScaleAffector, GravityAffector and LinearForceAffector. If needed, other 
+         affectors may follow.
+- (DONE) Add Maximum Velocity to ParticleTechnique.
+- (DONE) Flocking behaviour. This involves 3 separate affectors which, combined, offer flocking behaviour. These are
+         the affectors FlockCenteringAffector, CollisionAvoidanceAffector and VelocityMatchingAffector. Note, that the
+         CollisionAvoidanceAffector only offers collision avoidance between the particles themselves, but no collision
+         avoidance yet between particles and colliders (Plane, Box, Sphere). This is on the todo.
+- (DONE) Added 'observe_until_event' to ParticleObserver. This is used to observe (a particle), until the event occurs
+         and the eventhandler(s) are called. After that, the observer doesn´t observe anymore.
+- (DONE) Added 'entity_orientation_type' to EntityRender, to allow both the particles' own orientation, but also orientation
+         towards the particle direction.
+- (DONE) Added 'circle_em_normal' to CircleEmitter, to apply orientation to the circle emitter.
+- (DONE) Added ParticleUniverseSystemManager::removeAllParticleSystemTemplates() to explicitly delete templates and aliasses.
+- (DONE) OnRandomObserver: Generates a random value between 0..1 and if the value exceeds a certain threshold (0..1) it fires
+         an event.
+- (DONE) Add 'observe_interval' to ParticleObserver, to observer after each interval.
+- (DONE) DoEnableComponentEventHandler is now also able to enable/disable an 'observer_component'.
+- (DONE) Add Oscillate types (Sine and Square first, others later) to DynamicAttribute. This can be used for example, 
+         to assign a sine-function to the 'emission_rate' of an emitter.
+- (DONE) Add Spatial Hashing to the Particle Technique, to determine nearest neighbours, instead of a brute-force method.
+         This is used for Flocking behaviour and inter-particle collision.
+- (DONE) InterParticleCollider: Particles colliding with each other.
+- (DONE) Added hasEventFlags() to Particle and change getEventFlags() in if-statements with hasEventFlags()
+- (DONE) Create flip-flop force affector: 2 OnRandomObservers each with a DoEnableComponentEventHandler that 
+         enable or disable 2 LinearForceAffectors with opposite forces. To be used to apply wind to a flame.
+
+=================================================================================================================
+Release 0.6: Scheduled for January, 2008
+--------------------------------------------------
+- (DONE) PositionEmitter: Add positions to an emitter so that the particles emit on there positions. This makes it
+  possible to read positions from a file and add them to the PositionEmitter.
+- (DONE) Apply Scale for each Particle System, to scale the position, size (by means of scale attribute) and 
+  direction/velocity (by means of speed factor, that scales time since last update). This results in new properties
+  for the Particle System: scale, scale_velocity and scale_time.
+- (DONE) Added distance threshold to the Attachable. Any attachable can use it to determine whether the Attachable
+  still has any influence on the particle if the distance between the particle and the SceneNode to which the 
+  Attachable is attached exceeds the threshold.
+- (DONE) Add 'pre_post' indication to the DoEnableAffectorEventHandler, to execute also the pre- and post processing
+  functions.
+- (DONE) DoScaleEventHandler: Scales the velocity, ttl, with a scale value
+- (DONE) Create VortexExtern, take distance from each particle in relation to the position of the VortexExtern
+  into account. The longer the distance, the lesser the rotation.
+- (DONE) Add _getSortMode() to the ParticleRenderer.
+- (DONE) ParticleRenderer: Create ParticleRenderer.cpp en ParticleRendererTokens and set the defaults for renderqueue.
+- (DONE) Solve linker warnings 4217
+- (DONE) Create ParticleUniverse_d.dll in debug mode and move .lib files to the lib folder.
+
+
+=================================================================================================================
+Release 0.5: Scheduled for December, 2008
+--------------------------------------------------
+- (DONE) Bugfixes
+- (DONE) LightRenderer
+- (DONE) enum TokenID: Is part of ITokenRegister class itself, but should be outside. Same for other enums. Result: Moved some of the enums to the 
+  Common.h. TokenID will not be changed anymore.
+- (DONE) enum TokenID: Not clear how new id's should be added by other DLL's. Result: No time given to find a solution. Hopefully, this isn't an issue
+  anymore if the scriptcompiler is changed (> 1.0 version)
+- (DONE) Add more example scripts
+- (DONE) OnQuotaObserver also for system quota´s
+- (DONE) Add scaling to VertexEmitter and MeshSurfaceEmitter
+- (DONE) New Particle type 'Particle System'.
+- (DONE) Destroy all childscenenodes per particle system instead of doing this in the renderers.
+
+
+=================================================================================================================
+Release 0.4: Scheduled for November, 2007 (this will be the first public release)
+------------------------------------------------------------------------------------------
+- (DONE) Test everything
+- (DONE) Complete manual.
+- (DONE) ParticleTechnique: Suppress emission change in case of deleting emitters (not sure what this is. No change applied)
+- (DONE) PathFollower, Affector that causes a particle to follow a predefined path made up from control points (positions)
+- (DONE) Reserve domainname: www.fxpression.com
+- (DONE) Setup site
+
+=================================================================================================================
+Release 0.3: Scheduled for November, 2007
+-----------------------------------------------
+- (DONE) Add Node to a VisualParticle. This node is used in the EntityRenderer, RibbonTrailRenderer, ...
+         (solved with IVisualData)
+- (DONE) Create RibbonTrailRenderer
+- (DONE) Example scripts: Randomiser
+- (DONE) The EntityEmitter uses particle dimensions as scale. Scale should be a separate entity of VisualParticle.
+- (DONE) Create particle system viewer application; an application with a GUI that is able to create, load, pause, 
+         resume, stop and delete particle systems.
+- (DONE) Technique: Also call _notifyCurrentCamera for pooled techniques!!! This solves the bug that particles from
+         emitted techniques are not always visible.
+- (DONE) Externs: External collidors.
+- (DONE) Rotation around z-axis (needed for texture rotation) isn't implemented yet for both the box renderer 
+         and the entity renderer
+- (DONE) Observer observes only visual particles by default. This should be ALL particles (don't forget to change the 
+         ParticleObserver.html for this). Note, that is not true, so nothing changes.
+
+
+================================================================================================================
+Release 0.2: Scheduled for October, 2007
+----------------------------------------------
+
+- (DONE) Observers: OnEventFlagObserver (validates a given event flag. If the flag has been set, the observer triggers the handlers. 
+         Event flags are used for flexibility. Instead of several specific observers, it is possible to set a flag in the particle if a certain 
+         situation occurs. The observer validates this flag with the given flag.
+- (DONE) Example scripts: OnEmissionObserver, DoForceAffectorEventHandler
+- (DONE) Observers: OnCollisionObserver (detects that a particle has collided).
+- (DONE) Affectors: Realise BoxCollidor, SphereCollidor and PlaneCollidor, which provide collision with particles, sets the
+         collisionflag of the particle and calculates the new direction (bouncing from the shape). Collidor 
+         only collides with particles in its own technique.  This attribute is named 'contact_point_collision  true | false'
+         If particle collides with the collider, it will set the collision flag and searches in the particle for the CollisionBehaviour
+         object. It then passes itself in the CollisionBehaviour object. If the processloop handles the CollisionBehaviour,
+         it will use the Collider data to determine the behaviour (i.e. it calls the Collider::calculateNewDirection()).
+         Besides the CollisionBehaviour it still remains possible to observe the collisionflag and provide additional functionality.
+         The CollisionBehaviour is purely used to determine the particles' behaviour after a collision (bounces, determines new direction based
+         on shape and physical material of the Collider, calculates new velocity)
+- (DONE) Use original... attributes in emitters, affectors, etc. Reset the attributes to the original values in case
+         of a _notifyStart().
+- (DONE) BillboardRenderer: Check whether setting position of billboard is correct; either local or worldspace.
+- (DONE) Observers: OnVelocityObserver (determines whether the velocity is below the min_threshold or above the max_threshold)
+- (DONE) EventHandlers: DoFreezeParticleEventHandler disables movement
+- (DONE) ScaleAffector: scale must be dynamic attribute instead of Real. Add explosion example that uses ScaleAffector
+         with controlpoints (fast->slow)
+- (DONE) Behaviour: CollisionBehaviour. Define the behaviour of a particle when it collides with a Collider. 
+         The particle is affected in terms of direction, velocity and rotation speed. This doesn't 
+         exclude the use of a CollisionObserver. Note: CollisionBehaviour seems artificial. Everything is solved
+         in the Colliders!
+- (DONE) Create example scripts
+- (DONE) MeshSurfaceEmitter: Use the one in the FXPlugin. Add option to keep a distinct distance between particles.
+         That way it becomes possible to create a mesh outline from a number of blocks with the same size.
+- (DONE) Remove compilation warnings (especially 4217)
+- (DONE) Affectors: Create TextureRotationAffector, which rotates the texture.
+- (DONE) Emitters: CircleEmitter. Comparable with the ring emitter. Emit random on a given circle, or start
+         on a certain point an run around (once or continuous).
+- (DONE) Script: Emitted Circle emitters (with upwards direction), where the emission of each circle emitter starts at a certain point
+- (DONE) Script: SphereSurface emitter with a Gravity affector in the center; this makes the particles emit from the surface to the center 
+         of the sphere
+- (DONE) Script: Stones in tornadoSystem must have different dimensions.
+- (DONE) Observers: OnQuotaObserver (validates whether the quota has been reached (if number of emitted particles >= quota))
+- (DONE) Affectors: Create GeometryRotationAffector, which generates a random rotation vector during particle emission 
+         (and sets it in VisualParticle::orientation) and updates the particle rotation.
+- (DONE) Affectors: VortexAffector, creates rotation around an axis, based on the distance between the center point and
+         a particle.
+- (DONE) Change VortexAffector and GeometryRotator in manual
+- (DONE) VortexAffector: Take fraction of Quaternion to calculate rotation is probably incorrect.
+- (DONE) Realise GeometryRotatorTokens
+- (DONE) ParticleEmitter::_notifyStart() has an emtpy implementation. However, the duration and the force emission
+         attributes need to be reset, otherwise a restart fails.
+- (DONE) Renderers: Realize MeshInstance, MeshSet and MeshRenderer
+         Clone the mesh, recalculate the vertices based on the position, scale and orientation
+         Add the vertex and index data of each cloned Mesh to the MeshSet
+         (This has become the EntityRenderer!)
+- (DONE) AlignAffector: Add attribute (and make it scriptable) to only align, but not change dimensions
+- (DONE) Create Extern class 'Attacher', which is a Movable and implements Extern and can be attachted to a Scenenode. 
+         On its turn it is also possible to attach other objects to the Attacher itself. One example is to attach 
+         an Affector. The attacher is updated by a particle technique while on its turn the attacher updates the 
+         registered affectors. Objects that are attached to the Attacher must be of the type Extern also.
+         This also means that any particular reference in the affector to mParentTechnique must be eliminated. This 
+         means for instance that GravityAffector::calculatePosition() must determine whether it is attached to a 
+         ParticleTechnique or an Attacher.
+- (DONE) Observers: OnStartTimeObserver (detects that x seconds have been passed since the particle system has been started).
+- (DONE) EventHandlers: DoForceAffector. This calls the named affector for this particular particle, even if the
+         affector is disabled. It might be convenient to affect a particle only when a certain event occurs.
+- (DONE) OnTimeObserver should include the option to switch between time since the particle system started, or the
+         time since the particle was emitted.
+- (DONE) EventHandlers: DoJetEventHandler -> give particle extra speed (multiply direction with scalar).
+         This has become the JetAffector.
+- (DONE) Add additional attribute to Particle Emitter called 'force_emission true or false'. This means that 
+         the emission rate is not based on time, but the actual requested number of particles are emitted 
+         (once).
+- (DONE) Observers: OnTimeObserver (detects that x seconds have been passed after the particle was emitted).
+- (DONE) Affectors: ColourInterpolatorAffector (see Ogre)
+- (DONE) ParticleAlignAffector: Aligns a particle towards the previous particle (set x, y, z of the orientation based on particlePosition1 - 
+         particlePosition2). This is for creating a particle chain.
+- (DONE) BillboardRenderer: Change setBillboardType () function to allow new type BBT_ORIENTED_SHAPE (or something), to allow orientation
+         of another vector instead of the normalised direction vector. Reason is that particle can be aligned to another particle.
+- (DONE) PositionRandomiser: Add time step to change the position every x seconds
+- (DONE) LineEmitter: Attributes also by means of script (implement tokens file)
+- (DONE) Add autoDirection (bool) to the ParticleEmitter. If autoDirection is set to true, it generates a particle direction based on the
+         type of emitter. I.e. Perpendicular on a Line- or a Sphere Emitter. It doesn't always have a meaning for other emitters though
+         (i.e. Point Emitter). Default value is false.
+- (DONE) Emitters: SystematicMeshEmitter (emit from the surface of a mesh/entity in the vertex order).
+         Note, that it is now called VertexEmitter.
+- (DONE) Observers: OnParticlesClearObserver (Calls eventhandler(s) if no active particle are available anymore. Note, that initially 
+         there are no particles, so the observer initially should at least detect 1 particle and from that moment the 
+         validation starts)
+- (DONE) Change lod_camera_name into main_camera_name. The main camera isn't only used for LODding, but also for camera dependencies.
+- (DONE) EventHandlers: DoEnableTechniqueEventHandler (enables or disables a particle technique)
+- (DONE) EventHandlers: DoEnableAffectorEventHandler (enables or disables a particle affector)
+- (DONE) Emitters: SphereEmitter (emit from the surface of a sphere)
+- (DONE) Change Camera Dependency. As it should work, a CameraDependency object is created and added to the emitte (not sure)
+         (in case of emission rate dependency). If the requested emission rate is calculated it is passed as an argument
+         in the CameraDependency::apply(Real value) function, which returns the new real.
+
+
+================================================================================================================
+Release 0.1: Released on July 26, 2007
+--------------------------------------------
+
+- (DONE) Complete manual.
+- (DONE) In case of OnCountObserver, the counter must be set to 0 again if the ParticleSystem restarts again.
+- (DONE) Add Sphere and Box renderers and test it with the PhysX plugin. Use the orientation of the particle
+- (DONE) ParticleTechnique: Implement sorting. This is only really possible if the implementation of the Particle pool
+         is changed into a container type of class, implementing iterator, begin and end.
+- (DONE) Implement Billboard sorting.
+- (DONE) Implement lodCameraName in ParticleSystem. In case of _notifyCurrentCamera, the LOD code may only be executed
+         for this specific camera, otherwise the lod code is executed for every camera, which basicly screw
+         things up.
+- (DONE) In particle emitter define width, height and depth of particles (hasOwnDimensions = true), 
+         using DynamicAttribute. Also check the synchronisation in PhysXBehaviour in this case
+- (DONE) ParticleEmitter: Implement repeat.
+- (DONE) ParticleEmitter: Implement delay.
+- (DONE) ParticleTechnique: Implement functions that have an empty body in the .h file.
+- (DONE) Implement fastforward
+- (DONE) ParticleSystem: Update bounds
+- (DONE) Add preCalculate to ParticleBehaviour (similar to ParticleAffector)????
+- (DONE) Implement _initStart() and _initStop() for Externs, Affectors, Observers. The _initStop() in the PhysX Extern should remove
+         all actors (belonging to the particles of the technique)
+- (DONE) Calculate bounding box in Particle System: update worldAABB in ParticleTechique::_update(). Create a 
+         ParticleTechique::getWorldAABB(), which is called in ParticleSystem::_updateTechniques();
+- (DONE) Add a preProcessParticles() function to the Affector and move code from the _firstParticle() function to the
+         preProcessParticles().
+- (DONE) Set colour in both BoxRenderer and BillboardRenderer
+- (DONE) Colour buffer in BoxSet
+- (DONE) UV mapping in BoxSet is reversed (at least in 1 case)
+- (DONE) ParticlePool: Creation of visual part (to be rendered) of the Visual Particles not in place yet. Not sure 
+         whether this is still needed. Analyse again during implementation of another renderer.
+- (DONE) Add Orientation to the Particle class.
+- (DONE) Realise Box- and Sphere renderer, similar to Billboard renderer. (NOT SPHERE)
+- (DONE) Box::_initCorners() should only calculate the local corners (so don't add position), using the 
+         mOrientation.
+- (DONE) Box::getWorldspaceCorner(i) calculates the corner on the fly (getCorner(i) + position). 
+         Box::getWorldspaceCorner() is used in the BoxSet to generate the Vertices.
+- (DONE) Rename ParticleTechnique::_expireAllParticles() into stop(). In stop(), run through all observers 
+         and call the init() function (= new function). In case of OnCountObserver, the counter is set to 0 again.
+         Note, that ParticleTechnique::start() doesn´t exists, because if it is started, all activities are done in the
+         _update()
+- (DONE) Add postProcessParticles() to IExtern and implement its calls in ParticleTechnique::_postProcessParticles()
+- (DONE) ParticleBehaviour::postProcessParticle() must be renamed into ParticleBehaviour::initParticleForExpiration()
+- (DONE) ParticleUniverseContext: Rename nextSection into beginSection (+ endSection)
+- (DONE) ParticleUniverseScriptParser: CompilerContext and enum CompilerContextSection are limited to a few 
+         types. This must be setup more generic to allow other plugins to define their own sections.
+- (DONE) Miscellanious: Cloning of ParticleSystem, ParticleTechnique, ParticleEmitter and ParticleAffector
+- (DONE) SineForceAffector: Similar to the LinearForce affector, but it used a sine() function to vary the force. Using
+         a random sine, which generates a new sine for every interval from 0-2pi, a wind-effect is simulated. After every
+         2pi, both the frequency and amplitude can be changed.
+- (DONE) ParticleTechnique: _updatePooledTechniques only to be called if mIterationIntervalSet
+         is true, otherwise updating the technique inside the _applyParticleActions-loop is 
+         faster.
+- (DONE) Change camera dependency. Syntax must be something like:
+         'attribute' <#value> ['<<' <Dependency>]
+- (DONE)  Grammar:
+         <Dependency> := <CameraDependency>
+         <CameraDependency> := 'camera' '{' {<CameraDependencyProperties>} '}'
+         <CameraDependencyProperties> := <DistanceFactor> | <Increase>
+         <DistanceFactor> := 'distance_factor' <#distanceFactor>
+         <Increase> := 'increase' <True_False>
+
+         Example:
+         emission_rate 10 << camera
+         {
+                  distance_factor   1000
+                  increase          true
+         }
+         Camera is input for emission rate and changes the emission rate. It cannot be an attribute of emission_rate,
+         because how would the value '10' be assigned to emission rate?
+- (DONE) Implement emission of ParticleAffectors
+- (DONE) LOD system: Implement dependencies for emission rate, velocity, time_to_live, width, height and depth.
+                     One dependency is the camera_distance (distance between camera and particle system)
+                     For instance:
+                     emission_rate_dependency              camera_distance    100     0.95
+- (DONE) ParticleEmitter: Implement duration
+- (DONE) Implement Handlers. This concerns real implementations of handlers and also how they are related to observers.
+- (DONE) rainSystem: ParticleTechniques that are emitted still hold particles in the pool after the technique
+                     itself is expired. This is noticable in the rainSystem. Implementation of duration in
+                     ParticleEmitter is needed and should be used in the rainSystem.
+- (DONE) Rename and particle_type (property of observer) into observe_particle_type
+- (DONE) Implement emission of ParticleTechniques
+- (DONE) ParticleEmitter: Replace 'named_particle', 'named_technique', 'named_emitter', 'named_affector' with 
+                          'visual_particle', 'technique_particle', 'emitter_particle', 'affector_particle'
+- (DONE) ParticleGrammar: Implement on expire observer
+- (DONE) ParticleSystemManager: Implement parse function for parsing Observer
+- (DONE) ParticleObserver: Add 'particle_type' as generic attribute. This is to observe only particles of that type.
+- (DONE) ParticleEmitter::copyAttributesTo clone DynamicAttribute without knowing the type
+- (DONE) ParticleSystemManager: Add RendererFactory for Billboard
+- (DONE) ParticleTechnique: If the emitsName of an emitter has been set, the technique must be notified, to mark all emitters
+         techniques, affectors again
+- (DONE) ParticleTechnique: Implement function emitOneParticle()
+- (DONE) ParticleBillboardRenderer: update
+- (DONE) ParticleSystem: Create ParticleSystem by means of a SceneManager
+- (DONE) ParticlePool: Various bits
+- (DONE) Destruction Emitters: Must be done in ParticleTechnique destructor, but gives exception; investigate!
+
+
+=================================================================================================================
+Release > 1.0: Not scheduled yet
+--------------------------------------------------------
+- Create tests that combine multiple effects (LOD with soft particles, LOD with PhysX, ...)
+- Test with Hydrax, Cealum and PagedGeometry, escpecially with soft particles.
+- Setup testscene showcase with multiple particle systems.
+- Extend API documentation.
+- Extend ScaleAffector: Not only particle (dimensions) are be scaled, but also other affectors, emitters, ... This makes it possible
+  to dynamically apply scaling over a period of time.
+- Create BillboardChainRenderer. Also create an emitter that generates lightning.
+- Multi-threading support.
+- Add infinite bounding box, which results in 3 types.
+     o growing bounding box
+     o tight bounding box
+     o infinite bounding box- 4 variations of ParticleSystem::getEmitter (techniqueName, emitterName)
+  ParticleSystem::getEmitter (techniqueName, emitterIndex)
+  ParticleSystem::getEmitter (techniqueIndex, emitterIndex)
+  ParticleSystem::getEmitter (techniqueIndex, emitterName)
+  Also use a small buffer (array), that searches the last x emitters. This allows fast searching of the most recent emitters.
+  Do the same for Affectors, Observers, Externs.
+- Compress scripts:
+  o Combine one or multiple scripts into one compressed script.
+  o Change the compressed script in a binary form.
+  o Use a file archive that reads the binary script and expand it to a text format, so the parser is able to parse it (takes a little 
+    more overhead, because of the two-step).
+- Link attributes to each other (Velocity to particle dimensions, velocity to emission_rate, ...).
+      => Serializer: 'Camera dependency' is not realised, because linking attributes gets an overhaul.
+     - Rename Dependency into Function
+     - multiple Functions can be added
+     - Create function with FunctionParameter: Function(FunctionParameter param). Example
+       EmissionRateFunction(const VelocityParameter& velocityParam);
+     - FunctionParameter::calculateDeviation(), which calulates a value between max [-INF, INF], based on the attribute it 
+       refers to (Velocity for example). Notem that in some cases -INF/INF isn't reached, because of the type of curve.
+     - FunctionParameter::setThreshold(). If the value of a threshold is equal to attribute value of the parameter, the 
+       calculated deviation is 1 (for Reals)
+     - FunctionParameter::setCurve(), LINEAR, EXP, LOG. The curve determines the slope between [-INF, INF].
+     - Function::affect(), which takes the current value of the attribute to which the Function refers (emissionRate for 
+       example) and calcultes the new value by means of: value += value * FunctionParameter::calculateDeviation();
+       Function::affect() has several overloading variations.
+     - Function::affectParticle(); Similar to affect(), but affects only one particle at the time.
+- 3dText that disolves into particles.
+- Replace current scripts deserializer (based on compiler2pass) with Preators' version.
+- Tool that generates random ParticleSystems that act as a base for further development.
+- Particle System editor with wxWidgets or better, create an editor plugin in a worldeditor (still to be 
+  determined which one).
+- Advanced options: 
+      GPU renderer
+      Hardware instancing renderer
+      Particles with sensors + Target steering behaviour (seek, pursuit, ...)
+      Particles with field of view + Neighbor steering behaviour (alignment, keep distance, avoiding basic shapes)
+      Fluid system
+      Create predefined animation tracks
+      Metaball Renderer
+      Animation of particles (also take into account that affectors affect animation (i..e flocking behaviour))
+- TurbulenceAffector, using Perlin noise
+- ColourImageAffector, similar to the one in Ogre
+- TextureEmitter, emits from certain colours of a texture, also takes the object shape on which the texture 
+  is wrapped into account
+- OverlayEmitter, emit particles on an overlay
+- ParticleSystem::stop(): Expiring all particles at once could kill the framerate. Possible performance patch:
+  Introduce new state PSS_STOPPING and particle system attribute 'expirationDecay'. 
+  During _update of the particle system, call each technique which expires just a few particles 
+  each frame. This way, the particles expire graduately. If all particles are expired, the state 
+  is set to PSS_STOPPED.
+  Note, that the particle system isn´t visible anymore, as soon as the stop() function is called.
+  This way you don´t see the fading effect (which is the desired behaviour).
+- ParticleTechnique: Camera dependency on width, height and depth should resize individual particles and not all
+  of them at once. If this setting is used, the particles ownDimension is set to true and the particles 
+  are rendered  using their own width, height and depth.
+- EntityRenderer doesn´t use particle dimensions properly. It is currently misused for scale.
+- ParticleEmitter: Add property ´dynamic_scaledown´ true|false, to reduce number of particles if the fps is low
+- EventHandlers: DoExcludeAffectorEventHandler excludes one or more affectors from one specific particle.
+- Define Min and Max dimensions of a particle.
+- Implement camera dependency for particle dimensions/particle width, height and depth in the ParticleEmitter
+- SphereCollider and BoxCollider. Also posibility to keep the particles inside the shape
+- DoSetDirectionEventHandler:
+- Add option to Particle Emitter that defines that the emission rate will be related to the velocity (= length
+  of the direction vector). If the velocity increases, the emission rate also increases. This way a trail
+  from a fast moving object remains more compact. Use dependencies (emission_rate 10 << velocity_dependency {...})
+- Refactor the Pool classes. Use boost::any (?)
+- VortexAffector: Rotate around the direction vector
+- Combining multiple objects into 1 alias. This means that an alias not represents just one emitter, renderer, 
+  observer, etc., but multiple observers in combination with a few affectors, must also be possible to wrap them
+  into one alias.
+- CollisionAvoidanceAffector should also take Plane-, Box- and Sphere Colliders into account.
+- Mechanism that makes particles stick to the emitter. Using 'affect_specialisation' (or different) it is possible 
+  to let newly created particle stick more than older ones.
+- EntityExtern: This extern makes it possible to create an Entity that is automatically attached to the same Node 
+  to which the ParticleSystem itself is attached. The EntityExtern is more or less used for testing and to be able to
+  quickly create an Entity (by script).
+- GravityPlaneAffector: The particle is attracted to a plane instead of a point and the distance between 
+  the particle and the plane is taken into account.
+- Create Image manipulation tool, that reads a list of input images en output the manipulated images:
+  1. Basic perturburation, using 2D perlin noise. Perturburation is applied to each pixel position (moving pixels), 
+     rgb value (lighter/darker) and alpha (more solid/transparent)
+  2. Cosine perturburation, using 2D perlin noise. The same, but with a cosine function
+  3. Radial split, using 2D perlin noise. Radius > noise value => set to black / alpha 0
+  4. Radial blur, using 2D perlin noise. Smear everything along radius outside.
+- Create DoSetFlagEventHandler
+- Interpolation of direction/position/orientation by PU in case of large steps in PhysX.
+- Features of "Thinking Particles" at http://cebasserver.de/products/products.php?UD=10-7888-33-788&PID=15
+- Features of "Trapcodes' particular" at http://www.trapcode.com/products_particular.html
+- Complete API documentation.
+
+
+=================================================================================================================
+Miscellanious (to be evaluated if still needed)
+-----------------------------------------------
+- Change ParticleUniverseHook.h so it also works with other compilers.
+- BillboardRenderer: Add normal, binormal, tangent, and particle size data in the vertex buffer.
+- ParticleSystem pooling (this is just a list, you can use the existing pool class).
+- General: Add a "_" to all public methods that are supposed to be internal methods.
+- Move a technique relative towards the camera (camera_shift). This is used when different techniques are 
+  on the same position, but materials are not rendered in the desired order (alternative for renderqueue)
+- Observers: OnDimensionsObserver (validates whether the width, height or depth of a particle exceeds a certain threshold)
+- EventHandlers: DoBounceEventHandler
+- Observers: OnColourObserver (detects that the colour of a particle is below a certain threshold) .
+- Observers: OnEmissionrateObserver (determines whether the emission rate is below the min_threshold or above the max_threshold)
+- Affectors: RandomForceAffector, to give a random force to each particle (redundant with Randomiser?)
+- Create separate timesteps for affectors, observers and externs, so they don´t get called after every 
+  frame-ended call.
+- Rename ParticleUniverseSystem::mIterationInterval in ParticleUniverseSystem::mTimeStep.
+- ParticleEmitter::_init....: Uses getTimeElapsedSinceStart of ParentSystem. This results in wrong values for
+  mDurationRemain.
+- In particle technique define particle limit (number of particles displayed at the same time). 
+  Oldest particles are expired if the limit is reached.
+- Behaviour: The ParticleUniverseRotationBehaviour determines recalculates the particles´ rotation speed. The
+  rotation speed depends on the velocity of the particle. If the velocity decreases, the rotation speed also
+  decreases. This logic isn´t added in an Affector, because it uses additional data per particle. If the
+  particle velocity increases again, the rotation speed may not be increasing, so it needs some ´last velocity´
+  value. The ParticleUniverseRotationBehaviour is also responsible to affect the rotation speed in case of a 
+  collision.
+- Particle: Add _notifyEmitted(), which sets the ParticleEmitter* in the Particle. The _init() function of the
+  Particle must set mParticleEmitter* to 0. _notifyEmitted() is called by the emitter and passes a 'this'.
+- ParticlePool::increasePool has ParticleTechnique as argument, but it already has the parent 
+  ParticleTechnique set, so the extra argument is not needed.
+- Add 'affect_particle_type' to ParticleAffector. This property makes it possible to only affect particular particle
+  types (probable not needed, because you can exclude emitters)
+- ParticleFollower: Accelerate towards the previous particle instead of correcting the position (VelocityMatchingAffector
+  should be sufficient)
+- TextureInterpolator or TextureMorpher: Interpolate between textures. This needs a generic material in combination 
+  with a shader. Textures can be added dynamically (limited to max. of one pass). (The TextureAnimator does the same, but then
+  offline).
+================================================================================================================

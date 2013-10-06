@@ -1,0 +1,112 @@
+system atomicity
+{
+    category                                    LightFX
+    technique 
+    {
+        visual_particle_quota                   40
+        material                                PUMediaPack/Streak_02
+        default_particle_width                  2.4
+        default_particle_height                 2.4
+        default_particle_depth                  2.4
+        renderer                                Sphere
+        {
+        }
+        emitter                                 Point StreakEmitter
+        {
+            emission_rate                       dyn_oscillate
+            {
+                oscillate_frequency             0.4
+                oscillate_phase                 0
+                oscillate_base                  20
+                oscillate_amplitude             20
+                oscillate_type                  sine
+            }
+            time_to_live                        1.3
+            direction                           0 0 0
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    0.27 0.3 0.74 1
+            time_colour                         0.3  0.27 0.3 0.74 1
+            time_colour                         0.6  0.43 0.28 0.14 1
+            time_colour                         1    0 0 0 1
+        }
+        affector                                GeometryRotator 
+        {
+            rotation_speed                      dyn_curved_linear
+            {
+                control_point                   0 3
+                control_point                   1 0.2
+            }
+        }
+        affector                                Scale 
+        {
+            xyz_scale                           dyn_curved_linear
+            {
+                control_point                   0 12
+                control_point                   0.8 12
+                control_point                   1 24
+            }
+        }
+        observer                                OnCount 
+        {
+            handler                             DoEnableComponent 
+            {
+                enable_component                emitter_component StreakEmitter false
+            }
+            handler                             DoEnableComponent 
+            {
+                enable_component                emitter_component FlareEmitter false
+            }
+            handler                             DoEnableComponent 
+            {
+                enable_component                emitter_component FlareCoreEmitter false
+            }
+            count_threshold                     greater_than 39
+        }
+        observer                                OnClear 
+        {
+            handler                             DoStopSystem 
+            {
+            }
+        }
+    }
+    technique 
+    {
+        visual_particle_quota                   50
+        material                                PUMediaPack/Flare_04
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point FlareEmitter
+        {
+            emission_rate                       20
+            angle                               360
+            time_to_live                        1
+            velocity                            6
+            all_particle_dimensions             dyn_random
+            {
+                min                             0.6
+                max                             4.5
+            }
+        }
+        emitter                                 Point FlareCoreEmitter
+        {
+            emission_rate                       20
+            angle                               360
+            time_to_live                        1
+            velocity                            0.9
+            all_particle_dimensions             dyn_random
+            {
+                min                             1.2
+                max                             4.5
+            }
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 0.3 0.3 1
+            time_colour                         0.6  1 0.3 0.3 1
+            time_colour                         1    0 0 0 1
+        }
+    }
+}

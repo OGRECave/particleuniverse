@@ -1,0 +1,116 @@
+system fxPression
+{
+    technique 
+    {
+        visual_particle_quota                   1000
+        material                                ParticleUniverse/Star
+        default_particle_width                  12
+        default_particle_height                 12
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Line 
+        {
+            emission_rate                       20
+            angle                               0
+            time_to_live                        10
+            velocity                            dyn_random
+            {
+                min                             3
+                max                             12
+            }
+            position                            -24 18 0
+            direction                           0 -1 0
+            end                                 48 18 0
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    0.3 0 0.1 1
+            time_colour                         1    0.3 0.3 0 1
+        }
+    }
+    technique 
+    {
+        visual_particle_quota                   10
+        material                                fxpression/ac3dmat1
+        default_particle_width                  24
+        default_particle_height                 12
+        default_particle_depth                  1.2
+        renderer                                Entity
+        {
+            mesh_name                           fxpression.mesh
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       1
+            time_to_live                        10
+            repeat_delay                        4
+            enabled                             false
+            direction                           0 0 0
+            force_emission                      true
+        }
+        affector                                Vortex 
+        {
+            position                            0 0 -15
+            rotation_axis                       0 1 0
+            rotation_speed                      2
+        }
+        observer                                OnTime 
+        {
+            handler                             DoPlacementParticle 
+            {
+                force_emitter                   LogoEmitter
+            }
+            handler                             DoExpire 
+            {
+            }
+            since_start_system                  true
+            on_time                             greater_than 10.34
+        }
+    }
+    technique 
+    {
+        visual_particle_quota                   5000
+        emitted_emitter_quota                   1
+        material                                fxpression/ac3dmat1
+        default_particle_width                  0.15
+        default_particle_height                 0.15
+        default_particle_depth                  0.15
+        renderer                                Box
+        {
+        }
+        emitter                                 Point LogoEmitter
+        {
+            emission_rate                       0
+            time_to_live                        1
+            direction                           0 0 0
+            emits                               emitter_particle Logo
+            force_emission                      true
+        }
+        emitter                                 MeshSurface Logo
+        {
+            emission_rate                       3000
+            time_to_live                        15
+            velocity                            dyn_random
+            {
+                min                             0.3
+                max                             6
+            }
+            direction                           0 0 0
+            auto_direction                      true
+            force_emission                      true
+            mesh_name                           fxpression.mesh
+            mesh_surface_scale                  4.62 11.1 4.5
+            mesh_surface_distribution           heterogeneous_2
+        }
+        affector                                GeometryRotator 
+        {
+            use_own_rotation                    true
+            rotation_speed                      dyn_random
+            {
+                min                             1
+                max                             20
+            }
+        }
+    }
+}

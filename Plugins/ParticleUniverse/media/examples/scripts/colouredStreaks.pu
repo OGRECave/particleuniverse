@@ -1,0 +1,58 @@
+system colouredStreaks
+{
+    category                                    LightFX
+    technique 
+    {
+        position                                -9 -6 0
+        visual_particle_quota                   3000
+        emitted_emitter_quota                   30
+        material                                PUMediaPack/Streak_04
+        default_particle_width                  2.1
+        default_particle_height                 24
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       4
+            angle                               0
+            time_to_live                        dyn_random
+            {
+                min                             4
+                max                             6
+            }
+            velocity                            dyn_random
+            {
+                min                             0
+                max                             6
+            }
+            direction                           1 0 0
+            emits                               emitter_particle flares
+            colour                              1 0 0 1
+        }
+        emitter                                 Point flares
+        {
+            emission_rate                       100
+            angle                               0
+            time_to_live                        2
+            velocity                            3
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 0 0 1
+            time_colour                         0.2  0.3 0.1 0.6 1
+            time_colour                         0.4  1 1 0 1
+            time_colour                         0.8  0.3 1 0 1
+            time_colour                         1    0 0 0 1
+        }
+        affector                                PathFollower 
+        {
+            exclude_emitter                     flares 
+            path_follower_point                 -3 -0.3 -1.2
+            path_follower_point                 3 -1.5 1.2
+            path_follower_point                 0 -6 -0.3
+            path_follower_point                 3 3 2.1
+            path_follower_point                 -12 7.8 1.8
+        }
+    }
+}

@@ -1,0 +1,62 @@
+system electroShield
+{
+    fast_forward                                1 0.1
+    technique 
+    {
+        visual_particle_quota                   100
+        emitted_emitter_quota                   10
+        material                                PUMediaPack/Spark_01
+        default_particle_width                  2.4
+        default_particle_height                 0.03
+        renderer                                Billboard
+        {
+            billboard_type                      oriented_shape
+            billboard_origin                    bottom_center
+        }
+        emitter                                 Point ElectroPoint
+        {
+            emission_rate                       4
+            time_to_live                        2
+            duration                            5
+            direction                           0 0 0
+            emits                               emitter_particle ElectroCircle
+        }
+        emitter                                 Circle ElectroCircle
+        {
+            emission_rate                       16
+            time_to_live                        1
+            velocity                            1.2
+            force_emission                      true
+            radius                              6
+            step                                0.4
+            emit_random                         false
+        }
+        affector                                Align 
+        {
+            exclude_emitter                     ElectroPoint 
+            resize                              true
+        }
+        affector                                Randomiser 
+        {
+            exclude_emitter                     ElectroPoint 
+            max_deviation_x                     0.06
+            max_deviation_y                     0.12
+            max_deviation_z                     0.06
+            time_step                           0.01
+            use_direction                       false
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 1 1 1
+            time_colour                         0.8  1 1 1 1
+            time_colour                         1    0 0 0 0
+            colour_operation                    multiply
+        }
+        observer                                OnClear 
+        {
+            handler                             DoStopSystem 
+            {
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+system example_013
+{
+    category                                    Examples_11_20
+    technique 
+    {
+        visual_particle_quota                   1000
+        material                                ParticleUniverse/GreenBall
+        default_particle_width                  0.45
+        default_particle_height                 0.45
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       20
+            angle                               90
+            time_to_live                        7
+            velocity                            6
+            box_width                           3
+            box_height                          3
+            box_depth                           3
+        }
+        affector                                LinearForce 
+        {
+            force_vector                        0 -1.2 0
+        }
+        affector                                ParticleFollower 
+        {
+            min_distance                        0.9
+            max_distance                        4.5
+        }
+    }
+}

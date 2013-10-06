@@ -1,0 +1,79 @@
+system leaves
+{
+    category                                    Nature
+    technique 
+    {
+        material                                PUMediaPack/Leave
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Line 
+        {
+            emission_rate                       30
+            angle                               10
+            time_to_live                        15
+            velocity                            dyn_random
+            {
+                min                             1.5
+                max                             6
+            }
+            all_particle_dimensions             dyn_random
+            {
+                min                             3
+                max                             7.5
+            }
+            position                            -24 18 0
+            direction                           0 -1 0
+            end                                 72 18 0
+        }
+        affector                                TextureRotator 
+        {
+            use_own_rotation                    true
+            rotation                            dyn_random
+            {
+                min                             0
+                max                             180
+            }
+            rotation_speed                      dyn_random
+            {
+                min                             -1
+                max                             1
+            }
+        }
+        affector                                LinearForce WindLeft
+        {
+            enabled                             false
+            force_vector                        -4.5 -1.5 0
+        }
+        affector                                LinearForce WindRight
+        {
+            enabled                             false
+            force_vector                        1.5 0 0
+        }
+        observer                                OnRandom 
+        {
+            observe_interval                    1
+            handler                             DoEnableComponent 
+            {
+                enable_component                affector_component WindLeft true
+            }
+            handler                             DoEnableComponent 
+            {
+                enable_component                affector_component WindRight false
+            }
+        }
+        observer                                OnRandom 
+        {
+            observe_interval                    1
+            handler                             DoEnableComponent 
+            {
+                enable_component                affector_component WindRight true
+            }
+            handler                             DoEnableComponent 
+            {
+                enable_component                affector_component WindLeft false
+            }
+            random_threshold                    0.6
+        }
+    }
+}

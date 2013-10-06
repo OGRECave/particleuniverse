@@ -1,0 +1,163 @@
+system psychoBurn
+{
+    technique 
+    {
+        visual_particle_quota                   50
+        material                                PUMediaPack/Streak_01
+        renderer                                Billboard
+        {
+            billboard_origin                    bottom_center
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       160
+            time_to_live                        0.2
+            duration                            10
+            particle_width                      dyn_random
+            {
+                min                             2.4
+                max                             6
+            }
+            particle_height                     dyn_random
+            {
+                min                             9.6
+                max                             28.8
+            }
+            direction                           0 0 0
+            colour                              0.56 0.2 0.65 1
+            box_width                           9
+            box_height                          0.3
+            box_depth                           9
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 1 1 1
+            time_colour                         0.8  1 1 1 1
+            time_colour                         1    0 0 0 0
+            colour_operation                    multiply
+        }
+    }
+    technique 
+    {
+        visual_particle_quota                   200
+        material                                PUMediaPack/Star_03
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       80
+            time_to_live                        dyn_random
+            {
+                min                             1
+                max                             3
+            }
+            velocity                            dyn_random
+            {
+                min                             0.6
+                max                             6
+            }
+            duration                            8
+            all_particle_dimensions             dyn_random
+            {
+                min                             0.6
+                max                             6.6
+            }
+            colour                              0.56 0.2 0.65 1
+            box_width                           7.5
+            box_height                          0.3
+            box_depth                           7.5
+        }
+        affector                                TextureRotator 
+        {
+            use_own_rotation                    true
+            rotation_speed                      dyn_random
+            {
+                min                             2
+                max                             6
+            }
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 1 1 1
+            time_colour                         0.8  1 1 1 1
+            time_colour                         1    0 0 0 0
+            colour_operation                    multiply
+        }
+    }
+    technique 
+    {
+        position                                0 -5.4 0
+        visual_particle_quota                   10
+        material                                PUMediaPack/Genesis_11
+        default_particle_width                  9
+        default_particle_height                 15
+        default_particle_depth                  9
+        renderer                                Entity
+        {
+            mesh_name                           pump_tube.mesh
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       2
+            time_to_live                        5
+            velocity                            dyn_random
+            {
+                min                             2.4
+                max                             4.2
+            }
+            duration                            5
+        }
+        affector                                GeometryRotator 
+        {
+            use_own_rotation                    true
+            rotation_axis                       0 1 0
+            rotation_speed                      dyn_random
+            {
+                min                             -3
+                max                             3
+            }
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    0 0 0 0
+            time_colour                         0.5  1 1 1 1
+            time_colour                         1    0 0 0 0
+            colour_operation                    multiply
+        }
+    }
+    technique 
+    {
+        position                                0 -5.4 0
+        visual_particle_quota                   10
+        material                                PUMediaPack/Genesis_12
+        default_particle_width                  9
+        default_particle_height                 15
+        default_particle_depth                  9
+        renderer                                Entity
+        {
+            mesh_name                           pump_tube.mesh
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       2
+            time_to_live                        5
+            velocity                            dyn_random
+            {
+                min                             2.4
+                max                             4.2
+            }
+            duration                            5
+        }
+        affector                                GeometryRotator 
+        {
+            use_own_rotation                    true
+            rotation_axis                       0 1 0
+            rotation_speed                      dyn_random
+            {
+                min                             -3
+                max                             3
+            }
+        }
+    }
+}

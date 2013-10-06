@@ -1,0 +1,255 @@
+Known bugs:
+----------
+- http://www.fxpression.com/phpBB3/viewtopic.php?f=5&t=646&sid=b38488b2da24c14a00657a99efa1c1c8
+- http://www.fxpression.com/phpBB3/viewtopic.php?f=5&t=630
+- http://www.fxpression.com/phpBB3/viewtopic.php?f=6&t=609&sid=43e00300cfd3a17aea32f81491ccd203
+- Changing orientation of the ScenNode results in incorrect behaviour of the Vertex Emitter (shape is distorted).
+- 'Bug': Texture rotation for entities and boxes don´t behave as expected. With the current design it is difficult
+  to rotate the texures independently (for boxes only) and it is not possible to set a new rotationspeed if the
+  texture rotation has been activated.
+- Soft particles does not work with entities: For now, this is acceptable. 
+- With introduction of normal in the BoxRenderer and setting the dimensions in the emitter, causes disformation of the boxes. This option has not been
+  added because it involves more than a few lines of code.
+- If quota emitted techniques is set to 100, the actual number max. is only 50? Skipping one everytime in the loop?
+
+
+================================================================================================================
+Bugs: Release 1.5
+-----------------
+ :arrow: Plugin: Check in ParticleTechnique if mRenderer is 0 in _notifyStart/_notifyStop ([color=#00BF00]DONE[/color]).
+ :arrow: Plugin: Ribbontrail Renderer scene nodes do not inherit scale from their parent ([color=#00BF00]DONE[/color]).
+ :arrow: Plugin: Changed ParticleTechnique::setMaterialName() to prevent loading materials too early. See http://www.fxpression.com/phpBB3/viewtopic.php?f=5&t=550&sid=4e22d10049b76b4746520d775e41896b  ([color=#00BF00]DONE[/color]).
+ :arrow: Plugin: Destroy scenenodes in the EntityRenderer after a _destroyAll, to prevent that duplicate scenenodes (with the same name) are created. See also http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=545&sid=2685a1769571cb3bd4b1133c89bc2746 ([color=#00BF00]DONE[/color]).
+ :arrow: Plugin: Bugfix for stopFade and repeat-delay. See http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=539&sid=543ccb55b8e7910f334395244d7bc6fb ([color=#00BF00]DONE[/color]).
+ :arrow: Plugin: Memory leak after loading and unloading, without creating a particle system ([color=#00BF00]DONE[/color]).
+ :arrow: Plugin: Fixed crash when detaching from SceneNode and a technique contains emitted techniques (that still refer to the SceneNode). See also http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=540&sid=2685a1769571cb3bd4b1133c89bc2746 ([color=#00BF00]DONE[/color]).
+
+================================================================================================================
+Bugs: Release 1.4
+-----------------
+ :arrow: Plugin: OnRandomObserver::_processParticle() validates the random test for each particle, which should be done after one update. See http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=449 ([color=#00BF00]DONE[/color]).
+ :arrow: Plugin: PathFollower: Interpolation not correct. See http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=436  ([color=#00BF00]DONE[/color]).
+ :arrow: Plugin: Bug in OnQuotaObserver::_postProcessParticles(): Two times technique quota was calculated. See http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=446 ([color=#00BF00]DONE[/color]).
+ :arrow: Plugin: example_024 doesn't rotate correctly. See http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=443 ([color=#00BF00]DONE[/color]).
+ :arrow: Plugin: GeometryRotator: Deformation of boxes in boxrenderer, because of non-normalized rotation vector ([color=#00BF00]DONE[/color]).
+ :arrow: Plugin: ScaleAffector: Check width, height, depth > 0 before the scaling is applied is not enough (and causes negative width, height, depth). A validation whether the width, height, depth becomes negative is done after the scaling is applied ([color=#00BF00]DONE[/color]).
+ :arrow: Plugin: Problems with fast movemement. See http://www.fxpression.com/phpBB3/viewtopic.php?f=5&t=438 ([color=#00BF00]DONE[/color]).
+ :arrow: Plugin: Static initialization order 'fiasco'. See http://www.fxpression.com/phpBB3//viewtopic.php?f=5&t=466 for problem and http://www.parashift.com/c++-faq-lite/ctors.html#faq-10.14 for an explanation ([color=#00BF00]DONE[/color]).
+ :arrow: Plugin: Alias Technique bug: http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=461 ([color=#00BF00]DONE[/color]).
+ :arrow: Plugin: BeamRenderer bug: See http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=451 ([color=#00BF00]DONE[/color]).
+ :arrow: Plugin: Set texture coordinate in emitter with value > 0 while there is only 1 row and 1 column causes a crash. No validation added to the plugin itself (performance), but because of a change in ParticleRenderer::getNumTextureCoords(), the editor at least performs the validation ([color=#00BF00]DONE[/color]).
+ 
+================================================================================================================
+Bugs: Release 1.3.1
+-------------------
+- (DONE) ParticleEmitter::_initParticleTextureCoords() the rangerandom function doesn't reach the end texture coords.
+- (DONE) After the upgrade to pu 1.3 from 1.1, attaching particle systems to bones has a new problem. All particles emitted from the particle system just 
+  stay at the origin, despite any direction and velocity settings (http://www.fxpression.com/phpBB3/viewtopic.php?f=5&t=396)
+- (DONE) ForceField: Use class attributes so that settings can be changed although there is no factory yet. Problem is that changing settings 
+  (i.e. worldsize) of the ForceField crashes the application, because the factory was not created yet.
+- (DONE) keep_local on emitter level does not work.
+- (DONE) Bug in ParticleSystemManager::destroyAllParticleSystems. See http://www.fxpression.com/phpBB3/viewtopic.php?f=5&t=421
+- (DONE) Bug in InterparticleCollider: Fast rejection in _affect should use || instead of &&. 
+  See http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=424
+- (DONE) LineEmitter (and LineAffector): Writing the 'emitter Line' tokens to a script is incorrect. The name is added to the emitter type 
+  (i.e. LineEmitter0 instead of Line Emitter0). Bug was in ParticleScriptSerializer::_appendTabbedString()
+- (DONE) Incorrect Debug settings: See http://www.fxpression.com/phpBB3/viewtopic.php?f=5&t=412
+- (DONE) Randomizing funtion to calculate texture coordinate set index also takes to 'end' value into account (the 'end' value was never returned,
+  because of the truncation of the casting to uint16.
+
+================================================================================================================
+Bugs: Release 1.3
+-----------------
+- (DONE) Ogre::Double bug. See http://www.fxpression.com/phpBB3/posting.php?mode=reply&f=5&t=350
+- (DONE) Bug in Custom Memory Allocators: http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=349
+- (DONE) ParticleSystem::_notifyAttached: http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=348
+- (DONE) ParticlePool::_increaseParticleTechniquePool() bug? See http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=302
+- (DONE) ParticleTechnique::getNumberOfEmittedParticles(): Total number of particles in a technique not correct. 
+         Must also take emitted techniques into account
+- (DONE) LightRenderer: Emit light particle and set keep_local tot true in the technique doesn´t work the first time, but only after a 
+         stop-start (only if force emission is true)
+- (DONE) Example_021: Adding force_emitter to true causes a big explosion after the first start. After the second start it is ok 
+         (loading texture probably?)
+
+================================================================================================================
+Bugs: Release 1.2
+-----------------
+- (DONE) ColourAffector doesn't crash anymore if it is used and the colourmap is empty. Same with PositionEmitter.
+- (DONE) Soft particles don't work anymore with Ogre 1.7
+- (DONE) Use of 'duration' in an emitter that is included in an alias causes a parsing exception.
+- (DONE) Example_028: After a restart, there are some remaining particles emitted.
+- (DONE) ParticleTechnique::initVisualDataInPool() only loops through visual particles. This must be all particles.
+         (See also http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=306)
+- (DONE) If a spatial hashtable is used and the interval is set, the interval calculation was performed after each particle instead
+         after each (frame) update. This was incorrect (See also http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=304)
+- (DONE) 'Keep_local' property fix (See also http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=184)
+- (DONE) Fixed orientation of particle technique and emitter in the getDerivedPosition()
+         (See also http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=309)
+- (DONE) If the PhysX fluid is full, PU doesn't emit particles anymore.
+- (DONE) ParticleTechnique::_processMotion() moved in the main loop and only called for non-expired particles. 
+         See also  http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=305
+- (DONE) Bad programming style http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=307
+- (DONE) Scaling factor in SphereEmitter fixed.
+- (DONE) ParticleTechnique::_processParticles() doesn't skip particles in the loop anymore:
+         mPool.lockLatestParticle() function makes the pointer of the mPool jump wrong in the while loop. lockLatestParticle() is called 
+         when the particle is expired, and the pointer of the mPool is changed to a next particle. After that, when the mPool.getNext() 
+         function is called, it skips a particle.
+- (DONE) EntityRenderer, BillboardRenderer, LightRenderer: Don't use getDerivedPosition() of the particle system inside the 
+         _updateRenderQueue() loop (small performance gain).
+- (DONE) CollisionAvoidanceAffector::_unprepare() and InterParticleCollider::_unprepare: Set usage of spatial hashing to 'false'.
+- (DONE) ParticleSystem: LOD-level calculation was incorrect (see http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=298).
+- (DONE) PositionEmitter::_calculateRequestedParticles(): Fix calculation of requested particles in case not randomized; this is to 
+         prevent that more particles are requested than there are in the pool 
+         (see http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=311).
+- (DONE) BoxCollider, PlaneCollider and SphereCollider: Velocityscale is not taken into account (see http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=314)
+
+
+================================================================================================================
+Bugs: Release 1.1
+-----------------
+- ..\src\ParticleEmitters\ParticleUniverseMeshSurfaceEmitter.cpp(548, ParticleUniverse::MeshSurfaceEmitter::build): 24 bytes
+- BillboardRenderer::copyAttributesTo(), Also copy values of mBillboardSet.
+- Reattaching particle system with a billboardrenderer (same for other types) still not possible. See also
+  http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=179
+
+- (DONE) Initial velocity of a particle was not scaled.
+- (DONE) If two scripts have the same name the plugin crashes. Changed this into an exception and proceed.
+- (DONE) Extern ColliderTokens write the collider properties to the script in the ::write() functions.
+- (DONE) mParentTechnique was not initialised to 0 for Behavious and Observer.
+- (DONE) Parsing lod distances from system; the ParticleSystem::setLodDistances() always added an additional 0.0 float to the list of distances.
+- (DONE) Changed check on default value in case of writing a DynamicAttribute to a script.
+- (DONE) mNormal wasn't copied to the cloned CircleEmitter.
+- (DONE) If DynamicAttributeCurved has no controlpoints, an exception is throwed.
+- (DONE) Several miscellanious small bugfixes that where detected during development of the editor.
+
+Bugs: Release 1.01
+------------------
+- (DONE) After stoping by means of fadeStop, it cannot be started again. The mStopFadeSet needs to be set to false 
+  in start(). See also http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=155
+- (DONE) RibbonTrailRenderer::setVisible() works on the parent node instead of the Ribbontrail itself.
+  See http://www.fxpression.com/phpBB3/viewtopic.php?f=6&t=174&p=634#p634
+- (DONE) TextureAnimator doesn't work properly when time_step_animation has been set.
+  See http://www.fxpression.com/phpBB3/viewtopic.php?f=5&t=162&p=588#p588
+- (DONE) ParticleSystemManager::destroyAllParticleSystems(): The list is cleared after destruction of the Particle Systems.
+- (DONE) ParticleUniverseViewer: Recording is frames per second and not per minute.
+- (DONE) Detach from parent node is not propagated to underlying components (i.e. Billboard Renderer).
+  See http://www.fxpression.com/phpBB3/viewtopic.php?f=5&t=79&p=359#p359
+- (DONE) InterParticleCollider: When 2 particles are colliding Particle::PEF_COLLIDED isn't set in both particles.
+- (DONE) If a particle is freezed (by a DoFreeze handler) and expires, the freeze flag remains true. This means that when the particle
+  is pulled out of the pool and emitted again, it doesn’t move.
+- (DONE) ParticleScriptDeserializer::getGroupName() doesn't return a resource group name, but a resource name.
+- (DONE) Random crashes with AABB in negative coords. See http://www.fxpression.com/phpBB3/viewtopic.php?f=5&t=170
+  Was not a problem in PU.
+
+
+================================================================================================================
+Bugs: Release 1.0
+-----------------
+- (DONE) Changed 'particle->direction = ...' into 'particle->direction += ...' in Randomiser::_affect().
+- (DONE) Bounding box is not calculated properly in combination with emitted emitters. See:
+  http://www.fxpression.com/phpBB3/viewtopic.php?f=5&t=39
+  Solution: Not reproducable with the new changes applied in the bounding box code.
+- (DONE) Vortex affector cannot be applied to a Point emitter? Solution: Cannot reproduce it.
+- (DONE) Changed bug in AABB code. One of the corners was always 0,0,0
+- (DONE) PhysXBridge::onContactNotify sometimes results in a crash. Apparently, the userdata isn´t always a particle.
+- (DONE) ParticleSystem::setEnabled(false) now works as expected.
+- (DONE) PositionEmitter crashes randomly. See http://www.ogre3d.org/phpBB2/viewtopic.php?t=37426&start=100
+
+================================================================================================================
+Bugs: Release 0.8
+-----------------
+- (DONE) ParticleSystem. Scale description in the manual is corrupt.
+- (DONE) If iteration_interval is set, the techniques are updated only once. This is inaccurate if the framerate is 
+         really low.
+- (DONE) An alias that includes an emitter with a duration property will crash.
+- (DONE) A restarted technique doesn´t start with the proper mEnabled value.
+- (DONE) Name was not copied in cloned ParticleObservers.
+- (DONE) Potential infinite loop in LineAffector::_preProcessParticles, because mTimeStep is initialised with 0
+- (DONE) Regular particles emitted with keep_local set to true aren´t emitted in local space.
+- (DONE  (partly) If a framedrop occurs, some particles are affected heavily (a ScaleAffector causes a particle 
+         to expand rapidly). This is because the time since the last update becomes relatively high.
+- (DONE) Scaling of a Box in the box renderer doesn´t work.
+- (DONE) Particle system with ColourAffector causes flashes, which disappear after a while. Solution: The order 
+         of particle processing (which includes applying the affectors) and particle emission has been changed.
+         Also the initial colour can be set.
+
+================================================================================================================
+Bugs: Release 0.7
+-----------------
+- (DONE) Splashes in rainSystem_1 are not visible anymore. (solution was to modify the script, because the
+         splashes where expired too fast) 
+- (DONE) Creating an alias technique causes an exception when the plugin shuts down.
+
+================================================================================================================
+Bugs: Release 0.6
+-----------------
+- (DONE) Cannot attach more than 1 Extern (affector wrapper), because it is created without any name.
+- (DONE) Solved crash with MeshSurfaceEmitter
+
+================================================================================================================
+Bugs: Release 0.5
+-----------------
+
+- (DONE) FXpression particle system results in crash if restarted. This occurs with the Exploding mesh part. Problem didn't show up anymore.
+- (DONE) Restart of emitted particle system doesn´t work.
+- (DONE) Emission of particle systems with ribbontrail renderer doesn't show the ribbontrails.
+- (DONE) Emitted technique with a ribbontrail gives exception in _notifyAttached().
+
+================================================================================================================
+Bugs: Release 0.4
+-----------------
+
+================================================================================================================
+Bugs: Release 0.3
+-----------------
+
+================================================================================================================
+Bugs: Release 0.2
+-----------------
+- (DONE) EntityRenderer misuses particle width, height and depth for scaling. Use Mesh::getBounds() to determine the
+         width, height and depth of the box and relate it to the particle width, height and depth.
+- (DONE) Explosion system: Sometimes the projectiles aren't visible, depending on the camera position.
+
+
+================================================================================================================
+Bugs: Release 0.1
+-----------------
+- (DONE) Errors in case of emitted technique (see explosionSystem).
+         - The number of emitted techniques isn´t the same as the emission rate, but should be because of 
+           force_emission = true
+         - billboard_type = oriented_self doesn't present particles.
+- (DONE) Parsing GravityExtern with the gravity property doesn't work properly. The GravityAffectorTokens
+         should take care for the parsing, but the gravity isn't set properly.
+- (DONE) test_7 testing unsuccessful. Emitted emitters in combination with duration and repeat_delay doesn't work.
+         (it does work, but the time to live of the emitted emitters was incorrect)
+- (DONE) Parsing EntityEmitter gives exception.
+- (DONE) ParticleEmitter::_notifyStart() has an emtpy implementation. However, the duration and the force emission
+         attributes need to be reset, otherwise a restart fails.
+- (DONE) AlignAffector::copyAttributesTo is not called, but the ParticleAffector::copyAttributesTo is. Check whether
+         this is the case with the other affectors and emitters.
+- (DONE) ParticleUniverseContext: Parsing doesn't work anymore for LOD scripts. It trows exception during parsing (camera dependency?)
+- (DONE) General: _notifyCurrentCamera isn't called, because the AABB isn´t determined correctly.
+         SceneNode::_findVisibleObjects should call _notifyCurrentCamera, but doesn´t pass the first validation.
+- (DONE) ParticleTechnique: Emitted techniques in the rainSystem script jitter. All particles must be locked after the 
+         technique is expired.
+- (DONE) Bug: Destroying all externs results in exception. This is because the factory is deleted earlier than the
+         particle system manager.
+- (DONE) ParticleTechnique: camera dependency on width, height and depth doesn't work
+- (DONE) Releasemode doesn´t show anything.
+- (DONE) ParticleTechnique: If the DoForceEmission is used for emitting a technique, the rain emitter is also 
+                              not working properly anymore (the particles are no longer expired)
+- (DONE) rainSystem: One technique of the rainSystem is continuously emitting, while the time to live has been set by the 
+         emitter at 0.2. The other emitted techniques work fine.
+- (DONE) Ogre.log: Error during parsing in aliasses.pua, but alias still seems to be registered.
+- (DONE) ParticleTechnique: setEnabled is overridden, but not called.
+- (DONE) ParticlePool destructor called for no reason
+- (DONE) ParticlePool: Searching an emitter in the pool gives no results, while there are emitters created.
+- (DONE) ParticleTechnique: If a particle expires in _applyParticleActions, the iterator gets screwed up.
+- (DONE) ParticleUniverseBillboardRenderer: Initialisation of the renderer must be done in the technique. I.e. 
+         _notifyParticleQuota ommits, which results in 0 (zero) vertices when creating a buffer.
+- (DONE) MaterialToken::parse: Setting materialname doesn´t work. Somehow the argument is empty.
+- (DONE) ParticleUniverseEmitterFactory: Memory Leak after closing. Probably the pool of emitters isn't cleaned-up properly.
+- (DONE) General: Particles moving slowly. Implementation of particle speed needed.
+- (DONE) ParticleUniverseBillboardRendererTokens: 'center_right'  isn't parsed. The other tokens (i.e. ' top_left' )
+         are parsed fine (bug in Compiler2Pass where the order of registered keywords is important)
+

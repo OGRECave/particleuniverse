@@ -1,0 +1,50 @@
+system example_026
+{
+    category                                    Examples_21_30
+    technique 
+    {
+        visual_particle_quota                   1000
+        material                                ParticleUniverse/GreenBall
+        default_particle_width                  3
+        default_particle_height                 3
+        default_particle_depth                  3
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       3
+            angle                               0
+            time_to_live                        15
+            velocity                            dyn_random
+            {
+                min                             0.3
+                max                             9
+            }
+            position                            0 12 0
+            direction                           0 -1 0
+            box_width                           15
+            box_height                          0.03
+            box_depth                           0.03
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       3
+            angle                               0
+            time_to_live                        15
+            velocity                            dyn_random
+            {
+                min                             0.3
+                max                             9
+            }
+            position                            0 -12 0
+            box_width                           15
+            box_height                          0.03
+            box_depth                           0.03
+        }
+        affector                                InterParticleCollider 
+        {
+            adjustment                          0.9
+        }
+    }
+}

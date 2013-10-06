@@ -1,0 +1,66 @@
+system physXParticles
+{
+    category                                    PhysX
+    technique 
+    {
+        position                                0 30 0
+        visual_particle_quota                   1000
+        material                                ParticleUniverse/Crate
+        renderer                                Box
+        {
+        }
+        emitter                                 Box 
+        {
+            time_to_live                        10
+            mass                                3
+            velocity                            10
+            all_particle_dimensions             dyn_random
+            {
+                min                             0.3
+                max                             2.4
+            }
+            direction                           0 -1 0
+            start_orientation_range             0.2 1 2 3
+            end_orientation_range               3 3 2 1
+            box_width                           12
+            box_height                          12
+            box_depth                           12
+        }
+        observer                                OnCollision 
+        {
+            handler                             DoPlacementParticle 
+            {
+                force_emitter                   Sparks
+                number_of_particles             10
+            }
+        }
+        extern                                  PhysXActor 
+        {
+            actor_group                         100
+            physx_shape                         Box
+            {
+                angular_velocity                0 -3 0
+                angular_damping                 0.01
+            }
+        }
+    }
+    technique 
+    {
+        visual_particle_quota                   2500
+        emitted_emitter_quota                   100
+        material                                ParticleUniverse/Star
+        default_particle_width                  0.6
+        default_particle_height                 0.6
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point Sparks
+        {
+            emission_rate                       0
+            angle                               360
+            time_to_live                        0.4
+            velocity                            3.9
+            direction                           0 -1 0
+        }
+    }
+}

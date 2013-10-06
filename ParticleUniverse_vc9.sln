@@ -1,0 +1,45 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ParticleUniverse", "PlugIns\ParticleUniverse\scripts\ParticleUniverse_vc9.vcproj", "{1C741C2F-3278-43D8-9FD2-E631A64B70AE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AtlasImageTool", "Tools\AtlasImageTool\scripts\AtlasImageTool_vc9.vcproj", "{C74E7CA9-4CC7-4603-BB3A-6B86139DC2E6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sample_ParticleUniverseDemo", "Samples\ParticleUniverseDemo\misc\Sample_ParticleUniverseDemo.vcproj", "{C9F611C1-49DE-4E47-8EF4-3228FE609DD2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		MinSizeRel|Win32 = MinSizeRel|Win32
+		Release|Win32 = Release|Win32
+		RelWithDebInfo|Win32 = RelWithDebInfo|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C741C2F-3278-43D8-9FD2-E631A64B70AE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1C741C2F-3278-43D8-9FD2-E631A64B70AE}.Debug|Win32.Build.0 = Debug|Win32
+		{1C741C2F-3278-43D8-9FD2-E631A64B70AE}.MinSizeRel|Win32.ActiveCfg = Release|Win32
+		{1C741C2F-3278-43D8-9FD2-E631A64B70AE}.MinSizeRel|Win32.Build.0 = Release|Win32
+		{1C741C2F-3278-43D8-9FD2-E631A64B70AE}.Release|Win32.ActiveCfg = Release|Win32
+		{1C741C2F-3278-43D8-9FD2-E631A64B70AE}.Release|Win32.Build.0 = Release|Win32
+		{1C741C2F-3278-43D8-9FD2-E631A64B70AE}.RelWithDebInfo|Win32.ActiveCfg = Release|Win32
+		{1C741C2F-3278-43D8-9FD2-E631A64B70AE}.RelWithDebInfo|Win32.Build.0 = Release|Win32
+		{C74E7CA9-4CC7-4603-BB3A-6B86139DC2E6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C74E7CA9-4CC7-4603-BB3A-6B86139DC2E6}.Debug|Win32.Build.0 = Debug|Win32
+		{C74E7CA9-4CC7-4603-BB3A-6B86139DC2E6}.MinSizeRel|Win32.ActiveCfg = Release|Win32
+		{C74E7CA9-4CC7-4603-BB3A-6B86139DC2E6}.MinSizeRel|Win32.Build.0 = Release|Win32
+		{C74E7CA9-4CC7-4603-BB3A-6B86139DC2E6}.Release|Win32.ActiveCfg = Release|Win32
+		{C74E7CA9-4CC7-4603-BB3A-6B86139DC2E6}.Release|Win32.Build.0 = Release|Win32
+		{C74E7CA9-4CC7-4603-BB3A-6B86139DC2E6}.RelWithDebInfo|Win32.ActiveCfg = Release|Win32
+		{C74E7CA9-4CC7-4603-BB3A-6B86139DC2E6}.RelWithDebInfo|Win32.Build.0 = Release|Win32
+		{C9F611C1-49DE-4E47-8EF4-3228FE609DD2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C9F611C1-49DE-4E47-8EF4-3228FE609DD2}.Debug|Win32.Build.0 = Debug|Win32
+		{C9F611C1-49DE-4E47-8EF4-3228FE609DD2}.MinSizeRel|Win32.ActiveCfg = MinSizeRel|Win32
+		{C9F611C1-49DE-4E47-8EF4-3228FE609DD2}.MinSizeRel|Win32.Build.0 = MinSizeRel|Win32
+		{C9F611C1-49DE-4E47-8EF4-3228FE609DD2}.Release|Win32.ActiveCfg = Release|Win32
+		{C9F611C1-49DE-4E47-8EF4-3228FE609DD2}.Release|Win32.Build.0 = Release|Win32
+		{C9F611C1-49DE-4E47-8EF4-3228FE609DD2}.RelWithDebInfo|Win32.ActiveCfg = RelWithDebInfo|Win32
+		{C9F611C1-49DE-4E47-8EF4-3228FE609DD2}.RelWithDebInfo|Win32.Build.0 = RelWithDebInfo|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

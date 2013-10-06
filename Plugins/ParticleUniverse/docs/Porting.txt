@@ -1,0 +1,45 @@
+PORTING TO A NEW RENDERER:
+=========================
+Development of Particle Universe was started with Ogre 3D as the rendering engine. The Particle Universe code was strongly integrated with Ogre. 
+Besides the rendering code, a lot of other Ogre features were used. To make porting to another rendering engine a bit easier, the 
+Particle Universe code is abstracted from the Ogre code as much as possible. To prevent that al lot of classes have to be redesigned as a 
+Particle Universe version, the first step to the abstraction is to isolate the Ogre code and typedef or inherit it (where possible). This involves the 
+features that do not directly apply to rendering. It applies to the following header files:
+
+ParticleUniverseAlloc.h
+ParticleUniverseAny.h
+ParticleUniverseAxisAlignedBox.h
+ParticleUniverseCamera.h
+ParticleUniverseConfigFile.h
+ParticleUniverseController.h
+ParticleUniverseControllerManager.h
+ParticleUniverseException.h
+ParticleUniverseLogManager.h
+ParticleUniverseMath.h
+ParticleUniversePlane.h
+ParticleUniversePlugin.h (Deriving ParticleUniversePlugin from Ogre::Plugin is not strictly needed for the port)
+ParticleUniverseRadixSort.h
+ParticleUniverseScriptCompiler.h
+ParticleUniverseScriptDeserializer.h
+ParticleUniverseSimpleSpline.h
+OgreSingleton.h
+ParticleUniverseSimpleSphere.h
+ParticleUniverseTypes.h
+
+TODO: ScriptTranslatorManager ???????
+TODO: OgreImage.h
+TODO: OgreMovableObject.h?????
+TODO: OgreWorkQueue.h
+TODO: OgreNode.h?????
+TODO: OgreSceneManager.h????
+TODO: AtlasImageTool.cpp (remove Ogre.h)
+TODO: Ogre::NameValuePairList
+TODO: Ogre::uchar (ParticleUniverseNoise.cpp)
+TODO: ParticleUniverseDll.cpp (remove root and use another method to install/uninstall the plugin)
+
+In addition: 
+- all Renderer files must be redesigned so they fit the new renderer. There is no easy way to prevent this.
+- MeshSurfaceEmitter and VertexEmitter need to be adapted to the new rendersystem.
+- Externs that can be attached to a SceneNode.
+- Creation of depthmap in ParticleUniverseSystemManager.
+

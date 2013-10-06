@@ -1,0 +1,51 @@
+system example_030
+{
+    keep_local                                  true
+    category                                    Examples_21_30
+    technique 
+    {
+        visual_particle_quota                   2
+        emitted_emitter_quota                   0
+        emitted_technique_quota                 0
+        emitted_affector_quota                  0
+        emitted_system_quota                    0
+        material                                ParticleUniverse/Beam_1
+        default_particle_width                  0.9
+        renderer                                Beam
+        {
+            max_elements                        20
+            update_interval                     0.04
+            beam_deviation                      30
+            number_of_segments                  1
+        }
+        emitter                                 Point 
+        {
+            time_to_live                        200
+            position                            0 9 -45
+            direction                           0 0 0
+        }
+    }
+    technique 
+    {
+        visual_particle_quota                   2
+        emitted_emitter_quota                   0
+        emitted_technique_quota                 0
+        emitted_affector_quota                  0
+        material                                ParticleUniverse/Beam_2
+        default_particle_width                  0.3
+        renderer                                Beam
+        {
+            max_elements                        20
+            update_interval                     0.02
+            beam_deviation                      4.5
+            number_of_segments                  3
+            beam_jump_segments                  true
+        }
+        emitter                                 Point 
+        {
+            time_to_live                        200
+            position                            0 9 -45
+            direction                           0 0 0
+        }
+    }
+}

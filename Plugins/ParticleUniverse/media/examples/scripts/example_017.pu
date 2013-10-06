@@ -1,0 +1,52 @@
+system example_017
+{
+    category                                    Examples_11_20
+    technique 
+    {
+        visual_particle_quota                   4000
+        material                                ParticleUniverse/Star
+        default_particle_width                  3.6
+        default_particle_height                 3.6
+        spatial_hashtable_size                  3
+        spatial_hashing_update_interval         0.01
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       30
+            angle                               60
+            time_to_live                        10
+            velocity                            dyn_random
+            {
+                min                             1.2
+                max                             3
+            }
+            position                            0 36 0
+            direction                           1 -1 0
+            box_width                           24
+            box_height                          24
+            box_depth                           24
+        }
+        affector                                PlaneCollider 
+        {
+            position                            0 -6 0
+            friction                            0.5
+            bouncyness                          0.5
+            normal                              0 1 0
+        }
+        affector                                TextureRotator 
+        {
+            use_own_rotation                    true
+        }
+        affector                                LinearForce 
+        {
+            force_vector                        0 -36 0
+        }
+        affector                                InterParticleCollider 
+        {
+            adjustment                          0.024
+            collision_response                  angle_based_velocity
+        }
+    }
+}

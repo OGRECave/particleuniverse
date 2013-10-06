@@ -1,0 +1,34 @@
+system example_006
+{
+    category                                    Examples_1_10
+    technique 
+    {
+        position                                0 -6 0
+        visual_particle_quota                   10
+        material                                ParticleUniverse/Crate
+        default_particle_width                  2.4
+        default_particle_height                 2.4
+        default_particle_depth                  2.4
+        renderer                                Box
+        {
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       5
+            angle                               40
+            time_to_live                        10
+            velocity                            9
+            orientation                         0 0.33 0.33 0.33
+            box_width                           12
+            box_height                          12
+            box_depth                           0.3
+        }
+        affector                                LinearForce 
+        {
+            force_vector                        0 -3 0
+        }
+        affector                                Align 
+        {
+        }
+    }
+}

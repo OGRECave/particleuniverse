@@ -1,0 +1,49 @@
+system example_007
+{
+    category                                    Examples_1_10
+    technique 
+    {
+        visual_particle_quota                   1000
+        emitted_emitter_quota                   10
+        material                                ParticleUniverse/Flare
+        default_particle_width                  0.3
+        default_particle_height                 0.3
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       1000
+            velocity                            7.8
+            emits                               emitter_particle explosion
+            box_width                           3
+            box_height                          3
+            box_depth                           3
+        }
+        emitter                                 Point explosion
+        {
+            emission_rate                       1000
+            angle                               360
+            time_to_live                        2
+            velocity                            2.4
+            duration                            0.1
+            repeat_delay                        dyn_random
+            {
+                min                             2
+                max                             3
+            }
+            enabled                             false
+        }
+        affector                                LinearForce 
+        {
+            force_vector                        0 -3 0
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 1 0 1
+            time_colour                         0.5  1 0 0 1
+            time_colour                         0.9  0 0 1 1
+            time_colour                         1    0 0 0 1
+        }
+    }
+}

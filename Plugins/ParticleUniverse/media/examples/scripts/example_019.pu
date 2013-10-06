@@ -1,0 +1,63 @@
+system example_019
+{
+    category                                    Examples_11_20
+    technique 
+    {
+        visual_particle_quota                   5000
+        material                                ParticleUniverse/Star
+        default_particle_width                  0.3
+        default_particle_height                 0.3
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       1000
+            angle                               50
+            time_to_live                        15
+            velocity                            6
+            position                            3 9 3
+            direction                           -1 -2 -1
+            box_width                           9
+            box_height                          0.3
+            box_depth                           9
+        }
+        affector                                BoxCollider 
+        {
+            position                            0 3 0
+            bouncyness                          0.2
+            intersection                        box
+            box_width                           4.5
+            box_height                          3
+            box_depth                           4.5
+        }
+        affector                                Colour colourReset
+        {
+            enabled                             false
+            time_colour                         0    1 1 1 1
+        }
+        affector                                Colour colourCollision
+        {
+            enabled                             false
+            time_colour                         0    1 0 0 1
+        }
+        affector                                LinearForce 
+        {
+            force_vector                        0 -3 0
+        }
+        observer                                OnEmission 
+        {
+            handler                             DoAffector 
+            {
+                force_affector                  colourReset
+            }
+        }
+        observer                                OnCollision 
+        {
+            handler                             DoAffector 
+            {
+                force_affector                  colourCollision
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+system example_011
+{
+    category                                    Examples_11_20
+    technique 
+    {
+        material                                ParticleUniverse/GreenBall
+        default_particle_width                  0.06
+        default_particle_height                 0.06
+        renderer                                Billboard
+        {
+            billboard_type                      oriented_shape
+            billboard_origin                    bottom_center
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       dyn_curved_spline
+            {
+                control_point                   0 5
+                control_point                   2 20
+                control_point                   4 200
+                control_point                   6 30
+                control_point                   8 0
+            }
+            angle                               25
+            time_to_live                        dyn_random
+            {
+                min                             2
+                max                             6
+            }
+            velocity                            dyn_curved_spline
+            {
+                control_point                   0 3
+                control_point                   2 6
+                control_point                   4 12
+                control_point                   6 3
+                control_point                   8 0
+            }
+        }
+        affector                                LinearForce 
+        {
+            force_vector                        0 -3 0
+        }
+        affector                                Align 
+        {
+            resize                              true
+        }
+    }
+}
