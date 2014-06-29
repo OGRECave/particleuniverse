@@ -613,11 +613,13 @@ namespace ParticleUniverse
 	void ParticleSystem::destroyAllTechniques (void)
 	{
 		ParticleTechniqueIterator it;
-		for (it = mTechniques.begin(); it != mTechniques.end(); ++it)
+		while (mTechniques.size() > 0)
 		{
-			ParticleSystemManager::getSingletonPtr()->destroyTechnique(*it);
+			it = mTechniques.begin();
+			ParticleTechnique* tech = *it;
+			ParticleSystemManager::getSingletonPtr()->destroyTechnique(tech);
+			mTechniques.erase(it);
 		}
-		mTechniques.clear();
 	}
 	//-----------------------------------------------------------------------
 	const Real ParticleSystem::getFastForwardTime(void) const
