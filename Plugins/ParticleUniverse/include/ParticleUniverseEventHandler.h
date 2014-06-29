@@ -55,7 +55,7 @@ namespace ParticleUniverse
 			ParticleEventHandler(void) : 
 				IElement(),
 				mParentObserver(0),
-				mName(StringUtil::BLANK),
+				mName(""),
 				_mEventHandlerScale(Vector3::UNIT_SCALE)
 			{
 				mAliasType = AT_HANDLER;

@@ -30,6 +30,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "ParticleEmitters/ParticleUniverseMeshSurfaceEmitter.h"
 #include "OgreMeshManager.h"
 #include "OgreSubMesh.h"
+#include "OgreMesh.h"
 
 namespace ParticleUniverse
 {
@@ -416,7 +417,7 @@ namespace ParticleUniverse
 	//-----------------------------------------------------------------------
 	MeshSurfaceEmitter::MeshSurfaceEmitter(void) : 
 		ParticleEmitter(),
-		mMeshName(StringUtil::BLANK),
+		mMeshName(""),
 		mOrientation(Quaternion::IDENTITY),
 		mScale(DEFAULT_SCALE),
 		mDistribution(DEFAULT_DISTRIBUTION),
@@ -438,7 +439,7 @@ namespace ParticleUniverse
 	void MeshSurfaceEmitter::_prepare(ParticleTechnique* particleTechnique)
     {
 		// Build the data
-		if (mMeshName != StringUtil::BLANK)
+		if (mMeshName != "")
 		{
 			build();
 		}

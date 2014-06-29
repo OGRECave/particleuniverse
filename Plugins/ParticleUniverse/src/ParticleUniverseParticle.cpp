@@ -107,7 +107,7 @@ namespace ParticleUniverse
 	//-----------------------------------------------------------------------
 	ParticleBehaviour* Particle::getBehaviour(const String& behaviourType)
 	{
-		if (behaviourType == StringUtil::BLANK)
+		if (behaviourType == "")
 			return 0;
 
 		ParticleBehaviourIterator it;

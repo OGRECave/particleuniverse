@@ -30,7 +30,7 @@ int main(int argc, char* argv[])
 	AtlasImageTool atlasImageTool;
 	std::cout << "\n";
 	std::cout << "------------------------ Start creating atlas image! ------------------------\n";
-	Ogre::String configFileName = Ogre::StringUtil::BLANK;
+	Ogre::String configFileName = "";
 	if (argv[1])
 	{
 		configFileName = argv[1];
@@ -83,7 +83,7 @@ void AtlasImageTool::process (void)
 	Ogre::StringVector::iterator itAlpha;
 
 	itAlpha = mAlpha.begin();
-	if (mInputFrames.empty() || mInputFrames[0] == Ogre::StringUtil::BLANK)
+	if (mInputFrames.empty() || mInputFrames[0] == "")
 	{
 		// No Frames are assigned so just add them
 		for (itInputFileName = mInputFileNames.begin(); itInputFileName != mInputFileNames.end(); ++itInputFileName)
@@ -92,7 +92,7 @@ void AtlasImageTool::process (void)
 			Ogre::Image image;
 			image.load(imageFileName, "General");
 
-			if (itAlpha != mAlpha.end() && *itAlpha != Ogre::StringUtil::BLANK)
+			if (itAlpha != mAlpha.end() && *itAlpha != "")
 			{
 				Ogre::Real alpha = Ogre::StringConverter::parseReal(*itAlpha);
 				correctAlpha(image, alpha);
@@ -114,7 +114,7 @@ void AtlasImageTool::process (void)
 		nextImage.load(nextImageFileName, "General");
 		size_t frameCounter = 0;
 
-		if (!mAlpha.empty() && mAlpha[0] != Ogre::StringUtil::BLANK)
+		if (!mAlpha.empty() && mAlpha[0] != "")
 		{
 			itAlpha = mAlpha.begin();
 			Ogre::Real alpha = Ogre::StringConverter::parseReal(*itAlpha);
@@ -134,7 +134,7 @@ void AtlasImageTool::process (void)
 			nextImageFileName = *itInputFileName;
 			nextImage.load(nextImageFileName, "General");
 
-			if (itAlpha != mAlpha.end() && *itAlpha != Ogre::StringUtil::BLANK)
+			if (itAlpha != mAlpha.end() && *itAlpha != "")
 			{
 				Ogre::Real alpha = Ogre::StringConverter::parseReal(*itAlpha);
 				correctAlpha(nextImage, alpha);

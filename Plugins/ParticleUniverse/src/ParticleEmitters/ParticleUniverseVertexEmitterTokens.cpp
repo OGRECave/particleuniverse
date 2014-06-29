@@ -174,7 +174,7 @@ namespace ParticleUniverse
 			token[TOKEN_NUMBER_OF_SEGMENTS], StringConverter::toString(emitter->getSegments()), 12);
 		if (emitter->getIterations() != VertexEmitter::DEFAULT_ITERATIONS) serializer->writeLine(
 			token[TOKEN_ITERATIONS], StringConverter::toString(emitter->getIterations()), 12);
-		if (emitter->getMeshName() != StringUtil::BLANK) serializer->writeLine(
+		if (emitter->getMeshName() != "") serializer->writeLine(
 			token[TOKEN_MESH_NAME], emitter->getMeshName(), 12);
 
 		// Write the close bracket

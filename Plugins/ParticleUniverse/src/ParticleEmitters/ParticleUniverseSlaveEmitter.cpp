@@ -37,8 +37,8 @@ namespace ParticleUniverse
 		ParticleEmitter(),
 		TechniqueListener(),
 		mMasterParticle(0),
-		mMasterTechniqueName(StringUtil::BLANK),
-		mMasterEmitterName(StringUtil::BLANK),
+		mMasterTechniqueName(""),
+		mMasterEmitterName(""),
 		mMasterPosition(Vector3::ZERO),
 		mMasterDirection(Vector3::ZERO),
 		mMasterEmitterNameSet(false)

@@ -29,6 +29,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "ParticleRenderers/ParticleUniverseBeamRenderer.h"
 #include "OgreSceneManager.h"
+#include "OgreSceneNode.h"
 
 namespace ParticleUniverse
 {

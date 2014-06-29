@@ -31,6 +31,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "OgreTechnique.h"
 #include "OgreMaterialManager.h"
 #include "OgreHighLevelGpuProgramManager.h"
+#include "OgreHighLevelGpuProgram.h"
 
 namespace ParticleUniverse
 {

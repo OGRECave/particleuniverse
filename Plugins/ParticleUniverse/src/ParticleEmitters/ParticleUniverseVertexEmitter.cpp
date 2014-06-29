@@ -30,6 +30,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "ParticleEmitters/ParticleUniverseVertexEmitter.h"
 #include "OgreMeshManager.h"
 #include "OgreSubMesh.h"
+#include "OgreMesh.h"
 
 namespace ParticleUniverse
 {
@@ -54,7 +55,7 @@ namespace ParticleUniverse
 		mAllVerticesProcessed(false),
 		mSubMeshNumber(0),
 		mIterations(DEFAULT_ITERATIONS),
-		mMeshName(StringUtil::BLANK)
+		mMeshName("")
 	{
 		mBuffer.setNull();
 	}
@@ -209,7 +210,7 @@ namespace ParticleUniverse
 			return;
 		}
 
-		if (!mMesh && mMeshName != StringUtil::BLANK)
+		if (!mMesh && mMeshName != "")
 		{
 			_loadMesh();
 		}

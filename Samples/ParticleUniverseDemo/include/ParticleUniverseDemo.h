@@ -9,6 +9,7 @@
 #include <OgreCamera.h>
 #include <OgreRenderWindow.h>
 #include <OgreRoot.h>
+#include <OgreSceneNode.h>
 
 using namespace Ogre;
 

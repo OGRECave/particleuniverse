@@ -132,7 +132,11 @@ namespace ParticleUniverse
 			ParticleSystemWriter mParticleSystemWriter;
 			String mPath;
 			std::ofstream mScriptFile;
+#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR == 10 // Xalafu compatibility
+			Ogre::StringStream mScript;
+#else
 			StringUtil::StrStreamType mScript;
+#endif
 			String mScriptString;
 			short mTab[5];
 			short mIndentation;
