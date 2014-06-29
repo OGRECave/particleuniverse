@@ -147,12 +147,7 @@ namespace ParticleUniverse
 				if (section)
 					return section->sectionName;
 				else
-#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR == 10
 					return "";
-#else
-					return "";
-#endif
-					
 			}
 
 			/** 
