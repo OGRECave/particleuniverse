@@ -67,7 +67,7 @@ namespace ParticleUniverse
 		IElement(),
 		mParentTechnique(0),
 		mEmitsType(DEFAULT_EMITS),
-		mEmitsName(StringUtil::BLANK),
+		mEmitsName(""),
 		mRemainder(0),
 		mDurationRemain(0),
 		mRepeatDelayRemain(0),
@@ -90,7 +90,7 @@ namespace ParticleUniverse
 		mOriginalForceEmission(false),
 		mForceEmissionExecuted(false),
 		mOriginalForceEmissionExecuted(false),
-		mName(StringUtil::BLANK),
+		mName(""),
 		_mEmitterScale(Vector3::UNIT_SCALE),
 		mParticleColour(DEFAULT_COLOUR),
 		mParticleColourRangeStart(DEFAULT_START_COLOUR_RANGE),
@@ -418,7 +418,7 @@ namespace ParticleUniverse
 	void ParticleEmitter::setEmitsName(const String& emitsName)
 	{
 		mEmitsName = emitsName;
-		if (mEmitsName != StringUtil::BLANK)
+		if (mEmitsName != "")
 		{
 			mMarkedForEmission = true;
 			if (mParentTechnique)

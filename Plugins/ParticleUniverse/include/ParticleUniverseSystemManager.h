@@ -55,6 +55,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <OgreOverlayContainer.h>
 #include <OgreOverlay.h>
+#include <OgreRenderQueue.h>
 
 namespace ParticleUniverse
 {

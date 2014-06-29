@@ -39,7 +39,7 @@ class AtlasImageTool
 			mInputFrames(),
 			mAlpha(),
 			mOutputImage("atlas.jpg"),
-			mImagePath(Ogre::StringUtil::BLANK) {};
+			mImagePath("") {};
 		virtual ~AtlasImageTool(void){};
 
 		/** Read the configuration file.

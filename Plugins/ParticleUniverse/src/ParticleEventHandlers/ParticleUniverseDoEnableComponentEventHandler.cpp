@@ -34,7 +34,7 @@ namespace ParticleUniverse
 	//-----------------------------------------------------------------------
 	DoEnableComponentEventHandler::DoEnableComponentEventHandler(void) : 
 		ParticleEventHandler(),
-		mComponentName(StringUtil::BLANK),
+		mComponentName(""),
 		mComponentType(CT_EMITTER),
 		mComponentEnabled(true)
 	{

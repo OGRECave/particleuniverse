@@ -220,7 +220,7 @@ namespace ParticleUniverse
 		ParticleEventHandlerWriter::write(serializer, element);
 
 		// Write own attributes
-		if (eventHandler->getForceEmitterName() != StringUtil::BLANK) serializer->writeLine(
+		if (eventHandler->getForceEmitterName() != "") serializer->writeLine(
 			token[TOKEN_DOPLACE_FORCE_EMITTER], eventHandler->getForceEmitterName(), 16);
 		if (eventHandler->getNumberOfParticles() != DoPlacementParticleEventHandler::DEFAULT_NUMBER_OF_PARTICLES) serializer->writeLine(
 			token[TOKEN_DOPLACE_NUMBER_OF_PARTICLES], StringConverter::toString(eventHandler->getNumberOfParticles()), 16);

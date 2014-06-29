@@ -304,7 +304,7 @@ namespace ParticleUniverse
 			token[TOKEN_PS_SCALE], StringConverter::toString(system->getScale()), 4);
 		if (system->hasTightBoundingBox() != ParticleSystem::DEFAULT_TIGHT_BOUNDINGBOX) serializer->writeLine(
 			token[TOKEN_PS_TIGHT_BOUNDING_BOX], StringConverter::toString(system->hasTightBoundingBox()), 4);
-		if (system->getCategory() != StringUtil::BLANK) serializer->writeLine(
+		if (system->getCategory() != "") serializer->writeLine(
 			token[TOKEN_PS_CATEGORY], system->getCategory(), 4);
 
 		// Write lod distances

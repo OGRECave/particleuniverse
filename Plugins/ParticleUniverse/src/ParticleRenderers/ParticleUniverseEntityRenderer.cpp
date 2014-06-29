@@ -32,6 +32,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "OgreMeshManager.h"
 #include "OgreEntity.h"
 #include "OgreSubEntity.h"
+#include "OgreSceneNode.h"
+#include "OgreMesh.h"
+#include "OgreTechnique.h"
 
 namespace ParticleUniverse
 {
@@ -42,8 +45,8 @@ namespace ParticleUniverse
 	EntityRenderer::EntityRenderer(void) : 
 		ParticleRenderer(),
 		mQuota(0),
-		mMeshName(StringUtil::BLANK),
-		mEntityName(StringUtil::BLANK),
+		mMeshName(""),
+		mEntityName(""),
 		mBoxWidth(1.0),
 		mBoxHeight(1.0),
 		mBoxDepth(1.0),
