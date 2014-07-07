@@ -33,8 +33,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "OgreHighLevelGpuProgram.h"
 #include "OgreMaterialManager.h"
 #include "OgreHardwarePixelBuffer.h"
-#include "OgreOverlayManager.h"
-#include "OgreOverlayContainer.h"
 #include "OgreSceneNode.h"
 #include "OgreRenderTexture.h"
 #include "OgreViewport.h"
@@ -54,8 +52,6 @@ namespace ParticleUniverse
 		mDepthTechnique(0),
 		mDepthPass(0),
 		mDepthMapExtern(false),
-		mDebugPanel(0),
-		mDebugOverlay(0),
 		mAutoLoadMaterials(true),
 		mDepthScale(1.0f)
 	{

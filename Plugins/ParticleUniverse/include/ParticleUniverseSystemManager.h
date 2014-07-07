@@ -53,8 +53,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "OgreRenderTargetListener.h"
 #include "ParticleUniverseSingleton.h"
 
-#include <OgreOverlayContainer.h>
-#include <OgreOverlay.h>
 #include <OgreRenderQueue.h>
 
 namespace ParticleUniverse
@@ -201,8 +199,6 @@ namespace ParticleUniverse
 			Ogre::Technique* mDepthTechnique;
 			Ogre::Pass* mDepthPass;
 			bool mDepthMapExtern;
-			Ogre::OverlayContainer* mDebugPanel;
-			Ogre::Overlay* mDebugOverlay;
 			Real mDepthScale;
 
 			// Name of the last created template.

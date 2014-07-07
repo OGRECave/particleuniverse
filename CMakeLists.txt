@@ -25,12 +25,6 @@ list(APPEND LIBS ${OGRE_LIBRARIES})
 add_definitions(-DOGRE_PLUGIN_DIR_REL="${OGRE_PLUGIN_DIR_REL}")
 add_definitions(-DOGRE_PLUGIN_DIR_DBG="${OGRE_PLUGIN_DIR_DBG}")
 
-#OGRE-Overlay
-if (OGRE_VERSION_MAJOR GREATER 1 OR OGRE_VERSION_MINOR GREATER 8)
-	include_directories(${OGRE_Overlay_INCLUDE_DIRS})
-	list(APPEND LIBS ${OGRE_Overlay_LIBRARIES})
-endif()
-
 add_subdirectory(Plugins/ParticleUniverse)
 add_subdirectory(Samples/ParticleUniverseDemo)
 add_subdirectory(Tools/AtlasImageTool)
