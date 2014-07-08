@@ -90,9 +90,9 @@ namespace ParticleUniverse
 		ParticleEmitterWriter::write(serializer, element);
 
 		// Write own attributes
-		if (emitter->getMasterTechniqueName() != "") serializer->writeLine(
+		if (emitter->getMasterTechniqueName() != BLANK_STRING) serializer->writeLine(
 			token[TOKEN_MASTER_TECHNIQUE], emitter->getMasterTechniqueName(), 12);
-		if (emitter->getMasterEmitterName() != "") serializer->writeLine(
+		if (emitter->getMasterEmitterName() != BLANK_STRING) serializer->writeLine(
 			token[TOKEN_MASTER_EMITTER], emitter->getMasterEmitterName(), 12);
 
 		// Write the close bracket

@@ -57,7 +57,7 @@ namespace ParticleUniverse
 		public:
 			Extern(void) :
 				IElement(),
-				mExternType(""),
+				mExternType(BLANK_STRING),
 				mParentTechnique(0),
 				_mExternScale(Vector3::UNIT_SCALE){};
 			virtual ~Extern(void){};

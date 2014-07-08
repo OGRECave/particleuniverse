@@ -39,7 +39,7 @@ namespace ParticleUniverse
 	DoPlacementParticleEventHandler::DoPlacementParticleEventHandler(void) : 
 		ParticleEventHandler(),
 		TechniqueListener(),
-		mForceEmitterName(""),
+		mForceEmitterName(BLANK_STRING),
 		mNumberOfParticles(DEFAULT_NUMBER_OF_PARTICLES),
 		mFound(false),
 		mAlwaysUsePosition(true),

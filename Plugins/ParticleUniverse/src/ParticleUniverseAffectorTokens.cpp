@@ -234,7 +234,7 @@ namespace ParticleUniverse
 			token[TOKEN_AFFECTOR_SPECIALISATION], affectSpecialisation, 12);
 
 		const list<String> excludedEmitters = affector->getEmittersToExclude();
-		String emitterList = "";
+		String emitterList = BLANK_STRING;
 		if (!excludedEmitters.empty())
 		{
 			list<String>::const_iterator it;

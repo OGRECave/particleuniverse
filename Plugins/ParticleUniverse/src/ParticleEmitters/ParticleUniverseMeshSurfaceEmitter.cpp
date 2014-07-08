@@ -417,7 +417,7 @@ namespace ParticleUniverse
 	//-----------------------------------------------------------------------
 	MeshSurfaceEmitter::MeshSurfaceEmitter(void) : 
 		ParticleEmitter(),
-		mMeshName(""),
+		mMeshName(BLANK_STRING),
 		mOrientation(Quaternion::IDENTITY),
 		mScale(DEFAULT_SCALE),
 		mDistribution(DEFAULT_DISTRIBUTION),
@@ -439,7 +439,7 @@ namespace ParticleUniverse
 	void MeshSurfaceEmitter::_prepare(ParticleTechnique* particleTechnique)
     {
 		// Build the data
-		if (mMeshName != "")
+		if (mMeshName != BLANK_STRING)
 		{
 			build();
 		}

@@ -33,11 +33,11 @@ namespace ParticleUniverse
 {
 	//-----------------------------------------------------------------------
 	ParticleScriptSerializer::ParticleScriptSerializer(void) :
-		mPath(""),
+		mPath(BLANK_STRING),
 		mIndentation(0),
-		mKeyword(""),
+		mKeyword(BLANK_STRING),
 		mStreamToFile(true),
-		mScriptString("")
+		mScriptString(BLANK_STRING)
 	{
 		mTab[0] = 0;
 		mTab[1] = 48;
@@ -96,7 +96,7 @@ namespace ParticleUniverse
 		short indentation3,
 		short indentation4)
 	{
-		String base = "";
+		String base = BLANK_STRING;
 		base.reserve(256);
 		_appendTabbedString(0, base, s0, indentation0);
 		_appendTabbedString(1, base, s1, indentation1);
@@ -117,7 +117,7 @@ namespace ParticleUniverse
 		short indentation2,
 		short indentation3)
 	{
-		String base = "";
+		String base = BLANK_STRING;
 		_appendTabbedString(0, base, s0, indentation0);
 		_appendTabbedString(1, base, s1, indentation1);
 		_appendTabbedString(2, base, s2, indentation2);
@@ -134,7 +134,7 @@ namespace ParticleUniverse
 		short indentation1,
 		short indentation2)
 	{
-		String base = "";
+		String base = BLANK_STRING;
 		_appendTabbedString(0, base, s0, indentation0);
 		_appendTabbedString(1, base, s1, indentation1);
 		_appendTabbedString(2, base, s2, indentation2);
@@ -148,7 +148,7 @@ namespace ParticleUniverse
 		short indentation0,
 		short indentation1)
 	{
-		String base = "";
+		String base = BLANK_STRING;
 		_appendTabbedString(0, base, s0, indentation0);
 		_appendTabbedString(1, base, s1, indentation1);
 		base += "\n";
@@ -159,7 +159,7 @@ namespace ParticleUniverse
 		const String& s0,
 		short indentation0)
 	{
-		String base = "";
+		String base = BLANK_STRING;
 		_appendTabbedString(0, base, s0, indentation0);
 		base += "\n";
 		_stream(base);
@@ -189,12 +189,7 @@ namespace ParticleUniverse
 	//-----------------------------------------------------------------------
 	String ParticleScriptSerializer::toString(vector<Real> vector, bool applySqrt)
 	{
-#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR == 10 // Xalafu compatibility
-		Ogre::StringStream stream;
-#else
-		StringUtil::StrStreamType stream;
-#endif
-
+    StringStream stream;
 		if (!vector.empty())
 		{
 			for (size_t i = 0; i < vector.size(); ++i)

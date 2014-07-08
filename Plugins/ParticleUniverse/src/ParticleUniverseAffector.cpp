@@ -42,7 +42,7 @@ namespace ParticleUniverse
 		IAlias(),
 		IElement(),
 		mParentTechnique(0),
-		mName(""),
+		mName(BLANK_STRING),
 		_mAffectorScale(Vector3::UNIT_SCALE),
 		mAffectSpecialisation(ParticleAffector::AFSP_DEFAULT)
 	{

@@ -45,8 +45,8 @@ namespace ParticleUniverse
 	EntityRenderer::EntityRenderer(void) : 
 		ParticleRenderer(),
 		mQuota(0),
-		mMeshName(""),
-		mEntityName(""),
+		mMeshName(BLANK_STRING),
+		mEntityName(BLANK_STRING),
 		mBoxWidth(1.0),
 		mBoxHeight(1.0),
 		mBoxDepth(1.0),

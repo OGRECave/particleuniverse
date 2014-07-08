@@ -90,7 +90,7 @@ namespace ParticleUniverse
 		ParticleEventHandlerWriter::write(serializer, element);
 
 		// Write own attributes
-		if (eventHandler->getAffectorName() != "") serializer->writeLine(
+		if (eventHandler->getAffectorName() != BLANK_STRING) serializer->writeLine(
 			token[TOKEN_FORCE_AFFECTOR], eventHandler->getAffectorName(), 16);
 		if (eventHandler->getPrePost() != DoAffectorEventHandler::DEFAULT_PRE_POST) serializer->writeLine(
 			token[TOKEN_FORCE_AFFECTOR_PRE_POST], StringConverter::toString(eventHandler->getPrePost()), 16);

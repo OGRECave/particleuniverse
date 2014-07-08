@@ -116,7 +116,7 @@ namespace ParticleUniverse
 		ParticleRendererWriter::write(serializer, element);
 
 		// Write own attributes
-		if (renderer->getMeshName() != "") serializer->writeLine(
+		if (renderer->getMeshName() != BLANK_STRING) serializer->writeLine(
 			token[TOKEN_MESH_NAME], renderer->getMeshName(), 12);
 		if (renderer->getEntityOrientationType() != EntityRenderer::DEFAULT_ORIENTATION_TYPE)
 		{

@@ -59,7 +59,7 @@ namespace ParticleUniverse
 		IAlias(),
 		IElement(),
 		mParentSystem(0),
-		mName(""),
+		mName(BLANK_STRING),
 		mRenderer(0),
 		mVisualParticleQuota(DEFAULT_VISUAL_PARTICLE_QUOTA),
 		mEmittedEmitterQuota(DEFAULT_EMITTED_EMITTER_QUOTA),
@@ -75,7 +75,7 @@ namespace ParticleUniverse
 		mDefaultWidth(DEFAULT_WIDTH),
 		mDefaultHeight(DEFAULT_HEIGHT),
 		mDefaultDepth(DEFAULT_DEPTH),
-		mMaterialName(""),
+		mMaterialName(BLANK_STRING),
 		mLodIndex(DEFAULT_LOD_INDEX),
 		mCameraSquareDistance(0),
 		mPrepareExtern(false),
@@ -508,7 +508,7 @@ namespace ParticleUniverse
 	//-----------------------------------------------------------------------
 	ParticleEmitter* ParticleTechnique::createEmitter(const String& emitterType)
 	{
-		assert(emitterType != "" && "emitterType is empty!");
+		assert(emitterType != BLANK_STRING && "emitterType is empty!");
 		ParticleEmitter* emitter = ParticleSystemManager::getSingletonPtr()->createEmitter(emitterType);
 		addEmitter(emitter);
 		return emitter;
@@ -535,7 +535,7 @@ namespace ParticleUniverse
 			if (*it == emitter)
 			{
 				// Must be notified in case the emitter emits non-visual particles
-				notify = emitter->getEmitsName() != "";
+				notify = emitter->getEmitsName() != BLANK_STRING;
 
 				// Remove it
 				mEmitters.erase(it);
@@ -559,7 +559,7 @@ namespace ParticleUniverse
 	//-----------------------------------------------------------------------
 	ParticleEmitter* ParticleTechnique::getEmitter (const String& emitterName) const
 	{
-		if (emitterName == "")
+		if (emitterName == BLANK_STRING)
 			return 0;
 
 		ParticleEmitterIterator it;
@@ -607,7 +607,7 @@ namespace ParticleUniverse
 			if (*it == emitter)
 			{
 				// Must be notified in case the emitter emits non-visual particles
-				notify = emitter->getEmitsName() != "";
+				notify = emitter->getEmitsName() != BLANK_STRING;
 
 				// Detroy it
 				ParticleSystemManager::getSingletonPtr()->destroyEmitter(*it);
@@ -640,7 +640,7 @@ namespace ParticleUniverse
 	//-----------------------------------------------------------------------
 	ParticleAffector* ParticleTechnique::createAffector(const String& affectorType)
 	{
-		assert(affectorType != "" && "affectorType is empty!");
+		assert(affectorType != BLANK_STRING && "affectorType is empty!");
 		ParticleAffector* affector = ParticleSystemManager::getSingletonPtr()->createAffector(affectorType);
 		addAffector(affector);
 		return affector;
@@ -681,7 +681,7 @@ namespace ParticleUniverse
 	//-----------------------------------------------------------------------
 	ParticleAffector* ParticleTechnique::getAffector (const String& affectorName) const
 	{
-		if (affectorName == "")
+		if (affectorName == BLANK_STRING)
 			return 0;
 
 		ParticleAffectorIterator it;
@@ -754,7 +754,7 @@ namespace ParticleUniverse
 	//-----------------------------------------------------------------------
 	ParticleObserver* ParticleTechnique::createObserver(const String& observerType)
 	{
-		assert(observerType != "" && "observerType is empty!");
+		assert(observerType != BLANK_STRING && "observerType is empty!");
 		ParticleObserver* observer = ParticleSystemManager::getSingletonPtr()->createObserver(observerType);
 		addObserver(observer);
 		return observer;
@@ -795,7 +795,7 @@ namespace ParticleUniverse
 	//-----------------------------------------------------------------------
 	ParticleObserver* ParticleTechnique::getObserver (const String& observerName) const
 	{
-		if (observerName == "")
+		if (observerName == BLANK_STRING)
 			return 0;
 
 		ParticleObserverIterator it;
@@ -861,7 +861,7 @@ namespace ParticleUniverse
 			destroyRenderer();
 		}
 
-		if (rendererType != "")
+		if (rendererType != BLANK_STRING)
 		{
 			mRenderer = ParticleSystemManager::getSingletonPtr()->createRenderer(rendererType);
 			mRenderer->setParentTechnique(this);
@@ -937,7 +937,7 @@ namespace ParticleUniverse
 	//-----------------------------------------------------------------------
 	ParticleBehaviour* ParticleTechnique::_getBehaviourTemplate (const String& behaviourType) const
 	{
-		if (behaviourType == "")
+		if (behaviourType == BLANK_STRING)
 			return 0;
 
 		ParticleBehaviourIterator it;
@@ -988,7 +988,7 @@ namespace ParticleUniverse
 	//-----------------------------------------------------------------------
 	Extern* ParticleTechnique::createExtern (const String& externType)
 	{
-		assert(externType != "" && "externType is empty!");
+		assert(externType != BLANK_STRING && "externType is empty!");
 		Extern* externObject = ParticleSystemManager::getSingletonPtr()->createExtern(externType);
 		addExtern(externObject);
 		return externObject;
@@ -1030,7 +1030,7 @@ namespace ParticleUniverse
 	//-----------------------------------------------------------------------
 	Extern* ParticleTechnique::getExtern (const String& externName) const
 	{
-		if (externName == "")
+		if (externName == BLANK_STRING)
 			return 0;
 
 		ExternIterator it;
@@ -1048,7 +1048,7 @@ namespace ParticleUniverse
 	//-----------------------------------------------------------------------
 	Extern* ParticleTechnique::getExternType (const String& externType) const
 	{
-		if (externType == "")
+		if (externType == BLANK_STRING)
 			return 0;
 
 		ExternIterator it;

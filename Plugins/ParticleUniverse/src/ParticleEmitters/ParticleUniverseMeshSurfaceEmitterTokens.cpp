@@ -139,7 +139,7 @@ namespace ParticleUniverse
 		ParticleEmitterWriter::write(serializer, element);
 
 		// Write own attributes
-		if (emitter->getMeshName() != "") serializer->writeLine(
+		if (emitter->getMeshName() != BLANK_STRING) serializer->writeLine(
 			token[TOKEN_MESH_NAME], emitter->getMeshName(), 12);
 		if (emitter->getScale() != MeshSurfaceEmitter::DEFAULT_SCALE) serializer->writeLine(
 			token[TOKEN_MESH_SURFACE_MESH_SCALE], StringConverter::toString(emitter->getScale()), 12);

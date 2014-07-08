@@ -56,6 +56,14 @@ namespace ParticleUniverse
 	typedef Ogre::StringConverter StringConverter;
 	typedef Ogre::StringVector StringVector;
 	typedef Ogre::StringVectorPtr StringVectorPtr;
+#if OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR < 10
+	typedef StringUtil::StrStreamType StringStream;
+#else
+	typedef Ogre::StringStream StringStream;
+#endif
+
+	// Constants
+	const String BLANK_STRING = "";
 
 	// Typedef's for specific 'Ogre' containers.
 	// vector container
