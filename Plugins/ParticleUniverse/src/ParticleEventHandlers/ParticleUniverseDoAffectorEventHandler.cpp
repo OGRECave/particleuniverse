@@ -38,7 +38,7 @@ namespace ParticleUniverse
 	DoAffectorEventHandler::DoAffectorEventHandler(void) : 
 		ParticleEventHandler(),
 		mPrePost(DEFAULT_PRE_POST),
-		mAffectorName("")
+		mAffectorName(BLANK_STRING)
 	{
 	}
 	//-----------------------------------------------------------------------

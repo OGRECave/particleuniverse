@@ -101,7 +101,7 @@ namespace ParticleUniverse
 		mPauseTime(0.0f),
 		mPauseTimeSet(false),
 		mPauseTimeElapsed(0.0f),
-		mTemplateName(""),
+		mTemplateName(BLANK_STRING),
 		mStopFadeSet(false),
 		mLatestOrientation(Quaternion::IDENTITY),
 		mRotationOffset(Quaternion::IDENTITY),
@@ -152,7 +152,7 @@ namespace ParticleUniverse
 		mPauseTime(0.0f),
 		mPauseTimeSet(false),
 		mPauseTimeElapsed(0.0f),
-		mTemplateName(""),
+		mTemplateName(BLANK_STRING),
 		mStopFadeSet(false),
 		mLatestOrientation(Quaternion::IDENTITY),
 		mRotationOffset(Quaternion::IDENTITY),
@@ -566,7 +566,7 @@ namespace ParticleUniverse
 	//-----------------------------------------------------------------------
 	ParticleTechnique* ParticleSystem::getTechnique (const String& techniqueName) const
 	{
-		if (techniqueName == "")
+		if (techniqueName == BLANK_STRING)
 			return 0;
 
 		ParticleTechniqueConstIterator it;

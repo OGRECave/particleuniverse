@@ -39,8 +39,8 @@ namespace ParticleUniverse
 		Extern(),
 		mEntity(0),
 		mEntitySet(false),
-		mMeshName(""),
-		mEntityName(""),
+		mMeshName(BLANK_STRING),
+		mEntityName(BLANK_STRING),
 		mMaterialName("BaseWhite"),
 		mMaterialNameSet(false),
 		mScale(Vector3::UNIT_SCALE),
@@ -163,7 +163,7 @@ namespace ParticleUniverse
 			{
 				sceneManager->destroyEntity(mEntityName);
 				mEntity = 0;
-				mEntityName = "";
+				mEntityName = BLANK_STRING;
 			}
 		}
 	}

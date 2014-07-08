@@ -49,7 +49,7 @@ namespace ParticleUniverse
 	LightRenderer::LightRenderer(void) : 
 		ParticleRenderer(),
 		mLightType(DEFAULT_LIGHT_TYPE),
-		mLightName(""),
+		mLightName(BLANK_STRING),
 		mQuota(0),
 		mSpecularColour(DEFAULT_SPECULAR),
 		mAttenuationRange(DEFAULT_ATT_RANGE),

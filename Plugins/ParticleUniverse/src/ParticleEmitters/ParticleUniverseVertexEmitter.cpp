@@ -55,7 +55,7 @@ namespace ParticleUniverse
 		mAllVerticesProcessed(false),
 		mSubMeshNumber(0),
 		mIterations(DEFAULT_ITERATIONS),
-		mMeshName("")
+		mMeshName(BLANK_STRING)
 	{
 		mBuffer.setNull();
 	}
@@ -210,7 +210,7 @@ namespace ParticleUniverse
 			return;
 		}
 
-		if (!mMesh && mMeshName != "")
+		if (!mMesh && mMeshName != BLANK_STRING)
 		{
 			_loadMesh();
 		}

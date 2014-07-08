@@ -38,7 +38,7 @@ namespace ParticleUniverse
 			String elementName;
 			String sectionName;
 
-			Section(void) : elementName(""), sectionName("") {};
+			Section(void) : elementName(BLANK_STRING), sectionName(BLANK_STRING) {};
 			virtual ~Section(void) {};
 	};
 

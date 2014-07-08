@@ -48,7 +48,7 @@ namespace ParticleUniverse
 		mObserve(true),
 		mParticleTypeToObserve(DEFAULT_PARTICLE_TYPE),
 		mParticleTypeToObserveSet(false),
-		mName(""),
+		mName(BLANK_STRING),
 		_mObserverScale(Vector3::UNIT_SCALE),
 		mObserverInterval(DEFAULT_INTERVAL),
 		mObserverIntervalRemainder(0.0),
@@ -135,7 +135,7 @@ namespace ParticleUniverse
 	//-----------------------------------------------------------------------
 	ParticleEventHandler* ParticleObserver::createEventHandler(const String& eventHandlerType)
 	{
-		assert(eventHandlerType != "" && "eventHandlerType is empty!");
+		assert(eventHandlerType != BLANK_STRING && "eventHandlerType is empty!");
 		ParticleEventHandler* eventHandler = ParticleSystemManager::getSingletonPtr()->createEventHandler(eventHandlerType);
 		addEventHandler(eventHandler);
 		return eventHandler;
@@ -174,7 +174,7 @@ namespace ParticleUniverse
 	//-----------------------------------------------------------------------
 	ParticleEventHandler* ParticleObserver::getEventHandler (const String& eventHandlerName) const
 	{
-		if (eventHandlerName == "")
+		if (eventHandlerName == BLANK_STRING)
 			return 0;
 
 		ParticleEventHandlerConstIterator it;

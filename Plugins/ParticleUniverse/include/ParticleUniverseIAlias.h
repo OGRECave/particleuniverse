@@ -51,7 +51,7 @@ namespace ParticleUniverse
 			};
 
 			IAlias(void) : 
-				mAliasName(""),
+				mAliasName(BLANK_STRING),
 				mAliasType(AT_UNDEFINED) {};
 			virtual ~IAlias(void) {};
 

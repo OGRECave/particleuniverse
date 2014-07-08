@@ -33,8 +33,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "OgreHighLevelGpuProgram.h"
 #include "OgreMaterialManager.h"
 #include "OgreHardwarePixelBuffer.h"
-#include "OgreOverlayManager.h"
-#include "OgreOverlayContainer.h"
 #include "OgreSceneNode.h"
 #include "OgreRenderTexture.h"
 #include "OgreViewport.h"
@@ -45,17 +43,15 @@ template<> ParticleUniverse::ParticleSystemManager* Ogre::Singleton<ParticleUniv
 namespace ParticleUniverse
 {
 	ParticleSystemManager::ParticleSystemManager (void) :
-		mDepthTextureName(""),
-		mDepthMaterialName(""),
-		mDepthVertexName(""),
-		mDepthFragmentName(""),
-		mLastCreatedParticleSystemTemplateName(""),
+		mDepthTextureName(BLANK_STRING),
+		mDepthMaterialName(BLANK_STRING),
+		mDepthVertexName(BLANK_STRING),
+		mDepthFragmentName(BLANK_STRING),
+		mLastCreatedParticleSystemTemplateName(BLANK_STRING),
 		mDepthMap(0),
 		mDepthTechnique(0),
 		mDepthPass(0),
 		mDepthMapExtern(false),
-		mDebugPanel(0),
-		mDebugOverlay(0),
 		mAutoLoadMaterials(true),
 		mDepthScale(1.0f)
 	{
@@ -913,7 +909,7 @@ namespace ParticleUniverse
 	//-----------------------------------------------------------------------
 	ParticleSystem* ParticleSystemManager::getParticleSystem(const String& name)
 	{
-		if (name == "")
+		if (name == BLANK_STRING)
 			return 0;
 
 		ParticleSystemMap::iterator i = mParticleSystems.find(name);
@@ -1325,7 +1321,7 @@ namespace ParticleUniverse
 	//-----------------------------------------------------------------------
 	void ParticleSystemManager::resetExternDepthTextureName (void)
 	{
-		mDepthTextureName = "";
+		mDepthTextureName = BLANK_STRING;
 		mDepthMapExtern = false;
 	}
 	//-----------------------------------------------------------------------
