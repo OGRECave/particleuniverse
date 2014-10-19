@@ -15,6 +15,9 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/CMake/")
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 
+# Append _d for debug builds
+set(CMAKE_DEBUG_POSTFIX "_d")
+
 # Add the libraries
 # OGRE
 find_package(OGRE REQUIRED)
@@ -26,6 +29,12 @@ add_definitions(-DOGRE_PLUGIN_DIR_REL="${OGRE_PLUGIN_DIR_REL}")
 add_definitions(-DOGRE_PLUGIN_DIR_DBG="${OGRE_PLUGIN_DIR_DBG}")
 
 add_subdirectory(Plugins/ParticleUniverse)
-add_subdirectory(Samples/ParticleUniverseDemo)
-add_subdirectory(Tools/AtlasImageTool)
+
+if(PU_BUILD_SAMPLES)
+  add_subdirectory(Samples/ParticleUniverseDemo)
+endif()
+
+if(PU_BUILD_TOOLS)
+  add_subdirectory(Tools/AtlasImageTool)
+endif()
 

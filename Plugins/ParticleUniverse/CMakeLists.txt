@@ -17,10 +17,8 @@ if(NOT DEFINED BUILD_SHARED_LIBS)
 	set(BUILD_SHARED_LIBS ON)
 endif()
 
-# Add export flag when building as a shared library
-if(BUILD_SHARED_LIBS)
-	add_definitions(-DPARTICLE_UNIVERSE_EXPORTS)
-endif()
+# When building, we want to export
+add_definitions(-DPARTICLE_UNIVERSE_EXPORTS)
 
 # Add library
 add_library(${PARTICLEUNIVERSE_PLUGIN_NAME} ${PROJECT_SOURCES})
