@@ -30,6 +30,10 @@ add_definitions(-DOGRE_PLUGIN_DIR_DBG="${OGRE_PLUGIN_DIR_DBG}")
 
 add_subdirectory(Plugins/ParticleUniverse)
 
+# Samples and tools
+set(PU_BUILD_SAMPLES ON CACHE BOOL "Build plugin samples")
+set(PU_BUILD_TOOLS ON CACHE BOOL "Build tools")
+
 if(PU_BUILD_SAMPLES)
   add_subdirectory(Samples/ParticleUniverseDemo)
 endif()
