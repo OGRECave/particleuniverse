@@ -908,6 +908,7 @@ namespace ParticleUniverse
 			calulateRotationOffset();
 
 			// Determine whether timeElapsed or iterationInterval is used
+			bool particlesLeftTouched = false;
 			size_t particlesLeft = 0;
 			if (mIterationIntervalSet)
 			{
@@ -917,6 +918,7 @@ namespace ParticleUniverse
 				{
 					// Update all techniques using the iteration interval value
 					particlesLeft = _updateTechniques(mIterationInterval);
+					particlesLeftTouched = true;
 					mTimeSinceLastUpdate -= mIterationInterval;
 				}
 			}
@@ -924,9 +926,12 @@ namespace ParticleUniverse
 			{
 				// Update all techniques using the time elapsed (since last frame)
 				particlesLeft = _updateTechniques(timeElapsed);
+				particlesLeftTouched = true;
 			}
 
 			// Handle situation when no particles are emitted anymore
+			if (particlesLeftTouched)
+			{
 			if (particlesLeft == 0)
 			{
 				if (mAtLeastOneParticleEmitted)
@@ -951,6 +956,7 @@ namespace ParticleUniverse
 				// At least one particle was emitted, so if 'particlesLef' becomes 0, it concerns the period after the last emitted particle.
 				mAtLeastOneParticleEmitted = true;
 			}
+		}
 		}
 		else if (mState == ParticleSystem::PSS_PREPARED)
 		{
