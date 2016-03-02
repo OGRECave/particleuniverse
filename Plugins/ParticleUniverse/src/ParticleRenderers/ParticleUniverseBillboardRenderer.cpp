@@ -66,6 +66,8 @@ namespace ParticleUniverse
 		if (!technique || mRendererInitialised)
 			return;
 
+		// By default, make this transparent to query requests
+		mBillboardSet->setQueryFlags(0);
 		_notifyParticleQuota(technique->getVisualParticleQuota());
 
 		// Notify attached, but only if the parentnode exists
