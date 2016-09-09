@@ -3,24 +3,41 @@
 
 #include "ParticleUniverseSystemManager.h"
 
-#include "BaseApplication.h"
-
 #include <OgreSceneManager.h>
 #include <OgreCamera.h>
 #include <OgreRenderWindow.h>
 #include <OgreRoot.h>
 #include <OgreSceneNode.h>
+#include <OgreApplicationContext.h>
+
 
 using namespace Ogre;
 
-class Sample_ParticleUniverseDemo : public BaseApplication
+class Sample_ParticleUniverseDemo : public OgreBites::ApplicationContext
 {
-protected:
+public:
 	Ogre::SceneManager* mSceneMgr;
 	Ogre::Viewport* mViewport;
 	Ogre::Camera* mCamera;
 
-/** -----------------------------------------------------------------------
+	// ApplicationContext Boilerplate
+	Sample_ParticleUniverseDemo() : OgreBites::ApplicationContext("PU Demo") {
+	}
+
+	void createRoot() {
+	    OgreBites::ApplicationContext::createRoot();
+	    Root* root = getRoot();
+	    root->loadPlugin(OGRE_PLUGIN_DIR_REL + std::string("/RenderSystem_GL"));
+	    root->loadPlugin("./Plugin_ParticleUniverse");
+	}
+
+	bool frameStarted(const Ogre::FrameEvent& evt) {
+	    captureInputDevices();
+	    return true;
+	}
+
+
+	/** -----------------------------------------------------------------------
 	Create some particle systems
 	-----------------------------------------------------------------------*/
 	void createScene()
@@ -69,28 +86,32 @@ protected:
 		mCamera->lookAt(mSceneMgr->getRootSceneNode()->_getDerivedPosition());
 	}
 
-	virtual bool frameRenderingQueued (const Ogre::FrameEvent& evt)
+	bool frameRenderingQueued (const Ogre::FrameEvent& evt)
 	{
 		Ogre::Vector3 movementVector (0,0,0);
-		if (mOISKeyboard->isKeyDown(OIS::KC_W))
+
+		const Ogre::uint8* state = SDL_GetKeyboardState(NULL);
+
+		if (state[SDL_SCANCODE_W])
 			movementVector.z = -1;
-		else if (mOISKeyboard->isKeyDown(OIS::KC_S))
+		else if (state[SDL_SCANCODE_S])
 			movementVector.z = 1;
-		if (mOISKeyboard->isKeyDown(OIS::KC_A))
+		if (state[SDL_SCANCODE_A])
 			movementVector.x = -1;
-		else if (mOISKeyboard->isKeyDown(OIS::KC_D))
+		else if (state[SDL_SCANCODE_D])
 			movementVector.x = 1;
+
 		movementVector *= evt.timeSinceLastFrame * 200;
 
 		mCamera->moveRelative(movementVector);
 
-		return BaseApplication::frameRenderingQueued(evt);
+		return true;
 	}
 
-	virtual bool mouseMoved(const OIS::MouseEvent& event)
+	bool mouseMoved(const OgreBites::MouseMotionEvent& event)
 	{
-		mCamera->yaw(Ogre::Radian(-event.state.X.rel)*0.01);
-		mCamera->pitch(Ogre::Radian(-event.state.Y.rel)*0.01);
+		mCamera->yaw(Ogre::Radian(-event.xrel)*0.01);
+		mCamera->pitch(Ogre::Radian(-event.yrel)*0.01);
 
 		return true;
 	}
@@ -107,11 +128,11 @@ protected:
 /** -----------------------------------------------------------------------
 	1. Pause (F9 key) and resume (F10 key)
 	-----------------------------------------------------------------------*/
-	virtual bool keyPressed(const OIS::KeyEvent& evt)
+	bool keyPressed(const OgreBites::KeyboardEvent& evt)
 	{
-		if (evt.key == OIS::KC_ESCAPE)
+		if (evt.keysym.scancode == SDL_SCANCODE_ESCAPE)
 		{
-			mShutdown = true;
+			getRoot()->queueEndRendering();
 			return true;
 		}
 		
@@ -119,7 +140,7 @@ protected:
 		ParticleUniverse::ParticleSystem* pSys1 = pManager->getParticleSystem("pSys1");
 		ParticleUniverse::ParticleSystem* pSys2 = pManager->getParticleSystem("pSys2");
 
-		if (evt.key == OIS::KC_PAUSE)
+		if (evt.keysym.scancode == SDL_SCANCODE_F9)
 		{
 			// Get the particle systems by name and pause them
 			if (pSys1)
@@ -131,7 +152,7 @@ protected:
 				pSys2->pause();
 			}
 		}
-		else if (evt.key == OIS::KC_HOME)
+		else if (evt.keysym.scancode == SDL_SCANCODE_F10)
 		{
 			// Get the particle systems by name and start them again
 			if (pSys1)

@@ -7,12 +7,12 @@ file(GLOB PROJECT_SOURCES
 	src/*.cpp
 )
 
-# OIS
-find_package(OIS REQUIRED)
-include_directories(${OIS_INCLUDE_DIRS})
+# Input
+find_package(SDL2 REQUIRED)
+include_directories(${OGRE_Bites_INCLUDE_DIR} ${SDL2_INCLUDE_DIRS})
 
 add_executable(${PARTICLEUNIVERSE_DEMO_NAME} ${PROJECT_SOURCES})
-target_link_libraries(${PARTICLEUNIVERSE_DEMO_NAME} ${LIBS} ${OIS_LIBRARIES} ${PARTICLEUNIVERSE_LIBRARIES})
+target_link_libraries(${PARTICLEUNIVERSE_DEMO_NAME} ${LIBS} SDL2 ${PARTICLEUNIVERSE_LIBRARIES} ${OGRE_Bites_LIBRARIES})
 
 # Copy resources.cfg to the build folder
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/resources.cfg ${ParticleUniverse_BINARY_DIR}/resources.cfg COPYONLY)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/resources.cfg ${ParticleUniverse_BINARY_DIR}/resources.cfg)
