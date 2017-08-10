@@ -29,6 +29,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "ParticleEmitters/ParticleUniverseSphereSurfaceEmitter.h"
 #include "ParticleEmitters/ParticleUniverseSphereSurfaceEmitterTokens.h"
+#include "ParticleUniverseScriptDeserializerTokens.h"
 
 namespace ParticleUniverse
 {

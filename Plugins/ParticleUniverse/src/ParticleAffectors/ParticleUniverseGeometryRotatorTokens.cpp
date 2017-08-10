@@ -29,6 +29,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "ParticleAffectors/ParticleUniverseGeometryRotator.h"
 #include "ParticleAffectors/ParticleUniverseGeometryRotatorTokens.h"
+#include "ParticleUniverseScriptDeserializerTokens.h"
 
 namespace ParticleUniverse
 {

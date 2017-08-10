@@ -29,6 +29,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "ParticleRenderers/ParticleUniverseRibbonTrailRendererTokens.h"
 #include "ParticleRenderers/ParticleUniverseRibbonTrailRenderer.h"
+#include "ParticleUniverseScriptDeserializerTokens.h"
 
 namespace ParticleUniverse
 {

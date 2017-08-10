@@ -30,6 +30,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "Externs/ParticleUniverseBoxColliderExtern.h"
 #include "Externs/ParticleUniverseBoxColliderExternTokens.h"
 #include "ParticleAffectors/ParticleUniverseBaseColliderTokens.h"
+#include "ParticleUniverseScriptDeserializerTokens.h"
 
 namespace ParticleUniverse
 {

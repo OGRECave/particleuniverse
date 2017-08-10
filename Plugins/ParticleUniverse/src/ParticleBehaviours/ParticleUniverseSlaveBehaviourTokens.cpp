@@ -29,6 +29,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "ParticleBehaviours/ParticleUniverseSlaveBehaviour.h"
 #include "ParticleBehaviours/ParticleUniverseSlaveBehaviourTokens.h"
+#include "ParticleUniverseScriptDeserializerTokens.h"
 
 namespace ParticleUniverse
 {

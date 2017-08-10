@@ -380,7 +380,7 @@ namespace ParticleUniverse
 
 			/** Function to suppress notification of an emission change.
 			@remarks
-				This function is typically used when notification isn´t needed anymore. An example for this 
+				This function is typically used when notification isnï¿½t needed anymore. An example for this 
 				situation is for instance in case the ParticleTechnique is destroyed, which also causes the
 				emitters to be destroyed.
 	        */
@@ -463,7 +463,7 @@ namespace ParticleUniverse
 			bool makeParticleLocal(Particle* particle);
 
 			/** Is 'true' when the bounding box is wrapped tight around the particle system or 'false' when the
-				bounding box is only increasing and doesn´t shrink when the particle system shrinks.
+				bounding box is only increasing and doesnï¿½t shrink when the particle system shrinks.
 			*/
 			bool hasTightBoundingBox(void) const;
 
@@ -639,7 +639,7 @@ namespace ParticleUniverse
 	        */
 			Real mTimeSinceLastUpdate;
 
-			/** If set, the ParticleSystem automatically stops after ´mFixedTimeout´ seconds.
+			/** If set, the ParticleSystem automatically stops after ï¿½mFixedTimeoutï¿½ seconds.
 	        */
 			Real mFixedTimeout;
 
@@ -672,7 +672,7 @@ namespace ParticleUniverse
 			bool mMainCameraNameSet;
 			Camera* mCurrentCamera;
 
-			/** Scale the Particle Systems´ relative positions and size.
+			/** Scale the Particle Systemsï¿½ relative positions and size.
 			@remarks
 				Scaling is done on a Particle System level and is independent of the scaling of the SceneNode
 		    */

@@ -29,6 +29,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "ParticleAffectors/ParticleUniverseParticleFollower.h"
 #include "ParticleAffectors/ParticleUniverseParticleFollowerTokens.h"
+#include "ParticleUniverseScriptDeserializerTokens.h"
 #include "Externs/ParticleUniverseGravityExtern.h"
 
 namespace ParticleUniverse

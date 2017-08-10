@@ -29,6 +29,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "ParticleRenderers/ParticleUniverseEntityRendererTokens.h"
 #include "ParticleRenderers/ParticleUniverseEntityRenderer.h"
+#include "ParticleUniverseScriptDeserializerTokens.h"
 
 namespace ParticleUniverse
 {

@@ -29,6 +29,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "ParticleEventHandlers/ParticleUniverseDoExpireEventHandler.h"
 #include "ParticleEventHandlers/ParticleUniverseDoExpireEventHandlerTokens.h"
+#include "ParticleUniverseScriptDeserializerTokens.h"
 
 namespace ParticleUniverse
 {

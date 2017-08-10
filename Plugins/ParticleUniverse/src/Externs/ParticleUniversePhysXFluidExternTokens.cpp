@@ -31,6 +31,7 @@ Special thanks to: M. Geissler
 	#endif
 
 	#include "ParticleUniversePrerequisites.h"
+	#include "ParticleUniverseScriptDeserializerTokens.h"
 	#include "Externs/ParticleUniversePhysXFluidExternTokens.h"
 	#include "Externs/ParticleUniversePhysXFluidExtern.h"
 

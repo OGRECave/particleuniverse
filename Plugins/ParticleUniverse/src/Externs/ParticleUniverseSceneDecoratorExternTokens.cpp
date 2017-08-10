@@ -27,6 +27,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #define PARTICLE_UNIVERSE_EXPORTS
 #endif
 
+#include "ParticleUniverseScriptDeserializerTokens.h"
 #include "Externs/ParticleUniverseSceneDecoratorExtern.h"
 #include "Externs/ParticleUniverseSceneDecoratorExternTokens.h"
 

@@ -30,6 +30,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	#endif
 
 	#include "ParticleUniversePrerequisites.h"
+	#include "ParticleUniverseScriptDeserializerTokens.h"
 	#include "Externs/ParticleUniversePhysXActorExternTokens.h"
 	#include "Externs/ParticleUniversePhysXActorExtern.h"
 
