@@ -440,7 +440,7 @@ namespace ParticleUniverse
 			mIndexData = 0;
 		}
 
-		mMainBuf.setNull();
+		mMainBuf.reset();
 
 		mBuffersCreated = false;
 	}

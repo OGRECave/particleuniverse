@@ -24,8 +24,8 @@ add_definitions(-DPARTICLE_UNIVERSE_EXPORTS)
 add_library(${PARTICLEUNIVERSE_PLUGIN_NAME} ${PROJECT_SOURCES})
 target_link_libraries(${PARTICLEUNIVERSE_PLUGIN_NAME} ${LIBS})
 set_target_properties(${PARTICLEUNIVERSE_PLUGIN_NAME} PROPERTIES
-    VERSION "1.9.0"
-    SOVERSION "1.9.0"
+    VERSION ${OGRE_VERSION}
+    SOVERSION ${OGRE_VERSION}
     PREFIX "")
 
 # Build as a framework on OS X

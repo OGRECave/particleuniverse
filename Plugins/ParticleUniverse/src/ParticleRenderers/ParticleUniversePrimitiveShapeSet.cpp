@@ -71,7 +71,7 @@ namespace ParticleUniverse
 		{
 			mpMaterial = Ogre::MaterialManager::getSingleton().getByName(name);
 
-			if (mpMaterial.isNull())
+			if (!mpMaterial)
 				EXCEPT(Exception::ERR_ITEM_NOT_FOUND, "Could not find material " + name,
 				"PrimitiveShapeSet::setMaterialName" );
 	
@@ -148,7 +148,7 @@ namespace ParticleUniverse
 	{
 		// Get the material and rotate it, assume the material is loaded already, otherwise skip.
 		Ogre::MaterialPtr material = getMaterial();
-		if (material.isNull())
+		if (!material)
 			return;
 
 		Ogre::TextureUnitState::EffectMap::const_iterator it;
@@ -165,7 +165,7 @@ namespace ParticleUniverse
 				{
 					// Set the rotation if not already available.
 					// This can only be done once! Changing the rotationspeed or removing the rotation
-					// and resetting it doesn´t seem to work.
+					// and resetting it doesnï¿½t seem to work.
 					Ogre::TextureUnitState* textureUnitState = pass->getTextureUnitState(w);
 					it = textureUnitState->getEffects().find(Ogre::TextureUnitState::ET_ROTATE);
 					if (it == textureUnitState->getEffects().end())

@@ -170,7 +170,7 @@ namespace ParticleUniverse
 	void EntityRenderer::_prepare(ParticleTechnique* technique)
 	{
 		/** 
-			- This renderer is a ´hacky´ solution to display geometry-based particles. It pre-creates a 
+			- This renderer is a ï¿½hackyï¿½ solution to display geometry-based particles. It pre-creates a 
 			number of SceneNodes (childs of the parent Node to which the ParticleSystem is attached) and 
 			Entities and uses these pools to display the particles. There are better solutions, but 
 			this one is simple and fast enough, although it has some drawbacks.
@@ -188,7 +188,7 @@ namespace ParticleUniverse
 		mQuota = technique->getVisualParticleQuota();
 		Ogre::SceneNode* parentNode = technique->getParentSystem()->getParentSceneNode();
 		Ogre::MeshPtr mesh = Ogre::MeshManager::getSingleton().load(mMeshName, Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
-		Ogre::Mesh* meshPointer = mesh.getPointer();
+		Ogre::Mesh* meshPointer = mesh.get();
 		Vector3 size = meshPointer->getBounds().getSize();
 		mBoxWidth = size.x == 0.0f ? 1.0f : size.x;
 		mBoxHeight = size.y == 0.0f ? 1.0f : size.y;
@@ -360,7 +360,7 @@ namespace ParticleUniverse
 					{
 						// Set the rotation if not already available.
 						// This can only be done once! Changing the rotationspeed or removing the rotation
-						// and resetting it doesn´t seem to work.
+						// and resetting it doesnï¿½t seem to work.
 						Ogre::TextureUnitState* textureUnitState = pass->getTextureUnitState(x);
 						it = textureUnitState->getEffects().find(Ogre::TextureUnitState::ET_ROTATE);
 						if (it == textureUnitState->getEffects().end())

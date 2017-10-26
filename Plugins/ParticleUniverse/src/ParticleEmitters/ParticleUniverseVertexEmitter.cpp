@@ -57,7 +57,7 @@ namespace ParticleUniverse
 		mIterations(DEFAULT_ITERATIONS),
 		mMeshName(BLANK_STRING)
 	{
-		mBuffer.setNull();
+		mBuffer.reset();
 	}
 	//-----------------------------------------------------------------------
 	unsigned short VertexEmitter::getIterations(void) const
@@ -177,20 +177,20 @@ namespace ParticleUniverse
 		mAllVerticesProcessed = false;
 		mSubMeshNumber = 0;
 
-		if (!mBuffer.isNull())
+		if (mBuffer)
 		{
 			if (mBuffer->isLocked())
 			{
 				mBuffer->unlock();
 			}
-			mBuffer.setNull();
+			mBuffer.reset();
 		}
 	}
 	//-----------------------------------------------------------------------
 	void VertexEmitter::_loadMesh (void)
 	{
 		Ogre::MeshPtr mesh = Ogre::MeshManager::getSingleton().load(mMeshName, Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
-		mMesh = mesh.getPointer();
+		mMesh = mesh.get();
 		mMeshProcessed = false;
 			
 		if (mMesh->getNumSubMeshes() > 0)
@@ -233,7 +233,7 @@ namespace ParticleUniverse
 			// The vertices of 1 mesh/subMesh are processed. Determine whether more submeshes need to
 			// be processed.
 			mBuffer->unlock();
-			mBuffer.setNull();
+			mBuffer.reset();
 			mVertexCount = 0;
 			mMaxVertexCount = 0;
 			mVertexData = 0;

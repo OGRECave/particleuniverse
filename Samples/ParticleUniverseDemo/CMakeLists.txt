@@ -7,9 +7,6 @@ file(GLOB PROJECT_SOURCES
 	src/*.cpp
 )
 
-# Input
-include_directories(${OGRE_Bites_INCLUDE_DIRS})
-
 add_executable(${PARTICLEUNIVERSE_DEMO_NAME} ${PROJECT_SOURCES})
 target_link_libraries(${PARTICLEUNIVERSE_DEMO_NAME} ${LIBS} ${PARTICLEUNIVERSE_LIBRARIES})
 

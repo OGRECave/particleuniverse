@@ -481,12 +481,9 @@ namespace ParticleUniverse
 	const Ogre::MaterialPtr ParticleTechnique::getMaterial(void) const
 	{
 		String resourceGroupName = mParentSystem ? mParentSystem->getResourceGroupName() : Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME;
-		#if OGRE_VERSION >= (1 << 16 | 9 << 8 | 0)
-		return Ogre::MaterialManager::getSingleton().load(mMaterialName, resourceGroupName).staticCast<Ogre::Material>();
-		#else
-		return Ogre::MaterialManager::getSingleton().load(mMaterialName, resourceGroupName);
-		#endif
-	}
+        return Ogre::static_pointer_cast<Ogre::Material>(
+                    Ogre::MaterialManager::getSingleton().load(mMaterialName, resourceGroupName));
+    }
 	//-----------------------------------------------------------------------
 	void ParticleTechnique::setMaterialName(const String& materialName)
 	{
@@ -496,11 +493,8 @@ namespace ParticleUniverse
 			if (ParticleSystemManager::getSingletonPtr()->isAutoLoadMaterials())
 			{
 				String resourceGroupName = mParentSystem ? mParentSystem->getResourceGroupName() : Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME;
-				#if OGRE_VERSION >= (1 << 16 | 9 << 8 | 0)
-				Ogre::MaterialPtr mat = Ogre::MaterialManager::getSingleton().load(mMaterialName, resourceGroupName).staticCast<Ogre::Material>();
-				#else
-				Ogre::MaterialPtr mat = Ogre::MaterialManager::getSingleton().load(mMaterialName, resourceGroupName);
-				#endif
+				Ogre::MaterialPtr mat = Ogre::static_pointer_cast<Ogre::Material>(
+				        Ogre::MaterialManager::getSingleton().load(mMaterialName, resourceGroupName));
 				mRenderer->_setMaterialName(mMaterialName); // V1.5: If materials not auto loaded, then DIY
 			}
 		}
@@ -1362,7 +1356,7 @@ namespace ParticleUniverse
 	{
 		/*
 		@remarks
-			Note, that the ParticleBehaviour template list stored in this ParticleTechnique is ´prepared´ 
+			Note, that the ParticleBehaviour template list stored in this ParticleTechnique is ï¿½preparedï¿½ 
 			and not the ParticleBehaviour objects of each Particle. The ParticleBehaviour templates in 
 			this ParticleTechnique can be initialised quickly with certain data, while this data 
 			is automatically used in the cloned ParticleBehaviour objects stored in each Particle.
@@ -2150,7 +2144,7 @@ namespace ParticleUniverse
 		}
 
 		/*  Iterate through all pooled affector objects (these are the affectors that are emitted).
-			The pool itself isn´t used, but an extraction of the pooled affectors.
+			The pool itself isnï¿½t used, but an extraction of the pooled affectors.
 		*/
 		if (mCopyOfPooledAffectors.empty())
 			return;
@@ -2394,7 +2388,7 @@ namespace ParticleUniverse
 		}
 
 		/** Externs are also called to perform expiration activities. If needed, affectors and emitters may be added, but at the moment
-			there is no reason for (and we don´t want to waste cpu resources).
+			there is no reason for (and we donï¿½t want to waste cpu resources).
 		*/
 		if (!mExterns.empty())
 		{
@@ -2903,7 +2897,7 @@ namespace ParticleUniverse
 		{
 			if (*it == techniqueListener)
 			{
-				// Remove it (don´t destroy it, because the technique is not the owner)
+				// Remove it (donï¿½t destroy it, because the technique is not the owner)
 				mTechniqueListenerList.erase(it);
 				break;
 			}

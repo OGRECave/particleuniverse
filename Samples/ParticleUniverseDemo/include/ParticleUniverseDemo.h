@@ -13,7 +13,7 @@
 
 using namespace Ogre;
 
-class Sample_ParticleUniverseDemo : public OgreBites::ApplicationContext
+class Sample_ParticleUniverseDemo : public OgreBites::ApplicationContext, public OgreBites::InputListener
 {
 public:
 	Ogre::SceneManager* mSceneMgr;
@@ -26,29 +26,22 @@ public:
 
 	void createRoot() {
 	    OgreBites::ApplicationContext::createRoot();
-	    Root* root = getRoot();
-	    root->loadPlugin(OGRE_PLUGIN_DIR_REL + std::string("/RenderSystem_GL"));
-	    root->loadPlugin("./Plugin_ParticleUniverse");
+	    getRoot()->loadPlugin("./Plugin_ParticleUniverse");
 	}
-
-	bool frameStarted(const Ogre::FrameEvent& evt) {
-	    captureInputDevices();
-	    return true;
-	}
-
 
 	/** -----------------------------------------------------------------------
 	Create some particle systems
 	-----------------------------------------------------------------------*/
 	void createScene()
-	{		
-		mSceneMgr = Root::getSingleton().createSceneManager(ST_GENERIC);
+	{
+	    addInputListener(this);
+		mSceneMgr = Root::getSingleton().createSceneManager("DefaultSceneManager");
 		mCamera = mSceneMgr->createCamera("Camera");
 		mCamera->setPosition(320,0,40);
 		mCamera->lookAt(0,0,-50);
 		mCamera->setFarClipDistance(10000);
 		mCamera->setNearClipDistance(0.1);
-		mViewport = mWindow->addViewport(mCamera);
+		mViewport = getRenderWindow()->addViewport(mCamera);
 
 		
 		// setup some basic lighting for our scene

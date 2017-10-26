@@ -22,8 +22,6 @@ link_directories(${OGRE_LIBRARY_DIRS})
 include_directories(${OGRE_INCLUDE_DIRS})
 list(APPEND LIBS ${OGRE_LIBRARIES})
 
-add_definitions(-DOGRE_PLUGIN_DIR_REL="${OGRE_PLUGIN_DIR}")
-
 add_subdirectory(Plugins/ParticleUniverse)
 
 # Samples and tools

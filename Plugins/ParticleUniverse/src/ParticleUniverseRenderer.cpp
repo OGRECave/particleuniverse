@@ -207,7 +207,7 @@ namespace ParticleUniverse
 	void ParticleRenderer::_updateRenderQueue(Ogre::RenderQueue* queue, ParticlePool* pool)
 	{
 		/** Notify the Particle System Manager in case soft particles are used. This cannot be done elsewhere, because 
-			it isn´t sure whether there is already a camera created.
+			it isnï¿½t sure whether there is already a camera created.
 		*/
 		if (mUseSoftParticles && !mNotifiedDepthMap)
 		{
@@ -286,7 +286,7 @@ namespace ParticleUniverse
 		{
 			// Set GPU param
 			Ogre::MaterialPtr mat = mParentTechnique->getMaterial();
-			if (!mat.isNull())
+			if (mat)
 			{
 				if (mat->getBestTechnique() && mat->getBestTechnique()->getPass(0))
 				{
@@ -308,7 +308,7 @@ namespace ParticleUniverse
 		{
 			// Set GPU param
 			Ogre::MaterialPtr mat = mParentTechnique->getMaterial();
-			if (!mat.isNull())
+			if (mat)
 			{
 				if (mat->getBestTechnique() && mat->getBestTechnique()->getPass(0))
 				{
@@ -330,7 +330,7 @@ namespace ParticleUniverse
 		{
 			// Set GPU param
 			Ogre::MaterialPtr mat = mParentTechnique->getMaterial();
-			if (!mat.isNull())
+			if (mat)
 			{
 				if (mat->getBestTechnique() && mat->getBestTechnique()->getPass(0))
 				{
@@ -348,7 +348,7 @@ namespace ParticleUniverse
 	void ParticleRenderer::_createSoftMaterial(void)
 	{
 		String newMaterialName = SOFT_PREFIX + mParentTechnique->getMaterialName();
-		if (!Ogre::MaterialManager::getSingletonPtr()->getByName(newMaterialName).isNull())
+		if (Ogre::MaterialManager::getSingletonPtr()->getByName(newMaterialName))
 		{
 			mParentTechnique->setMaterialName(newMaterialName);
 			return;
@@ -386,7 +386,7 @@ namespace ParticleUniverse
 
 			// Create material with depth texture
 			Ogre::MaterialPtr newMaterial = Ogre::MaterialManager::getSingleton().getByName(newMaterialName);
-			if (!newMaterial.getPointer())
+			if (!newMaterial)
 			{
 				newMaterial = Ogre::MaterialManager::getSingleton().create(newMaterialName, resourceGroupName);
 				Ogre::Pass* newPass = newMaterial->getTechnique(0)->getPass(0);

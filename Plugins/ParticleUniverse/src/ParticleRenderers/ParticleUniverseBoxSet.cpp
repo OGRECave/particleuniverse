@@ -494,7 +494,7 @@ namespace ParticleUniverse
 			mIndexData = 0;
 		}
 
-		mMainBuf.setNull();
+		mMainBuf.reset();
 
 		mBuffersCreated = false;
 	}
@@ -625,7 +625,7 @@ namespace ParticleUniverse
 				Ogre::Vector3 corner = Ogre::Vector3::ZERO;
 				if (box.mOrientation == Ogre::Quaternion::IDENTITY)
 				{
-					// Boxes didn´t rotate
+					// Boxes didnï¿½t rotate
 					corner = mDefaultCorners[i];
 				}
 				else

@@ -412,7 +412,7 @@ namespace ParticleUniverse
 	void ScriptTranslator::errorUnexpectedToken(ScriptCompiler* compiler, 
 		AbstractNodePtr token)
 	{
-		compiler->addError(ScriptCompiler::CE_UNEXPECTEDTOKEN, token.getPointer()->file, token.getPointer()->line, 
+		compiler->addError(ScriptCompiler::CE_UNEXPECTEDTOKEN, token->file, token->line,
 			"PU Compiler: token is not recognized");
 	}
 	//-------------------------------------------------------------------------
