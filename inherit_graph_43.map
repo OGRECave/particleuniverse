@@ -1,0 +1,41 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\&lt; T \&gt;" alt="" coords="146,5,341,32"/>
+<area shape="rect" id="node3" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; Box * \&gt;" alt="" coords="162,57,325,98"/>
+<area shape="rect" id="node4" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; Extern * \&gt;" alt="" coords="162,122,325,163"/>
+<area shape="rect" id="node5" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; Ogre::Entity * \&gt;" alt="" coords="162,187,325,229"/>
+<area shape="rect" id="node6" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; Ogre::FloatRect \&gt;" alt="" coords="162,253,325,294"/>
+<area shape="rect" id="node7" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; Ogre::Image * \&gt;" alt="" coords="162,318,325,359"/>
+<area shape="rect" id="node8" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; Ogre::Light * \&gt;" alt="" coords="162,383,325,425"/>
+<area shape="rect" id="node9" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; Ogre::TRect\&lt; float \&gt; * \&gt;" alt="" coords="155,449,331,490"/>
+<area shape="rect" id="node10" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; Ogre::Vector3 \&gt;" alt="" coords="162,514,325,555"/>
+<area shape="rect" id="node11" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; ParticleAffector * \&gt;" alt="" coords="162,579,325,621"/>
+<area shape="rect" id="node12" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; ParticleBehaviour * \&gt;" alt="" coords="162,645,325,686"/>
+<area shape="rect" id="node13" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; ParticleEmitter * \&gt;" alt="" coords="162,710,325,751"/>
+<area shape="rect" id="node14" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; ParticleEventHandler * \&gt;" alt="" coords="154,775,333,817"/>
+<area shape="rect" id="node15" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; ParticleObserver * \&gt;" alt="" coords="162,841,325,882"/>
+<area shape="rect" id="node16" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; ParticleSystemListener * \&gt;" alt="" coords="148,906,339,947"/>
+<area shape="rect" id="node17" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; ParticleTechnique * \&gt;" alt="" coords="162,971,325,1013"/>
+<area shape="rect" id="node18" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; ParticleUniverse::BeamRenderer\lVisualData * \&gt;" alt="" coords="131,1036,356,1092"/>
+<area shape="rect" id="node19" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; ParticleUniverse::EntityRenderer\lVisualData * \&gt;" alt="" coords="131,1116,356,1172"/>
+<area shape="rect" id="node20" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; ParticleUniverse::ExternFactory * \&gt;" alt="" coords="123,1195,364,1237"/>
+<area shape="rect" id="node21" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; ParticleUniverse::LightRenderer\lVisualData * \&gt;" alt="" coords="134,1260,353,1316"/>
+<area shape="rect" id="node22" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; ParticleUniverse::ParticleAffector * \&gt;" alt="" coords="119,1339,368,1381"/>
+<area shape="rect" id="node23" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; ParticleUniverse::ParticleAffector\lFactory * \&gt;" alt="" coords="129,1404,357,1460"/>
+<area shape="rect" id="node24" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; ParticleUniverse::ParticleBehaviour\lFactory * \&gt;" alt="" coords="123,1484,363,1540"/>
+<area shape="rect" id="node25" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; ParticleUniverse::ParticleEmitter * \&gt;" alt="" coords="121,1563,366,1605"/>
+<area shape="rect" id="node26" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; ParticleUniverse::ParticleEmitter\lFactory * \&gt;" alt="" coords="131,1628,355,1684"/>
+<area shape="rect" id="node27" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; ParticleUniverse::ParticleEvent\lHandlerFactory * \&gt;" alt="" coords="135,1708,351,1764"/>
+<area shape="rect" id="node28" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; ParticleUniverse::ParticleObserver\lFactory * \&gt;" alt="" coords="126,1788,361,1844"/>
+<area shape="rect" id="node29" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; ParticleUniverse::ParticleRenderer * \&gt;" alt="" coords="115,1867,371,1909"/>
+<area shape="rect" id="node30" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; ParticleUniverse::ParticleRenderer\lFactory * \&gt;" alt="" coords="126,1932,361,1988"/>
+<area shape="rect" id="node31" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; ParticleUniverse::ParticleTechnique * \&gt;" alt="" coords="112,2011,375,2053"/>
+<area shape="rect" id="node32" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; ParticleUniverse::RibbonTrail\lRendererVisualData * \&gt;" alt="" coords="141,2076,345,2132"/>
+<area shape="rect" id="node33" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; ParticleUniverse::VisualParticle * \&gt;" alt="" coords="124,2155,363,2197"/>
+<area shape="rect" id="node34" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; Real \&gt;" alt="" coords="162,2221,325,2262"/>
+<area shape="rect" id="node35" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; Section * \&gt;" alt="" coords="162,2286,325,2327"/>
+<area shape="rect" id="node36" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; Sphere * \&gt;" alt="" coords="162,2351,325,2393"/>
+<area shape="rect" id="node37" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; String \&gt;" alt="" coords="162,2417,325,2458"/>
+<area shape="rect" id="node38" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; TechniqueListener * \&gt;" alt="" coords="162,2482,325,2523"/>
+<area shape="rect" id="node39" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; Triangle \&gt;" alt="" coords="162,2547,325,2589"/>
+<area shape="rect" id="node40" href="$struct_particle_universe_1_1vector.html" title="ParticleUniverse::vector\l\&lt; Vector2 \&gt;" alt="" coords="162,2613,325,2654"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_particle_universe_1_1_i_visual_data.html" title="ParticleUniverse::IVisualData" alt="" coords="5,111,200,138"/>
+<area shape="rect" id="node2" href="$class_particle_universe_1_1_beam_renderer_visual_data.html" title="ParticleUniverse::BeamRenderer\lVisualData" alt="" coords="248,5,461,47"/>
+<area shape="rect" id="node3" href="$class_particle_universe_1_1_entity_renderer_visual_data.html" title="ParticleUniverse::Entity\lRendererVisualData" alt="" coords="275,71,435,112"/>
+<area shape="rect" id="node4" href="$class_particle_universe_1_1_light_renderer_visual_data.html" title="ParticleUniverse::LightRenderer\lVisualData" alt="" coords="251,136,458,177"/>
+<area shape="rect" id="node5" href="$class_particle_universe_1_1_ribbon_trail_renderer_visual_data.html" title="ParticleUniverse::Ribbon\lTrailRendererVisualData" alt="" coords="271,201,438,243"/>
+</map>

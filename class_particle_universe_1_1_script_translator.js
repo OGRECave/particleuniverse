@@ -1,0 +1,38 @@
+var class_particle_universe_1_1_script_translator =
+[
+    [ "ValidationType", "class_particle_universe_1_1_script_translator.html#a9f44786a75c28b64f72ddda017e8b69f", [
+      [ "VAL_REAL", "class_particle_universe_1_1_script_translator.html#a9f44786a75c28b64f72ddda017e8b69fa6f4ad07c2c2149f5a832a6c9345004cb", null ],
+      [ "VAL_BOOL", "class_particle_universe_1_1_script_translator.html#a9f44786a75c28b64f72ddda017e8b69fae7ae1098c0ceabab8407a69d387bc1ba", null ],
+      [ "VAL_UINT", "class_particle_universe_1_1_script_translator.html#a9f44786a75c28b64f72ddda017e8b69fa86bcec8cf65085363a498203cd6f27bb", null ],
+      [ "VAL_INT", "class_particle_universe_1_1_script_translator.html#a9f44786a75c28b64f72ddda017e8b69fa346571d48d6b4389f7d204d51227ebcc", null ],
+      [ "VAL_STRING", "class_particle_universe_1_1_script_translator.html#a9f44786a75c28b64f72ddda017e8b69fa195ed7d0f13f801abd48fd2d7d657123", null ],
+      [ "VAL_VECTOR2", "class_particle_universe_1_1_script_translator.html#a9f44786a75c28b64f72ddda017e8b69fae6a31c59d023c430713643ce7b8230ec", null ],
+      [ "VAL_VECTOR3", "class_particle_universe_1_1_script_translator.html#a9f44786a75c28b64f72ddda017e8b69fa5ba54df768f5a3d39a656174e9e4c16f", null ],
+      [ "VAL_VECTOR4", "class_particle_universe_1_1_script_translator.html#a9f44786a75c28b64f72ddda017e8b69faddd58f06bc8743769210bab166415b45", null ],
+      [ "VAL_COLOURVALUE", "class_particle_universe_1_1_script_translator.html#a9f44786a75c28b64f72ddda017e8b69fa916582b938a44a7e213e98b22570acbd", null ],
+      [ "VAL_QUATERNION", "class_particle_universe_1_1_script_translator.html#a9f44786a75c28b64f72ddda017e8b69fa32f345653b13bb91fcde04276f48be2d", null ]
+    ] ],
+    [ "ScriptTranslator", "class_particle_universe_1_1_script_translator.html#a7e31c39925bcd7df6d9ea35aa415172f", null ],
+    [ "~ScriptTranslator", "class_particle_universe_1_1_script_translator.html#ae9d52e99404c116800b5281ae120ac81", null ],
+    [ "errorUnexpectedProperty", "class_particle_universe_1_1_script_translator.html#a1fa42b6133ee5c8f2ef557092a14b8cd", null ],
+    [ "errorUnexpectedToken", "class_particle_universe_1_1_script_translator.html#ab48b997ef24dcd3c8570c560ed447f0b", null ],
+    [ "getQuaternion", "class_particle_universe_1_1_script_translator.html#a70ed4ce43ca36b0b5333758b93616a76", null ],
+    [ "getVector2", "class_particle_universe_1_1_script_translator.html#adf15d214d61775b0fc62900e21ad5d7c", null ],
+    [ "getVector3", "class_particle_universe_1_1_script_translator.html#ae7138c2273ff71f9ee5081f0257046e8", null ],
+    [ "getVector4", "class_particle_universe_1_1_script_translator.html#a0325cf7e9a416e69ecc3e3e64a625595", null ],
+    [ "passValidateProperty", "class_particle_universe_1_1_script_translator.html#aee8df25bc2b4ca5f806375439baa734b", null ],
+    [ "passValidatePropertyNoValues", "class_particle_universe_1_1_script_translator.html#addc00f19c56f6b09176bb42b37bee6ca", null ],
+    [ "passValidatePropertyNumberOfValues", "class_particle_universe_1_1_script_translator.html#ac7bc4b65b61efa0ef8faa5544baec6c4", null ],
+    [ "passValidatePropertyNumberOfValuesRange", "class_particle_universe_1_1_script_translator.html#af741a6152b63fa05455f8f4f947c37d0", null ],
+    [ "passValidatePropertyValidBool", "class_particle_universe_1_1_script_translator.html#ab1fb33954311709890f8dd5f7a78ee4b", null ],
+    [ "passValidatePropertyValidInt", "class_particle_universe_1_1_script_translator.html#acbaaa85d1bd6086e285433f5c3fe2c0a", null ],
+    [ "passValidatePropertyValidQuaternion", "class_particle_universe_1_1_script_translator.html#a6d6087b826bb023da82bb09fb82e8425", null ],
+    [ "passValidatePropertyValidReal", "class_particle_universe_1_1_script_translator.html#a76fea154ff245db999496cb60576dd44", null ],
+    [ "passValidatePropertyValidUint", "class_particle_universe_1_1_script_translator.html#a7d58a1b1a5816eb10d57ccb34f328de5", null ],
+    [ "passValidatePropertyValidVector2", "class_particle_universe_1_1_script_translator.html#ab838bfe4243ce6bbe9b6e5bdf91195f2", null ],
+    [ "passValidatePropertyValidVector3", "class_particle_universe_1_1_script_translator.html#a42dc46643cc2b8014ffd38cbc1ab6a15", null ],
+    [ "passValidatePropertyValidVector4", "class_particle_universe_1_1_script_translator.html#aeb0535c60565385c09395971a242ffd8", null ],
+    [ "translate", "class_particle_universe_1_1_script_translator.html#a1e495858cba1913df46c1783718f7a19", null ],
+    [ "translateChildObject", "class_particle_universe_1_1_script_translator.html#aa5b67f5b523c7a04077e788aff359f05", null ],
+    [ "translateChildProperty", "class_particle_universe_1_1_script_translator.html#a78058f832eac17b4f02fbcd53e98581e", null ]
+];

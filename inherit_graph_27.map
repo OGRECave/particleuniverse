@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_particle_universe_1_1_physics_shape_desc.html" title="ParticleUniverse::Physics\lShapeDesc" alt="" coords="5,71,179,112"/>
+<area shape="rect" id="node2" href="$class_particle_universe_1_1_physics_box_desc.html" title="ParticleUniverse::Physics\lBoxDesc" alt="" coords="227,5,400,47"/>
+<area shape="rect" id="node3" href="$class_particle_universe_1_1_physics_capsule_desc.html" title="ParticleUniverse::Physics\lCapsuleDesc" alt="" coords="227,71,400,112"/>
+<area shape="rect" id="node4" href="$class_particle_universe_1_1_physics_sphere_desc.html" title="ParticleUniverse::Physics\lSphereDesc" alt="" coords="227,136,400,177"/>
+</map>

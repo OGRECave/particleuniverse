@@ -1,0 +1,14 @@
+<map id="ParticleUniverse::ParticleEmitter" name="ParticleUniverse::ParticleEmitter">
+<area shape="rect" id="node5" href="$class_particle_universe_1_1_box_emitter.html" title="ParticleUniverse::BoxEmitter" alt="" coords="457,5,647,32"/>
+<area shape="rect" id="node6" href="$class_particle_universe_1_1_circle_emitter.html" title="ParticleUniverse::Circle\lEmitter" alt="" coords="472,57,632,98"/>
+<area shape="rect" id="node7" href="$class_particle_universe_1_1_line_emitter.html" title="ParticleUniverse::LineEmitter" alt="" coords="456,123,648,149"/>
+<area shape="rect" id="node8" href="$class_particle_universe_1_1_mesh_surface_emitter.html" title="ParticleUniverse::MeshSurface\lEmitter" alt="" coords="451,174,653,215"/>
+<area shape="rect" id="node9" href="$class_particle_universe_1_1_point_emitter.html" title="ParticleUniverse::PointEmitter" alt="" coords="453,240,651,267"/>
+<area shape="rect" id="node10" href="$class_particle_universe_1_1_position_emitter.html" title="ParticleUniverse::Position\lEmitter" alt="" coords="465,291,639,333"/>
+<area shape="rect" id="node11" href="$class_particle_universe_1_1_slave_emitter.html" title="ParticleUniverse::SlaveEmitter" alt="" coords="451,357,653,384"/>
+<area shape="rect" id="node12" href="$class_particle_universe_1_1_sphere_surface_emitter.html" title="ParticleUniverse::Sphere\lSurfaceEmitter" alt="" coords="469,409,635,450"/>
+<area shape="rect" id="node13" href="$class_particle_universe_1_1_vertex_emitter.html" title="ParticleUniverse::Vertex\lEmitter" alt="" coords="470,474,634,515"/>
+<area shape="rect" id="node2" href="$class_particle_universe_1_1_particle.html" title="ParticleUniverse::Particle" alt="" coords="9,189,180,216"/>
+<area shape="rect" id="node3" href="$class_particle_universe_1_1_i_alias.html" title="ParticleUniverse::IAlias" alt="" coords="15,240,174,267"/>
+<area shape="rect" id="node4" href="$class_particle_universe_1_1_i_element.html" title="ParticleUniverse::IElement" alt="" coords="5,291,184,317"/>
+</map>

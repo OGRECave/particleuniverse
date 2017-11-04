@@ -1,0 +1,6 @@
+<map id="ParticleUniverse::TextureRotator" name="ParticleUniverse::TextureRotator">
+<area shape="rect" id="node2" href="$class_particle_universe_1_1_particle_affector.html" title="ParticleUniverse::Particle\lAffector" alt="" coords="195,80,365,121"/>
+<area shape="rect" id="node3" href="$class_particle_universe_1_1_particle.html" title="ParticleUniverse::Particle" alt="" coords="5,5,176,32"/>
+<area shape="rect" id="node4" href="$class_particle_universe_1_1_i_alias.html" title="ParticleUniverse::IAlias" alt="" coords="201,5,359,32"/>
+<area shape="rect" id="node5" href="$class_particle_universe_1_1_i_element.html" title="ParticleUniverse::IElement" alt="" coords="384,5,563,32"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="ParticleUniverse::Extern" name="ParticleUniverse::Extern">
+<area shape="rect" id="node5" href="$class_particle_universe_1_1_attachable.html" title="ParticleUniverse::Attachable" alt="" coords="460,111,648,138"/>
+<area shape="rect" id="node10" href="$class_particle_universe_1_1_physics_extern.html" title="ParticleUniverse::Physics\lExtern" alt="" coords="467,163,641,204"/>
+<area shape="rect" id="node11" href="$class_particle_universe_1_1_scene_decorator_extern.html" title="ParticleUniverse::SceneDecorator\lExtern" alt="" coords="444,228,664,269"/>
+<area shape="rect" id="node2" href="$class_particle_universe_1_1_i_alias.html" title="ParticleUniverse::IAlias" alt="" coords="15,119,174,146"/>
+<area shape="rect" id="node3" href="$class_particle_universe_1_1_i_element.html" title="ParticleUniverse::IElement" alt="" coords="5,170,184,197"/>
+<area shape="rect" id="node4" href="/home/pavel/workspace/ogre-git/build/api/Ogre.tag$class_ogre_1_1_allocated_object.html" title="FXAlloc" alt="" coords="61,221,129,247"/>
+<area shape="rect" id="node6" href="$class_particle_universe_1_1_box_collider_extern.html" title="ParticleUniverse::BoxCollider\lExtern" alt="" coords="712,5,905,47"/>
+<area shape="rect" id="node7" href="$class_particle_universe_1_1_gravity_extern.html" title="ParticleUniverse::Gravity\lExtern" alt="" coords="725,71,893,112"/>
+<area shape="rect" id="node8" href="$class_particle_universe_1_1_sphere_collider_extern.html" title="ParticleUniverse::Sphere\lColliderExtern" alt="" coords="725,136,892,177"/>
+<area shape="rect" id="node9" href="$class_particle_universe_1_1_vortex_extern.html" title="ParticleUniverse::Vortex\lExtern" alt="" coords="727,201,891,243"/>
+</map>

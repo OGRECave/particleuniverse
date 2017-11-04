@@ -1,0 +1,12 @@
+<map id="ParticleUniverse::ParticleEmitterWriter" name="ParticleUniverse::ParticleEmitterWriter">
+<area shape="rect" id="node3" href="$class_particle_universe_1_1_box_emitter_writer.html" title="ParticleUniverse::BoxEmitter\lWriter" alt="" coords="438,5,629,47"/>
+<area shape="rect" id="node4" href="$class_particle_universe_1_1_circle_emitter_writer.html" title="ParticleUniverse::Circle\lEmitterWriter" alt="" coords="453,71,613,112"/>
+<area shape="rect" id="node5" href="$class_particle_universe_1_1_line_emitter_writer.html" title="ParticleUniverse::LineEmitter\lWriter" alt="" coords="437,136,629,177"/>
+<area shape="rect" id="node6" href="$class_particle_universe_1_1_mesh_surface_emitter_writer.html" title="ParticleUniverse::MeshSurface\lEmitterWriter" alt="" coords="432,201,635,243"/>
+<area shape="rect" id="node7" href="$class_particle_universe_1_1_point_emitter_writer.html" title="ParticleUniverse::PointEmitter\lWriter" alt="" coords="434,267,633,308"/>
+<area shape="rect" id="node8" href="$class_particle_universe_1_1_position_emitter_writer.html" title="ParticleUniverse::Position\lEmitterWriter" alt="" coords="447,332,620,373"/>
+<area shape="rect" id="node9" href="$class_particle_universe_1_1_slave_emitter_writer.html" title="ParticleUniverse::SlaveEmitter\lWriter" alt="" coords="433,397,634,439"/>
+<area shape="rect" id="node10" href="$class_particle_universe_1_1_sphere_surface_emitter_writer.html" title="ParticleUniverse::Sphere\lSurfaceEmitterWriter" alt="" coords="450,463,617,504"/>
+<area shape="rect" id="node11" href="$class_particle_universe_1_1_vertex_emitter_writer.html" title="ParticleUniverse::Vertex\lEmitterWriter" alt="" coords="451,528,615,569"/>
+<area shape="rect" id="node2" href="$class_particle_universe_1_1_script_writer.html" title="ParticleUniverse::Script\lWriter" alt="" coords="5,267,165,308"/>
+</map>

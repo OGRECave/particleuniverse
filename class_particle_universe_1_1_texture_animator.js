@@ -1,0 +1,38 @@
+var class_particle_universe_1_1_texture_animator =
+[
+    [ "TextureAnimationType", "class_particle_universe_1_1_texture_animator.html#a190b74cc9678c3e6446a34d5b0f7c011", [
+      [ "TAT_LOOP", "class_particle_universe_1_1_texture_animator.html#a190b74cc9678c3e6446a34d5b0f7c011afbd57482037345394a62438af897d0ce", null ],
+      [ "TAT_UP_DOWN", "class_particle_universe_1_1_texture_animator.html#a190b74cc9678c3e6446a34d5b0f7c011ac00f60b18cd8b1ef324e671b20b4ed08", null ],
+      [ "TAT_RANDOM", "class_particle_universe_1_1_texture_animator.html#a190b74cc9678c3e6446a34d5b0f7c011a331bab6f104364544f6b490ec853fa71", null ]
+    ] ],
+    [ "TextureAnimator", "class_particle_universe_1_1_texture_animator.html#aa8efbc3c2de55e49c59b62e03b330f5c", null ],
+    [ "~TextureAnimator", "class_particle_universe_1_1_texture_animator.html#a1fe8a959615128d4de3e930eba530bb8", null ],
+    [ "_affect", "class_particle_universe_1_1_texture_animator.html#ab546e2219162ebb58d4850834f288d89", null ],
+    [ "_determineNextTextureCoords", "class_particle_universe_1_1_texture_animator.html#ad9eb5ead0c450346bf71c99066d941bc", null ],
+    [ "_initParticleForEmission", "class_particle_universe_1_1_texture_animator.html#a45efeb85c95ede0f37074bc70413337d", null ],
+    [ "_preProcessParticles", "class_particle_universe_1_1_texture_animator.html#a45f6ccf965fd031c4dd9c476c5f8d80d", null ],
+    [ "copyAttributesTo", "class_particle_universe_1_1_texture_animator.html#aabab3a4a1b603be4caee4dd3dd8a49d6", null ],
+    [ "getAnimationTimeStep", "class_particle_universe_1_1_texture_animator.html#a91020f976ef8c487c4d183757716c92f", null ],
+    [ "getTextureAnimationType", "class_particle_universe_1_1_texture_animator.html#a360a466d906564f122ef06b349da2a07", null ],
+    [ "getTextureCoordsEnd", "class_particle_universe_1_1_texture_animator.html#af7a3627482b2cededadfb7232da7af8e", null ],
+    [ "getTextureCoordsStart", "class_particle_universe_1_1_texture_animator.html#afe50659eb9d1be5a591616118d918f42", null ],
+    [ "isStartRandom", "class_particle_universe_1_1_texture_animator.html#aac4745175ebb26a8007134576b3d7309", null ],
+    [ "setAnimationTimeStep", "class_particle_universe_1_1_texture_animator.html#ad59d9333db20a8aadb216cacf7536986", null ],
+    [ "setStartRandom", "class_particle_universe_1_1_texture_animator.html#a0d28a349312540d41208adb905303f5c", null ],
+    [ "setTextureAnimationType", "class_particle_universe_1_1_texture_animator.html#a5beca3978a6ea5e78891d66136e37405", null ],
+    [ "setTextureCoordsEnd", "class_particle_universe_1_1_texture_animator.html#ac632086b5cd0544d1b6527cf9c6ca305", null ],
+    [ "setTextureCoordsStart", "class_particle_universe_1_1_texture_animator.html#abf1c44c1bbef3f0ea8f5cfd9f6adf957", null ],
+    [ "DEFAULT_ANIMATION_TYPE", "class_particle_universe_1_1_texture_animator.html#a978cdfd0868c14591ad805b7698a3b24", null ],
+    [ "DEFAULT_START_RANDOM", "class_particle_universe_1_1_texture_animator.html#a3879007fe919267b770d8b8fdd225b42", null ],
+    [ "DEFAULT_TEXCOORDS_END", "class_particle_universe_1_1_texture_animator.html#a68d66a7ceaf0eccaedf0b1cfde4de04a", null ],
+    [ "DEFAULT_TEXCOORDS_START", "class_particle_universe_1_1_texture_animator.html#a35a881a48002649d9d91de0789c995c6", null ],
+    [ "DEFAULT_TIME_STEP", "class_particle_universe_1_1_texture_animator.html#ae835b8fee6f0741a741403d2fdd9ae6d", null ],
+    [ "mAnimationTimeStep", "class_particle_universe_1_1_texture_animator.html#ade6d852369627a0d0862c42c576d7fc1", null ],
+    [ "mAnimationTimeStepCount", "class_particle_universe_1_1_texture_animator.html#a044581b5ca2940e5e4fecf0a463bd2e5", null ],
+    [ "mAnimationTimeStepSet", "class_particle_universe_1_1_texture_animator.html#a034f861f77e0334eeb41ed2aab1ae936", null ],
+    [ "mNextIndex", "class_particle_universe_1_1_texture_animator.html#a1b864b05e8119e72cb211926fac444f1", null ],
+    [ "mStartRandom", "class_particle_universe_1_1_texture_animator.html#ab5d7d7f7787c9256b2b78aceefd6c6c8", null ],
+    [ "mTextureAnimationType", "class_particle_universe_1_1_texture_animator.html#a7780cf4e602481bde3ab908dd86d2900", null ],
+    [ "mTextureCoordsEnd", "class_particle_universe_1_1_texture_animator.html#a7eeb164b9ac1e10d4c2984614b7d4940", null ],
+    [ "mTextureCoordsStart", "class_particle_universe_1_1_texture_animator.html#a3ffe7074527fea60d819dcc687422d6e", null ]
+];

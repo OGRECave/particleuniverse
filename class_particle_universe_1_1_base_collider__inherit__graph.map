@@ -1,0 +1,12 @@
+<map id="ParticleUniverse::BaseCollider" name="ParticleUniverse::BaseCollider">
+<area shape="rect" id="node6" href="$class_particle_universe_1_1_box_collider.html" title="ParticleUniverse::BoxCollider" alt="" coords="703,13,897,39"/>
+<area shape="rect" id="node8" href="$class_particle_universe_1_1_inter_particle_collider.html" title="ParticleUniverse::InterParticle\lCollider" alt="" coords="702,64,898,105"/>
+<area shape="rect" id="node9" href="$class_particle_universe_1_1_plane_collider.html" title="ParticleUniverse::PlaneCollider" alt="" coords="699,130,901,157"/>
+<area shape="rect" id="node10" href="$class_particle_universe_1_1_sphere_collider.html" title="ParticleUniverse::Sphere\lCollider" alt="" coords="717,181,883,223"/>
+<area shape="rect" id="node2" href="$class_particle_universe_1_1_particle_affector.html" title="ParticleUniverse::Particle\lAffector" alt="" coords="232,93,403,135"/>
+<area shape="rect" id="node3" href="$class_particle_universe_1_1_particle.html" title="ParticleUniverse::Particle" alt="" coords="9,50,180,77"/>
+<area shape="rect" id="node4" href="$class_particle_universe_1_1_i_alias.html" title="ParticleUniverse::IAlias" alt="" coords="15,101,174,127"/>
+<area shape="rect" id="node5" href="$class_particle_universe_1_1_i_element.html" title="ParticleUniverse::IElement" alt="" coords="5,151,184,178"/>
+<area shape="rect" id="node7" href="$class_particle_universe_1_1_box_collider_extern.html" title="ParticleUniverse::BoxCollider\lExtern" alt="" coords="949,5,1143,47"/>
+<area shape="rect" id="node11" href="$class_particle_universe_1_1_sphere_collider_extern.html" title="ParticleUniverse::Sphere\lColliderExtern" alt="" coords="963,181,1129,223"/>
+</map>

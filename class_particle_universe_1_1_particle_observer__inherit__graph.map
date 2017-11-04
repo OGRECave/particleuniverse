@@ -1,0 +1,15 @@
+<map id="ParticleUniverse::ParticleObserver" name="ParticleUniverse::ParticleObserver">
+<area shape="rect" id="node4" href="$class_particle_universe_1_1_on_clear_observer.html" title="ParticleUniverse::OnClear\lObserver" alt="" coords="462,5,637,47"/>
+<area shape="rect" id="node5" href="$class_particle_universe_1_1_on_collision_observer.html" title="ParticleUniverse::OnCollision\lObserver" alt="" coords="453,71,646,112"/>
+<area shape="rect" id="node6" href="$class_particle_universe_1_1_on_count_observer.html" title="ParticleUniverse::OnCount\lObserver" alt="" coords="460,136,639,177"/>
+<area shape="rect" id="node7" href="$class_particle_universe_1_1_on_emission_observer.html" title="ParticleUniverse::OnEmission\lObserver" alt="" coords="451,201,648,243"/>
+<area shape="rect" id="node8" href="$class_particle_universe_1_1_on_event_flag_observer.html" title="ParticleUniverse::OnEvent\lFlagObserver" alt="" coords="461,267,638,308"/>
+<area shape="rect" id="node9" href="$class_particle_universe_1_1_on_expire_observer.html" title="ParticleUniverse::OnExpire\lObserver" alt="" coords="459,332,639,373"/>
+<area shape="rect" id="node10" href="$class_particle_universe_1_1_on_position_observer.html" title="ParticleUniverse::OnPosition\lObserver" alt="" coords="454,397,645,439"/>
+<area shape="rect" id="node11" href="$class_particle_universe_1_1_on_quota_observer.html" title="ParticleUniverse::OnQuota\lObserver" alt="" coords="460,463,639,504"/>
+<area shape="rect" id="node12" href="$class_particle_universe_1_1_on_random_observer.html" title="ParticleUniverse::OnRandom\lObserver" alt="" coords="453,528,645,569"/>
+<area shape="rect" id="node13" href="$class_particle_universe_1_1_on_time_observer.html" title="ParticleUniverse::OnTime\lObserver" alt="" coords="463,593,635,635"/>
+<area shape="rect" id="node14" href="$class_particle_universe_1_1_on_velocity_observer.html" title="ParticleUniverse::OnVelocity\lObserver" alt="" coords="454,659,645,700"/>
+<area shape="rect" id="node2" href="$class_particle_universe_1_1_i_alias.html" title="ParticleUniverse::IAlias" alt="" coords="15,314,174,341"/>
+<area shape="rect" id="node3" href="$class_particle_universe_1_1_i_element.html" title="ParticleUniverse::IElement" alt="" coords="5,365,184,391"/>
+</map>

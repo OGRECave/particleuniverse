@@ -1,0 +1,14 @@
+<map id="ParticleUniverse::ParticleEmitterFactory" name="ParticleUniverse::ParticleEmitterFactory">
+<area shape="rect" id="node5" href="$class_particle_universe_1_1_box_emitter_factory.html" title="ParticleUniverse::BoxEmitter\lFactory" alt="" coords="438,5,629,47"/>
+<area shape="rect" id="node6" href="$class_particle_universe_1_1_circle_emitter_factory.html" title="ParticleUniverse::Circle\lEmitterFactory" alt="" coords="453,71,613,112"/>
+<area shape="rect" id="node7" href="$class_particle_universe_1_1_line_emitter_factory.html" title="ParticleUniverse::LineEmitter\lFactory" alt="" coords="437,136,629,177"/>
+<area shape="rect" id="node8" href="$class_particle_universe_1_1_mesh_surface_emitter_factory.html" title="ParticleUniverse::MeshSurface\lEmitterFactory" alt="" coords="432,201,635,243"/>
+<area shape="rect" id="node9" href="$class_particle_universe_1_1_point_emitter_factory.html" title="ParticleUniverse::PointEmitter\lFactory" alt="" coords="434,267,633,308"/>
+<area shape="rect" id="node10" href="$class_particle_universe_1_1_position_emitter_factory.html" title="ParticleUniverse::Position\lEmitterFactory" alt="" coords="447,332,620,373"/>
+<area shape="rect" id="node11" href="$class_particle_universe_1_1_slave_emitter_factory.html" title="ParticleUniverse::SlaveEmitter\lFactory" alt="" coords="433,397,634,439"/>
+<area shape="rect" id="node12" href="$class_particle_universe_1_1_sphere_surface_emitter_factory.html" title="ParticleUniverse::Sphere\lSurfaceEmitterFactory" alt="" coords="450,463,617,504"/>
+<area shape="rect" id="node13" href="$class_particle_universe_1_1_vertex_emitter_factory.html" title="ParticleUniverse::Vertex\lEmitterFactory" alt="" coords="451,528,615,569"/>
+<area shape="rect" id="node2" href="$class_particle_universe_1_1_script_reader.html" title="ParticleUniverse::Script\lReader" alt="" coords="5,201,165,243"/>
+<area shape="rect" id="node3" href="$class_particle_universe_1_1_script_writer.html" title="ParticleUniverse::Script\lWriter" alt="" coords="5,267,165,308"/>
+<area shape="rect" id="node4" href="/home/pavel/workspace/ogre-git/build/api/Ogre.tag$class_ogre_1_1_allocated_object.html" title="FactoryAlloc" alt="" coords="38,333,133,359"/>
+</map>

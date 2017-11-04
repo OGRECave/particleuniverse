@@ -1,0 +1,26 @@
+var class_particle_universe_1_1_visual_particle =
+[
+    [ "VisualParticle", "class_particle_universe_1_1_visual_particle.html#a39e9f3869432fc6b1611b1c4c22ff529", null ],
+    [ "~VisualParticle", "class_particle_universe_1_1_visual_particle.html#a7fc4fee40472861ce59f5b6eb6f5475f", null ],
+    [ "_calculateBoundingSphereRadius", "class_particle_universe_1_1_visual_particle.html#a407cf755d60a8e993eb0aa417e58f78e", null ],
+    [ "_initForEmission", "class_particle_universe_1_1_visual_particle.html#a4ec327957a26742b6084383c21ededdb", null ],
+    [ "_initForExpiration", "class_particle_universe_1_1_visual_particle.html#acc1a9b17608df45cac44eec7b9f45701", null ],
+    [ "setOwnDimensions", "class_particle_universe_1_1_visual_particle.html#afd5a19909054d98a724cfd97d0b009d4", null ],
+    [ "colour", "class_particle_universe_1_1_visual_particle.html#a5b0eb44fbd5726cdf78104ea04b48c03", null ],
+    [ "depth", "class_particle_universe_1_1_visual_particle.html#af5f5421a6e3771fcd43412587582aefc", null ],
+    [ "height", "class_particle_universe_1_1_visual_particle.html#a68501a46487a621e1e08c3a3d5d81381", null ],
+    [ "orientation", "class_particle_universe_1_1_visual_particle.html#abb5e4047ba7bd5c4803136a83cb71bee", null ],
+    [ "originalColour", "class_particle_universe_1_1_visual_particle.html#ae7506fcdfb960e300e591e348a74fd6b", null ],
+    [ "originalOrientation", "class_particle_universe_1_1_visual_particle.html#a77b78b5c54464825890bfc726c166578", null ],
+    [ "ownDimensions", "class_particle_universe_1_1_visual_particle.html#affc1d786d1cd90c55b835c4973353790", null ],
+    [ "radius", "class_particle_universe_1_1_visual_particle.html#a4f9322a094819432c1778f1f4a7ce8fc", null ],
+    [ "rotationAxis", "class_particle_universe_1_1_visual_particle.html#a9fc357073ee94118addde0bf93cc92fa", null ],
+    [ "rotationSpeed", "class_particle_universe_1_1_visual_particle.html#a0a18b41934660c5c67ff90b236bf309c", null ],
+    [ "textureAnimationDirectionUp", "class_particle_universe_1_1_visual_particle.html#a650cf7a777533306695609f5286db042", null ],
+    [ "textureAnimationTimeStep", "class_particle_universe_1_1_visual_particle.html#a3313239dfc969cac532718c65225522b", null ],
+    [ "textureAnimationTimeStepCount", "class_particle_universe_1_1_visual_particle.html#a1262be3340fa8899f87046fa964853f8", null ],
+    [ "textureCoordsCurrent", "class_particle_universe_1_1_visual_particle.html#abcaf4fd6db1a26edbe772671d37b03f5", null ],
+    [ "width", "class_particle_universe_1_1_visual_particle.html#a288f8cb79f7fc6946bbe4cedb307131d", null ],
+    [ "zRotation", "class_particle_universe_1_1_visual_particle.html#a4b94b0ac9a4f105343f58e139842a4ee", null ],
+    [ "zRotationSpeed", "class_particle_universe_1_1_visual_particle.html#afdc50d93684e461e2fa19912c17293ff", null ]
+];

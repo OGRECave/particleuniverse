@@ -1,0 +1,31 @@
+<map id="ParticleUniverse::ParticleAffectorFactory" name="ParticleUniverse::ParticleAffectorFactory">
+<area shape="rect" id="node5" href="$class_particle_universe_1_1_align_affector_factory.html" title="ParticleUniverse::AlignAffector\lFactory" alt="" coords="439,5,640,47"/>
+<area shape="rect" id="node6" href="$class_particle_universe_1_1_base_collider_factory.html" title="ParticleUniverse::BaseCollider\lFactory" alt="" coords="439,71,639,112"/>
+<area shape="rect" id="node7" href="$class_particle_universe_1_1_base_force_affector_factory.html" title="ParticleUniverse::BaseForce\lAffectorFactory" alt="" coords="445,136,634,177"/>
+<area shape="rect" id="node8" href="$class_particle_universe_1_1_box_collider_factory.html" title="ParticleUniverse::BoxCollider\lFactory" alt="" coords="443,201,636,243"/>
+<area shape="rect" id="node9" href="$class_particle_universe_1_1_collision_avoidance_affector_factory.html" title="ParticleUniverse::Collision\lAvoidanceAffectorFactory" alt="" coords="451,267,627,308"/>
+<area shape="rect" id="node10" href="$class_particle_universe_1_1_colour_affector_factory.html" title="ParticleUniverse::Colour\lAffectorFactory" alt="" coords="457,332,621,373"/>
+<area shape="rect" id="node11" href="$class_particle_universe_1_1_flock_centering_affector_factory.html" title="ParticleUniverse::FlockCentering\lAffectorFactory" alt="" coords="432,397,647,439"/>
+<area shape="rect" id="node12" href="$class_particle_universe_1_1_force_field_affector_factory.html" title="ParticleUniverse::ForceField\lAffectorFactory" alt="" coords="446,463,633,504"/>
+<area shape="rect" id="node13" href="$class_particle_universe_1_1_geometry_rotator_factory.html" title="ParticleUniverse::Geometry\lRotatorFactory" alt="" coords="448,528,631,569"/>
+<area shape="rect" id="node14" href="$class_particle_universe_1_1_gravity_affector_factory.html" title="ParticleUniverse::Gravity\lAffectorFactory" alt="" coords="455,593,623,635"/>
+<area shape="rect" id="node15" href="$class_particle_universe_1_1_inter_particle_collider_factory.html" title="ParticleUniverse::InterParticle\lColliderFactory" alt="" coords="441,659,637,700"/>
+<area shape="rect" id="node16" href="$class_particle_universe_1_1_jet_affector_factory.html" title="ParticleUniverse::JetAffector\lFactory" alt="" coords="444,724,635,765"/>
+<area shape="rect" id="node17" href="$class_particle_universe_1_1_line_affector_factory.html" title="ParticleUniverse::LineAffector\lFactory" alt="" coords="441,789,637,831"/>
+<area shape="rect" id="node18" href="$class_particle_universe_1_1_linear_force_affector_factory.html" title="ParticleUniverse::Linear\lForceAffectorFactory" alt="" coords="459,855,620,896"/>
+<area shape="rect" id="node19" href="$class_particle_universe_1_1_particle_follower_factory.html" title="ParticleUniverse::Particle\lFollowerFactory" alt="" coords="454,920,625,961"/>
+<area shape="rect" id="node20" href="$class_particle_universe_1_1_path_follower_factory.html" title="ParticleUniverse::PathFollower\lFactory" alt="" coords="438,985,641,1027"/>
+<area shape="rect" id="node21" href="$class_particle_universe_1_1_plane_collider_factory.html" title="ParticleUniverse::PlaneCollider\lFactory" alt="" coords="438,1051,641,1092"/>
+<area shape="rect" id="node22" href="$class_particle_universe_1_1_randomiser_factory.html" title="ParticleUniverse::Randomiser\lFactory" alt="" coords="441,1116,637,1157"/>
+<area shape="rect" id="node23" href="$class_particle_universe_1_1_scale_affector_factory.html" title="ParticleUniverse::ScaleAffector\lFactory" alt="" coords="437,1181,642,1223"/>
+<area shape="rect" id="node24" href="$class_particle_universe_1_1_scale_velocity_affector_factory.html" title="ParticleUniverse::ScaleVelocity\lAffectorFactory" alt="" coords="436,1247,643,1288"/>
+<area shape="rect" id="node25" href="$class_particle_universe_1_1_sine_force_affector_factory.html" title="ParticleUniverse::SineForce\lAffectorFactory" alt="" coords="447,1312,632,1353"/>
+<area shape="rect" id="node26" href="$class_particle_universe_1_1_sphere_collider_factory.html" title="ParticleUniverse::Sphere\lColliderFactory" alt="" coords="456,1377,623,1419"/>
+<area shape="rect" id="node27" href="$class_particle_universe_1_1_texture_animator_factory.html" title="ParticleUniverse::Texture\lAnimatorFactory" alt="" coords="454,1443,625,1484"/>
+<area shape="rect" id="node28" href="$class_particle_universe_1_1_texture_rotator_factory.html" title="ParticleUniverse::Texture\lRotatorFactory" alt="" coords="454,1508,625,1549"/>
+<area shape="rect" id="node29" href="$class_particle_universe_1_1_velocity_matching_affector_factory.html" title="ParticleUniverse::Velocity\lMatchingAffectorFactory" alt="" coords="453,1573,626,1615"/>
+<area shape="rect" id="node30" href="$class_particle_universe_1_1_vortex_affector_factory.html" title="ParticleUniverse::Vortex\lAffectorFactory" alt="" coords="457,1639,621,1680"/>
+<area shape="rect" id="node2" href="$class_particle_universe_1_1_script_reader.html" title="ParticleUniverse::Script\lReader" alt="" coords="5,757,165,799"/>
+<area shape="rect" id="node3" href="$class_particle_universe_1_1_script_writer.html" title="ParticleUniverse::Script\lWriter" alt="" coords="5,823,165,864"/>
+<area shape="rect" id="node4" href="/home/pavel/workspace/ogre-git/build/api/Ogre.tag$class_ogre_1_1_allocated_object.html" title="FactoryAlloc" alt="" coords="38,889,133,915"/>
+</map>

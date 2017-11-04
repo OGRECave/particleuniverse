@@ -1,0 +1,29 @@
+<map id="ParticleUniverse::ParticleAffectorWriter" name="ParticleUniverse::ParticleAffectorWriter">
+<area shape="rect" id="node3" href="$class_particle_universe_1_1_align_affector_writer.html" title="ParticleUniverse::AlignAffector\lWriter" alt="" coords="439,71,640,112"/>
+<area shape="rect" id="node4" href="$class_particle_universe_1_1_base_collider_writer.html" title="ParticleUniverse::BaseCollider\lWriter" alt="" coords="439,136,639,177"/>
+<area shape="rect" id="node8" href="$class_particle_universe_1_1_base_force_affector_writer.html" title="ParticleUniverse::BaseForce\lAffectorWriter" alt="" coords="445,201,634,243"/>
+<area shape="rect" id="node11" href="$class_particle_universe_1_1_collision_avoidance_affector_writer.html" title="ParticleUniverse::Collision\lAvoidanceAffectorWriter" alt="" coords="451,267,627,308"/>
+<area shape="rect" id="node12" href="$class_particle_universe_1_1_colour_affector_writer.html" title="ParticleUniverse::Colour\lAffectorWriter" alt="" coords="457,332,621,373"/>
+<area shape="rect" id="node13" href="$class_particle_universe_1_1_flock_centering_affector_writer.html" title="ParticleUniverse::FlockCentering\lAffectorWriter" alt="" coords="432,397,647,439"/>
+<area shape="rect" id="node14" href="$class_particle_universe_1_1_force_field_affector_writer.html" title="ParticleUniverse::ForceField\lAffectorWriter" alt="" coords="446,463,633,504"/>
+<area shape="rect" id="node15" href="$class_particle_universe_1_1_geometry_rotator_writer.html" title="ParticleUniverse::Geometry\lRotatorWriter" alt="" coords="448,528,631,569"/>
+<area shape="rect" id="node16" href="$class_particle_universe_1_1_gravity_affector_writer.html" title="ParticleUniverse::Gravity\lAffectorWriter" alt="" coords="455,593,623,635"/>
+<area shape="rect" id="node17" href="$class_particle_universe_1_1_inter_particle_collider_writer.html" title="ParticleUniverse::InterParticle\lColliderWriter" alt="" coords="441,659,637,700"/>
+<area shape="rect" id="node18" href="$class_particle_universe_1_1_jet_affector_writer.html" title="ParticleUniverse::JetAffector\lWriter" alt="" coords="444,724,635,765"/>
+<area shape="rect" id="node19" href="$class_particle_universe_1_1_line_affector_writer.html" title="ParticleUniverse::LineAffector\lWriter" alt="" coords="441,789,637,831"/>
+<area shape="rect" id="node20" href="$class_particle_universe_1_1_particle_follower_writer.html" title="ParticleUniverse::Particle\lFollowerWriter" alt="" coords="454,855,625,896"/>
+<area shape="rect" id="node21" href="$class_particle_universe_1_1_path_follower_writer.html" title="ParticleUniverse::PathFollower\lWriter" alt="" coords="438,920,641,961"/>
+<area shape="rect" id="node22" href="$class_particle_universe_1_1_randomiser_writer.html" title="ParticleUniverse::Randomiser\lWriter" alt="" coords="441,985,637,1027"/>
+<area shape="rect" id="node23" href="$class_particle_universe_1_1_scale_affector_writer.html" title="ParticleUniverse::ScaleAffector\lWriter" alt="" coords="437,1051,642,1092"/>
+<area shape="rect" id="node24" href="$class_particle_universe_1_1_scale_velocity_affector_writer.html" title="ParticleUniverse::ScaleVelocity\lAffectorWriter" alt="" coords="436,1116,643,1157"/>
+<area shape="rect" id="node25" href="$class_particle_universe_1_1_texture_animator_writer.html" title="ParticleUniverse::Texture\lAnimatorWriter" alt="" coords="454,1181,625,1223"/>
+<area shape="rect" id="node26" href="$class_particle_universe_1_1_texture_rotator_writer.html" title="ParticleUniverse::Texture\lRotatorWriter" alt="" coords="454,1247,625,1288"/>
+<area shape="rect" id="node27" href="$class_particle_universe_1_1_velocity_matching_affector_writer.html" title="ParticleUniverse::Velocity\lMatchingAffectorWriter" alt="" coords="453,1312,626,1353"/>
+<area shape="rect" id="node28" href="$class_particle_universe_1_1_vortex_affector_writer.html" title="ParticleUniverse::Vortex\lAffectorWriter" alt="" coords="457,1377,621,1419"/>
+<area shape="rect" id="node2" href="$class_particle_universe_1_1_script_writer.html" title="ParticleUniverse::Script\lWriter" alt="" coords="5,724,165,765"/>
+<area shape="rect" id="node5" href="$class_particle_universe_1_1_box_collider_writer.html" title="ParticleUniverse::BoxCollider\lWriter" alt="" coords="699,5,893,47"/>
+<area shape="rect" id="node6" href="$class_particle_universe_1_1_plane_collider_writer.html" title="ParticleUniverse::PlaneCollider\lWriter" alt="" coords="695,71,897,112"/>
+<area shape="rect" id="node7" href="$class_particle_universe_1_1_sphere_collider_writer.html" title="ParticleUniverse::Sphere\lColliderWriter" alt="" coords="713,136,879,177"/>
+<area shape="rect" id="node9" href="$class_particle_universe_1_1_linear_force_affector_writer.html" title="ParticleUniverse::Linear\lForceAffectorWriter" alt="" coords="715,201,877,243"/>
+<area shape="rect" id="node10" href="$class_particle_universe_1_1_sine_force_affector_writer.html" title="ParticleUniverse::SineForce\lAffectorWriter" alt="" coords="703,267,889,308"/>
+</map>

@@ -1,0 +1,26 @@
+var class_particle_universe_1_1_texture_rotator =
+[
+    [ "TextureRotator", "class_particle_universe_1_1_texture_rotator.html#a3564280221e53d8e247c25a2236d1d2b", null ],
+    [ "~TextureRotator", "class_particle_universe_1_1_texture_rotator.html#a739118113f6afee4832630f9b17d1429", null ],
+    [ "_affect", "class_particle_universe_1_1_texture_rotator.html#a2ad6818867e5ce00f3ef3ce4fa55251a", null ],
+    [ "_calculateRotation", "class_particle_universe_1_1_texture_rotator.html#aefbd59456311cdbb719e5fa88728cfa4", null ],
+    [ "_calculateRotationSpeed", "class_particle_universe_1_1_texture_rotator.html#aeff60fddc55bf95183f112f81b9784e0", null ],
+    [ "_initParticleForEmission", "class_particle_universe_1_1_texture_rotator.html#a86484f9489bafb1bcfefc472b541f032", null ],
+    [ "copyAttributesTo", "class_particle_universe_1_1_texture_rotator.html#ae080ec824d6d53bcc9418933dfaac2d1", null ],
+    [ "getRotation", "class_particle_universe_1_1_texture_rotator.html#adf9a08e26cb7980d2cfe86053acccd5e", null ],
+    [ "getRotationSpeed", "class_particle_universe_1_1_texture_rotator.html#a2f07bfa3b03f83e21266b149b767ae07", null ],
+    [ "setRotation", "class_particle_universe_1_1_texture_rotator.html#a483ce42a5024b35325d7fdc9ce55a477", null ],
+    [ "setRotationSpeed", "class_particle_universe_1_1_texture_rotator.html#ad910c18df08992457a6d36810e82423d", null ],
+    [ "setUseOwnRotationSpeed", "class_particle_universe_1_1_texture_rotator.html#af3c8e5399b6d9358ca3bc1e0e14b118c", null ],
+    [ "useOwnRotationSpeed", "class_particle_universe_1_1_texture_rotator.html#a5fd35bc2ec37d11c3d4e535e0d110698", null ],
+    [ "DEFAULT_ROTATION", "class_particle_universe_1_1_texture_rotator.html#a69aee9676ea2d561a96ffcd53c84d157", null ],
+    [ "DEFAULT_ROTATION_SPEED", "class_particle_universe_1_1_texture_rotator.html#a90df6f065e39bc93664b3bb9c4e527c4", null ],
+    [ "DEFAULT_USE_OWN_SPEED", "class_particle_universe_1_1_texture_rotator.html#a6b1a307bed45e7ee7aa902fc3f9a60dd", null ],
+    [ "mDynamicAttributeFactory", "class_particle_universe_1_1_texture_rotator.html#af2e7f9fc7fcb619873411681e1d3330c", null ],
+    [ "mDynamicAttributeHelper", "class_particle_universe_1_1_texture_rotator.html#a361b68f2f4a47d385302967281f7f4a8", null ],
+    [ "mDynRotation", "class_particle_universe_1_1_texture_rotator.html#af7956865b251f01723147b0bd10179ff", null ],
+    [ "mDynRotationSpeed", "class_particle_universe_1_1_texture_rotator.html#a7802e39f84bdaa36ffb845b476ba5d10", null ],
+    [ "mScaledRotationSpeed", "class_particle_universe_1_1_texture_rotator.html#a62d9dcb842c38f81349733979bab4a68", null ],
+    [ "mUseOwnRotationSpeed", "class_particle_universe_1_1_texture_rotator.html#a67dcf646f5e94e64bc8dac5f399cce29", null ],
+    [ "twoPiRad", "class_particle_universe_1_1_texture_rotator.html#ac908b190af972e61815e0946edc3a838", null ]
+];

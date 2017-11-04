@@ -1,0 +1,14 @@
+<map id="ParticleUniverse::ParticleObserverWriter" name="ParticleUniverse::ParticleObserverWriter">
+<area shape="rect" id="node3" href="$class_particle_universe_1_1_on_clear_observer_writer.html" title="ParticleUniverse::OnClear\lObserverWriter" alt="" coords="443,5,618,47"/>
+<area shape="rect" id="node4" href="$class_particle_universe_1_1_on_collision_observer_writer.html" title="ParticleUniverse::OnCollision\lObserverWriter" alt="" coords="434,71,627,112"/>
+<area shape="rect" id="node5" href="$class_particle_universe_1_1_on_count_observer_writer.html" title="ParticleUniverse::OnCount\lObserverWriter" alt="" coords="441,136,620,177"/>
+<area shape="rect" id="node6" href="$class_particle_universe_1_1_on_emission_observer_writer.html" title="ParticleUniverse::OnEmission\lObserverWriter" alt="" coords="432,201,629,243"/>
+<area shape="rect" id="node7" href="$class_particle_universe_1_1_on_event_flag_observer_writer.html" title="ParticleUniverse::OnEvent\lFlagObserverWriter" alt="" coords="442,267,619,308"/>
+<area shape="rect" id="node8" href="$class_particle_universe_1_1_on_expire_observer_writer.html" title="ParticleUniverse::OnExpire\lObserverWriter" alt="" coords="441,332,621,373"/>
+<area shape="rect" id="node9" href="$class_particle_universe_1_1_on_position_observer_writer.html" title="ParticleUniverse::OnPosition\lObserverWriter" alt="" coords="435,397,626,439"/>
+<area shape="rect" id="node10" href="$class_particle_universe_1_1_on_quota_observer_writer.html" title="ParticleUniverse::OnQuota\lObserverWriter" alt="" coords="441,463,620,504"/>
+<area shape="rect" id="node11" href="$class_particle_universe_1_1_on_random_observer_writer.html" title="ParticleUniverse::OnRandom\lObserverWriter" alt="" coords="435,528,627,569"/>
+<area shape="rect" id="node12" href="$class_particle_universe_1_1_on_time_observer_writer.html" title="ParticleUniverse::OnTime\lObserverWriter" alt="" coords="445,593,617,635"/>
+<area shape="rect" id="node13" href="$class_particle_universe_1_1_on_velocity_observer_writer.html" title="ParticleUniverse::OnVelocity\lObserverWriter" alt="" coords="435,659,626,700"/>
+<area shape="rect" id="node2" href="$class_particle_universe_1_1_script_writer.html" title="ParticleUniverse::Script\lWriter" alt="" coords="5,332,165,373"/>
+</map>

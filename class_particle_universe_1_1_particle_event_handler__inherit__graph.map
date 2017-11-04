@@ -1,0 +1,11 @@
+<map id="ParticleUniverse::ParticleEventHandler" name="ParticleUniverse::ParticleEventHandler">
+<area shape="rect" id="node4" href="$class_particle_universe_1_1_do_affector_event_handler.html" title="ParticleUniverse::DoAffector\lEventHandler" alt="" coords="459,5,648,47"/>
+<area shape="rect" id="node5" href="$class_particle_universe_1_1_do_enable_component_event_handler.html" title="ParticleUniverse::DoEnable\lComponentEventHandler" alt="" coords="462,71,645,112"/>
+<area shape="rect" id="node6" href="$class_particle_universe_1_1_do_expire_event_handler.html" title="ParticleUniverse::DoExpire\lEventHandler" alt="" coords="463,136,643,177"/>
+<area shape="rect" id="node7" href="$class_particle_universe_1_1_do_freeze_event_handler.html" title="ParticleUniverse::DoFreeze\lEventHandler" alt="" coords="462,201,645,243"/>
+<area shape="rect" id="node8" href="$class_particle_universe_1_1_do_placement_particle_event_handler.html" title="ParticleUniverse::DoPlacement\lParticleEventHandler" alt="" coords="451,267,656,308"/>
+<area shape="rect" id="node9" href="$class_particle_universe_1_1_do_scale_event_handler.html" title="ParticleUniverse::DoScale\lEventHandler" alt="" coords="465,332,641,373"/>
+<area shape="rect" id="node10" href="$class_particle_universe_1_1_do_stop_system_event_handler.html" title="ParticleUniverse::DoStop\lSystemEventHandler" alt="" coords="468,397,639,439"/>
+<area shape="rect" id="node2" href="$class_particle_universe_1_1_i_alias.html" title="ParticleUniverse::IAlias" alt="" coords="15,183,174,210"/>
+<area shape="rect" id="node3" href="$class_particle_universe_1_1_i_element.html" title="ParticleUniverse::IElement" alt="" coords="5,234,184,261"/>
+</map>

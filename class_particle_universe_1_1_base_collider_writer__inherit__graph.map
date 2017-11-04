@@ -1,0 +1,7 @@
+<map id="ParticleUniverse::BaseColliderWriter" name="ParticleUniverse::BaseColliderWriter">
+<area shape="rect" id="node4" href="$class_particle_universe_1_1_box_collider_writer.html" title="ParticleUniverse::BoxCollider\lWriter" alt="" coords="685,5,878,47"/>
+<area shape="rect" id="node5" href="$class_particle_universe_1_1_plane_collider_writer.html" title="ParticleUniverse::PlaneCollider\lWriter" alt="" coords="680,71,883,112"/>
+<area shape="rect" id="node6" href="$class_particle_universe_1_1_sphere_collider_writer.html" title="ParticleUniverse::Sphere\lColliderWriter" alt="" coords="698,136,865,177"/>
+<area shape="rect" id="node2" href="$class_particle_universe_1_1_particle_affector_writer.html" title="ParticleUniverse::Particle\lAffectorWriter" alt="" coords="213,71,384,112"/>
+<area shape="rect" id="node3" href="$class_particle_universe_1_1_script_writer.html" title="ParticleUniverse::Script\lWriter" alt="" coords="5,71,165,112"/>
+</map>
