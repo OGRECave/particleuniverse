@@ -1,4 +1,4 @@
-# particleuniverse
+# Particle Universe {#mainpage}
 
 Particle Universe plugin for Ogre3D with community fixes
 

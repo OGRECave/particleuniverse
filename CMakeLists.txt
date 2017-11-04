@@ -35,3 +35,20 @@ endif()
 if(PU_BUILD_TOOLS)
   add_subdirectory(Tools/AtlasImageTool)
 endif()
+
+# doxygen stuff
+find_package(Doxygen)
+if (DOXYGEN_FOUND)
+  # prepare doxygen configuration file
+  configure_file(${CMAKE_CURRENT_SOURCE_DIR}/Plugins/ParticleUniverse/docs/Doxyfile.in ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile)
+
+  add_custom_target( docs
+    COMMAND ${DOXYGEN_EXECUTABLE} ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile
+    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+    COMMENT "Generating documentation with Doxygen."
+    VERBATIM
+  )
+
+  # cleanup $build/api-doc on "make clean"
+  set_property(DIRECTORY APPEND PROPERTY ADDITIONAL_MAKE_CLEAN_FILES docs)
+endif (DOXYGEN_FOUND)
