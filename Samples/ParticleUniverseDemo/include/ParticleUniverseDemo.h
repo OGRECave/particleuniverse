@@ -9,6 +9,7 @@
 #include <OgreRoot.h>
 #include <OgreSceneNode.h>
 #include <OgreApplicationContext.h>
+#include <OgreCameraMan.h>
 
 
 using namespace Ogre;
@@ -17,8 +18,8 @@ class Sample_ParticleUniverseDemo : public OgreBites::ApplicationContext, public
 {
 public:
 	Ogre::SceneManager* mSceneMgr;
-	Ogre::Viewport* mViewport;
 	Ogre::Camera* mCamera;
+	OgreBites::CameraMan* mCameraMan;
 
 	// ApplicationContext Boilerplate
 	Sample_ParticleUniverseDemo() : OgreBites::ApplicationContext("PU Demo") {
@@ -29,24 +30,29 @@ public:
 	    getRoot()->loadPlugin("./Plugin_ParticleUniverse");
 	}
 
+	void setupInput(bool) {}
+
 	/** -----------------------------------------------------------------------
 	Create some particle systems
 	-----------------------------------------------------------------------*/
 	void createScene()
 	{
 	    addInputListener(this);
-		mSceneMgr = Root::getSingleton().createSceneManager("DefaultSceneManager");
+		mSceneMgr = getRoot()->createSceneManager("DefaultSceneManager");
 		mCamera = mSceneMgr->createCamera("Camera");
-		mCamera->setPosition(320,0,40);
-		mCamera->lookAt(0,0,-50);
+		SceneNode* camNode = mSceneMgr->getRootSceneNode()->createChildSceneNode();
+		camNode->attachObject(mCamera);
+		mCameraMan = new OgreBites::CameraMan(camNode);
+		mCameraMan->setStyle(OgreBites::CS_ORBIT);
+		addInputListener(mCameraMan);
+
 		mCamera->setFarClipDistance(10000);
 		mCamera->setNearClipDistance(0.1);
-		mViewport = getRenderWindow()->addViewport(mCamera);
+		Ogre::Viewport* viewport = getRenderWindow()->addViewport(mCamera);
 
-		
 		// setup some basic lighting for our scene
         mSceneMgr->setAmbientLight(ColourValue(0.3, 0.3, 0.3));
-        mSceneMgr->createLight()->setPosition(20, 80, 50);
+        //mSceneMgr->createLight()->setPosition(20, 80, 50);
         
 		// create a skyplane 5000 units away, facing down, 10000 square units large, with 3x texture tiling
         //mSceneMgr->setSkyPlane(true, Plane(0, -1, 0, 5000), "Examples/SpaceSkyPlane", 10000, 3);
@@ -75,38 +81,7 @@ public:
 		pSys2->start();
 
 		// Look at the torches
-		mCamera->setPosition(0, 0, 150);
-		mCamera->lookAt(mSceneMgr->getRootSceneNode()->_getDerivedPosition());
-	}
-
-	bool frameRenderingQueued (const Ogre::FrameEvent& evt)
-	{
-		Ogre::Vector3 movementVector (0,0,0);
-
-		const Ogre::uint8* state = SDL_GetKeyboardState(NULL);
-
-		if (state[SDL_SCANCODE_W])
-			movementVector.z = -1;
-		else if (state[SDL_SCANCODE_S])
-			movementVector.z = 1;
-		if (state[SDL_SCANCODE_A])
-			movementVector.x = -1;
-		else if (state[SDL_SCANCODE_D])
-			movementVector.x = 1;
-
-		movementVector *= evt.timeSinceLastFrame * 200;
-
-		mCamera->moveRelative(movementVector);
-
-		return true;
-	}
-
-	bool mouseMoved(const OgreBites::MouseMotionEvent& event)
-	{
-		mCamera->yaw(Ogre::Radian(-event.xrel)*0.01);
-		mCamera->pitch(Ogre::Radian(-event.yrel)*0.01);
-
-		return true;
+		mCameraMan->setYawPitchDist(Radian(0), Radian(0), 150);
 	}
 
 /** -----------------------------------------------------------------------
@@ -123,7 +98,7 @@ public:
 	-----------------------------------------------------------------------*/
 	bool keyPressed(const OgreBites::KeyboardEvent& evt)
 	{
-		if (evt.keysym.scancode == SDL_SCANCODE_ESCAPE)
+		if (evt.keysym.sym == SDLK_ESCAPE)
 		{
 			getRoot()->queueEndRendering();
 			return true;
@@ -133,7 +108,7 @@ public:
 		ParticleUniverse::ParticleSystem* pSys1 = pManager->getParticleSystem("pSys1");
 		ParticleUniverse::ParticleSystem* pSys2 = pManager->getParticleSystem("pSys2");
 
-		if (evt.keysym.scancode == SDL_SCANCODE_F9)
+		if (evt.keysym.sym == SDLK_F9)
 		{
 			// Get the particle systems by name and pause them
 			if (pSys1)
@@ -145,7 +120,7 @@ public:
 				pSys2->pause();
 			}
 		}
-		else if (evt.keysym.scancode == SDL_SCANCODE_F10)
+		else if (evt.keysym.sym == SDLK_F10)
 		{
 			// Get the particle systems by name and start them again
 			if (pSys1)
