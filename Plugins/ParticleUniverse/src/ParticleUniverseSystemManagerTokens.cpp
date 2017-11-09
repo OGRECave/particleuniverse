@@ -34,6 +34,10 @@ namespace ParticleUniverse
 	//-------------------------------------------------------------------------
 	BuiltinScriptTranslatorManager::BuiltinScriptTranslatorManager()
 	{
+	    ScriptCompilerManager* mgr = ScriptCompilerManager::getSingletonPtr();
+
+	    for(int i = TOKEN_GROUP_MASK; i <= TOKEN_SCENE_POSITION; i++)
+            mgr->registerCustomWordId(token[eDefineStaticToken(i)]);
 	}
 	//-------------------------------------------------------------------------
 	size_t BuiltinScriptTranslatorManager::getNumTranslators() const
