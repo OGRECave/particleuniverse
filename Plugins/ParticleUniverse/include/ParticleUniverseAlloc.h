@@ -36,28 +36,15 @@ namespace ParticleUniverse
 	static const MemoryCategory MEMCATEGORY_SCRIPTING = Ogre::MEMCATEGORY_SCRIPTING;
 
 	// Define the new and delete macro's
-	#if OGRE_DEBUG_MODE
-		#define PU_NEW_T(T, category) new (::Ogre::CategorisedAllocPolicy<category>::allocateBytes(sizeof(T), __FILE__, __LINE__, __FUNCTION__)) T
-		#define PU_DELETE_T(ptr, T, category) if(ptr){(ptr)->~T(); ::Ogre::CategorisedAllocPolicy<category>::deallocateBytes((void*)ptr);}		
-		#define PU_NEW_ARRAY_T(T, count, category) ::Ogre::constructN(static_cast<T*>(::Ogre::CategorisedAllocPolicy<category>::allocateBytes(sizeof(T)*(count), __FILE__, __LINE__, __FUNCTION__)), count) 
-		#define PU_DELETE_ARRAY_T(ptr, T, count, category) if(ptr){for (size_t b = 0; b < count; ++b) { (ptr)[b].~T();} ::Ogre::CategorisedAllocPolicy<category>::deallocateBytes((void*)ptr);}
-		#define PU_NEW new (__FILE__, __LINE__, __FUNCTION__)
-		#define PU_DELETE delete
-		#define PU_ALLOC_T(T, count, category) static_cast<T*>(::Ogre::CategorisedAllocPolicy<category>::allocateBytes(sizeof(T)*(count), __FILE__, __LINE__, __FUNCTION__))
-		#define PU_FREE(ptr, category) ::Ogre::CategorisedAllocPolicy<category>::deallocateBytes((void*)ptr)
-		#define PU_DELETE_ARRAY_BYTES(ptr, category) ::Ogre::CategorisedAllocPolicy<category>::deallocateBytes((void*)ptr)
-
-	#else
-		#define PU_NEW_T(T, category) new (::Ogre::CategorisedAllocPolicy<category>::allocateBytes(sizeof(T))) T
-		#define PU_DELETE_T(ptr, T, category) if(ptr){(ptr)->~T(); ::Ogre::CategorisedAllocPolicy<category>::deallocateBytes((void*)ptr);}
-		#define PU_NEW_ARRAY_T(T, count, category) ::Ogre::constructN(static_cast<T*>(::Ogre::CategorisedAllocPolicy<category>::allocateBytes(sizeof(T)*(count))), count)
-		#define PU_DELETE_ARRAY_T(ptr, T, count, category) if(ptr){for (size_t b = 0; b < count; ++b) { (ptr)[b].~T();} ::Ogre::CategorisedAllocPolicy<category>::deallocateBytes((void*)ptr);}
-		#define PU_NEW new 
-		#define PU_DELETE delete
-		#define PU_ALLOC_T(T, count, category) static_cast<T*>(::Ogre::CategorisedAllocPolicy<category>::allocateBytes(sizeof(T)*(count)))
-		#define PU_FREE(ptr, category) ::Ogre::CategorisedAllocPolicy<category>::deallocateBytes((void*)ptr)
-		#define PU_DELETE_ARRAY_BYTES(ptr, category) ::Ogre::CategorisedAllocPolicy<category>::deallocateBytes((void*)ptr)
-	#endif
+    #define PU_NEW_T OGRE_NEW_T
+    #define PU_DELETE_T OGRE_DELETE_T
+    #define PU_NEW_ARRAY_T OGRE_NEW_ARRAY_T
+    #define PU_DELETE_ARRAY_T OGRE_DELETE_ARRAY_T
+    #define PU_NEW OGRE_NEW
+    #define PU_DELETE OGRE_DELETE
+    #define PU_ALLOC_T OGRE_ALLOC_T
+    #define PU_FREE OGRE_FREE
+    #define PU_DELETE_ARRAY_BYTES OGRE_FREE
 
 	// Typedef the allocation policy for factories
 	typedef Ogre::FactoryAlloc FactoryAlloc;

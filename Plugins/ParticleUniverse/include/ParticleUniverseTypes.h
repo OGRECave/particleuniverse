@@ -67,17 +67,17 @@ namespace ParticleUniverse
 
 	// Typedef's for specific 'Ogre' containers.
 	// vector container
-	template <class T> struct vector : public std::vector<T, Ogre::STLAllocator<T, Ogre::GeneralAllocPolicy> >
+	template <class T> struct vector : public Ogre::vector<T>::type
 	{
 	};
 
 	// list container
-	template <class T> struct list : public std::list<T, Ogre::STLAllocator<T, Ogre::GeneralAllocPolicy> >
+	template <class T> struct list : public Ogre::list<T>::type
 	{ 
 	};
 
 	// map container
-	template <class T, class M> struct map : public std::map<T, M, std::less<T>, Ogre::STLAllocator<T, Ogre::GeneralAllocPolicy> >
+	template <class T, class M> struct map : public Ogre::map<T, M>::type
 	{ 
 	};
 }
