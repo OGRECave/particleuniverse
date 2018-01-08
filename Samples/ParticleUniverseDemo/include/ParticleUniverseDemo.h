@@ -11,6 +11,7 @@
 #include <OgreApplicationContext.h>
 #include <OgreCameraMan.h>
 
+#include "ParticleUniversePlugin.h"
 
 using namespace Ogre;
 
@@ -27,7 +28,7 @@ public:
 
 	void createRoot() {
 	    OgreBites::ApplicationContext::createRoot();
-	    getRoot()->loadPlugin("./Plugin_ParticleUniverse");
+	    getRoot()->installPlugin(new ParticleUniverse::ParticleUniversePlugin);
 	}
 
 	void setupInput(bool) {}
