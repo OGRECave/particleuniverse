@@ -65,21 +65,10 @@ namespace ParticleUniverse
 	// Constants
 	const String BLANK_STRING = "";
 
-	// Typedef's for specific 'Ogre' containers.
-	// vector container
-	template <class T> struct vector : public Ogre::vector<T>::type
-	{
-	};
-
-	// list container
-	template <class T> struct list : public Ogre::list<T>::type
-	{ 
-	};
-
-	// map container
-	template <class T, class M> struct map : public Ogre::map<T, M>::type
-	{ 
-	};
+	// Typedef's for containers
+	template<class T> using vector = std::vector<T>;
+	template <class T> using list = std::list<T>;
+	template <class T, class M> using map = std::map<T, M>;
 }
 
 #endif

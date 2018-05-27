@@ -250,7 +250,7 @@ namespace ParticleUniverse
 		{
 			if (*it == particleSystemListener)
 			{
-				// Remove it (don´t destroy it, because the ParticleSystem is not the owner)
+				// Remove it (donï¿½t destroy it, because the ParticleSystem is not the owner)
 				mParticleSystemListenerList.erase(it);
 				break;
 			}
@@ -469,7 +469,7 @@ namespace ParticleUniverse
 			}
 			else
 			{
-				// Don´t know
+				// Donï¿½t know
 				return Quaternion::IDENTITY;
 			}
 		}
@@ -757,7 +757,7 @@ namespace ParticleUniverse
 
 		for (it = mTechniques.begin(); it != itEnd; ++it)
 		{
-			// Calculate the distance between the camera and each ParticleTechnique (although it isn´t always used).
+			// Calculate the distance between the camera and each ParticleTechnique (although it isnï¿½t always used).
 			if ((*it)->_isMarkedForEmission())
 			{
 				vec = cam->getDerivedPosition() - (*it)->position;
@@ -1066,14 +1066,14 @@ namespace ParticleUniverse
 				{
 					// Wrap the bounding box tight around the particle system
 					mAABB = worldAABB;
-					mAABB.transformAffine(mParentNode->_getFullTransform().inverseAffine());
+					mAABB.transform(mParentNode->_getFullTransform().inverse());
 				}
 				else
 				{
 					// Merge with the current bounding box
 					// Note, that the mAABB must in localspace, so transformation of the worldAABB is required.
 					AxisAlignedBox newAABB(worldAABB);
-					newAABB.transformAffine(mParentNode->_getFullTransform().inverseAffine());
+					newAABB.transform(mParentNode->_getFullTransform().inverse());
 	
 					// Merge calculated box with current AABB.
 					mAABB.merge(newAABB);
@@ -1429,7 +1429,7 @@ namespace ParticleUniverse
 	//-----------------------------------------------------------------------
 	void ParticleSystem::stop(void)
 	{
-		/*  Note, that the ParticleSystem ins´t visible anymore, but it is still attached to the
+		/*  Note, that the ParticleSystem insï¿½t visible anymore, but it is still attached to the
 			node and still consumes resources, but it allows fast start/stop iterations if needed.
 			An important thing why it keeps attached to the node is that attaching and detaching the 
 			ParticleSystem to/from a node must be done outside of the ParticleSystem. If the ParticleSystem

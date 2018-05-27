@@ -513,7 +513,7 @@ namespace ParticleUniverse
 		SimpleSphere sph;
 		Ogre::Matrix4 xworld;
 		getWorldTransforms(&xworld);
-		sph.setCenter(xworld.transformAffine(box.mPosition));
+		sph.setCenter(xworld*box.mPosition);
 
 		if (box.mOwnDimensions)
 		{

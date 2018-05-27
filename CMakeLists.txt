@@ -1,7 +1,11 @@
 set(PROJECT_NAME "ParticleUniverse")
 
 project(${PROJECT_NAME} CXX C)
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.3)
+
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Avoid source tree pollution
 if(CMAKE_SOURCE_DIR STREQUAL CMAKE_BINARY_DIR)
@@ -17,7 +21,7 @@ set(CMAKE_DEBUG_POSTFIX "_d")
 
 # Add the libraries
 # OGRE
-find_package(OGRE 1.10 REQUIRED)
+find_package(OGRE 1.11 REQUIRED)
 link_directories(${OGRE_LIBRARY_DIRS})
 include_directories(${OGRE_INCLUDE_DIRS})
 list(APPEND LIBS ${OGRE_LIBRARIES})
