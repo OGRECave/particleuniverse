@@ -30,11 +30,17 @@ add_subdirectory(Plugins/ParticleUniverse)
 
 # Samples and tools
 set(PU_BUILD_SAMPLES ON CACHE BOOL "Build plugin samples")
+set(PU_BUILD_PYSAMPLES ON CACHE BOOL "Build plugin samples_py")
 set(PU_BUILD_TOOLS ON CACHE BOOL "Build tools")
 
 if(PU_BUILD_SAMPLES)
   add_subdirectory(Samples/ParticleUniverseDemo)
 endif()
+
+if(PU_BUILD_PYSAMPLES)
+  add_subdirectory(Samples/Py)
+endif()
+
 
 if(PU_BUILD_TOOLS)
   add_subdirectory(Tools/AtlasImageTool)

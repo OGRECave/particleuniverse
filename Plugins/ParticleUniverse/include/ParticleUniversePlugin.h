@@ -117,25 +117,25 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 namespace ParticleUniverse
 {
 	/** Plugin instance for Particle Universe */
-	class ParticleUniversePlugin : public Ogre::Plugin
+	class _ParticleUniverseExport ParticleUniversePlugin : public Ogre::Plugin
 	{
 	public:
-		ParticleUniversePlugin(void);
+		ParticleUniversePlugin();
 
 		/// @copydoc Plugin::getName
-		const String& getName(void) const;
+		virtual const String& getName() const;
 
 		/// @copydoc Plugin::install
-		void install(void);
+		virtual void install();
 
 		/// @copydoc Plugin::initialise
-		void initialise(void);
+		virtual void initialise();
 
 		/// @copydoc Plugin::shutdown
-		void shutdown(void);
+		virtual void shutdown();
 
 		/// @copydoc Plugin::uninstall
-		void uninstall(void);
+		virtual void uninstall();
 
 	protected:
 		ParticleSystemManager* mParticleSystemManager;
