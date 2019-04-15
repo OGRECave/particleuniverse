@@ -32,6 +32,8 @@ public:
 	attach particle to scenenode
 	*/
 	void attachParticleToSceneNode(std::string, Ogre::SceneNode* );
+	void attachEntityBone(std::string, Ogre::Entity*, std::string);
+
 	/*
 	set particle scale_velocity
 	*/
@@ -50,6 +52,9 @@ public:
 	void start(std::string);
 	void pause(std::string);
 	void resume(std::string);
+	void stop(std::string);
+	void stopfade(std::string);
+	void stopfade(std::string, Ogre::Real);
 };
 
 

@@ -10,6 +10,7 @@
 #include <OgreSceneNode.h>
 #include <OgreApplicationContext.h>
 #include <OgreCameraMan.h>
+#include <Ogre.h>
 
 #include "ParticleUniversePlugin.h"
 
@@ -165,7 +166,7 @@ public:
 
 	void createRoot() {
 		OgreBites::ApplicationContext::createRoot();
-		getRoot()->installPlugin(new ParticleUniverse::ParticleUniversePlugin());
+		//getRoot()->installPlugin(new ParticleUniverse::ParticleUniversePlugin());
 	}
 
 	void setupInput(bool) {}
@@ -197,10 +198,20 @@ public:
 
 		// Create the particle systems and attach them to a SceneNode
 		ParticleUniverse::ParticleSystemManager* pManager = ParticleUniverse::ParticleSystemManager::getSingletonPtr();
-		ParticleUniverse::ParticleSystem* pSys1 = pManager->createParticleSystem("pSys1", "mp_torch", mSceneMgr);
-		ParticleUniverse::ParticleSystem* pSys2 = pManager->createParticleSystem("pSys2", "mp_torch", mSceneMgr);
-		mSceneMgr->getRootSceneNode()->attachObject(pSys1);
+		ParticleUniverse::ParticleSystem* pSys1 = pManager->createParticleSystem("pSys1", "electroShield", mSceneMgr);
+		ParticleUniverse::ParticleSystem* pSys2 = pManager->createParticleSystem("pSys2", "fireplace_01", mSceneMgr);
+		//mSceneMgr->getRootSceneNode()->attachObject(pSys1);
 		mSceneMgr->getRootSceneNode()->attachObject(pSys2);
+		Ogre::Entity *ent=mSceneMgr->createEntity("hell", "Sinbad.mesh");
+		mSceneMgr->getRootSceneNode()->createChildSceneNode("b")->attachObject(ent);
+		//ent->attachObjectToBone("Handle.L", pSys2);
+
+		//Ogre::ParticleSystem *ps = mSceneMgr->createParticleSystem("dman", "Examples/Swarm");
+		//mSceneMgr->getRootSceneNode()->createChildSceneNode()->attachObject(ps);
+
+
+
+
 
 		// Scale the particle systems, just because we can!
 		pSys1->setScaleVelocity(10);
@@ -215,7 +226,7 @@ public:
 		pSys2->getTechnique(0)->position = Ogre::Vector3(-5, 0, 0);
 
 		// Start!
-		pSys1->start();
+		//pSys1->start();
 		pSys2->start();
 
 		// Look at the torches
@@ -270,6 +281,9 @@ public:
 			{
 				pSys2->resume();
 			}
+		}
+		else if (evt.keysym.sym == int('=')) {
+			mSceneMgr->getSceneNode("b")->translate(0, 0, 1);
 		}
 		return true;
 	}

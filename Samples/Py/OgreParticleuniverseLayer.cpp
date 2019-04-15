@@ -23,6 +23,10 @@ void OgrePartUniLayer::attachParticleToSceneNode(std::string name, Ogre::SceneNo
 	nd->attachObject(particles_map.at(name));
 }
 
+void OgrePartUniLayer::attachEntityBone(std::string name, Ogre::Entity *ent, std::string bonename) {
+	ent->attachObjectToBone(Ogre::String(bonename), particles_map.at(name));
+}
+
 void OgrePartUniLayer::setScaleVelocity(std::string name, int i) {
 	particles_map.at(name)->setScaleVelocity(i);
 }
@@ -44,4 +48,13 @@ void OgrePartUniLayer::pause(std::string name) {
 }
 void OgrePartUniLayer::resume(std::string name) {
 	particles_map.at(name)->resume();
+}
+void OgrePartUniLayer::stopfade(std::string name) {
+	particles_map.at(name)->stopFade();
+}
+void OgrePartUniLayer::stop(std::string name) {
+	particles_map.at(name)->stop();
+}
+void OgrePartUniLayer::stopfade(std::string name,Ogre::Real t) {
+	particles_map.at(name)->stopFade(t);
 }
