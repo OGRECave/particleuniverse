@@ -29,8 +29,9 @@ list(APPEND LIBS ${OGRE_LIBRARIES})
 add_subdirectory(Plugins/ParticleUniverse)
 
 # Samples and tools
-set(PU_BUILD_SAMPLES ON CACHE BOOL "Build plugin samples")
-set(PU_BUILD_TOOLS ON CACHE BOOL "Build tools")
+option(PU_BUILD_SAMPLES "Build plugin samples" OFF)
+option(PU_BUILD_TOOLS "Build tools" OFF)
+option(PU_BUILD_EDITOR "Build PUED Editor [DOES NOT RUN]" OFF)
 
 if(PU_BUILD_SAMPLES)
   add_subdirectory(Samples/ParticleUniverseDemo)
@@ -56,3 +57,31 @@ if (DOXYGEN_FOUND)
   # cleanup $build/api-doc on "make clean"
   set_property(DIRECTORY APPEND PROPERTY ADDITIONAL_MAKE_CLEAN_FILES docs)
 endif (DOXYGEN_FOUND)
+
+if(PU_BUILD_EDITOR)
+  # does not use Bites, needs the cfg
+  file(COPY ${OGRE_CONFIG_DIR}/plugins.cfg DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+  
+  file(COPY PUED/pued.cfg DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
+  # wxWidgets
+  find_package(wxWidgets REQUIRED COMPONENTS core base propgrid adv)
+  include(${wxWidgets_USE_FILE})
+
+  file(GLOB_RECURSE pued_SRC PUED/src/*.cpp)
+
+  # add the source files as usual
+  add_executable(PUED ${pued_SRC})
+  target_include_directories(PUED PRIVATE PUED/include)
+  target_link_libraries(PUED PRIVATE OgreMain ${wxWidgets_LIBRARIES} ParticleUniverse)
+
+  if(UNIX)
+    # we need GTK because wxWidgets is crap
+    find_package(PkgConfig REQUIRED)
+    PKG_CHECK_MODULES(GTK REQUIRED gtk+-3.0)
+
+    target_compile_options(PUED PRIVATE ${GTK_CFLAGS_OTHER})
+    target_include_directories(PUED PRIVATE ${GTK_INCLUDE_DIRS})
+    target_link_libraries(PUED PRIVATE ${GTK_LIBRARIES})
+  endif()
+endif()

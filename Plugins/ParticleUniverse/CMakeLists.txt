@@ -1,6 +1,3 @@
-# The project's include directories
-include_directories(include)
-
 set (PARTICLEUNIVERSE_PLUGIN_NAME "ParticleUniverse")
 
 # The project's sources
@@ -26,6 +23,8 @@ target_link_libraries(${PARTICLEUNIVERSE_PLUGIN_NAME} ${LIBS})
 set_target_properties(${PARTICLEUNIVERSE_PLUGIN_NAME} PROPERTIES
     VERSION ${OGRE_VERSION}
     SOVERSION ${OGRE_VERSION})
+
+target_include_directories(ParticleUniverse PUBLIC include)
 
 # Build as a framework on OS X
 if(APPLE)
