@@ -513,11 +513,7 @@ wxFontPropertyClass::wxFontPropertyClass( const wxString& label, const wxString&
         wxFontEnumerator enumerator;
         enumerator.EnumerateFacenames();
 
-#if wxMINOR_VERSION > 6
         wxArrayString faceNames = enumerator.GetFacenames();
-#else
-        wxArrayString& faceNames = *enumerator.GetFacenames();
-#endif
 		// Allow empty string as a default facename
 		faceNames.Add( wxEmptyString );
         faceNames.Sort();
@@ -1760,9 +1756,9 @@ wxPGVariant wxDatePropertyClass::DoGetValue() const
 bool wxDatePropertyClass::SetValueFromString( const wxString& text,
                                                   int WXUNUSED(argFlags) )
 {
-    const wxChar* c = m_valueDateTime.ParseFormat(text.c_str(),wxDefaultDateTimeFormat);
+    m_valueDateTime.ParseFormat(text.c_str(),wxDefaultDateTimeFormat);
 
-    return c ? true : false;
+    return true;
 }
 
 wxString wxDatePropertyClass::GetValueAsString( int argFlags ) const

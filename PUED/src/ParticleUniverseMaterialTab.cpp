@@ -220,7 +220,7 @@ void MaterialTab::fillMaterials(void)
 	selectMaterial(mMaterialListBox->GetStringSelection());
 }
 //-----------------------------------------------------------------------
-void MaterialTab::selectMaterial(wxString& materialName)
+void MaterialTab::selectMaterial(const wxString& materialName)
 {
 	Ogre::TextureUnitState* textureUnitState = 0;
 	mTxtMaterialName->SetValue(materialName);

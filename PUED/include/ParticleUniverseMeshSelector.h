@@ -27,7 +27,7 @@ class MeshSelector : public wxSingleChoiceDialog
 			const wxString* choices, 
 			long style = wxCHOICEDLG_STYLE, 
 			const wxPoint& pos = wxDefaultPosition) : 
-		wxSingleChoiceDialog(parent, message, caption, n, choices, 0, style, pos){};
+		wxSingleChoiceDialog(parent, message, caption, n, choices, (void**)0, style, pos){};
 		~MeshSelector(void){};
 };
 

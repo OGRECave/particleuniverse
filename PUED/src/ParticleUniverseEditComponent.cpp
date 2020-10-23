@@ -650,7 +650,7 @@ void EditComponent::selectConnection(bool viewOnly)
 			_("Existing connections"), 
 			count, 
 			choices,
-			0,
+			(void**)0,
 			wxDEFAULT_DIALOG_STYLE | wxRESIZE_BORDER | wxOK | wxCENTRE);
 			choiceWindow.SetSize(320, 200);
 			choiceWindow.ShowModal();

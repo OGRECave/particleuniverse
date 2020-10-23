@@ -70,15 +70,15 @@ wxPGId* ParentPropertyWithButtonAndPositions::addPosition(wxPropertyGrid* propgr
 	wxString postFix = ogre2wx(Ogre::StringConverter::toString(mPosition));
 	wxString name = PRNL_POSITION + postFix;
 	wxPGId pid = propgrid->AppendIn(this, wxParentProperty(PRNL_POSITION, name));
-	wxPGId* xid = &(propgrid->AppendIn(pid, wxFloatProperty(PRNL_POSITION + PRNL_POSITION_X, name + PRNL_POSITION_X, vec3.x)));
-	propgrid->SetPropertyEditor(*xid, wxPG_EDITOR(SpinCtrl));
+	wxPGId xid = (propgrid->AppendIn(pid, wxFloatProperty(PRNL_POSITION + PRNL_POSITION_X, name + PRNL_POSITION_X, vec3.x)));
+	propgrid->SetPropertyEditor(xid, wxPG_EDITOR(SpinCtrl));
 	wxPGId yid = propgrid->AppendIn(pid, wxFloatProperty(PRNL_POSITION + PRNL_POSITION_Y, name + PRNL_POSITION_Y, vec3.y));
 	propgrid->SetPropertyEditor(yid, wxPG_EDITOR(SpinCtrl));
 	wxPGId zid = propgrid->AppendIn(pid, wxFloatProperty(PRNL_POSITION + PRNL_POSITION_Z, name + PRNL_POSITION_Z, vec3.z));
 	propgrid->SetPropertyEditor(zid, wxPG_EDITOR(SpinCtrl));
 	mPosition++;
 	propgrid->GetPrevProperty(*xid);
-	return xid;
+	return &xid;
 }
 //-----------------------------------------------------------------------
 unsigned int ParentPropertyWithButtonAndPositions::getNumberOfPositions(void)
@@ -146,11 +146,11 @@ wxPGId* ParentPropertyWithButtonAndFloats::addFloat(wxPropertyGrid* propgrid, fl
 	// Insert a float
 	wxString postFix = ogre2wx(Ogre::StringConverter::toString(mFloat));
 	wxString name = PRNL_FLOAT + postFix;
-	wxPGId* xid = &(propgrid->AppendIn(this, wxFloatProperty(PRNL_FLOAT, name, value)));
-	propgrid->SetPropertyEditor(*xid, wxPG_EDITOR(SpinCtrl));
+	wxPGId xid = (propgrid->AppendIn(this, wxFloatProperty(PRNL_FLOAT, name, value)));
+	propgrid->SetPropertyEditor(xid, wxPG_EDITOR(SpinCtrl));
 	mFloat++;
-	propgrid->GetPrevProperty(*xid);
-	return xid;
+	propgrid->GetPrevProperty(xid);
+	return &xid;
 }
 //-----------------------------------------------------------------------
 unsigned int ParentPropertyWithButtonAndFloats::getNumberOfFloats(void)

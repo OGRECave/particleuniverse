@@ -101,7 +101,7 @@ class ConnectionPolicy
 		// Getters
 		ComponentRelation getRelation(void) const;
 		ComponentRelationDirection getRelationDirection(void) const;
-		const wxString& ConnectionPolicy::getRelationDescription(ComponentRelation relation, 
+		const wxString& getRelationDescription(ComponentRelation relation, 
 			ComponentRelationDirection relationDirection,
 			const wxString& typeToBeConnectedWith, 
 			const wxString& subTypeToBeConnectedWith) const;

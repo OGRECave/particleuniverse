@@ -45,7 +45,7 @@ bool MaterialProperty::OnEvent (wxPropertyGrid* propgrid, wxWindow* wnd_primary,
 		Ogre::ResourceManager::ResourceMapIterator materialIterator = Ogre::MaterialManager::getSingleton().getResourceIterator();
 		while (materialIterator.hasMoreElements())
 		{
-			choices[count] = ogre2wx((static_cast<Ogre::MaterialPtr>(materialIterator.peekNextValue()))->getName());
+			choices[count] = ogre2wx(materialIterator.peekNextValue()->getName());
 			materialIterator.moveNext();
 			count++;
 		}
@@ -80,7 +80,7 @@ const Ogre::String& MaterialDialog::openDialog(wxWindow* parent)
 	Ogre::ResourceManager::ResourceMapIterator materialIterator = Ogre::MaterialManager::getSingleton().getResourceIterator();
 	while (materialIterator.hasMoreElements())
 	{
-		choices[count] = ogre2wx((static_cast<Ogre::MaterialPtr>(materialIterator.peekNextValue()))->getName());
+		choices[count] = ogre2wx(materialIterator.peekNextValue()->getName());
 		materialIterator.moveNext();
 		count++;
 	}

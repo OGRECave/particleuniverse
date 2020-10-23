@@ -31,7 +31,7 @@ MaterialListBox::MaterialListBox(MaterialTab* materialTab,
 	wxWindowID id,
 	const wxPoint& pos,
 	const wxSize& size)	: 
-	wxListBox(parent, id, pos, size, 0, wxLB_SORT),
+	wxListBox(parent, id, pos, size, 0, NULL, wxLB_SORT),
 	mMaterialTab(materialTab)
 {
 
@@ -48,7 +48,7 @@ void MaterialListBox::loadMaterials(void)
 	Ogre::ResourceManager::ResourceMapIterator materialIterator = Ogre::MaterialManager::getSingleton().getResourceIterator();
 	while (materialIterator.hasMoreElements())
 	{
-		Ogre::String s = (static_cast<Ogre::MaterialPtr>(materialIterator.peekNextValue()))->getName();
+		Ogre::String s = materialIterator.peekNextValue()->getName();
 		Append(ogre2wx(s));
 		materialIterator.moveNext();
 	}

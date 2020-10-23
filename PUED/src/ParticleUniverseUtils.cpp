@@ -38,8 +38,8 @@ const wxString& Utils::getCurrentDirectory(void)
 		//delete [] path;
 
 		size_t size = 2048;
-		wchar_t* path = new wchar_t[size];
-	    path = _wgetcwd(path, size);
+		char* path = new char[size];
+	    path = getcwd(path, size);
 		CURRENT_DIR_ATTR = wxString(path);
 		delete [] path;
 	}

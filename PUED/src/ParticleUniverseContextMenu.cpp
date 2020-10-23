@@ -152,9 +152,19 @@ void ContextMenu::initialise(void)
 	mInitialised = true;
 }
 //-----------------------------------------------------------------------
+
+static bool IsMouseInWindow( wxWindow *win )
+{
+	wxPoint pt = ::wxGetMousePosition();
+	pt = win->ScreenToClient( pt );
+	wxRect rec = win->GetRect();
+
+	return rec.Contains( pt );
+}
+
 void ContextMenu::hideIfNeeded(void)
 {
-	if (!IsMouseInWindow())
+	if (!IsMouseInWindow(this))
 	{
 		// Hide the context menu if the mouse is in another window
 		Hide();

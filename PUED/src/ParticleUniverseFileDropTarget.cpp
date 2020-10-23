@@ -495,7 +495,7 @@ bool FileDropTarget::loadMaterialFile(const Ogre::String& baseNameAndExtension, 
 			Ogre::ResourceManager::ResourceMapIterator materialIterator = Ogre::MaterialManager::getSingleton().getResourceIterator();
 			while (materialIterator.hasMoreElements())
 			{
-				Ogre::MaterialPtr material = materialIterator.peekNextValue();
+				Ogre::MaterialPtr material = std::static_pointer_cast<Ogre::Material>(materialIterator.peekNextValue());
 				if (!material.isNull())
 				{
 					materialFileName = material->getOrigin();
@@ -623,7 +623,7 @@ bool FileDropTarget::loadMeshFile(const Ogre::String& baseNameAndExtension, cons
 void FileDropTarget::addDirectoryToResources(const Ogre::String& path, const Ogre::String& name, const Ogre::String& fileType)
 {
 	wxString title = ogre2wx(name) + wxT(" (") + ogre2wx(fileType) + _(") cannot be found. Select a directory where it can be loaded");
-	wxString& dir = wxDirSelector(title, ogre2wx(path));
+	wxString dir = wxDirSelector(title, ogre2wx(path));
 	if (!dir.empty())
 	{
 		initialiseResourceGroup(wx2ogre(dir));

@@ -19,6 +19,8 @@ You can find a copy of the Commercial License in the Particle Universe package.
 #include "wx/cmndata.h"
 #include "wx/colordlg.h"
 
+#include "OgreOverlay.h"
+
 #ifdef PU_PHYSICS_PHYSX
 	#include "Externs/ParticleUniversePhysXBridge.h"
 #endif // PU_PHYSICS_PHYSX
@@ -156,7 +158,6 @@ ParticleUniverseEditorFrame::ParticleUniverseEditorFrame(wxWindow* parent, wxWin
 	mDefaultCameraPosition = Ogre::Vector3(-1100, 0, -1100);
 	wxInitAllImageHandlers();
 	Maximize();
-	wxImage::AddHandler(new wxPNGHandler());
 	mStatusBar = CreateStatusBar();
 	mMainVSizer = new wxBoxSizer(wxVERTICAL); // Main sizer
 	mEditSizer = new wxBoxSizer(wxVERTICAL);
@@ -443,7 +444,7 @@ void ParticleUniverseEditorFrame::SetLanguage(void)
         // Use English as locale, because somehow setting the actual language gives a problem (particle system templates are not created
 		// properly and the grid material is white). Therefore, the different directories with the .mo files are not used, but a 
 		// catalog is added prefixes with the language code
-		if (mLocale.Init(wxLANGUAGE_ENGLISH, wxLOCALE_CONV_ENCODING))
+		if (mLocale.Init(wxLANGUAGE_ENGLISH))
 		{
 			// To be sure that if the exe is not at the root path, the proper location is searched
 			wxLocale::AddCatalogLookupPathPrefix(wxT("language"));
@@ -1079,7 +1080,7 @@ void ParticleUniverseEditorFrame::OnHelp(void)
 	{
 		// Start the browser
 		wxString url = CURRENT_DIR + SCRIPT_DIR + mPropertyWindow->getHelpHtml();
-		ShellExecute(NULL, wxT("open"), url.c_str(), NULL, NULL, SW_SHOWNORMAL);
+		// ShellExecute(NULL, wxT("open"), url.c_str(), NULL, NULL, SW_SHOWNORMAL);
 		mEditNotebookPage->getEditCanvas()->SetFocus(); // Needed to prevent exception
 	}
 }
@@ -1332,7 +1333,7 @@ void ParticleUniverseEditorFrame::OnLoadResourcePath(wxCommandEvent& event)
 void ParticleUniverseEditorFrame::doLoadResourcePath(void)
 {
 	// Add a resource location which contains particle universe scripts
-	wxString& dir = wxDirSelector(_("Select a directory that contains *.pu and .pua scripts"));
+	wxString dir = wxDirSelector(_("Select a directory that contains *.pu and .pua scripts"));
 	if (!dir.empty())
 	{
 		SetCursor(*wxHOURGLASS_CURSOR);
@@ -2004,7 +2005,8 @@ void ParticleUniverseEditorFrame::OnTabChanging(wxCommandEvent& event)
 //-----------------------------------------------------------------------
 void ParticleUniverseEditorFrame::OnTabChanged(wxCommandEvent& event)
 {
-	OnStop(wxCommandEvent(0));
+	wxCommandEvent t(0);
+	OnStop(t);
 
 	// Check which page is active
 	switch (mNotebook->GetSelection())
@@ -2029,7 +2031,8 @@ void ParticleUniverseEditorFrame::OnTabChanged(wxCommandEvent& event)
 			mEditNotebookPage->enableTools(false);
 			if (mAutoStartRender)
 			{
-				OnPlay(wxCommandEvent(0));
+				wxCommandEvent t(0);
+				OnPlay(t);
 			}
 			restoreFocus();
 		}
@@ -2047,7 +2050,8 @@ void ParticleUniverseEditorFrame::OnTabChanged(wxCommandEvent& event)
 			setLeftSideWindow(mPropertyWindow);
 			if (mAutoStartRender && mOgreControlSmall)
 			{
-				OnPlay(wxCommandEvent(0));
+				wxCommandEvent t(0);
+				OnPlay(t);
 			}
 			if (mEditNotebookPage)
 			{
@@ -2306,7 +2310,7 @@ void ParticleUniverseEditorFrame::doRemove(void)
 	}
 }
 //-----------------------------------------------------------------------
-void ParticleUniverseEditorFrame::OnTemplatesClick(wxCommandEvent& event)
+void ParticleUniverseEditorFrame::OnTemplatesClick(const wxCommandEvent& event)
 {
 	mControl->Freeze();
 	mEditNotebookPage->Freeze();
@@ -2342,7 +2346,8 @@ void ParticleUniverseEditorFrame::OnTemplatesClick(wxCommandEvent& event)
 				if (showMessage(warn + ogre2wx(mCurrentParticleSystemForRenderer->getTemplateName()) + wxT("?"), wxOK | wxCANCEL) == wxID_OK)
 				{
 					// Save it
-					OnSave(wxCommandEvent(0));
+					wxCommandEvent t(0);
+					OnSave(t);
 				}
 			}
 #endif // PU_FULL_VERSION
@@ -2410,6 +2415,7 @@ void ParticleUniverseEditorFrame::_generateVideoIfNeeded(bool recording)
 
 	//showMessage(args, wxOK | wxICON_INFORMATION); // For debug
 
+#if 0
 	SHELLEXECUTEINFO sei = {0};
 	sei.cbSize = sizeof(sei);
 	sei.fMask = SEE_MASK_NOCLOSEPROCESS;
@@ -2424,6 +2430,7 @@ void ParticleUniverseEditorFrame::_generateVideoIfNeeded(bool recording)
 		WaitForSingleObject(sei.hProcess, INFINITE); 
 		CloseHandle(sei.hProcess);
 	}
+#endif
 
 	// 2. Delete the generated image files
 	ParticleUniverse::String delFrames = "del " + wx2ogre(mConfigDialog->getVideoPath()) + "\\Frame*.*";
@@ -2774,6 +2781,7 @@ void ParticleUniverseEditorFrame::synchroniseScriptWithEditTab(void)
 //-----------------------------------------------------------------------
 bool ParticleUniverseEditorFrame::isPhysXInstalled(void)
 {
+#if 0
 	HKEY hKey = 0;
 //	char buf[255] = {0};
 //	DWORD dwBufSize = sizeof(buf);
@@ -2786,6 +2794,7 @@ bool ParticleUniverseEditorFrame::isPhysXInstalled(void)
 		return true;
     }
     else
+#endif
 	{
 		return false;
 	}

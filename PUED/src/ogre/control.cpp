@@ -23,12 +23,9 @@
 #include "wx/ogre/control.h"
 #include "wx/ogre/utils.h"
 
-#ifdef __WXGTK20__
-extern "C" {
-#include <gdk/gdkx.h>
+#ifdef __WXGTK__
 #include <gtk/gtk.h>
-#include <wx/gtk/win_gtk.h>
-}
+#include <gdk/gdkx.h>
 #endif
 
 unsigned int wxOgreControl::m_instances = 0;
@@ -150,7 +147,7 @@ void wxOgreControl::OnSize(wxSizeEvent& WXUNUSED(event))
         m_rwin->windowMovedOrResized();
     }
 
-#ifdef __WXGTK20__
+#ifdef __WXGTK__
     // Fix because it is not automaticaly done with gtk+
     if (m_vp)
         m_vp->_updateDimensions();
@@ -228,57 +225,12 @@ void wxOgreControl::GetParentWindowHandle(Ogre::NameValuePairList& pl)
     pl["externalWindowHandle"] = all2std((size_t)GetHandle());
 
 #elif defined(__WXGTK20__)
+	// Handle for GTK-based systems
+    GtkWidget *widget = GetHandle();
+	gtk_widget_realize( widget );
 
-    /* 
-     * Ok here is the most important comment about the GTK+
-     * part of this lib.
-     *
-     * Why we don't use GetHandle() here? Because it returns a
-     * generic GtkWidget* that isn't one of the internals used
-     * by wxGTK and can't be passed to the GTK_PIZZA() macro.
-     *
-     * This becomes a problem when we need to know the window ID
-     * of the current widget. If you know Gtk+ you may want to use
-     * gtk_widget_get_window() but in that case it doesn't return
-     * the good pointer and the Ogre render window will be painted
-     * under the background of this wxControl.
-     *
-     * Look at "wx/gtk/win_gtk.c" for more detailes.
-     */
-    GtkWidget* widget = m_wxwindow;
-
-    /* May prevent from flickering */
-    gtk_widget_set_double_buffered(widget, false);
-
-    /* 
-     * The frame need to be realize unless the parent
-     * is already shown.
-     */
-    gtk_widget_realize(widget);
-
-    /* Get the window: this Control */
-    GdkWindow* gdkWin = GTK_PIZZA(widget)->bin_window;
-    XID        window = GDK_WINDOW_XWINDOW(gdkWin);
-
-
-#if WXOGRE_OGRE_VER < 150
-
-    /* Get the display */
-    Display* display = GDK_WINDOW_XDISPLAY(gdkWin);
-
-    /* Get the Screen */
-    unsigned int screen = DefaultScreen(display);
-
-    pl["parentWindowHandle"] = all2std((unsigned long)display) + ":"
-                             + all2std(screen) + ":"
-                             + all2std(window);
-
-#else // WXOGRE_OGRE_VER < 150
-
+    Window window = gdk_x11_window_get_xid(gtk_widget_get_window(widget));
     pl["parentWindowHandle"] = all2std(window);
-
-#endif
-
 #else
 # error Not supported on this platform.
 #endif

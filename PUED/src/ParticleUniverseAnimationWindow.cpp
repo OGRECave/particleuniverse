@@ -39,7 +39,7 @@ AnimationWindow::AnimationWindow(ParticleUniverseEditorFrame* parent, Ogre::Scen
 	// Dropdown list with animations
 	wxBoxSizer* animationSelectionSizer = new wxBoxSizer(wxHORIZONTAL);
 	mTxtAnimation = new wxStaticText(mAnimationPanel, -1, _("Animation"));
-	mListAnimations = new wxComboBox(mAnimationPanel, wxID_ANY, wxT(""), wxDefaultPosition, wxSize(0.5 * LB_TEMPLATES_WIDTH, wxDefaultSize.y), 0, wxCB_READONLY | wxCB_SORT);
+	mListAnimations = new wxComboBox(mAnimationPanel, wxID_ANY, wxT(""), wxDefaultPosition, wxSize(0.5 * LB_TEMPLATES_WIDTH, wxDefaultSize.y), 0, NULL, wxCB_READONLY | wxCB_SORT);
 	animationSelectionSizer->Add(mTxtAnimation, 0, wxALL|wxALIGN_LEFT, 10);
 	animationSelectionSizer->Add(mListAnimations, 0, wxGROW|wxALL, 10);
 	verticalSizer->Add(animationSelectionSizer, 0, wxGROW|wxALL, 0);
@@ -279,7 +279,7 @@ void AnimationWindow::loadBoneBranche(wxTreeItemId boneNode, Ogre::Node::ChildNo
 {
 	while(boneIterator.hasMoreElements())
 	{
-		Ogre::Node* bone = boneIterator.peekNextValue();
+		Ogre::Node* bone = boneIterator.peekNext();
 		Ogre::String boneName = bone->getName();
 		wxTreeItemId subBoneNode = mListOfBones->AppendItem(boneNode, ogre2wx(boneName), 0);
 		Ogre::Node::ChildNodeIterator childNodeIterator = bone->getChildIterator();

@@ -24,7 +24,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "ParticleUniverseEditorPCH.h"
 #include "ParticleUniverseEditor.h"
 #include "ParticleUniverseSystemTreeControl.h"
-#include "uxtheme.h"
 
 //-----------------------------------------------------------------------
 SystemTreeControl::SystemTreeControl(ParticleUniverseEditorFrame* parentFrame, 
@@ -356,7 +355,7 @@ wxTreeItemId SystemTreeControl::getPreviousItem(void)
 	return 0;
 }
 //-----------------------------------------------------------------------
-wxTreeItemId SystemTreeControl::addItem(wxString& categoryName, wxString& particleSystemName, bool sortParent)
+wxTreeItemId SystemTreeControl::addItem(wxString categoryName, const wxString& particleSystemName, bool sortParent)
 {
 	wxTreeItemId newItem = 0;
 	if (categoryName == wxT("") || categoryName == ROOT_NODE_NAME)

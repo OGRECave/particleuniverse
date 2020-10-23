@@ -46,7 +46,7 @@ class MaterialTab : public wxPanel
 
 		/**	A material has been selected. Fill the properties.
 		*/
-		void selectMaterial(wxString& materialName);
+		void selectMaterial(const wxString& materialName);
 
 		/**	Display the image associated with the TextureUnitState
 		*/

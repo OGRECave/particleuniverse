@@ -63,7 +63,7 @@ class SystemTreeControl : public wxTreeCtrl, ContextMenuCallbackObject
 		bool isSelectedItemFirst(void);
 		wxTreeItemId getNextItem(void);
 		wxTreeItemId getPreviousItem(void);
-		wxTreeItemId addItem(wxString& categoryName, wxString& particleSystemName, bool sortParent = true);
+		wxTreeItemId addItem(wxString categoryName, const wxString& particleSystemName, bool sortParent = true);
 		void sortAll(void);
 		wxTreeItemId setToFirstParticleSystem(void);
 
