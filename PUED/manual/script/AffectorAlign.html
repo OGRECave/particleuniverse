@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleAffector.html">Affector&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Align Affector</h2>
+  <p>Aligns the orientation of a particle towards the previous particle and adjusts the height of
+    the particle (optional), which becomes the length between the two particles. With this combination, it is
+	possible to create a chain of particles (with the right renderer settings).
+  </p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>affector&nbsp;&nbsp;&nbsp;Align&nbsp;&nbsp;&nbsp;[affectorName]&nbsp;&nbsp;&nbsp;{affector properties}</i></strong>
+  <p>See ParticleAffector for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+affector                    Align
+{
+   resize                   true
+}</pre>
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Resize</h6>
+  <p>With this attribute it is possible to either adjust the height of a particle related to the previous particle, or not. Syntax:</p>
+  <p><strong><i>resize&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>resize</i></strong> is the keyword. <font color="#F62217"><strong><em>align_aff_resize</em></strong><em> is deprecated from version 1.2</em></font>
+    <br>
+    <strong><i>true | false</i></strong> indicate whether the particle must be resized (true) or not. Default: false
+   </p>
+
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

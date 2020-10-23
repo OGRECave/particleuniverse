@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Setup</h2>
+  <h3>Particle Universe</h3>
+  <p>Instal the Particle Universe package by starting the installer. Choose  <i><strong>../ogre</strong></i> 
+    as the target directory<br>
+    This creates
+  <ul>
+    <li><i><strong>../ogre/PlugIns/ParticleUniverse</strong></i>, which includes the sourcecode and the documentation.
+    <li>the ParticleUniverseViewer in <i><strong>../ogre/Samples</strong></i>.
+    <li>the AtlasImageTool in <i><strong>../ogre/Tools</strong></i>.
+    <li>the Particle Universe media in <i><strong>../ogre/Samples/Media/ParticleUniverse</strong></i>.
+  </ul>
+  </p>
+
+  <p>Add the entry <i><strong>Plugin=ParticleUniverse</strong></i> to <i><strong>Plugins.cfg</strong></i> or <i><strong>Plugin=ParticleUniverse_d</strong></i> if you want to use it in Debug mode (see also the <i><strong>Plugins.cfg_</strong></i> file in the Common directory).</p>
+  <p>Copy the content of the <i><strong>resources.cfg_</strong></i> (in the Common directory) to <i><strong>resources.cfg</strong></i>. This contains the following entries:
+  <ul>
+    <li>FileSystem=../../../Media/ParticleUniverse
+    <li>FileSystem=../../../Media/ParticleUniverse/core
+    <li>FileSystem=../../../Media/ParticleUniverse/gui
+    <li>FileSystem=../../../Media/ParticleUniverse/materials
+    <li>FileSystem=../../../Media/ParticleUniverse/scripts
+    <li>FileSystem=../../../Media/ParticleUniverse/models
+	<li>FileSystem=../../../Media/ParticleUniverse/textures
+  </ul>
+  <br>
+  <p>Beware that the 'core' directory is mandatory for certain Particle Universe functions, so it may not be removed.
+  <br>Optional you can add the directories of the Mediapack:
+  <ul>
+    <li>FileSystem=../../../Media/ParticleUniverse/mediapack/materials
+    <li>FileSystem=../../../Media/ParticleUniverse/mediapack/scripts
+    <li>FileSystem=../../../Media/ParticleUniverse/mediapack/models
+    <li>FileSystem=../../../Media/ParticleUniverse/mediapack/textures
+  </ul>
+  </p>
+  <h3>PhysX</h3> 
+  <p>
+  If the PhysX engine is used in Particle Universe, you have to: <br>
+  1. Uncomment the line #ifdef PU_PHYSICS in <i><strong>ParticleUniversePrerequisites.h</strong></i> (by default the PhysX engine is supported in Particle Universe, but other physics
+  engines can also be added).<br>
+  2. Set the environment variable <i><strong>PHYSX_HOME</strong></i>. For PhysX version 2.8.1. this can be done by the command:<br>
+  <i>set PHYSX_HOME=C:\Program Files\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\SDKs\</i><br>
+  The PHYSX_HOME environment variable is used in the compiler settings.<br>
+  3. Add PhysXLoader.lib to the linker settings (remark: Adding pragma comment ( lib, &quot;PhysXLoader.lib&quot;) to the code doesn´t work, because it cannot find the .lib even though the paths are set). Linking to PhysXLoader.lib can be omitted if the client application itself already links to this lib.<br>
+  4. The project properties contains references to PhysX directories ($(PHYSX_HOME)Physics\include, for example). If you don't want to use Physx you can remove them or just keep them in. If you keep the directories, the compilation returns a <em>Project : warning PRJ0018</em>. This is harmless, so there is no urgent reason to remove these references.</p>
+  <h3>Compatibility</h3>
+  <p>The compatibility matrix below lists which version of the Particle Universe plugin works with the version of Ogre and PhysX.</p>
+  <p><table class="stdtable" cellspacing="0" summary="stdtable template">
+    <tr>
+      <td width="33%" class="stdt1" >Particle Universe version</td>
+      <td class="stdt1">Ogre version</td>
+      <td width="34%" class="stdt1">PhysX version</td>
+    </tr>
+
+    <tr>
+      <td class="stdt2">Particle Universe: 1.3.1</td>
+      <td class="stdt2" width="33%">Ogre: 1.7</td>
+      <td class="stdt2" width="33%">PhysX: 2.8.1</td>
+    </tr>
+    <tr>
+      <td class="stdt2">Particle Universe: 1.3</td>
+      <td class="stdt2" width="33%">Ogre: 1.7</td>
+      <td class="stdt2" width="33%">PhysX: 2.8.1</td>
+    </tr>
+    <tr>
+      <td class="stdt2">Particle Universe: 1.2</td>
+      <td class="stdt2" width="33%">Ogre: 1.7</td>
+      <td class="stdt2" width="33%">PhysX: 2.8.1</td>
+    </tr>
+    <tr>
+      <td class="stdt2">Particle Universe: 1.1</td>
+      <td class="stdt2" width="33%">Ogre: 1.6</td>
+      <td class="stdt2" width="33%">PhysX: 2.8.1</td>
+    </tr>
+    <tr>
+      <td class="stdt2">Particle Universe: 1.0 / 1.01</td>
+      <td class="stdt2" width="33%">Ogre: 1.6</td>
+      <td class="stdt2" width="33%">PhysX: 2.8.1</td>
+    </tr>
+    <tr>
+      <td class="stdt2">Particle Universe: 0.81 </td>
+      <td class="stdt2" width="33%">Ogre: 1.6</td>
+      <td class="stdt2" width="33%">PhysX: -</td>
+    </tr>
+    <tr>
+      <td class="stdt2">Particle Universe: 0.8 </td>
+      <td class="stdt2" width="33%">Ogre: 1.4.6</td>
+      <td class="stdt2" width="33%">PhysX: -</td>
+    </tr>
+    <tr>
+      <td class="stdt2">Particle Universe: 0.7 </td>
+      <td class="stdt2" width="33%">Ogre: 1.4.6</td>
+      <td class="stdt2" width="33%">PhysX: -</td>
+    </tr>
+    <tr>
+      <td class="stdt2">Particle Universe: 0.6 </td>
+      <td class="stdt2" width="33%">Ogre: 1.4.6</td>
+      <td class="stdt2" width="33%">PhysX: -</td>
+    </tr>
+    <tr>
+      <td class="stdt2">Particle Universe: 0.5 </td>
+      <td class="stdt2" width="33%">Ogre: 1.4.6</td>
+      <td class="stdt2" width="33%">PhysX: -</td>
+    </tr>
+    <tr>
+      <td class="stdt2">Particle Universe: 0.4 </td>
+      <td class="stdt2" width="33%">Ogre: 1.4.5</td>
+      <td class="stdt2" width="33%">PhysX: -</td>
+    </tr>
+  </table>
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>	

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleObserver.html">Observer&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">On Time Observer</h2>
+  <p>Observes the time since the start of the Particle System or the time since the particle was emitted. If the time is equal, less or greater than a 
+     certain threshold value, the registered Event Handlers are called.</p>
+  
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>observer&nbsp;&nbsp;&nbsp;OnTime&nbsp;&nbsp;&nbsp;[observerName]&nbsp;&nbsp;&nbsp;{observer properties}</i></strong>
+  <p>See ParticleObserver for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+observer                   OnTime
+{
+   on_time                 greater_than 4
+   handler                 DoEnableComponent
+   {
+       enable_component    emitter_component    myEmitter    false
+   }
+}</pre>
+
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Time Threshold</h6>
+  <p>Defines the threshold time and calls the registered eventhandlers if the time is before or after that value. Syntax:</p>
+  <p><strong><i>on_time&nbsp;&nbsp;&nbsp;less_than | greater_than | equals&nbsp;&nbsp;&nbsp;#value</i></strong> <br>
+    <br><strong><i>on_time</i></strong> is the keyword.
+    <br>
+    <strong><i>less_than | greater_than | equals</i></strong> defines the comparision operator. Default: greater_than
+    <br><strong><i>#value</i></strong> is the threshold value that determines when the event handlers are triggered. Default: 0</p>
+
+  <h6>Since Start System</h6>
+  <p>Since Start System is an indication that determines whether the time threshold condition refers to the time since the start of the Particle System,
+     or the time since the particle was emitted. Syntax:</p>
+  <p><strong><i>since_start_system&nbsp;&nbsp;&nbsp;true | false</i></strong> <br>
+    <br><strong><i>since_start_system</i></strong> is the keyword.
+    <br><strong><i>true | false</i></strong> defines whether the time condition refers to the time since the Particle System was started (true) or
+	the time since the particle was emitted. Default: false.</p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

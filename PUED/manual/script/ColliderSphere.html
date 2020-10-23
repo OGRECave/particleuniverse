@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleAffector.html">Affector&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Sphere Collider</h2>
+  <p>The Sphere Collider represents a sphere shape with which the particles collide. This concerns particles of the same technique at which the Sphere 
+     Collider is registered. If a particle collides with the shape, the collision flag is set, which makes it possible to observe the particle collision. Furthermore,
+	 the Collider itself can change the behaviour of the particle. This concerns behaviour that is difficult to realise (or with a lot of overhead) in an event
+	 handler, because the data will not be available in the event handler. Bouncing and flowing (in which the particle flows on the surface of the shape) are typical examples. </p>
+     
+  <p>Beware that the Sphere Collider is part of Particle Universe itself. If you want more sophisticated collision and responses, Particle Universe also has the option to integrate with Nvidia´s PhysX engine, formerly owned by Ageia.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>affector&nbsp;&nbsp;&nbsp;SphereCollider&nbsp;&nbsp;&nbsp;[affectorName]&nbsp;&nbsp;&nbsp;{affector properties}</i></strong>
+  <p>See ParticleAffector for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+affector                     SphereCollider
+{
+    position                 0 400 0
+    radius                   300
+    intersection             point
+    collision_type           bounce
+    friction                 0.2
+    bouncyness               0.4
+}</pre>
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Friction</h6>
+  <p>Friction is an attribute of the sphere surface. It indicates the smoothness of the surface, which will influence the rotation behaviour of the particle
+     when it hits the sphere. If the friction is high, the particle rotation (both texture and geometry rotation) decreases. Syntax:</p>
+  <p><strong><i>friction&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>friction</i></strong> is the keyword. <font color="#F62217"><strong><em>collision_friction</em></strong><em> is deprecated from version 1.2</em></font>
+    <br><strong><i>#value</i></strong> is a real value > 0 that defines the friction. Default: 0.0.</p>
+
+  <h6>Bouncyness</h6>
+  <p>Bouncyness is an attribute of the surface. It indicates how much a particle bounces from the sphere when it hits the surface. This means that
+     bouncyness influences the particle velocity. Syntax:</p>
+  <p><strong><i>bouncyness&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>bouncyness</i></strong> is the keyword. <font color="#F62217"><strong><em>collision_bouncyness</em></strong><em> is deprecated from version 1.2</em></font>
+    <br><strong><i>#value</i></strong> is a real value between > 0 that defines the bouncyness. The higher the value, the higher the velocity of a particle
+	when it hits the sphere. Default: 1.0.</p>
+
+  <h6>Intersection Type</h6>
+  <p>Determines how a particle collision should be determined. 'point' means that the position of a particle will be validated against the Colliders' 
+     shape, while 'box' means that the dimensions (width, height and depth) are taken into account to determine whether the particle collides. Syntax:</p>
+  <p><strong><i>intersection&nbsp;&nbsp;&nbsp;point | box</i></strong>
+    <br>
+    <br><strong><i>intersection</i></strong> is the keyword. <font color="#F62217"><strong><em>collision_intersection</em></strong><em> is deprecated from version 1.2</em></font>
+    <br><strong><i>point</i></strong> defines whether the position of the particle is used to determine collision. Default: point.
+    <br><strong><i>box</i></strong> defines whether the particle width, height and depth are used to determine collision.</p>
+
+  <h6>Collision Type</h6>
+  <p>Determines how a particle behaves after collision with this collider. The behaviour of the particle is solved in the collider and only
+     behaviour that needs the colliders' data, is taken into account. The fact that a particle expires for example, can be achieved by using an 
+     Observer in combination with an EventHandler (DoExpireEventHandler). Syntax:</p>
+  <p><strong><i>collision_type&nbsp;&nbsp;&nbsp;bounce | flow | none</i></strong>
+    <br>
+    <br><strong><i>collision_type</i></strong> is the keyword.
+    <br><strong><i>bounce</i></strong> means that the particle bounces off the collider. Default: bounce.
+    <br><strong><i>flow</i></strong> means that the particle flows around the contours of the collider.
+    <br><strong><i>none</i></strong> means that the particle doesn't do anything. This value should be set 
+	if the behaviour of the particle is determined outside the collider (for example, expiring the particle).</p>
+
+  <h6>Radius</h6>
+  <p>Represents the radius of the sphere. Syntax:</p>
+  <p><strong><i>radius&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>radius</i></strong> is the keyword. <font color="#F62217"><strong><em>sphere_collider_radius</em></strong><em> is deprecated from version 1.2</em></font>
+    <br>
+    <strong><i>#value</i></strong> is a real value > 0 that defines the radius of the sphere. Default: 0.0.</p>
+
+  <h6>Inner Collision</h6>
+  <p>Defines whether the collision takes place inside of the sphere, or outside. If the value is set to true, particles collide with the inner surface of the sphere. Syntax:</p>
+  <p><strong><i>inner_collision&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>inner_collision</i></strong> is the keyword.
+  <br>
+  <strong><i>true | false</i></strong> defines wither the collision is inside of the sphere. Default: false.</p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

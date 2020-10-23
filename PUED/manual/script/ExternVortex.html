@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="Extern.html">Extern&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Vortex Extern</h2>
+  <p>The Vortex Extern is a wrapper around the Vortex Affector. Its capabilities are extended by
+    making the Vortex Affector 'attachable'. This means that it can be attached to another SceneNode, but
+	is still able to affect the particles in the Particle Technique where this Vortex Extern is registered.
+	Although the registration of this Extern to a Particle Technique can be done by script, attaching it to
+	a SceneNode must still be done programmatically. See below for an example. The benefit of having a Vortex Extern
+	is, that you are able to affect particles from outside the Particle System. Effects like a helicopter that blows away
+	leaves when it approaches can be created easily now.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>extern&nbsp;&nbsp;&nbsp;Vortex&nbsp;&nbsp;&nbsp;[externName]&nbsp;&nbsp;&nbsp;{extern properties}</i></strong>
+  <p>See Extern for explanation of the syntax.</p>
+  <p> Script example:
+  <pre>
+system with_an_extern
+{
+    technique
+    {
+        ....
+        extern                                Vortex
+        {
+            rotation_axis                     0 1 0
+            rotation_speed                    5
+            distance_threshold                300
+        }
+    }
+}</pre>
+  <p> Additional code example to attach the extern to a SceneNode (sys is a ParticleSystem):
+  <pre>
+ParticleUniverse::ParticleSystem* sys = 
+   ParticleUniverse::ParticleSystemManager::getSingleton().createParticleSystem
+   ("mySystem", "with_an_extern", mSceneMgr);
+SceneNode* externNode = mSceneMgr->getRootSceneNode()->createChildSceneNode();
+Attachable* attachable = static_cast&lt;Attachable*&gt;(sys->getTechnique(0)->getExtern(0));
+if (attachable)
+{
+    externNode->attachObject(attachable);
+    externNode->setPosition(Vector3(-300, 100, -100));
+}</pre>
+  <br>
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Distance Threshold</h6>
+  <p>Maximum distance where the Vortex Extern doesn't affect the particle anymore. Syntax:</p>
+  <p><strong><i>distance_threshold&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>distance_threshold</i></strong> is the keyword. <font color="#F62217"><strong><em>attachable_distance_threshold</em></strong><em> is deprecated from version 1.2</em></font>
+  <br><strong><i>#value</i></strong> is a real value that defines the threshold speed. Default: Infinite.</p>
+
+  <h6>Rotation Axis</h6>
+  <p>See <a href="AffectorVortex.html">Vortex Affector</a></p>
+
+  <h6>Rotation Speed</h6>
+  <p>See <a href="AffectorVortex.html">Vortex Affector</a></p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

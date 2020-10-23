@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleAffector.html">Affector&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Velocity Matching Affector</h2>
+  <p>This affector is one element of the Flocking behaviour algorithm. It adjusts the velocity of a particle so it matches the velocity of its neighbouring particles. The method of detecting whether particles are nearby is not done by a brute-force method, but with a spatial hashing algorithm. This means that in the Particle Technique, you have to set the spatial hashing properties (i.e. 'spatial_hashing_cell_dimension').</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>affector&nbsp;&nbsp;&nbsp;VelocityMatching&nbsp;&nbsp;&nbsp;[affectorName]&nbsp;&nbsp;&nbsp;{affector properties}</i></strong>
+  <p>See ParticleAffector for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+affector                        VelocityMatching
+{
+   radius                       100
+}</pre>
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Radius</h6>
+  <p>This is the maximum distance between 2 particles before the velocity matching function comes into action. This means that if the positions of two particles  &lt; Radius, the velocities of both particles are adjusted. Note, that it is called radius, because it is comparable with a bounding sphere collision detection. Syntax:</p>
+  <p><strong><i>radius&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br>
+    <strong><i>radius</i></strong> is the keyword. <font color="#F62217"><strong><em>velocity_matching_radius</em></strong><em> is deprecated from version 1.2</em></font>
+    <br>
+  <strong><i>#value</i></strong> is the maximum distance between 2 particles, before the velocities are adjusted. Default: 100.</p>
+
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

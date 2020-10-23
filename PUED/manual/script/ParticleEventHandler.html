@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Particle Event Handler</h2>
+  <h3>Definition</h3>
+  <p>The syntax of a Particle EventHandler definition is:</p>
+  <p><strong><i>handler&nbsp;&nbsp;&nbsp;handlerType&nbsp;&nbsp;&nbsp;[handlerName]&nbsp;&nbsp;&nbsp;{handler properties}</i></strong>
+    <br>
+    <br><strong><i>handler</i></strong> is the keyword.
+    <br><strong><i>handlerType</i></strong> is the type of handler.
+    <br><strong><i>handlerName</i></strong> defines the name of the event handler. The handlerName is optional but required if the handler must be identified.
+    <br>The <strong><i>handler properties</i></strong> are handled in the paragraph 'Base Properties'.
+	<p> Example:
+  <pre>
+observer                   OnPosition
+{
+   ...
+   handler                 DoExpire {}
+}</pre>
+
+<h3>Specific Event Handlers</h3>
+  <ul>
+    <li><a href="EventHandlerDoAffector.html">Do Affector Event Handler</a>
+    <li><a href="EventHandlerDoEnableComponent.html">Do Enable Component Event Handler</a>
+    <li><a href="EventHandlerDoExpire.html">Do Expire Event Handler</a>
+    <li><a href="EventHandlerDoFreeze.html">Do Freeze Event Handler</a>
+    <li><a href="EventHandlerDoPlacementParticle.html">Do Placement Particle Event Handler</a>
+    <li><a href="EventHandlerDoScale.html">Do Scale Event Handler</a>
+    <li><a href="EventHandlerDoStopSystem.html">Do Stop System Event Handler</a>
+  </ul>
+  <br>
+  
+  <h3>Base Properties</h3>
+  <p>Particle Event Handler doesn't have base properties.</p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

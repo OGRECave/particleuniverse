@@ -1,0 +1,89 @@
+system teleport
+{
+    category                                    LightFX
+    technique 
+    {
+        visual_particle_quota                   50
+        material                                PUMediaPack/Streak_01
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Circle 
+        {
+            emission_rate                       dyn_oscillate
+            {
+                oscillate_frequency             0.5
+                oscillate_phase                 0
+                oscillate_base                  100
+                oscillate_amplitude             100
+                oscillate_type                  sine
+            }
+            time_to_live                        0.2
+            velocity                            3
+            particle_width                      dyn_random
+            {
+                min                             2.4
+                max                             4.2
+            }
+            particle_height                     dyn_random
+            {
+                min                             9.6
+                max                             28.8
+            }
+            direction                           0 0 0
+            colour                              0.3 0.65 0.76 1
+            radius                              3
+            step                                0.2
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 1 1 1
+            time_colour                         0.8  1 1 1 1
+            time_colour                         1    0 0 0 0
+            colour_operation                    multiply
+        }
+        observer                                OnClear 
+        {
+            handler                             DoStopSystem 
+            {
+            }
+        }
+    }
+    technique 
+    {
+        visual_particle_quota                   100
+        material                                PUMediaPack/Flare_04
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       dyn_oscillate
+            {
+                oscillate_frequency             0.5
+                oscillate_phase                 0
+                oscillate_base                  200
+                oscillate_amplitude             200
+                oscillate_type                  sine
+            }
+            time_to_live                        0.2
+            all_particle_dimensions             dyn_random
+            {
+                min                             1.44
+                max                             4.8
+            }
+            direction                           0 0 0
+            colour                              0.3 0.65 0.76 1
+            box_width                           4.5
+            box_height                          18
+            box_depth                           4.5
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 1 1 1
+            time_colour                         0.6  1 1 1 1
+            time_colour                         1    0 0 0 0
+            colour_operation                    multiply
+        }
+    }
+}

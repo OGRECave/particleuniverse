@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Particle Affector</h2>
+  <h3>Definition</h3>
+  <p>The syntax of a Particle Affector definition is:</p>
+  <p><strong><i>affector&nbsp;&nbsp;&nbsp;[affectorName]&nbsp;&nbsp;&nbsp;{affector properties}</i></strong>
+    <br>
+    <br><strong><i>affector</i></strong> is the keyword.
+    <br><strong><i>affectorType</i></strong> is the type of the affector.
+    <br><strong><i>affectorName</i></strong> defines the name of the affector. The affectorName is optional but required if the affector must be identified.
+    <br>The <strong><i>affector properties</i></strong> are handled in the paragraph 'Base Properties'.
+	<p> Example:
+  <pre>
+affector               Gravity
+{
+    ...
+}</pre>
+
+  <h3>Specific Affectors</h3>
+  <ul>
+    <li><a href="AffectorAlign.html">Align Affector</a>
+    <li><a href="ColliderBox.html">Box Collider</a>
+    <li><a href="AffectorCollisionAvoidance.html">Collision Avoidance Affector</a>
+    <li><a href="AffectorColour.html">Colour Affector</a>
+    <li><a href="AffectorFlockCentering.html">Flock Centering Affector</a>
+    <li><a href="AffectorForcefield.html">Forcefield Affector</a>
+    <li><a href="AffectorGeometryRotator.html">Geometry Rotator</a>
+    <li><a href="AffectorGravity.html">Gravity Affector</a>
+    <li><a href="ColliderInterParticle.html">Inter Particle Collider</a>
+    <li><a href="AffectorJet.html">Jet Affector</a>
+    <li><a href="AffectorLine.html">Line Affector</a>
+    <li><a href="AffectorLinearForce.html">Linear Force Affector</a>
+    <li><a href="AffectorParticleFollower.html">Particle Follower</a>
+    <li><a href="PathFollower.html">Path Follower</a>
+    <li><a href="ColliderPlane.html">Plane Collider</a>
+    <li><a href="AffectorRandomiser.html">Randomiser</a>
+    <li><a href="AffectorScale.html">Scale Affector</a>
+    <li><a href="AffectorScaleVelocity.html">Scale Velocity Affector</a>
+    <li><a href="AffectorSineForce.html">Sine Force Affector</a>
+    <li><a href="ColliderSphere.html">Sphere Collider</a>
+    <li><a href="AffectorTextureAnimator.html">Texture Animator</a>
+    <li><a href="AffectorTextureRotator.html">Texture Rotator</a>
+    <li><a href="AffectorVelocityMatching.html">Velocity Matching Affector</a>
+    <li><a href="AffectorVortex.html">Vortex Affector</a>
+  </ul>
+  <br>
+
+  <h3>Base Properties</h3>
+  <p>The Base Properties apply to all affectors.</p>
+
+  <h6>Enabled</h6>
+  <p>Enables or disables the affector as soon as the particle system starts. Syntax:</p>
+  <p><strong><i>enabled&nbsp;&nbsp;&nbsp;true | false</i></strong> <br>
+    <br>
+    <strong><i>enabled</i></strong> is the keyword. <br>
+    <strong><i>true | false</i></strong> defines whether the affector is enabled (true) or disabled (false). Default: true</p>
+
+  <h6>Position</h6>
+  <p>Position applies to the relative position of this affector in respect to the Particle Technique. Syntax:</p>
+  <p><strong><i>position&nbsp;&nbsp;&nbsp;#x&nbsp;&nbsp;&nbsp;#y&nbsp;&nbsp;&nbsp;#z</i></strong> <br>
+    <br><strong><i>position</i></strong> is the keyword.
+    <br><strong><i>#x</i></strong> is a real value that defines the x coordinate. Default: 0.
+    <br><strong><i>#y</i></strong> is a real value that defines the y coordinate. Default: 0.
+    <br><strong><i>#z</i></strong> is a real value that defines the z coordinate. Default: 0.</p>
+
+  <h6>Mass</h6>
+  <p>Defines the mass of a Particle Affector. This is only useful if the Particle Affector is also emitted and the mass is needed in another affector (so
+     this affector is affected by another one). Although it is possible to define the mass of an affector particle in the Particle Emitter, it is also 
+	 possible to define it here. Syntax:</p>
+  <p><strong><i>mass_affector&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>mass_affector</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is a real value > 0 that defines the mass of the affector.</p>
+
+
+  <h6>Exclude Emitter(s)</h6>
+  <p>Exclude one or more Particle Emitters from this affector. This means that particles that are emitted by an emitter that is in the list of excluded 
+     emitters, will not be affected by this Particle Affector. Syntax:</p>
+  <p><strong><i>exclude_emitter&nbsp;&nbsp;&nbsp;#name&nbsp;&nbsp;&nbsp;[#name]</i></strong> 
+    <br>
+    <br><strong><i>exclude_emitter</i></strong> is the keyword.
+    <br>
+    <strong><i>#name&nbsp;&nbsp;&nbsp;[#name]</i></strong> 
+    is an array of one or more emitter names that are excluded from the affector. 
+   <font color="#F62217">E</font><font color="#F62217">nclosing the names with double quotes is no longer supported from version 1.2</em></font></p>
+
+  <h6>Affect Specialisation</h6>
+  <p>A Particle Affector should sometimes behave different in various situations. These are common situations, which apply to most of the affectors. One such a common situation is that the affector strength is less when a particle is near the end of its lifetime. The Affect Specialisation is an optional property that affectors can use to differentiate behaviour in a number of common situations. If the options of this property apply to a particular affector, a 'logical' implementation has been choosen. Note, that this property is only implemented for a few affectors! Syntax:</p>
+  <p><strong><i>affect_specialisation&nbsp;&nbsp;&nbsp;special_default | special_ttl_increase | special_ttl_decrease </i></strong>
+    <br>
+    <br><strong><i>affect_specialisation</i></strong> is the keyword.
+    <br><strong><i>special_default</i></strong> is the default behaviour of an affector. It is not needed to set this property explicitly.
+    <br><strong><i>special_ttl_increase</i></strong> means that older particles will be affected MORE than just emitted particles.
+    <br><strong><i>special_ttl_decrease</i></strong> means that older particles will be affected LESS than just emitted particles.</p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

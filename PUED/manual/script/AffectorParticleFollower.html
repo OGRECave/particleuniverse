@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleAffector.html">Affector&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Particle Follower</h2>
+  <p>The Particle Follower forces a particle to follow its predecessor if it is within a certain range of the previous particle. 
+     This affector makes it possible to create a trail of particles</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>affector&nbsp;&nbsp;&nbsp;Follow&nbsp;&nbsp;&nbsp;[affectorName]&nbsp;&nbsp;&nbsp;{affector properties}</i></strong>
+  <p>See ParticleAffector for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+affector                           Follower
+{
+    min_distance                   60
+    max_distance                   300
+}</pre>
+
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Minimum Distance</h6>
+  <p>If the particle is beyond the minimum distance of its predecessor, it will be forced to follow its predecessor within the limits defined by the minimum distance. Syntax:</p>
+  <p><strong><i>min_distance&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>min_distance</i></strong> is the keyword. <font color="#F62217"><strong><em>follower_min_distance</em></strong><em> is deprecated from version 1.2</em></font>
+    <br><strong><i>#value</i></strong> is a real value that defines the minimum between 2 successive particles. Default: 10.0.</p>
+	
+  <h6>Maximum Distance</h6>
+  <p>If the maximum distance has been defined, and a particle is beyond this distance (in comparison with the previous particle), the 'follow' effect is ignored.
+     In some cases this can be convenient. If, for example the emission rate is low and the time to live is high, new emitted particles always tend to
+	 stick at the back of the particle 'trail'. If the maximum distance is set, a new emitted particle ignores this trail if it is too far away and starts a new trail. Syntax:</p>
+  <p><strong><i>max_distance&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>max_distance</i></strong> is the keyword. <font color="#F62217"><strong><em>follower_max_distance</em></strong><em> is deprecated from version 1.2</em></font>
+    <br>
+    <strong><i>#value</i></strong> is a real value that defines the maximum distance 
+    between 2 successive particles for which the follow effect is ignored. Default: 
+    Infinite.</p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

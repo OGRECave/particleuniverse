@@ -1,0 +1,40 @@
+system woosh
+{
+    technique 
+    {
+        position                                0 -12 0
+        visual_particle_quota                   1
+        material                                PUMediaPack/Ring_14
+        default_particle_width                  0.3
+        default_particle_height                 0.3
+        renderer                                Billboard
+        {
+            billboard_type                      perpendicular_common
+            common_direction                    0 1 0
+            common_up_vector                    0 0 1
+        }
+        emitter                                 Point wooshEmitter
+        {
+            emission_rate                       1
+            time_to_live                        1
+            direction                           0 0 0
+            force_emission                      true
+        }
+        affector                                Scale 
+        {
+            xyz_scale                           30
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 1 1 1
+            time_colour                         1    0 0 0 0
+            colour_operation                    multiply
+        }
+        observer                                OnClear 
+        {
+            handler                             DoStopSystem 
+            {
+            }
+        }
+    }
+}

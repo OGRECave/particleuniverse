@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleRenderer.html">Renderer&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+
+<div id="maincol"> 
+  <h2 id="content">Light Renderer</h2>
+  <p>Renders particles as a light, which enables dynamic lightning. One example is a fire particle system with an additional light particle that dynamically lights the scene.
+     Be careful with the number of lights that are emitted, because it slows down the framerate considerably. Set the visual_particle_quota very low.</p>
+  <p>Although it concerns a light renderer, it is not possible to set the diffuse colour (although it possible to set the specular colour). This is because the light renderer 'inherits' its colour from the particle. This makes it possible to change the colour of the light similar as a regular particle, by means of a Colour Affector, for example.</p>
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>renderer&nbsp;&nbsp;&nbsp;Light&nbsp;&nbsp;&nbsp;{renderer properties}</i></strong>
+  <p>See ParticleRenderer for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+technique
+{
+    renderer                          Light
+    {
+        light_renderer_light_type     point
+        light_renderer_diffuse        1 0 0
+        light_renderer_specular       1 1 0
+        light_renderer_att_range      200
+    }
+}
+</pre>
+
+  <h3>Properties</h3>
+
+  <h6>Light Type</h6>
+  <p>This is either a spotlight or a pointlight. Directional lights are not supported. Syntax:</p>
+  <p><strong><i>light_renderer_light_type&nbsp;&nbsp;&nbsp;point | spot</i></strong>
+    <br>
+    <br><strong><i>light_renderer_light_type</i></strong> is the keyword.
+    <br><strong><i>point | spot</i></strong> define the type of light. Default: point</p>
+
+  <h6>Specular Colour</h6>
+  <p>The colour of the specular light. Syntax:</p>
+  <p><strong><i>light_renderer_specular&nbsp;&nbsp;&nbsp;#r #g #b</i></strong>
+    <br>
+    <br><strong><i>light_renderer_specular</i></strong> is the keyword.
+    <br><strong><i>#r</i></strong> is the red-value. This is a value between 0..1
+    <br><strong><i>#g</i></strong> is the green-value. This is a value between 0..1
+    <br>
+    <strong><i>#b</i></strong> is the blue value. This is a value between 0..1. Default rgb values: 0 0 0</p>
+
+  <h6>Attenuation Range</h6>
+  <p>Attenuation range defines the upper range where the light is still active. The range value is in world units  Syntax:</p>
+  <p><strong><i>light_renderer_att_range&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>light_renderer_att_range</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is a value > 0. Default: 100000</p>
+
+  <h6>Attenuation Constant</h6>
+  <p>This is the 'constant' factor in the attenuation formula. Syntax:</p>
+  <p><strong><i>light_renderer_att_constant&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>light_renderer_att_constant</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is a value between 0..1. Default: 1 (no attenuation)</p>
+
+  <h6>Attenuation Linear</h6>
+  <p>Defines whether attenuation is performed gradually in an even manner. Syntax:</p>
+  <p><strong><i>light_renderer_att_linear&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>light_renderer_att_linear</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is a value > 0. Default: 0</p>
+
+  <h6>Attenuation Quadratic</h6>
+  <p>Defines whether attenuation is performed gradually in a curved manner. Syntax:</p>
+  <p><strong><i>light_renderer_att_quadratic&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>light_renderer_att_quadratic</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is a value > 0. Default: 0</p>
+
+  <h6>Spotlight Inner Angle</h6>
+  <p>The angle of the inner cone of a spotlight. Syntax:</p>
+  <p><strong><i>light_renderer_spot_inner&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>light_renderer_spot_inner</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is a value > 0. Default: 30</p>
+
+  <h6>Spotlight Outer Angle</h6>
+  <p>The angle of the outer cone of a spotlight. Syntax:</p>
+  <p><strong><i>light_renderer_spot_outer&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>light_renderer_spot_outer</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is a value > 0. Default: 40</p>
+
+  <h6>Falloff</h6>
+  <p>The rate of falloff between the inner and outer cones of a spotlight. Syntax:</p>
+  <p><strong><i>light_renderer_falloff&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>light_renderer_falloff</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is a value > 0. Default: 1</p>
+
+  <h6>Power Scale</h6>
+  <p>Scaling factor for the relative power of a light (for HDR). Syntax:</p>
+  <p><strong><i>light_renderer_powerscale&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>light_renderer_powerscale</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is a value > 0. Default: 1</p>
+
+  <h6>Flash Frequency</h6>
+  <p>This makes it possible to flash the light on/off with a certain frequency. Syntax:</p>
+  <p><strong><i>flash_frequency&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>flash_frequency</i></strong> is the keyword.
+  <br><strong><i>#value</i></strong> defines the frequency of the flash. Default: 0</p>
+
+  <h6>Flash Length</h6>
+  <p>Only in case the Flash Frequency is set, this property has a meaning. It defines how long the light is 'on'. Syntax:</p>
+  <p><strong><i>flash_length&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>flash_length</i></strong> is the keyword.
+  <br><strong><i>#value</i></strong> defines the how long the light is 'on'. Default: 0</p>
+
+  <h6>Flash Random</h6>
+  <p>Where a combination of Flash Frequency and Flash Lenght causes a steady flashing effect, does the combination of Flash Frequency and Flash Random result in an irregular flashing effect. Syntax:</p>
+  <p><strong><i>flash_random&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br>
+    <strong><i>flash_random</i></strong> is the keyword.
+    <br><strong><i>true | false</i></strong> indicates whether the flash effect is regular (false) or irregular (true). Default: false</p>
+
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

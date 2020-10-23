@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Particle Observer</h2>
+
+  <p>The syntax of a Particle Observer definition is:</p>
+  <p><strong><i>observer&nbsp;&nbsp;&nbsp;observerType&nbsp;&nbsp;&nbsp;[observerName]&nbsp;&nbsp;&nbsp;{observer properties}</i></strong>
+    <br>
+    <br><strong><i>observer</i></strong> is the keyword.
+    <br><strong><i>observerType</i></strong> is the type of observer.
+    <br><strong><i>observerName</i></strong> defines the name of the observer. The observerName is optional but required if the observer must be identified.
+    <br>The <strong><i>observer properties</i></strong> are handled in the paragraph 'Base Properties'.
+	<p> Example:
+  <pre>
+observer                   OnPosition
+{
+   ...
+}</pre>
+
+  <h3>Specific Observers</h3>
+  <ul>
+    <li><a href="ObserverOnClear.html">On Clear Observer</a>
+    <li><a href="ObserverOnCollision.html">On Collision Observer</a>
+    <li><a href="ObserverOnCount.html">On Count Observer</a>
+    <li><a href="ObserverOnEmission.html">On Emission Observer</a>
+    <li><a href="ObserverOnEventFlag.html">On Event Flag Observer</a>
+    <li><a href="ObserverOnExpire.html">On Expire Observer</a>
+    <li><a href="ObserverOnPosition.html">On Position Observer</a>
+    <li><a href="ObserverOnQuota.html">On Quota Observer</a>
+    <li><a href="ObserverOnRandom.html">On Random Observer</a>
+    <li><a href="ObserverOnTime.html">On Time Observer</a>
+    <li><a href="ObserverOnVelocity.html">On Velocity Observer</a>
+  </ul>
+  <br>
+
+  <h3>Base Properties</h3>
+  <p>The Base Properties apply to all observers.</p>
+
+  <h6>Enabled</h6>
+  <p>Enables or disables the observer as soon as the particle system starts. This makes it possible not to observe the particles immediately, but for instance if another event occurs. Syntax:</p>
+  <p><strong><i>enabled&nbsp;&nbsp;&nbsp;true | false</i></strong> <br>
+    <br>
+    <strong><i>enabled</i></strong> is the keyword. <br>
+    <strong><i>true | false</i></strong> defines whether the observer is enabled (true) or disabled (false). Default: true</p>
+
+  <h6>Observe Particle Type</h6>
+  <p>Besides emission of visual particles, also other particle types can be emitted. The observer observes all particles by default, but if
+     specific particle types must be observed, this property is used to define the particle type that should be observed only. Syntax:</p>
+  <p><strong><i>observe_particle_type&nbsp;&nbsp;&nbsp;visual_particle | emitter_particle 
+    | technique_particle | affector_particle | system_particle</i></strong> <br>
+    <br>
+    <strong><i>observe_particle_type</i></strong> is the keyword. <br>
+    <strong><i>visual_particle | emitter_particle | technique_particle | affector_particle 
+    | system_particle</i></strong>. Set one of these 5 values to define which 
+    particle type is observed. Default: visual_particle.</p>
+
+  <h6>Observe Interval</h6>
+  <p>Only observe after every interval. This prevents continuous observation. Syntax:</p>
+  <p><strong><i>observe_interval&nbsp;&nbsp;&nbsp;#value</i></strong> <br>
+    <br>
+    <strong><i>observe_interval</i></strong> is the keyword. <br>
+    <strong><i>#value</i></strong>. defines the interval after which the observer is active. Default: No interval set.</p>
+
+  <h6>Observe Until Event</h6>
+  <p>This attribute makes it possible to stop observing after the event handler(s) are called for the first time. This means that the event handlers are called only once and after that, the observer stops observing. Syntax:</p>
+  <p><strong><i>observe_until_event&nbsp;&nbsp;&nbsp;true | false</i></strong> <br>
+    <br>
+    <strong><i>observe_until_event</i></strong> is the keyword. <br>
+    <strong><i>true | false</i></strong> defines whether the observer should stop observing after the event handler(s) are called for the first time (= true). Default: false.</p>
+
+  <h6>Event Handler</h6>
+  <p>Invokes an Event Handler is the condition of the Observer is true. See <a href="ParticleEventHandler.html">Event Handler</a> for the syntax.</p>
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

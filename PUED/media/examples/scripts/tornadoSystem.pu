@@ -1,0 +1,95 @@
+system tornadoSystem
+{
+    category                                    Nature
+    technique 
+    {
+        visual_particle_quota                   3000
+        material                                ParticleUniverse/Tornado
+        default_particle_width                  7.5
+        default_particle_height                 7.5
+        renderer                                Billboard
+        {
+            sorting                             true
+        }
+        emitter                                 Circle 
+        {
+            emission_rate                       150
+            angle                               0
+            time_to_live                        4
+            velocity                            18
+            radius                              0.6
+        }
+        affector                                Vortex 
+        {
+            rotation_axis                       0 1 0
+            rotation_speed                      10
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 0.95 0.95 1
+            time_colour                         0.5  1 0.95 0.95 0
+        }
+        affector                                Scale 
+        {
+            xyz_scale                           dyn_random
+            {
+                min                             1.5
+                max                             10.5
+            }
+        }
+    }
+    technique 
+    {
+        visual_particle_quota                   20
+        material                                ParticleUniverse/Stone
+        renderer                                Entity
+        {
+            mesh_name                           pu_stone.mesh
+        }
+        emitter                                 Point 
+        {
+            angle                               50
+            time_to_live                        5
+            velocity                            dyn_random
+            {
+                min                             24
+                max                             36
+            }
+            duration                            dyn_random
+            {
+                min                             0.5
+                max                             1.5
+            }
+            repeat_delay                        dyn_random
+            {
+                min                             0.5
+                max                             2
+            }
+            all_particle_dimensions             dyn_random
+            {
+                min                             0.06
+                max                             2.4
+            }
+        }
+        affector                                PlaneCollider 
+        {
+            position                            0 -6 0
+            friction                            0.5
+            bouncyness                          0.4
+            normal                              0 1 0
+        }
+        affector                                LinearForce 
+        {
+            force_vector                        0 -36 0
+        }
+        affector                                GeometryRotator 
+        {
+            use_own_rotation                    true
+            rotation_speed                      dyn_random
+            {
+                min                             1
+                max                             30
+            }
+        }
+    }
+}

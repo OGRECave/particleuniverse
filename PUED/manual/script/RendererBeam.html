@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleRenderer.html">Renderer&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Beam Renderer</h2>
+  <p>Renders a particle as a beam. The starting position of each beam is the position of the node to which the Particle System is attached. The end position is the particle position itself.
+  The beam can be defined in such a way that it wiggles.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>renderer&nbsp;&nbsp;&nbsp;Beam&nbsp;&nbsp;&nbsp;{renderer properties}</i></strong>
+  <p>See ParticleRenderer for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+technique
+{
+    renderer                                Beam
+    {
+        update_interval                     0.04
+        beam_deviation                      1000
+        number_of_segments                  1
+    }
+}</pre>
+
+  <h3>Properties</h3>
+
+  <h6>Use Vertex Colours</h6>
+  <p>Set indication whether to use vertex colours or not. Syntax:</p>
+  <p><strong><i>use_vertex_colours&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>use_vertex_colours</i></strong> is the keyword.
+    <br>
+    <strong><i>true | false</i></strong> If set to true, vertex colours are used. Default: false</p>
+
+  <h6>Max Chain Elements</h6>
+  <p>Maximum number of elements in a chain. The more elements, the smoother the 
+    beam. Syntax:</p>
+  <p><strong><i>max_elements&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>max_elements</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> Maximum of chain elements. Default: 10</p>
+
+  <h6>Update Interval</h6>
+  <p>The time it takes to change the wiggle of the beam. Syntax:</p>
+  <p><strong><i>update_interval&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>update_interval</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> defines when the beam changes the wiggle. Default: 0.1</p>
+
+  <h6>Deviation</h6>
+  <p>The deviation defines the amplitude of the wiggle. Syntax:</p>
+  <p><strong><i>beam_deviation&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>beam_deviation</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> defines the amplitude of the wiggle. Default: 300</p>
+
+  <h6>Number of segments</h6>
+  <p>The number of segments defines how many 'breakpoints' are used for the wiggle. The more segments, the more changes in the curve of the beam. The number of segments is not the same as the number of elements. Syntax:</p>
+  <p><strong><i>number_of_segments&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br>
+    <strong><i>number_of_segments</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> defines the curve of the wiggle. Default: 2</p>
+
+  <h6>Jump</h6>
+  <p>If jump is set to false, the wiggle of the beam is smooth. If set to true, the changes in the wiggle are 'jumpy'. Syntax:</p>
+  <p><strong><i>beam_jump_segments&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>beam_jump_segments</i></strong> is the keyword.
+    <br>
+    <strong><i>true | false</i></strong> defines whether the wiggle jumps or not. Default: false</p>
+
+  <h6>Texture Direction</h6>
+  <p>Set the direction in which texture coords specified on each element are deemed to run along the length of the chain. Syntax:</p>
+  <p><strong><i>beam_texcoord_direction&nbsp;&nbsp;&nbsp;tcd_u | tcd_v</i></strong>
+    <br>
+    <br><strong><i>beam_texcoord_direction</i></strong> is the keyword.
+    <br>
+    <strong><i>tcd_u | tcd_v</i></strong> defines the direction. Default: tcd_v</p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

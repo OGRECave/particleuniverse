@@ -1,0 +1,56 @@
+//-----------------------------------------------------------------------------------------------------------------------
+// This script is part of the Particle Universe Media Pack product.
+//
+// Copyright (c) 2008 Henry van Merode
+//
+// Usage of this program is licensed under the terms of the Particle Universe Commercial License.
+// You can find a copy of the Commercial License in the Particle Universe package.
+//-----------------------------------------------------------------------------------------------------------------------
+vertex_program example_32_vertex hlsl
+{
+	source pu_example_32_sm20.hlsl
+	target vs_2_0
+	entry_point mainVP
+}
+
+fragment_program example_32_fragment hlsl
+{
+	source pu_example_32_sm20.hlsl
+	target ps_2_0
+	entry_point mainFP
+}
+
+
+// The shader is used to enable billboards to react on lights
+material ParticleUniverse/SmallSmokeTexture
+{
+    technique
+    {
+        pass
+        {
+            lighting on
+            ambient 0.4 0.4 0.4 1
+            depth_write off
+            scene_blend alpha_blend
+
+            vertex_program_ref example_32_vertex
+            {
+                param_named_auto worldViewProj worldviewproj_matrix
+                param_named_auto lightPosition light_position 0
+                param_named radius float 3
+            }
+
+
+            fragment_program_ref example_32_fragment
+            {
+                param_named_auto lightColour light_diffuse_colour 0
+           }
+
+            texture_unit
+            {
+                texture pu_smoke_brown_336x330.png
+                tex_address_mode clamp
+            }
+        }
+    }
+}

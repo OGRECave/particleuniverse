@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleObserver.html">Observer&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">On Quota Observer</h2>
+  <p>The Particle Universe plugin already identifies several ways to manage the 
+    amount of emitted particles. Examples:</p>
+  <ul>
+    <li> Using the 'force_emission' attribute in a particle emitter, forces the emitter to emit a number of particles (defined by the emission rate) in one go.
+    <li> With the OnCount Observer the number of emitted particles is counted. One or more handlers are called if a threshold has been exceeded.
+  </ul>
+  <p>The On Quota observer adds another method. This observer determines whether the number of emitted particles has reached the quota. If the 'quota' number
+  of particles has been emitted, one or more event handlers are called. Although it looks the same as the On Count observer, there is a real difference.
+  The On Quota observer validates the number of emitted particles on that particular moment, while the On Count observer just counts the particles over
+  a period of time.</p>
+  
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>observer&nbsp;&nbsp;&nbsp;OnQuota&nbsp;&nbsp;&nbsp;[observerName]&nbsp;&nbsp;&nbsp;{observer properties}</i></strong>
+  <p>See ParticleObserver for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+observer                   OnQuota
+{
+   handler                 DoEnableComponent
+   {
+       enable_component    emitter_component    myEmitter    false
+   }
+}</pre>
+
+
+  <h3>Properties</h3>
+  <p>This Observer doesn't have own properties.</p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

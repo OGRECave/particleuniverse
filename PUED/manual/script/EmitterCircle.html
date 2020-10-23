@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleEmitter.html">Emitter&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Circle Emitter</h2>
+  <p>Emits particles on a circle shape. The 'auto_direction' property moves the particles outside from the center.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>emitter&nbsp;&nbsp;&nbsp;Circle&nbsp;&nbsp;&nbsp;[emitterName]&nbsp;&nbsp;&nbsp;{emitter properties}</i></strong>
+  <p>See ParticleEmitter for explanation of the syntax</p>
+  <p> Example:
+  <pre>
+emitter                Circle
+{
+   ...
+   radius              100
+   emit_random         false
+   step                0.2
+}</pre>
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Radius</h6>
+  <p>The radius of the circle. Syntax:</p>
+  <p><strong><i>radius&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>radius</i></strong> is the keyword. <font color="#F62217"><strong><em>circle_em_radius</em></strong><em> is deprecated from version 1.2</em></font>
+  <br>
+  <strong><i>#value</i></strong> is a real value > 0 that defines the radius of the circle. Default: 100.</p>
+
+  <h6>Step</h6>
+  <p>The step value determines the distance between the emitted particles. This attribute has no meaning if circle_em_random has been set to true. Syntax:</p>
+  <p><strong><i>step&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>step</i></strong> is the keyword. <font color="#F62217"><strong><em>circle_em_step</em></strong><em> is deprecated from version 1.2</em></font>
+    <br><strong><i>#value</i></strong> is a real value > 0 that defines the increments of the angle. The smaller the value, the closer the distance 
+	  between the emitted particles. Default: 0.1.</p>
+
+  <h6>Angle</h6>
+  <p>The angle defines the start position on the circle. This attribute has no meaning if circle_em_random 
+	has been set to true. Syntax:</p>
+  <p><strong><i>angle&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>angle</i></strong> is the keyword. <font color="#F62217"><strong><em>circle_em_angle</em></strong><em> is deprecated from version 1.2</em></font>
+  <br>
+  <strong><i>#value</i></strong> is a real value that defines the start position on the circle. Default: 0.</p>
+
+  <h6>Emit Random</h6>
+  <p>Particles can be emitted random on the circle, or following the countour 
+    of the circle. Syntax:</p>
+  <p><strong><i>emit_random&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>emit_random</i></strong> is the keyword. <font color="#F62217"><strong><em>circle_em_random</em></strong><em> is deprecated from version 1.2</em></font>
+  <br><strong><i>true | false</i></strong> defines whether particles are emitted random on the circle (true) or follow the contour. Default: true.</p>
+
+  <h6>Normal</h6>
+  <p>The normal is used to set the orientation of the circle. Syntax:</p>
+  <p><strong><i>normal&nbsp;&nbsp;&nbsp;#x&nbsp;&nbsp;&nbsp;#y&nbsp;&nbsp;&nbsp;#z</i></strong>
+    <br>
+    <br><strong><i>normal</i></strong> is the keyword. <font color="#F62217"><strong><em>circle_em_normal</em></strong><em> is deprecated from version 1.2</em></font>
+    <br>
+    <strong><i>#x</i></strong> represents the x-value of the normal. Default value of the normal: Identity.
+    <br><strong><i>#y</i></strong> represents the x-value of the normal.
+    <br><strong><i>#z</i></strong> represents the x-value of the normal.</p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

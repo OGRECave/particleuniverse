@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Create a ParticleSystem</h2>
+  <p>Creation of a Particle Universe Particle System differs slightly from creation of a Particle System using Ogre's ParticleFX plugin. 
+  A Particle Universe Particle System is created by means of the ParticleSystemManager, while the Particle System in the ParticleFX situation is created 
+  by means of the SceneManger.
+  <br>A code example how to create a Particle Universe Particle System:</p>
+  <pre>
+#include "ParticleUniverseSystemManager.h"
+...
+ParticleUniverse::ParticleSystem mySys = ParticleUniverse::ParticleSystemManager::getSingleton().
+    createParticleSystem("mySystem", "systemNameFromScript", sceneManager);
+SceneNode* particleNode = sceneManager->getRootSceneNode()->createChildSceneNode();
+particleNode->attachObject(mySys);
+particleNode->setPosition(Vector3(0, -150, 0));
+mySys->prepare();
+<br>
+...
+mySys->start ();
+</pre>
+  <p>Another difference is that the Particle Universe version of the Particle 
+    System has a lifecycle that includes : creation, preparing, starting, pausing, 
+    resuming, stopping and deletion.</p>
+  <p>In the example, the Particle System is prepared first, meaning that time 
+    consuming initialisations are executed before the Particle System is started. 
+    Starting a Particle System is therefor slightly faster. Note, that if the 
+    start is called without the prepare first, the initialisations are also executed.</p>
+<p>The lifecycle in short:</p>
+<ol>
+<li>Create - Create a Particle System
+<li>Prepare - Perform initialisation activities, such as creating a particle pool
+<li>Start - Start the Particle System
+<li>Pause - Pause the Particle System; the particles are still displayed, but do not move (useful for 
+pausing a game)
+<li>Resume - Resume the Particle System again; particles start moving again
+<li>Stop - Stop the Particle System; particles aren't  visible anymore
+<li>Delete - Delete the Particle System
+</ol>
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>	

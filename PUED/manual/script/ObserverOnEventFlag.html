@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleObserver.html">Observer&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">On Event Flag Observer</h2>
+  <p>Some of the Observers (OnEmission, OnCollision) validate the value of the 
+    particles' event flag. These observers are created just for convenience. A 
+    more generic solution is this On Event Flag Observer. You can set a mask (the 
+    event_flag) in the script in the form of a uint32. With this mask it is possible 
+    to validate more than one particle state at once. For instance, if you want 
+    to determine whether a particle has collided and expired at the same time, 
+    the event flag must be set to 1 (expired) + 4 (collided) = 5. <br>
+	 <br>
+    Instead of using predefined values, it is also possible to validate the flag 
+    with a user value. It is possible to add or set any event flag to a particle, 
+    which can be detected by this observer.</p>
+  
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>observer&nbsp;&nbsp;&nbsp;OnEventFlag&nbsp;&nbsp;&nbsp;[observerName]&nbsp;&nbsp;&nbsp;{observer properties}</i></strong>
+  <p>See ParticleObserver for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+observer                OnEventFlag
+{
+   event_flag           4
+   handler              DoExpire {}
+}</pre>
+
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Event Flag</h6>
+  <p>The event flag is a mask that is used to validate the event flag value of a particle. The mask and the particles' event flag value are matched bitwise.
+     If a bit in the mask has been set in the event flag of the particle, the observer calls the registered handlers. Syntax:</p>
+  <p><strong><i>event_flag&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>event_flag</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is a uint32 value that is used for matching the eventflag of the particle. Default: 0.</p>
+
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

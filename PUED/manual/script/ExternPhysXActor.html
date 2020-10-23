@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+ <style type="text/css">
+<!--
+.stijl1 {color: #FF0000}
+.stijl2 {color: #008000}
+-->
+ </style>
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="Extern.html">Extern&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">PhysX Actor Extern</h2>
+  <p>Nvidia's PhysX can be used to add physical behaviour to Particle Universe particles. Currently there are 2 options:
+  <br>
+  1) Rigid body based particles: Particle Universe particles are associated with an NxActor. This means that particles derive their values (position, direction, ...) from the NxActor. This is the default behaviour of a PhysX Extern.
+  <br>
+  2) Fluid based particles: Particle Universe particles are associated with an NxFluid.</p>
+ <p>Particle Universe is prepared for easy integration of PhysX. The manual (Particle Universe Manual.pdf) covers the compilation and linking steps and describes the usage of the PhysXBridge, a singleton class that communicates with PhysX. If the PhysX setup is done for Particle Universe, particle system scripts that use  the PhysX features can be defined similar to a regular particle system script.</p>
+ 
+  <h3>Definition</h3>
+  <p>Each particle system that uses the PhysXActor capabilities must add a PhysXActor Extern to its technique. With the use of the PhysXActor Extern, the shape and other PhysX properties are assigned to the particles. Syntax:
+  <br>
+  <p><strong><i>extern&nbsp;&nbsp;&nbsp;PhysXActor&nbsp;&nbsp;&nbsp;[externName]&nbsp;&nbsp;&nbsp;{extern properties}</i></strong>
+  <p>See Extern for explanation of the syntax.</p>
+  <p> Script example:
+  <pre>technique
+{
+    ....
+    extern                                PhysXActor
+    {
+        actor_group                       100
+        physx                             Box
+        {
+            shape_group                   1
+            angular_velocity              0 10 0
+            angular_damping               0.2
+            material_index                1
+        }
+    }
+}</pre>
+
+  <p>Because PhysX takes over the behaviour of the particle , some of the affectors don't affect the particles anymore. The table below gives an overview of affectors that can be combined with PhysXActor. The other affectors cannot be combined with PhysXActor, because they apply forces or changing the particles' position, so this conflicts with PhysXActor:
+<ul>
+ <li>Scale Affector
+ <li>Colour Affector
+ <li>Texture Rotator
+ <li>Texture Animator
+</ul>
+<br>
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Collision Group</h6>
+  <p>Particle actors can be assigned to an actor collision group. The actor collision group is an integer between 0..65535 and can be used to define whether actors of a particular group are allowed to collide with actors of another group. The actor collision group set in a PhysXActor Extern is unique for the particles of the Particle Technique to which the PhysXActor Extern belongs and may not be assigned to other actors. For example, if an actor collision group is set in a  PhysXActor Extern but the same value is also assigned to a regular plane actor, collision detection results in an exception, because it assumes that the plane is also a particle. Syntax:</p>
+  <p><strong><i>actor_group&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>actor_group</i></strong> is the keyword.
+  <br><strong><i>#value</i></strong> is the actor collision group value. Default: 0</p>
+  <p>Particle Universe does not include any functionality to define collision between groups, because this can easily be done by means of the PhysX API itself. This has to be done in code. An example: Assume that the collision group of the actor (= particle) is set to value 100. If you want Particle Universe to detect the collision between individual particles, you have to set group pair flags by means of 
+<pre>nxScene->setActorGroupPairFlags(100, 100, NX_NOTIFY_ON_START_TOUCH);
+</pre>
+  <p>
+  Particle Universe has a build-in onContactNotify() function that registers which particles collide and sets the PEF_COLLIDED flag in the particles. This allows the use of the OnCollision observer for example.</p>
+
+  <h6>Shape Type</h6>
+  <p>This defines the physical shape of a particle and includes the definition of the most important properties. Syntax:</p>
+  <p><strong><i>shape&nbsp;&nbsp;&nbsp;Box | Sphere | Capsule&nbsp;&nbsp;&nbsp;{shape properties}</i></strong>
+  <br>
+  <br><strong><i>shape</i></strong> is the keyword.
+  <br>
+  <strong><i>Box | Sphere | Capsule</i></strong> defines the physical shape. Note, that this is independent of the rendered shape. This means that a box can be rendered as a sphere or vice versa. Default: Box
+  <br><strong><i>{shape properties}</i></strong> includes definition of the properties:
+<ul>
+ <li>shape_group
+ <li>group_mask
+ <li>angular_velocity
+ <li>angular_damping
+ <li>material_index
+</ul>
+<br></p>
+
+  <h6>Shape - Collision Group</h6>
+  <p>Particle shapes can be assigned to a collision group. The collision group is an integer between 0..31 and can be used to define whether shapes of a particular group are allowed to collide with shapes of another group. Syntax:</p>
+  <p><strong><i>shape_group&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>shape_group</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong> is todo. Default: 0</p>
+
+  <h6>Shape - Group Mask</h6>
+  <p>Specifies a 128 bit group mask for each shape, by means of four 32 bit values. The group mask can be used for detailed filtering of collisions. See the PhysX documentation for more information. Syntax:</p>
+  <p><strong><i>group_mask&nbsp;&nbsp;&nbsp;#bits0&nbsp;&nbsp;&nbsp;#bits1&nbsp;&nbsp;&nbsp;#bits2&nbsp;&nbsp;&nbsp;#bits3</i></strong>
+  <br>
+  <br><strong><i>group_mask</i></strong> is the keyword.
+  <br>
+  <strong><i>#bits0&nbsp;&nbsp;&nbsp;#bits1&nbsp;&nbsp;&nbsp;#bits2&nbsp;&nbsp;&nbsp;#bits3</i></strong> represent the four 32 bit values. Default: 0 0 0 0
+  </p>
+
+  <h6>Shape - Angular Velocity</h6>
+  <p>The angular velocity is a Vector3 value which specifies the angular speed and axis about which an object is rotating. Syntax:</p>
+  <p><strong><i>angular_velocity&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>angular_velocity</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong> is the Vector3 value. Default: Ogre::Vector3::ZERO </p>
+
+  <h6>Shape - Angular Damping</h6>
+  <p>Damps the angular velocity. Syntax:</p>
+  <p><strong><i>angular_damping&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>angular_damping</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong> is the damping value. Default: 0.5</p>
+
+  <h6>Shape - Material Index</h6>
+  <p>Each shape can be associated with a physics material. In PhysX, materials can be created and each material gets an index. The index value can be used in Particle Universe. Note, that
+  creation of physics materials must be done with the PhysX API itself. Particle Universe doesn´t have the possibilities to do that. Syntax:</p>
+  <p><strong><i>material_index&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>material_index</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong> is the integer index of the material that is defined in PhysX. Default: 0</p>
+
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

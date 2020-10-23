@@ -1,0 +1,111 @@
+system example_028
+{
+    category                                    Examples_21_30
+    technique 
+    {
+        visual_particle_quota                   2000
+        material                                ParticleUniverse/Nucleus
+        default_particle_width                  0.9
+        default_particle_height                 0.9
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Slave 
+        {
+            time_to_live                        5
+            direction                           0 0 0
+            colour                              1 0.6 0.3 1
+            master_technique_name               testTechnique
+            master_emitter_name                 PointEmitter
+        }
+        affector                                Scale 
+        {
+            xyz_scale                           dyn_curved_linear
+            {
+                control_point                   0 1.5
+                control_point                   1 0
+            }
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 1 1 1
+            time_colour                         0.05  0.3 0.3 0.3 1
+            time_colour                         1    0 0 0 1
+            colour_operation                    multiply
+        }
+        affector                                TextureRotator 
+        {
+            use_own_rotation                    true
+            rotation                            dyn_random
+            {
+                min                             1
+                max                             40
+            }
+            rotation_speed                      0.5
+        }
+        behaviour                               Slave
+        {
+        }
+    }
+    technique testTechnique
+    {
+        visual_particle_quota                   2000
+        emitted_emitter_quota                   100
+        material                                PUMediaPack/Smoke
+        default_particle_width                  0.03
+        default_particle_height                 0.03
+        renderer                                Billboard
+        {
+            render_queue_group                  51
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       1
+            angle                               60
+            time_to_live                        7
+            velocity                            9
+            emits                               emitter_particle PointEmitter
+        }
+        emitter                                 Point PointEmitter
+        {
+            emission_rate                       40
+            angle                               360
+            time_to_live                        4
+            velocity                            0.6
+            colour                              0 0 0 0
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    0 0 0 0
+            time_colour                         0.06  0 0 0 0
+            time_colour                         0.1  0.1 0.1 0.1 1
+            time_colour                         0.5  0.2 0.2 0.2 0.3
+            time_colour                         0.8  0.2 0.2 0.2 0.3
+            time_colour                         1    0 0 0 0
+        }
+        affector                                Scale 
+        {
+            xyz_scale                           dyn_curved_linear
+            {
+                control_point                   0 0.3
+                control_point                   0.4 2.4
+                control_point                   1 0
+            }
+        }
+        affector                                TextureRotator 
+        {
+            use_own_rotation                    true
+            rotation                            dyn_random
+            {
+                min                             1
+                max                             40
+            }
+            rotation_speed                      0.5
+        }
+        affector                                LinearForce 
+        {
+            exclude_emitter                     PointEmitter 
+            force_vector                        0 -3 0
+        }
+    }
+}

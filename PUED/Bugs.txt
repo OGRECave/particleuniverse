@@ -1,0 +1,67 @@
+Known bugs:
+==========
+- Sometimes the particle list is displayed in full length in the Edit tab overwriting the component property window.
+- Deleting renderer from technique in Edittab and switching to another tab results in a crash.
+- Editor can't load script with Chinese character. See http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=447
+- See http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=444&p=1398#p1398
+- Changes in emitted techniques or its subcomponents do not come into effect in realtime, if the graphical editor (EditTab) is used (maybe
+  add 'compile' support to re-create the particle system completely)
+- Adding a resource location and exit the application results in memory leaks. Check for duplicates.
+- CTRL/S saves PU script when material tab is open. This is confusing.
+- After inserting a new material at the top and swapping tabs, the new material is listed at the bottom.
+- With synchronisation between render/edit tabs, the particle system scale is incorrect in the edit tab (= old bug?). It is restored 
+  when selecting new ps and selecting the old one again.
+- DynamicAttribute Curved dialog: Flickering when controlpoints are moved.
+
+V1.5.1
+======
+ :arrow: Editor: Refresh screen after disconnecting 2 components in the Edit-tab. The connection line is immediately removed.
+ :arrow: Editor: notifyTimeRescaled changes scaleTime in the particle system. This conflicts if you actually want to change the scaleTime value.
+ :arrow: Editor: Solved irritating flashing of the screen after selecting another particle system from the list.
+ :arrow: Editor: Crash when changing texture coordinates in emitter while the particle system is running.
+
+
+V1.5
+=====
+ :arrow: Editor: Crash when texture coordinates in Texture Animator is set to values higher than values defined in the renderer ([color=#00BF00]DONE[/color]).
+ :arrow: Editor: Crash when mesh name is not filled and you select an Entity Renderer ([color=#00BF00]DONE[/color]).
+ :arrow: Editor: Crash when renderer is deleted in Edittab while the particle system is running ([color=#00BF00]DONE[/color]).
+
+V1.4
+=====
+ :arrow: Editor: 'Options' screen disappears when displayed on top of the edittab and the edittab is pressed ([color=#00BF00]DONE[/color]).
+ :arrow: Editor: Problem reading added resource locations with space character. See http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=455 ([color=#00BF00]DONE[/color]).
+ :arrow: Editor: Set texture coordinate in emitter with value > 0 while there is only 1 row and 1 column causes a crash. No validation added to the plugin itself (performance), but because of a change in ParticleRenderer::getNumTextureCoords(), the editor at least performs the validation ([color=#00BF00]DONE[/color]).
+ :arrow: Editor: Inconsistency between render, edit and scrip tab. See http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=444&p=1398#p1398. Changing the name of the particle system in the Edit-tab doesn't result in a changed name in the list and the script. This is because once created, the particle system cannot be renamed (it is a Movable object) ([color=#00BF00]DONE[/color]).
+ :arrow: Editor: Change made in script (name) is not automatically refreshed in the listbox when the Compile is done ([color=#00BF00]DONE[/color]).
+ :arrow: Editor: Change system name in script + compile doesn't change the name in the list, but creates a CopyOf... ([color=#00BF00]DONE[/color]).
+
+
+V 1.3.1
+=======
+Bugs:
+- (DONE) After selecting a script in the listbox, the listbox gives a flickering, which is annoying.
+- (DONE) ForceFieldAffector: Change type from realtime to matrix and then change the forcefield size (from 64 to 32) crashes the application. Changing
+  it by means of the script works, but not in the edit tab. First changing the forcefield size from 64 to 32 and then changing the type from 
+  realtime to matrix does work.
+
+
+
+V 1.3
+=====
+Bugs:
+- (DONE) The preview of the particle system in the 'Edit' tab is not visible anymore
+
+
+V 1.2
+=====
+Bugs:
+- (DONE) Render to image files with background colour fixed (background colour was always black).
+- (DONE) Bug scenario: http://www.fxpression.com/phpBB3/viewtopic.php?f=4&t=284. This particular script doesn't cause a bug anymore.
+- (DONE) GeometryRotator: Change type of rotation speed a couple of times in the script, results in a crash (this occurs in combination with
+  changing the DynamicAttributeType and an EntityRenderer). Hard to find what it is, because even the debugger exits.
+  Seems solved with the new scriptcompiler.
+
+V 1.1
+=====
+Bugs:

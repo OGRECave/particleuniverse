@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1> Particle Universe</h1>
+<h5><a href="ParticleAffector.html">Affector&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Box Collider</h2>
+  <p>The Box Collider represents a box shape with which the particles collide.</p>
+
+  <p>Beware that the Box Collider is part of Particle Universe itself. If you want more sophisticated collision and responses, Particle Universe also has the option to integrate with Nvidia´s PhysX engine, formerly owned by Ageia.</p>
+ 
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>affector&nbsp;&nbsp;&nbsp;BoxCollider&nbsp;&nbsp;&nbsp;[affectorName]&nbsp;&nbsp;&nbsp;{affector properties}</i></strong>
+  <p>See ParticleAffector for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+affector                     BoxCollider
+{
+    position                 0 -100 0
+    box_width                20
+    box_height               300
+    box_depth                20
+    intersection             point
+    collision_type           flow
+}</pre>
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Box Width</h6>
+  <p>Defines the width of the box collider. Syntax:</p>
+  <p><strong><i>box_width&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>box_width</i></strong> is the keyword. <font color="#F62217"><strong><em>box_collider_width</em></strong><em> is deprecated from version 1.2</em></font>
+  <br>
+  <strong><i>#value</i></strong> is a real value > 0 that defines the width. Default: 0.</p>
+
+  <h6>Box Height</h6>
+  <p>Defines the height of the box collider. Syntax:</p>
+  <p><strong><i>box_height&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>box_height</i></strong> is the keyword. <font color="#F62217"><strong><em>box_collider_height</em></strong><em> is deprecated from version 1.2</em></font>
+  <br>
+  <strong><i>#value</i></strong> is a real value > 0 that defines the height. Default: 0.</p>
+
+  <h6>Box Depth</h6>
+  <p>Defines the depth of the box collider. Syntax:</p>
+  <p><strong><i>box_depth&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>box_depth</i></strong> is the keyword. <font color="#F62217"><strong><em>box_collider_depth</em></strong><em> is deprecated from version 1.2</em></font>
+  <br>
+  <strong><i>#value</i></strong> is a real value > 0 that defines the depth. Default: 0.</p>
+
+  <h6>Inner Collision</h6>
+  <p>Defines whether the collision takes place inside of the box, or outside. If the value is set to true, particles collide with the inner sides of the box. Syntax:</p>
+  <p><strong><i>inner_collision&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>inner_collision</i></strong> is the keyword.
+  <br>
+  <strong><i>true | false</i></strong> defines wither the collision is inside of the box. Default: false.</p>
+
+  <h6>Friction</h6>
+  <p>See <a href="ColliderSphere.html">Sphere Collider</a></p>
+
+  <h6>Bouncyness</h6>
+  <p>See <a href="ColliderSphere.html">Sphere Collider</a></p>
+
+  <h6>Intersection Type</h6>
+  <p>See <a href="ColliderSphere.html">Sphere Collider</a></p>
+
+  <h6>Collision Type</h6>
+  <p>See <a href="ColliderSphere.html">Sphere Collider</a></p>
+
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

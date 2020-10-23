@@ -1,0 +1,122 @@
+system fireplace_02
+{
+    category                                    Fire
+    technique 
+    {
+        visual_particle_quota                   450
+        material                                PUMediaPack/Fire_03
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       200
+            angle                               10
+            time_to_live                        dyn_random
+            {
+                min                             1
+                max                             3
+            }
+            velocity                            dyn_random
+            {
+                min                             3
+                max                             6
+            }
+            particle_width                      dyn_random
+            {
+                min                             0.9
+                max                             2.1
+            }
+            particle_height                     dyn_random
+            {
+                min                             0.39
+                max                             1.2
+            }
+            box_width                           3
+            box_height                          0.12
+            box_depth                           3
+        }
+        affector                                Gravity 
+        {
+            position                            0 3.9 0
+            gravity                             2.4
+        }
+        affector                                Scale 
+        {
+            x_scale                             -0.15
+            y_scale                             dyn_random
+            {
+                min                             0.12
+                max                             2.25
+            }
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    0 0 0 1
+            time_colour                         0.1  1 1 1 1
+            time_colour                         1    0 0 0 1
+        }
+    }
+    technique 
+    {
+        visual_particle_quota                   450
+        material                                PUMediaPack/Fire_04
+        renderer                                Billboard
+        {
+            billboard_type                      oriented_self
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       200
+            angle                               10
+            time_to_live                        dyn_random
+            {
+                min                             1
+                max                             3
+            }
+            velocity                            dyn_random
+            {
+                min                             3
+                max                             6
+            }
+            particle_width                      dyn_random
+            {
+                min                             0.9
+                max                             2.1
+            }
+            particle_height                     dyn_random
+            {
+                min                             0.39
+                max                             1.2
+            }
+            box_width                           3
+            box_height                          0.12
+            box_depth                           3
+        }
+        affector                                Gravity 
+        {
+            position                            0 3.9 0
+            gravity                             2.4
+        }
+        affector                                Scale 
+        {
+            x_scale                             -0.15
+            y_scale                             dyn_random
+            {
+                min                             0.09
+                max                             0.78
+            }
+        }
+        affector                                ParticleFollower 
+        {
+            min_distance                        0.12
+            max_distance                        1.05
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    0 0 0 1
+            time_colour                         0.1  1 1 1 1
+            time_colour                         1    0 0 0 1
+        }
+    }
+}

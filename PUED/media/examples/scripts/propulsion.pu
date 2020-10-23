@@ -1,0 +1,97 @@
+system propulsion
+{
+    keep_local                                  true
+    category                                    Fire
+    technique 
+    {
+        visual_particle_quota                   200
+        material                                PUMediaPack/Streak_04
+        renderer                                Billboard
+        {
+            billboard_type                      oriented_self
+            billboard_origin                    bottom_center
+        }
+        emitter                                 Circle 
+        {
+            emission_rate                       100
+            angle                               0
+            time_to_live                        dyn_random
+            {
+                min                             0.2
+                max                             0.4
+            }
+            velocity                            0.03
+            particle_width                      dyn_random
+            {
+                min                             1.2
+                max                             1.8
+            }
+            particle_height                     dyn_random
+            {
+                min                             1.2
+                max                             2.4
+            }
+            direction                           0 -1 0
+            colour                              0.8 0.8 1 1
+            radius                              0.75
+            normal                              0 1 0
+        }
+        emitter                                 Circle 
+        {
+            emission_rate                       100
+            angle                               0
+            time_to_live                        dyn_random
+            {
+                min                             0.2
+                max                             0.4
+            }
+            velocity                            0.03
+            particle_width                      dyn_random
+            {
+                min                             0.9
+                max                             1.8
+            }
+            particle_height                     dyn_random
+            {
+                min                             2.4
+                max                             6
+            }
+            direction                           0 -1 0
+            colour                              0.5 0.5 1 1
+            radius                              0.6
+            normal                              0 1 0
+        }
+        emitter                                 Circle 
+        {
+            emission_rate                       100
+            angle                               0
+            time_to_live                        dyn_random
+            {
+                min                             0.2
+                max                             0.4
+            }
+            velocity                            0.03
+            particle_width                      dyn_random
+            {
+                min                             0.3
+                max                             0.6
+            }
+            particle_height                     dyn_random
+            {
+                min                             4.8
+                max                             9
+            }
+            direction                           0 -1 0
+            colour                              0.3 0.3 1 1
+            radius                              0.3
+            normal                              0 1 0
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 1 1 1
+            time_colour                         0.8  1 1 1 1
+            time_colour                         1    0 0 0 0
+            colour_operation                    multiply
+        }
+    }
+}

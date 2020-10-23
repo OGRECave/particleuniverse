@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleAffector.html">Affector&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Texture Rotator</h2>
+  <p>The Texture Rotator rotates the texture of a particle. </p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>affector&nbsp;&nbsp;&nbsp;TextureRotator&nbsp;&nbsp;&nbsp;[affectorName]&nbsp;&nbsp;&nbsp;{affector properties}</i></strong>
+  <p>See ParticleAffector for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+affector                           TextureRotator
+{
+    use_own_rotation               true
+    rotation                       dyn_random
+    {
+        min                        1
+        max                        30
+    }
+    rotation_speed                 dyn_random
+    {
+        min                        1
+        max                        30
+    }
+}</pre>
+
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Use Own Rotation</h6>
+  <p>This boolean attribute determines whether the rotation speed must be set and controlled by the particle affector, or whether the speed is set for each
+     individual particle. In the first case, the rotation speed is the same for all particles and not set for individual particles. This also means that
+	 the rotation speed cannot be controlled by the particle itself (at least the Texture Rotator doesn't use it). In the second case, the rotation speed is set for each particle. Changing the rotation 
+	 speed in the particle results in a different rotation speed of the texture. Syntax:</p>
+  <p><strong><i>use_own_rotation&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>use_own_rotation</i></strong> is the keyword. <font color="#F62217"><strong><em>tex_rot_use_own_rotation</em></strong><em> is deprecated from version 1.2</em></font>
+    <br>
+    <strong><i>true | false</i></strong> is a boolean value that defines whether the rotation speed of the individual particle texture is set and used (true) or 
+	    whether the rotation speed of the affector (the Texture Rotator) is used. Default: false.</p>
+
+  <h6>Rotation</h6>
+  <p>The rotation is a dynamic attribute that defines the initial rotation offset of a particle texture. Syntax:</p>
+  <p><strong><i>rotation&nbsp;&nbsp;&nbsp;#value | 
+  <br>
+  &nbsp;&nbsp;&nbsp;dyn_random {random properties} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_linear {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_spline {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_oscillate {oscillating properties}</i></strong>
+    <br>
+    <br>
+    <strong><i>rotation</i></strong> is the keyword.  <font color="#F62217"><strong><em>tex_rot_rotation</em></strong><em> is deprecated from version 1.2</em></font>  </p>
+  <p><strong><i>#value</i></strong> is a real value that defines the initial texture rotation. Default: 0.0.</p>
+  <p> <strong><i>dyn_random {random properties}</i></strong> means that the initial texture rotation is generated randomly</p>
+  <p> <strong><i>dyn_curved_linear {control point [control point]}</i></strong> means that the initial texture rotation is determined by means of 1 or more control points.
+  The interpolation between the control points is linear</p>
+  <p> <strong><i>dyn_curved_spline {control point [control point]}</i></strong> means that the initial texture rotation is determined by means of 1 or more control points.
+  The interpolation between the control points is cubic</p>
+  <p> <strong><i>dyn_oscillate {oscillating properties}</i></strong> means that the initial texture rotation is determined by means of an oscillating function.</p>
+  <p>See also the page <a href="SpecialCases.html">'Special Cases'</a> for an explanation of the 'Dynamic Attribute'.</p>
+
+  <h6>Rotation Speed</h6>
+  <p>The rotation speed is a dynamic attribute that defines the rotation speed of a particle texture. Syntax:</p>
+  <p><strong><i>rotation_speed&nbsp;&nbsp;&nbsp;#value | 
+  <br>
+  &nbsp;&nbsp;&nbsp;dyn_random {random properties} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_linear {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_spline {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_oscillate {oscillating properties}</i></strong>
+    <br>
+    <br> 
+    <strong><i>rotation_speed</i></strong>is the keyword.  <font color="#F62217"><strong><em>tex_rot_speed</em></strong><em> is deprecated from version 1.2</em></font>
+  <br><strong><i>#value</i></strong> is a real value that defines the rotation speed. Default: 0.0.</p>
+
+  <p> <strong><i>dyn_random {random properties}</i></strong> means that the rotation speed is generated randomly</p>
+  <p> <strong><i>dyn_curved_linear {control point [control point]}</i></strong> means that the rotation speed is determined by means of 1 or more control points.
+  The interpolation between the control points is linear.  Note, that if this option is used, speed is based on the particles' time-to-live and not based on the time since the start of the particle system. This means the the first value of each control point lies between the interval [0..1].</p>
+  <p> <strong><i>dyn_curved_spline {control point [control point]}</i></strong> means that the rotation speed is determined by means of 1 or more control points.
+  The interpolation between the control points is cubic.  Note, that if this option is used, speed is based on the particles' time-to-live and not based on the time since the start of the particle system. This means the the first value of each control point lies between the interval [0..1].</p>
+  <p> <strong><i>dyn_oscillate {oscillating properties}</i></strong> means that the rotation speed is determined by means of an oscillating function.</p>
+  <p>See also the page <a href="SpecialCases.html">'Special Cases'</a> for an explanation of the 'Dynamic Attribute'.</p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

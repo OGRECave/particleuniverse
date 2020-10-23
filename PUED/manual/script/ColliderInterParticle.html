@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1> Particle Universe</h1>
+<h5><a href="ParticleAffector.html">Affector&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Inter Particle Collider</h2>
+  <p>The Inter Particle Collider is used to define that particles are colliding with each other. It uses a bounding sphere collision detection, while different types of collision response 
+  can be used. This affector make use of the Spatial Hashing function of the Particle Technique. Make sure that the Spatial Hashing attributes of the Particle Technique have been set to a proper value.</p>
+
+  <p>Beware that inter particle collision is part of Particle Universe itself. If you want more sophisticated collision and responses, Particle Universe also has the option to integrate with Nvidia´s PhysX engine, formerly owned by Ageia.</p>
+  
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>affector&nbsp;&nbsp;&nbsp;InterParticleCollider&nbsp;&nbsp;&nbsp;[affectorName]&nbsp;&nbsp;&nbsp;{affector properties}</i></strong>
+  <p>See ParticleAffector for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+affector                     InterParticleCollider
+{
+    adjustment               0.8
+    collision_response       angle_based_velocity
+}</pre>
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Adjustment</h6>
+  <p>The adjustment property is used to adjust the collision detection. For example, in case where a texture doesn't completely cover a billboard at the edges, it might look as if particles are colliding with the surrounding space. If the adjustment property is set to a value < 1, the particles are able to approach each other closer, before the collision detection is activated. Syntax:</p>
+  <p><strong><i>adjustment&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>adjustment</i></strong> is the keyword. <font color="#F62217"><strong><em>ip_adjustment</em></strong><em> is deprecated from version 1.2</em></font>
+    <br><strong><i>#value</i></strong> is a value > 0 and defines the amount of adjustment needed to correct the collision detection. Default: 1.0.</p>
+
+  <h6>Collision Response</h6>
+  <p>Defines how a particle behaves after it collides with another particle. Syntax:</p>
+  <p><strong><i>collision_response&nbsp;&nbsp;&nbsp;average_velocity | angle_based_velocity</i></strong>
+    <br>
+    <br><strong><i>collision_response</i></strong> is the keyword. <font color="#F62217"><strong><em>ip_collision_response</em></strong><em> is deprecated from version 1.2</em></font>
+    <br><strong><i>average_velocity</i></strong> means that the velocity of each particle after collision is the average of the two velocities before collision. This is the default.
+    <br>
+    <strong><i>angle_based_velocity</i></strong> means that the velocity after collision is based on the angle between the direction vector before and the direction vector after collision.</p>
+
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+system example_008
+{
+    category                                    Examples_1_10
+    technique 
+    {
+        visual_particle_quota                   200
+        material                                ParticleUniverse/Hart
+        default_particle_width                  1.5
+        default_particle_height                 1.5
+        default_particle_depth                  1.5
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point myPointEmitter
+        {
+            emission_rate                       100
+            angle                               25
+            time_to_live                        5
+            velocity                            6.6
+        }
+        affector                                LinearForce 
+        {
+            force_vector                        0 -3 0
+        }
+        observer                                OnQuota 
+        {
+            observe_particle_type               visual_particle
+            handler                             DoEnableComponent 
+            {
+                enable_component                emitter_component myPointEmitter false
+            }
+        }
+    }
+}

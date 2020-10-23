@@ -1,0 +1,4 @@
+The Particle Universe Editor has the following dependencies:
+- Ogre
+- wxWidgets (V2.8.9)
+- wxPropertyGrid (V1.4.3).

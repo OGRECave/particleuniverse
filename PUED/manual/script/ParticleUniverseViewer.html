@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Particle Universe Viewer</h2>
+  <p>The Particle Viewer is a basic viewer application to load, start, pause, resume and stop particle systems. It displays a list of all loaded templates from which yout can pick. Everything works straightforwards, so a detailed description isn´t needed.</p>
+
+  <h3>Recording</h3>
+  <p>The recording part of the viewer does need some more explanation. If a particle system is selected and the ´Record´ button is pressed, the particle system starts and a ´video´ recording is made. The output is a list of image files, where every image represents one frame. Stitching them all to a real video format is not supported (you should use a video editing tool for that), but it is possible to create one atlas image from them with the <a href="AtlasImageTool.html">Atlas Image Tool</a>. This atlas image can be played with the use of a the <a href="AffectorTextureAnimator.html">Texture Animator</a></p>
+  <p>Recording isn´t done in realtime, so that explains why a setting of 60 frames per minute takes longer than 1 minute. The recording settings are included in the <em>puviewer.cfg</em>. This configuration file includes the following settings:</p>
+  <p><strong><i>VideoPath</i></strong> is a (relative)directory that defines where the recorded image files are saved.<br>
+  <strong><i>ImageWidth</i></strong> defines the width of each image file. <br>
+  <strong><i>ImageHeight</i></strong> defines the height of each image file. <br>
+  <strong><i>FramesPerMinute</i></strong> defines the number of frames per minute. <br>
+  <strong><i>FileNameSuffix</i></strong> defines the extension of the image files (".png" for example). <br>
+  <strong><i>StartTime</i></strong> defines how many seconds the recording waits after the Record buttons has been pressed. <br>
+  <strong><i>EndTime</i></strong> defines how many seconds it takes to stop recording. <br>
+  <strong><i>PauseTime</i></strong> defines the pause after each image file (frame) has been saved. The pause time is needed for calibration. <br>
+
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>	

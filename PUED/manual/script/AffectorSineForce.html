@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleAffector.html">Affector&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Sine Force Affector</h2>
+  <p>The Sine Force Affector applies a non-linear force to a particle. Using a sine-function, the force varies and gives a wave effect on the movement of 
+     the particle.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>affector&nbsp;&nbsp;&nbsp;SineForce&nbsp;&nbsp;&nbsp;[affectorName]&nbsp;&nbsp;&nbsp;{affector properties}</i></strong>
+  <p>See ParticleAffector for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+affector                      SineForce
+{
+   force_vector               30 0 0
+   frequency_min              0
+   frequency_max              3
+}</pre>
+
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Force Vector</h6>
+  <p>Defines the direction to which the force applies. Syntax:</p>
+  <p><strong><i>force_vector&nbsp;&nbsp;&nbsp;#x #y #z</i></strong> <br>
+    <br>
+    <strong><i>force_vector</i></strong> is the keyword. <font color="#F62217"><strong><em>force_aff_vector</em></strong><em> is deprecated from version 1.2</em></font>
+    <br>
+    <strong><i>#x</i></strong> is a real value that defines the x coordinate of 
+    the force vector. Default: 0. <br>
+    <strong><i>#y</i></strong> is a real value that defines the y coordinate of 
+    the force vector. Default: 0. <br>
+    <strong><i>#z</i></strong> is a real value that defines the z coordinate of 
+    the force vector. Default: 0.</p>
+
+  <h6>Force Application</h6>
+  <p>Defines how the force vector is applied. Syntax:</p>
+  <p><strong><i>force_application&nbsp;&nbsp;&nbsp;add | average</i></strong>
+    <br>
+    <br><strong><i>force_application</i></strong> is the keyword. <font color="#F62217"><strong><em>force_aff_application</em></strong><em> is deprecated from version 1.2</em></font>
+    <br><strong><i>add | average</i></strong>. The 'add' value adds a fraction of the force vector to the particles' direction vector, which causes the
+	  particles' movement being affected. In case of average, an average value of the particles' direction and the force vector is calculated. Default: add.</p>
+
+  <h6>Minimum Frequency</h6>
+  <p>A sine wave with a frequency that lies between a minimum and maximum frequency is generated and multiplied with the force factor. 
+     This gives the particles a waving motion. A new frequency is determined after every sine cycle. This property defines the minimum frequency. Syntax:</p>
+  <p><strong><i>frequency_min&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>frequency_min</i></strong> is the keyword. <font color="#F62217"><strong><em>sinef_aff_frequency_min</em></strong><em> is deprecated from version 1.2</em></font>
+  <br>
+  <strong><i>#value</i></strong> is a real value that defines the minimum frequency of the sine. Default: 1.0.</p>
+
+  <h6>Maximum Frequency</h6>
+  <p>This property defines the maximum frequency (see also frequency_min). Syntax:</p>
+  <p><strong><i>frequency_max&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>frequency_max</i></strong> is the keyword. <font color="#F62217"><strong><em>sinef_aff_frequency_max</em></strong><em> is deprecated from version 1.2</em></font>
+  <br>
+  <strong><i>#value</i></strong> is a real value that defines the maximum frequency of the sine. Default: 1.0.</p>
+
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>
