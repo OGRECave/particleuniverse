@@ -38,7 +38,7 @@ wxOgreRenderSystem::wxOgreRenderSystem()
 #ifndef WXOGRE_DEBUG
 	m_root = new Ogre::Root("", "", "");
 #else
-	m_root = new Ogre::Root("", "", "boot.log");
+	m_root = new Ogre::Root("plugins.cfg", "ogre.cfg", "boot.log");
 #endif
 }
 //------------------------------------------------------------------------------
@@ -89,6 +89,7 @@ void wxOgreRenderSystem::SelectOgreRenderSystem(const Ogre::String& render)
 //------------------------------------------------------------------------------
 void wxOgreRenderSystem::Initialise()
 {
+    m_root->setRenderSystem(m_root->getAvailableRenderers().at(0));
     m_root->initialise(false);
 }
 //------------------------------------------------------------------------------

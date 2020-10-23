@@ -43,6 +43,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "ParticleUniverseGizmoManager.h"
 #include "ParticleUniverseFileDropTarget.h"
 #include "ParticleUniverseAnimationWindow.h"
+#include "ParticleUniverseRoot.h"
 
 // Global Particle System for editor
 static const ParticleUniverse::String CURRENT_PS_NAME = "currentParticleSystemName";
@@ -180,7 +181,7 @@ class ParticleUniverseEditorFrame : public wxFrame
 		void OnClone(wxCommandEvent& event);
 		void OnRemove(wxCommandEvent& event);
 		void OnPaint(wxPaintEvent& WXUNUSED(event));
-		void OnTemplatesClick(wxCommandEvent& event);
+		void OnTemplatesClick(const wxCommandEvent& event);
 		void doWindowLeave(wxMouseEvent& event);
 		void validateAndReparse(void);
 		//void validateScript(void);
@@ -330,9 +331,8 @@ public:
     bool OnInit()
     {
         // Initialize Ogre render system
-        m_rsys->LoadPlugin("RenderSystem_Direct3D9");
-        m_rsys->SelectOgreRenderSystem("Direct3D9 Rendering Subsystem");
-		m_rsys->LoadPlugin("ParticleUniverse");
+		new ParticleUniverse::ParticleUniverseRoot();
+		ParticleUniverse::ParticleUniverseRoot::getSingleton().initialise();
         m_rsys->Initialise();
 
 		m_frame = new ParticleUniverseEditorFrame(0, ID_EDITOR_WINDOW);

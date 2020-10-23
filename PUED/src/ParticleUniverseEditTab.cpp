@@ -2499,7 +2499,7 @@ void EditTab::scaleEditComponents(ParticleUniverse::Real scale)
 void EditTab::OnMouseWheel(wxMouseEvent& event)
 {
 	// Scroll the window up or down
-	wxMDIClientWindow* clientWindow = GetClientWindow();
+	wxMDIClientWindowBase* clientWindow = GetClientWindow();
 	if (!clientWindow)
 		return;
 
@@ -2859,8 +2859,9 @@ void EditTab::ThawClientWindow()
 //-----------------------------------------------------------------------
 //-----------------------------------------------------------------------
 //-----------------------------------------------------------------------
-ClientWindow::ClientWindow(wxMDIParentFrame* parent) : wxMDIClientWindow(parent)
+ClientWindow::ClientWindow(wxMDIParentFrame* parent) : wxMDIClientWindow()
 {
+	CreateClient(parent);
 }
 //-----------------------------------------------------------------------
 //-----------------------------------------------------------------------
@@ -2999,7 +3000,8 @@ void EditTools::OnCursor(wxCommandEvent& event)
 {
 	// Reset the cursor
 	EditTab* parent = static_cast<EditTab*>(GetParent());
-	parent->getEditCanvas()->OnMouseRButtonPressed(wxMouseEvent(0));
+	wxMouseEvent tmp(0);
+	parent->getEditCanvas()->OnMouseRButtonPressed(tmp);
 }
 //-----------------------------------------------------------------------
 void EditTools::notifyConnectionsChanged(void)

@@ -380,7 +380,7 @@ void wxPGComboPopupWindow::OnKeyEvent( wxKeyEvent& event )
     // (just skipping may just cause the popup to close)
     wxWindowList children = GetChildren();
     wxWindowList::iterator node = children.begin();
-    wxWindow* child = (wxWindow*)*node;
+    wxEvtHandler* child = (wxEvtHandler*)*node;
     child->AddPendingEvent(event);
 }
 
@@ -2057,7 +2057,7 @@ void wxPGComboControlBase::HandleNormalMouseEvent( wxMouseEvent& event )
     {
         // relay (some) mouse events to the popup
         if ( evtType == wxEVT_MOUSEWHEEL )
-            m_popup->AddPendingEvent(event);
+            ((wxEvtHandler*)m_popup)->AddPendingEvent(event);
     }
     else if ( evtType )
         event.Skip();
@@ -2082,7 +2082,7 @@ void wxPGComboControlBase::OnKeyEvent( wxKeyEvent& event )
     if ( IsPopupShown() )
     {
         // pass it to the popped up control
-        GetPopupControl()->AddPendingEvent(event);
+        ((wxEvtHandler*)GetPopupControl())->AddPendingEvent(event);
     }
     else // no popup
     {
