@@ -12,7 +12,7 @@
 #include <OgreCameraMan.h>
 #include <OgreTrays.h>
 
-#include "ParticleUniversePlugin.h"
+#include "ParticleUniverseRoot.h"
 
 using namespace Ogre;
 
@@ -31,7 +31,8 @@ public:
 
 	void createRoot() {
 	    OgreBites::ApplicationContext::createRoot();
-	    getRoot()->installPlugin(new ParticleUniverse::ParticleUniversePlugin);
+	    new ParticleUniverse::ParticleUniverseRoot();
+		ParticleUniverse::ParticleUniverseRoot::getSingleton().initialise();
 	}
 
 	/** -----------------------------------------------------------------------
