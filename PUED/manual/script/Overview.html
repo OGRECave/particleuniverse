@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Overview</h2>
+  <p>The Particle Universe System consists of a number of key components, the building blocks. This is a brief summary.</p>
+  <h3>ParticleSystemManager</h3>
+  <p>The ParticleSystemManager basicly has the same function as the one in Ogre's ParticleFX plugin. It manages creation and deletion of other 
+  components, it manages aliases, ParticleSystem templates and forms the entry point for compiling the particle scripts.</p>
+  <h3>ParticleSystem</h3>
+  <p>A ParticleSystem is the most top level of a particle structure, that consists of Particles, ParticleEmitters, ParticleAffectors, ParticleObservers, 
+  etc. The ParticleSystem can be seen as the container that includes the components that are needed to create, display, move and affect Particles.</p>
+  <h3>Particle</h3>
+  <p>The Particle is the element where its all about. Particles are generated (emitted) from specific areas and their motion and behaviour is controlled 
+  by the components of which a ParticleSystem consists. Several types of Particles are possible, where the VisualParticle is the most obvious one, 
+  but also ParticleEmitters, ParticleAffectors and even ParticleTechniques can act as a Particle. This gives them typical Particle characteristics. 
+  Consider a ParticleEmitter that is emitted itself. During its life as a Particle it behaves as a Particle, but it is also is a ParticleEmitter 
+  and therefor emits other Particles (either VisualParticles or other Particle types).</p>
+  <h3>VisualParticle</h3>
+  <p>A VisualParticle represents the Particle that is displayed on the screen. It is the only Particle type that is rendered. 
+  It also has attributes typical for an object that is rendered; examples are height, width and depth, but also colour is a typical 'visual' object 
+  attribute.</p>
+  <h3>ParticleTechnique</h3>
+  <p>In analogy of Ogre's material system, the ParticleTechnique is introduced. It adds an extra layer between the ParticleSystem and the ParticleEmitters, 
+  ParticleAffectors, etc. A ParticleTechnique has a number of benefits. With the use of a ParticleTechnique it is possible to combine Particles with 
+  different materials into one Particle System. Each ParticleTechnique has its own ParticleRenderer and uses its own material. By combining multiple 
+  ParticleTechniques into one ParticleSystem, it is possible to create complex ParticleSystems. Also Particle LOD (Level Of Detail) is possible with the 
+  use of the ParticleTechnique. Light-weight ParticleTechniques (using a Billboard renderer for example) can be activated if the ParticleSystem is further away, 
+  while more complex ParticleTechniques could be used if the camera is near.</p>
+  <h3>ParticleRenderer</h3>
+  <p>A ParticleRenderer is responsible for rendering visual particles. The particle itself usually doesn't define its appearance; the renderer determines 
+  how the particle will look like. This means that changing a renderer can imply that a totally different object is rendered. Several types of renderers 
+  are possible. A billboard- and a Box- renderer are two examples.</p>
+  <h3>ParticleEmitter</h3>
+  <p>ParticleEmitters are responsible for spawning (emitting) the particles.</p>
+  <h3>ParticleAffector</h3>
+  <p>Particle affectors modify (affect) particles in a Particle System over their lifetime.</p>
+  <h3>ParticleObserver</h3>
+  <p>ParticleObservers are used to observe whether a certain condition/event occurs. This condition is often related to the state of a Particle, but also 
+  certain situations regarding a ParticleTechnique, ParticleEmitter or even the ParticleSystem can be validated. If a certain event occurs (i.e.
+  the particle collides), it can be detected by an observer that validates collision events.</p>
+  <h3>ParticleEventHandler</h3>
+  <p>A ParticleEventHandlers are used to perform a task in case a certain event happens. A ParticleEventHandler is associated with a ParticleObserver; 
+  The ParticleObserver signals what event occurs, while the ParticleEventHandler performs the action.</p>
+  <h3>ParticleBehaviour</h3>
+  <p>ParticleBehaviour makes it possible to add additional behaviour to a particle. While a ParticleAffector acts as an external 'force' on the particles, 
+  the ParticleBehaviour defines the internal behaviour of each particle individually. For example, 'wind' is typically implemented as a ParticleAffector, 
+  while 'physical characteristics' apply to the behaviour of the particle itself. It is possible to register multiple Behaviours to a Particle.</p>
+  <h3>Extern</h3>
+  <p>An Extern class forms a bridge between an external component and the ParticleUniverse 
+    plugin. An example of such an external component is a physics system - such 
+    as Ageia's PhysX plugin - with which it becomes possible to add physical behaviour 
+    to particles. Also Affectors that are attached to their own SceneNode can 
+    be identified as 'extern'. An external Affector makes it possible to affect 
+    a ParticleSystem based on the mutual distance between the SceneNode of the 
+    ParticleSystem and the SceneNode of the external Affector.</p>
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>	

@@ -1,0 +1,74 @@
+system example_032
+{
+    category                                    Examples_31_40
+    technique 
+    {
+        visual_particle_quota                   8000
+        material                                ParticleUniverse/SmallSmokeTexture
+        default_particle_width                  0.24
+        default_particle_height                 0.24
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point ForceFieldEmitter
+        {
+            emission_rate                       2000
+            angle                               30
+            time_to_live                        dyn_random
+            {
+                min                             4
+                max                             12
+            }
+            velocity                            dyn_random
+            {
+                min                             1.5
+                max                             2.4
+            }
+            enabled                             false
+        }
+        affector                                ForceField 
+        {
+            delta                               0.001
+            force                               450
+            frequency                           2.5
+            persistence                         2
+            worldsize                           30 30 30
+            movement                            9 9 9
+            movement_frequency                  200
+        }
+        affector                                Scale 
+        {
+            xyz_scale                           dyn_curved_linear
+            {
+                control_point                   0 0.45
+                control_point                   0.5 -0.3
+            }
+        }
+    }
+    technique 
+    {
+        keep_local                              true
+        visual_particle_quota                   1
+        material                                BaseWhite
+        renderer                                Light
+        {
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       1
+            time_to_live                        100
+            velocity                            0
+            direction                           0 0 0
+            colour                              1 0.545098 0.243137 1
+            force_emission                      true
+        }
+        observer                                OnEmission 
+        {
+            observe_until_event                 true
+            handler                             DoEnableComponent 
+            {
+                enable_component                emitter_component ForceFieldEmitter true
+            }
+        }
+    }
+}

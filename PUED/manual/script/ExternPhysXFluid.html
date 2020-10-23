@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" /></head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="Extern.html">Extern&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">PhysX Fluid Extern</h2>
+  <p>Nvidia's PhysX can be used to add physical behaviour to Particle Universe particles. Currently there are 2 options:
+  <br>
+  1) Rigid body based particles: Particle Universe particles are associated with an NxActor. This means that particles derive their values (position, direction, ...) from the NxActor. This is the default behaviour of a PhysX Extern.
+  <br>
+2) Fluid based particles: Particle Universe particles are associated with an NxFluid.</p>
+  <h3>Definition</h3>
+  <p>Each particle system that uses the PhysFluid capabilities must add a PhysXFluid Extern to its technique. With the use of the PhysXFluid Extern, the PhysX properties are assigned to the fluid particles. Syntax:
+  <br>
+  <p><strong><i>extern&nbsp;&nbsp;&nbsp;PhysXFluid&nbsp;&nbsp;&nbsp;[externName]&nbsp;&nbsp;&nbsp;{extern properties}</i></strong>
+  <p>See Extern for explanation of the syntax.</p>
+  <p> Script example:
+  <pre>technique
+{
+    ....
+    extern                                  PhysXFluid
+    {
+        rest_particles_per_meter            0.2
+        rest_density                        20
+        kernel_radius_multiplier            1.9
+        motion_limit_multiplier             2
+        collision_distance_multiplier       1.6
+        packet_size_multiplier              4
+        stiffness                           0.1
+        viscosity                           0.1
+        surface_tension                     0.1
+        damping                             1
+        external_acceleration               0 -5 0
+        collision_group                     2
+        flags
+        {
+            hardware                        false
+        }
+    }
+}</pre>
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Rest Particle Per Meter</h6>
+  <p>The number of particles per meter in the relaxed state of the fluid. Syntax:</p>
+  <p><strong><i>rest_particles_per_meter&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>rest_particles_per_meter</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong> is a floating value and defines the rest particle per meter.</p>
+
+  <h6>Rest Density</h6>
+  <p>The density in the relaxed state of the fluid. Syntax:</p>
+  <p><strong><i>rest_density&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>rest_density</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong>  is a floating value and defines the rest density.</p>
+
+  <h6>Kernel Radius Multiplier</h6>
+  <p>The particle interacts with a certain radius. Syntax:</p>
+  <p><strong><i>kernel_radius_multiplier&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>kernel_radius_multiplier</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong>  is a floating value and defines the kernel radius multiplier.</p>
+
+  <h6>Motion Limit Multiplier</h6>
+  <p>The particle can move a maximal distance of during one timestep. Syntax:</p>
+  <p><strong><i>motion_limit_multiplier&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>motion_limit_multiplier</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong>  is a floating value and defines the motion limit multiplier.</p>
+
+  <h6>Collision Distance Multiplier</h6>
+  <p>The distance between particles and collision geometry, which is   maintained during simulation. Syntax:</p>
+  <p><strong><i>collision_distance_multiplier&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>collision_distance_multiplier</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong>  is a floating point value and defines the collision distance multiplier.</p>
+
+  <h6>Packet Size multiplier</h6>
+  <p>The fluid packet size used for parallelization of the fluid computations. Syntax:</p>
+  <p><strong><i>packet_size_multiplier&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>packet_size_multiplier</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong>   is an unsigned int (32 bits) value and defines the packet size multiplier.</p>
+
+  <h6>Stiffness</h6>
+  <p>Set the fluid stiffness. Syntax:</p>
+  <p><strong><i>stiffness&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>stiffness</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong>   is a floating point value and defines the stiffness.</p>
+
+  <h6>Viscosity</h6>
+  <p>Set the fluid viscosity. Syntax:</p>
+  <p><strong><i>viscosity&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>viscosity</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong>   is a floating point value and defines the viscosity.</p>
+
+  <h6>Surface Tension</h6>
+  <p>Set the fluid surface tension. Syntax:</p>
+  <p><strong><i>surface_tension&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>surface_tension</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong>   is a floating point value and defines the surface tension.</p>
+
+  <h6>Damping</h6>
+  <p>Set the fluid damping. Syntax:</p>
+  <p><strong><i>damping&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>damping</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong>   is a floating point value and defines the damping.</p>
+
+  <h6>External Acceleration</h6>
+  <p>Set the external acceleration applied to each particle at each time step. Syntax:</p>
+  <p><strong><i>external_acceleration&nbsp;&nbsp;&nbsp;#x #y #z</i></strong>
+  <br>
+  <br><strong><i>external_acceleration</i></strong> is the keyword.
+  <br>
+  <strong><i>#x #y #z</i></strong>   is a vector3 and defines the external acceleration.</p>
+
+  <h6>Restitution For Static Shapes</h6>
+  <p>Set the restitution used for collision with static shapes. Syntax:</p>
+  <p><strong><i>restitution_for_static_shapes&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>restitution_for_static_shapes</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong>    is a floating point value and defines the restitution for static shapes.</p>
+
+  <h6>Dynamic Friction For Static Shapes</h6>
+  <p>The dynamic friction used for collision with static shapes. Syntax:</p>
+  <p><strong><i>dynamic_friction_for_static_shapes&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>dynamic_friction_for_static_shapes</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong>    is a floating point value and defines the dynamic friction for static shapes.</p>
+
+  <h6>Static Friction For Static Shapes</h6>
+  <p>Currently not implemented. Syntax:</p>
+  <p><strong><i>static_friction_for_static_shapes&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>static_friction_for_static_shapes</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong>    is a floating point value and defines the static friction for static shapes.</p>
+
+  <h6>Attraction For Static Shapes</h6>
+  <p>Currently not implemented. Syntax:</p>
+  <p><strong><i>attraction_for_static_shapes&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>attraction_for_static_shapes</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong>    is a floating point value and defines the attraction for static shapes.</p>
+
+  <h6>Restitution For Dynamic Shapes</h6>
+  <p>The restitution used for collision with static shapes. Syntax:</p>
+  <p><strong><i>restitution_for_dynamic_shapes&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>restitution_for_dynamic_shapes</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong>    is a floating point value and defines the restitution for dynamic shapes.</p>
+
+  <h6>Dynamic Friction For Dynamic Shapes</h6>
+  <p>The dynamic friction used for collision with dynamic shapes. Syntax:</p>
+  <p><strong><i>dynamic_friction_for_dynamic_shapes&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>dynamic_friction_for_dynamic_shapes</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong>    is a floating point value and defines the dynamic friction for dynamic shapes.</p>
+
+  <h6>Static Friction For Dynamic Shapes</h6>
+  <p>Currently not implemented. Syntax:</p>
+  <p><strong><i>static_friction_for_dynamic_shapes&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>static_friction_for_dynamic_shapes</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong>    is a floating point value and defines the static friction for dynamic shapes.</p>
+
+  <h6>Attraction For Dynamic Shapes</h6>
+  <p>Currently not implemented. Syntax:</p>
+  <p><strong><i>attraction_for_dynamic_shapes&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>attraction_for_dynamic_shapes</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong>    is a floating point value and defines  the attraction for dynamic shapes.</p>
+
+  <h6>Collision Response Coefficient</h6>
+  <p>Set the collision response coefficient. Syntax:</p>
+  <p><strong><i>collision_response_coefficient&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>collision_response_coefficient</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong>    is a floating point value and defines the collision response coefficient.</p>
+
+  <h6>Collision Group</h6>
+  <p>Defines which collision group this fluid is part of. Syntax:</p>
+  <p><strong><i>collision_group&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>collision_group</i></strong> is the keyword.
+  <br>
+  <strong><i>#value</i></strong>    is an unsigned integer value and defines the collision group.</p>
+
+  <h6>Simulation Method</h6>
+  <p>Describes the particle simulation method. Particles can be treated in two ways: either they are simulated considering interparticular forces, or they are simulated independently. In the latter case, you still get collision between particles and static/dynamic shapes, damping, acceleration due to gravity, and the user force. Syntax:</p>
+  <p><strong><i>simulation_method&nbsp;&nbsp;&nbsp;intercollision | no_intercollision | mix_intercollision</i></strong>
+  <br>
+  <br><strong><i>simulation_method</i></strong> is the keyword.
+  <br>
+  <strong><i>intercollision | no_intercollision | mix_intercollision</i></strong> is the simulation method. Default: intercollision</p>
+
+  <h6>Collision Method</h6>
+  <p>The collision method of the fluid. Syntax:</p>
+  <p><strong><i>collision_method&nbsp;&nbsp;&nbsp;static | dynamic</i></strong>
+  <br>
+  <br><strong><i>collision_method</i></strong> is the keyword.
+  <br>
+  <strong><i>static | dynamic</i></strong> is the method of collision. Default: static</p>
+
+  <h6>Flag - Visualization</h6>
+  <p>Enables debug visualization for the fluid. Syntax:</p>
+  <p><strong><i>visualization&nbsp;&nbsp;&nbsp;true | false</i></strong>
+  <br>
+  <br>
+  <strong><i>visualization</i></strong><em><strong></strong></em> is the keyword.
+  <br>
+  <strong><i>true | false</i></strong> defines whether visualisation is set.</p>
+
+  <h6>Flag - Disable Gravity</h6>
+  <p>Disables scene gravity for the fluid. Syntax:</p>
+  <p><strong><i>disable_gravity&nbsp;&nbsp;&nbsp;true | false</i></strong>
+  <br>
+  <br><strong><i>disable_gravity</i></strong> is the keyword.
+  <br>
+  <strong><i>true | false</i></strong> defines whether gravity is disabled.</p>
+
+  <h6>Flag - Collision Two Way</h6>
+  <p>Enable/disable two way collision of fluid with the rigid body scene. In either case, fluid is influenced by colliding rigid bodies. If this flag is not set, rigid bodies are not influenced by colliding pieces of fluid. Syntax:</p>
+  <p><strong><i>collision_twoway&nbsp;&nbsp;&nbsp;true | false</i></strong>
+  <br>
+  <br><strong><i>collision_twoway</i></strong> is the keyword.
+  <br>
+  <strong><i>true | false</i></strong> defines whether two way collision is used.</p>
+
+  <h6>Flag - Fluid Enabled</h6>
+  <p>Enable/disable execution of fluid simulation. Syntax:</p>
+  <p><strong><i>fluid_enabled&nbsp;&nbsp;&nbsp;true | false</i></strong>
+  <br>
+  <br><strong><i>fluid_enabled</i></strong> is the keyword.
+  <br>
+  <strong><i>true | false</i></strong> defines whether the fluid is enabled.</p>
+
+  <h6>Flag - Hardware</h6>
+  <p>Defines whether this fluid is simulated on the PPU. Syntax:</p>
+  <p><strong><i>hardware&nbsp;&nbsp;&nbsp;true | false</i></strong>
+  <br>
+  <br><strong><i>hardware</i></strong> is the keyword.
+  <br>
+  <strong><i>true | false</i></strong>  defines whether a hardware (PPU) is used. Default: false</p>
+
+  <h6>Flag - Priority Mode</h6>
+  <p>Enable/disable particle priority mode. If enabled, the oldest particles are   deleted to keep a certain budget for new particles. Syntax:</p>
+  <p><strong><i>priority_mode&nbsp;&nbsp;&nbsp;true | false</i></strong>
+  <br>
+  <br><strong><i>priority_mode</i></strong> is the keyword.
+  <br>
+  <strong><i>true | false</i></strong> defines whether the priority mode is set. </p>
+
+  <h6>Flag - Project To Plane</h6>
+  <p>Defines whether the particles of this fluid should be projected to a plane. This   can be used to build 2D fluid applications, for instance. Syntax:</p>
+  <p><strong><i>project_to_plane&nbsp;&nbsp;&nbsp;true | false</i></strong>
+  <br>
+  <br><strong><i>project_to_plane</i></strong> is the keyword.
+  <br>
+  <strong><i>true | false</i></strong> defines whether the particles are projected to a plane. </p>
+
+  <h6>Flag - Strict Cooking Format</h6>
+  <p>Currently not implemented. Syntax:</p>
+  <p><strong><i>strict_cooking_format&nbsp;&nbsp;&nbsp;true | false</i></strong>
+  <br>
+  <br><strong><i>strict_cooking_format</i></strong> is the keyword.
+  <br>
+  <strong><i>true | false</i></strong> defines whether strict cooking format is used. </p>
+
+  <h6>Group Mask</h6>
+  <p>128-bit mask used for collision filtering. Syntax:</p>
+  <p><strong><i>group_mask&nbsp;&nbsp;&nbsp;#bits0&nbsp;&nbsp;&nbsp;#bits1&nbsp;&nbsp;&nbsp;#bits2&nbsp;&nbsp;&nbsp;#bits3</i></strong>
+  <br>
+  <br><strong><i>group_mask</i></strong> is the keyword.
+  <br>
+  <strong><i>#bits0&nbsp;&nbsp;&nbsp;#bits1&nbsp;&nbsp;&nbsp;#bits2&nbsp;&nbsp;&nbsp;#bits3</i></strong> represent the four 32 bit values.</p>
+
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

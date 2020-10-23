@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Particle Renderer</h2>
+
+  <h3>Definition</h3>
+  <p>The syntax of a Particle Renderer definition is:</p>
+  <p><strong><i>renderer&nbsp;&nbsp;&nbsp;rendererType&nbsp;&nbsp;&nbsp;{renderer properties}</i></strong>
+    <br>
+    <br><strong><i>renderer</i></strong> is the keyword.
+    <br><strong><i>rendererType</i></strong> is the type of renderer.
+    <br>The <strong><i>renderer properties</i></strong> are handled in the paragraph 'Properties' of each specific Renderer.
+	<p> Example:
+  <pre>
+renderer                 Billboard
+{
+   ...
+}</pre>
+
+  <h3>Specific Renderers</h3>
+  <ul>
+    <li><a href="RendererBeam.html">Beam Renderer</a>
+    <li><a href="RendererBillboard.html">Billboard Renderer</a>
+    <li><a href="RendererBox.html">Box Renderer</a>
+    <li><a href="RendererEntity.html">Entity Renderer</a>
+    <li><a href="RendererLight.html">Light Renderer</a>
+    <li><a href="RendererRibbonTrail.html">Ribbon Trail Renderer</a>
+    <li><a href="RendererSphere.html">Sphere Renderer</a>
+  </ul>
+  <br>
+
+  <h3>Base Properties</h3>
+  <br>
+
+  <h6>Render Queue Group</h6>
+  <p>Instead of using a default render queue group, an specific queuegroup can be used. Learn more about render queue groups in the Ogre documentation. Syntax:</p>
+  <p><strong><i>render_queue_group&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>render_queue_group</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is a uint8 value that identifies the render queue group. Default: 50 (RENDER_QUEUE_MAIN)</p>
+
+  <h6>Sorting</h6>
+  <p>Sort particles. Sorted billboards for instance can look better in some cases. Note, that sorting decreases the performance / framerate. For some renderers it doesn't really make sense to sort. 
+     This is usually the case for renderers that render 3D particles, such as the Box Renderer. Syntax:</p>
+  <p><strong><i>sorting&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>sorting</i></strong> is the keyword.
+    <br><strong><i>true | false</i></strong>. Determines whether the particles must be sorted (true) or not. Default: false</p>
+
+  <h6>Texture Coordinate Rows</h6>
+  <p>Defining texture coordinates in a Particle Renderer serves several purposes. It can be used in combination with animated textures, where one texture contains several images (atlas texture). It is also possible to emit particles with an unique image, while only one texture is used. The bottomline is, that using one material (texture) with multiple images is 'cheaper' than using multiple materials. If you want to use texture coordinates, there are various ways how to do this. If the atlas texture contains images that are equally sized, the easiest way to define texture coordinates is to devide the texture in a number of rows and columns. This property defines the number of rows.
+  <br>Each texture coordinate set gets an index, starting with 0, which identifies the top-left corner and ending with a rown * columns - 1, which identifies the bottom-right corner. Syntax:</p>
+  <p><strong><i>texture_coords_rows&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>texture_coords_rows</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is a value > 0 that identifies the number of rows in a texture. Default: 1</p>
+
+  <h6>Texture Coordinate Columns</h6>
+  <p>This property is used in combination with the 'texture_coords_rows' property and defines the number of columns in a texture. Syntax:</p>
+  <p><strong><i>texture_coords_columns&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>texture_coords_columns</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is a value > 0 that identifies the number of columns in a texture. Default: 1</p>
+
+  <h6>Texture Coordinate Set</h6>
+  <p>If an atlas texture contains images of various size and you want to use texture coordinates, you have to set them manually. Each added 'texture_coords' entry gets an index that starts with 0 and increments with each added entry. Syntax:</p>
+  <p><strong><i>texture_coords_set&nbsp;&nbsp;&nbsp;[texture_coords_define&nbsp;&nbsp;&nbsp;#u&nbsp;&nbsp;&nbsp;#v&nbsp;&nbsp;&nbsp;#width&nbsp;&nbsp;&nbsp;#height]</i></strong>
+    <br>
+    <br><strong><i>texture_coords_set</i></strong> is a keyword and defines the set.
+    <br><strong><i>texture_coords_define</i></strong> is a keyword and defines individual texture coordinates. One texture_coords_set contains one or more texture_coords_define.
+    <br>
+    <br><strong><i>#u</i></strong> is a value between [0..1] and defines the u-value in the texture.
+    <br><strong><i>#v</i></strong> is a value between [0..1] and defines the v-value in the texture.
+    <br><strong><i>#width</i></strong> is a value between [0..1] and defines the width of an image in the texture.
+    <br><strong><i>#heigh</i></strong> is a value between [0..1] and defines the height of an image in the texture.</p>
+  <p> Example:
+  <pre>
+renderer Billboard
+{
+    texture_coords_set
+    {
+        texture_coords_define 0 0 0.0625 1
+        texture_coords_define 0.0625 0 0.0625 1
+        texture_coords_define 0.125 0 0.0625 1
+        texture_coords_define 0.1875 0 0.0625 1
+        texture_coords_define 0.25 0 0.0625 1
+        texture_coords_define 0.3125 0 0.0625 1
+        texture_coords_define 0.375 0 0.0625 1
+        texture_coords_define 0.4375 0 0.0625 1
+        texture_coords_define 0.5 0 0.0625 1
+        texture_coords_define 0.5625 0 0.0625 1
+        texture_coords_define 0.625 0 0.0625 1
+        texture_coords_define 0.6875 0 0.0625 1
+        texture_coords_define 0.75 0 0.0625 1
+        texture_coords_define 0.8125 0 0.0625 1
+        texture_coords_define 0.875 0 0.0625 1
+        texture_coords_define 0.9375 0 0.0625 1
+    }
+}</pre>
+
+  <h6>Use soft particles</h6>
+  <p>Soft particles are particles that fade if they approach another surface. This prevents sharp edges between the particles and other objects. Important to know when you use them:
+  <ul>
+    <li>This effect takes al lot of resources, because the scene is also rendered to a render texture.
+    <li>Set the main camera (*) in the particle system if you can.
+    <li>Soft particles don´t work with the EntityRenderer. Billboard and Box renderers are tested and do work.
+  </ul>
+  <p><em>&nbsp;&nbsp;&nbsp;&nbsp;(*) This is the camera that is used for creating the depthmap, needed for the effect. 
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;If the main camera is omitted, the first camera that is encountered is used.</em>
+  <br>
+  <br>Syntax: </p>
+  <p><strong><i>use_soft_particles&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>use_soft_particles</i></strong> is the keyword.
+    <br><strong><i>true | false</i></strong> indicates whether soft particles are use (true) or not. Default: false</p>
+
+  <h6>Contrast Power (soft particles)</h6>
+  <p>Contrast Power defines the smoothness of the fading effect. Syntax:</p>
+  <p><strong><i>soft_particles_contrast_power&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>soft_particles_contrast_power</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> defines the smoothness of the fading effect. Default: 0.8</p>
+
+  <h6>Scale (soft particles)</h6>
+  <p>The scale defines the slope of the alpha fading and determines how fast alpha fading happens. Syntax:</p>
+  <p><strong><i>soft_particles_scale&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>soft_particles_scale</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is the scaling amount. Default: 1.0</p>
+
+  <h6>Delta (soft particles)</h6>
+  <p>The delta value determines the difference between the depth of the scene and the depth of the particles. Beyond this difference, no alpha fading is applied anymore. Delta is
+  a value in the range [-1, 0]. Syntax:</p>
+  <p><strong><i>soft_particles_delta&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>soft_particles_delta</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is a threshold value that defines the difference between the depth of the scene and the depth of the particles. Default: -1.0</p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

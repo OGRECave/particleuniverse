@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleRenderer.html">Renderer&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Billboard Renderer</h2>
+  <p>Renders particles as a billboard, using the material set in the technique.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>renderer&nbsp;&nbsp;&nbsp;Billboard&nbsp;&nbsp;&nbsp;{renderer properties}</i></strong>
+  <p>See ParticleRenderer for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+renderer                Billboard
+{
+   billboard_type       point
+   sorting              true
+}</pre>
+
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Billboard Type</h6>
+  <p>Set the type of billboard. The different types also influence the way (orientation) the billboard are rendered. Syntax:</p>
+  <p><strong><i>billboard_type&nbsp;&nbsp;&nbsp;point | oriented_common | oriented_self | perpendicular_common | perpendicular_self | oriented_shape</i></strong>
+    <br>
+    <br><strong><i>billboard_type</i></strong> is the keyword.
+    <br><strong><i>point | oriented_common | oriented_self | perpendicular_common | perpendicular_self | oriented_shape</i></strong>. These types are the same as
+      the ones defined in Ogre's ParticleFX plugin, except for oriented_shape, which uses the orientation of the particle to change the direction. Default: point</p>
+
+  <h6>Origin</h6>
+  <p>Set the relative offset of the billboard in relation to its position. Syntax:</p>
+  <p><strong><i>billboard_origin&nbsp;&nbsp;&nbsp;top_left | top_center | top_right | center_left | center_right | center | bottom_left |
+     bottom_center | bottom_right</i></strong>
+    <br>
+    <br><strong><i>billboard_origin</i></strong> is the keyword.
+    <br><strong><i>top_left | top_center | top_right | center_left | center_right | center | bottom_left |
+     bottom_center | bottom_right</i></strong>. These origins are the same as the ones defined in Ogre's ParticleFX plugin. Default: center</p>
+
+  <h6>Rotation Type</h6>
+  <p>It is possible to rotate the billboard around the direction it faces. This is achieved by either rotating the vertices or the texture coorcdinates. Syntax:</p>
+  <p><strong><i>billboard_rotation_type&nbsp;&nbsp;&nbsp;vertex | texcoord</i></strong>
+    <br>
+    <br><strong><i>billboard_rotation_type</i></strong> is the keyword.
+    <br><strong><i>vertex | texcoord</i></strong>. These rotation types are the same as the ones defined in Ogre's ParticleFX plugin.Default: texcoord</p>
+
+  <h6>Common Direction</h6>
+  <p>If the billboard_type is set to oriented_common or perpendicular_common, the direction vector is identified by this attribute. Syntax:</p>
+  <p><strong><i>common_direction&nbsp;&nbsp;&nbsp;#x #y #z</i></strong>
+    <br>
+    <br><strong><i>common_direction</i></strong> is the keyword.
+    <br><strong><i>#x</i></strong> represents the x-coordinate of the common direction vector. Default: 0
+    <br><strong><i>#y</i></strong> represents the y-coordinate of the common direction vector. Default: 0
+    <br><strong><i>#z</i></strong> represents the z-coordinate of the common direction vector. Default: 0</p>
+
+  <h6>(Common) Up Vector</h6>
+  <p>If the billboard_type is set to either perpendicular_common or perpendicular_self, the up vector is required to determine the billboard x- and y-axis. Syntax:</p>
+  <p><strong><i>common_up_vector&nbsp;&nbsp;&nbsp;#x #y #z</i></strong>
+    <br>
+    <br><strong><i>common_up_vector</i></strong> is the keyword.
+    <br><strong><i>#x</i></strong> represents the x-coordinate of the common up vector. Default: 0
+    <br><strong><i>#y</i></strong> represents the y-coordinate of the common up vector. Default: 0
+    <br><strong><i>#z</i></strong> represents the z-coordinate of the common up vector. Default: 0</p>
+
+  <h6>Point Rendering</h6>
+  <p>Use hardware point-rendering instead of using textured quads. Syntax:</p>
+  <p><strong><i>point_rendering&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>point_rendering</i></strong> is the keyword.
+    <br><strong><i>true | false</i></strong>. Determines whether the billboard must be rendered as a point (true) or not. Default: false</p>
+
+  <h6>Accurate Facing</h6>
+  <p>Using a billboard facing model, which is more accurate than the default facing model. Syntax:</p>
+  <p><strong><i>accurate_facing&nbsp;&nbsp;&nbsp;on | off</i></strong>
+    <br>
+    <br><strong><i>accurate_facing</i></strong> is the keyword.
+    <br><strong><i>on | off</i></strong>. Determines whether accurate facing is 'on' or 'off'. Default: off</p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

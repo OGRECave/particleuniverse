@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleAffector.html">Affector&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Texture Animator</h2>
+  <p>The Texture Animator animates the texture of a particle. This makes it possible to animate each particle individually. A precondition is, that texture coordinates must be defined in the <a href="ParticleRenderer.html">Particle Render</a>, because the Texture Animator assumes you are using an atlas texture that contains all images needed for the animation. See the <a href="ParticleRenderer.html">Particle Render</a> page how to define texture coordinates.
+  <br> The Texture Animator currently only works in combination with a Billboard Renderer and the Texture Rotator doesn't mix very well with the Texture Animator.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>affector&nbsp;&nbsp;&nbsp;TextureAnimator&nbsp;&nbsp;&nbsp;[affectorName]&nbsp;&nbsp;&nbsp;{affector properties}</i></strong>
+  <p>See ParticleAffector for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+affector                           TextureAnimator
+{
+    time_step                      0.1
+    start_texture_coords_range     0
+    end_texture_coords_range       17
+    texture_animation_type         loop
+    texture_start_random           true
+}</pre>
+
+  <h3>Visualisation</h3>
+  <p>The figure below illustrates the workflow of creating an atlas image with the AtlasImageTool and using it in the TextureAnimator.</p>
+  <p><img src="TextureAnimator.png" alt="" width="702" height="522" /></p>
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Time Step Animation</h6>
+  <p>An animation can be based on a fixed update time or based on the lifetime of each individual particle (= default). The latter means that if a 'loop' animation is defined, the update interval of each animation frame is calculated by means of 'lifetime of particle / number of animation frames'. The number of animation frames can be set by 'texture_coords_start' and 'texture_coords_ends'.
+  This also means the the animation sequence is only played once during the lifetime of a particle.<br>
+  If the 'time_step_animation' is set, the each animation frame is updated every 'time_step_animation' seconds. This applies to all particles. Setting this value means that an animation sequence can be played multiple times per particle. Syntax:</p>
+  <p><strong><i>time_step&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br>
+    <strong><i>time_step</i></strong> is the keyword. <font color="#F62217"><strong><em>time_step_animation</em></strong><em> is deprecated from version 1.2</em></font>
+    <br><strong><i>#value</i></strong> is value > 0 that defines the update interval of each animation frame. Default: 0.0 (not set).</p>
+
+  <h6>Animation Type</h6>
+  <p>Multiple types of animations are supported. Syntax:</p>
+  <p><strong><i>texture_animation_type&nbsp;&nbsp;&nbsp;loop | up_down | random</i></strong>
+    <br>
+    <br><strong><i>texture_animation_type</i></strong> is the keyword.
+    <br>
+    <strong><i>loop</i></strong> means an animation that plays the animation frames in a sequence from start..end and is repeated if 'time_step_animation' has been set. This is the default value.
+    <br>
+    <strong><i>up_down</i></strong> means an animation that plays the animation frames in a sequence from start..end and down to start again.
+    <br>
+    <strong><i>random</i></strong> means an animation where the animation frames are played random. </p>
+
+  <h6>Start Texture Coordinates Range</h6>
+  <p>This property defines the first texture coordinate set, where each texture coordinate set defines one animation frame. Syntax:</p>
+  <p><strong><i>start_texture_coords_range&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>start_texture_coords_range</i></strong> is the keyword. <font color="#F62217"><strong><em>texture_coords_start</em></strong><em> is deprecated from version 1.2</em></font>
+    <br><strong><i>#value</i></strong> is value > 0 that defines the first texture coordinate set. Default: 0.0.</p>
+
+  <h6>End Texture Coordinates Range</h6>
+  <p>This property defines the last texture coordinate set, where each texture coordinate set defines one animation frame. Syntax:</p>
+  <p><strong><i>end_texture_coords_range&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>end_texture_coords_range</i></strong> is the keyword. <font color="#F62217"><strong><em>texture_coords_end</em></strong><em> is deprecated from version 1.2</em></font>
+    <br><strong><i>#value</i></strong> is value > 0 that defines the last texture coordinate set. Default: 0.0.</p>
+
+  <h6>Random Start</h6>
+  <p>If set to true, the animation starts with an animation frame between 'texture_coords_start' and 'texture_coords_end'. If set to false, the starting animation frame is 'texture_coords_start'. Syntax:</p>
+  <p><strong><i>texture_start_random&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>texture_start_random</i></strong> is the keyword.
+    <br><strong><i>true | false</i></strong> is boolean value that defines whether the animation start with the value determine by 'texture_coords_start' or a random value between 'texture_coords_start' and 'texture_coords_end'. Default: false</p>
+
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

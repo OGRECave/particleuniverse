@@ -1,0 +1,345 @@
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+fragment_program pu_fp_grid hlsl
+{
+	source pu_grid_sm20.hlsl
+	target ps_2_0
+	entry_point mainFP
+}
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+material ParticleUniverseEditor/BackgroundMaterial
+{
+    technique
+    {
+        pass
+        {
+            depth_write off
+            depth_check on
+        }
+    }
+}
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+material ParticleUniverseEditor/TransparentGrid
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            depth_write off
+            depth_check off
+            scene_blend alpha_blend
+            fragment_program_ref pu_fp_grid
+            {
+                param_named_auto CameraPos     camera_position
+            }
+            texture_unit
+            {
+                texture tranparent_grid.png
+                max_anisotropy 8
+                filtering anisotropic
+                scale 0.01 0.01
+            }
+        }
+    }
+}
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+material ParticleUniverseEditor/LightMaterial
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            depth_check off
+            scene_blend alpha_blend
+            texture_unit
+            {
+                texture lightbulb.png
+                max_anisotropy 16
+		filtering anisotropic
+            }
+        }
+    }
+}
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+material pu_x_axis
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            depth_check off
+            scene_blend alpha_blend
+            texture_unit
+            {
+                texture red.png
+                max_anisotropy 16
+                filtering anisotropic
+            }
+        }
+    }
+}
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+material pu_y_axis
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            depth_check off
+            scene_blend alpha_blend
+            texture_unit
+            {
+                texture green.png
+                max_anisotropy 16
+		filtering anisotropic
+            }
+        }
+    }
+}
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+material pu_z_axis
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            depth_check off            
+            scene_blend alpha_blend
+            texture_unit
+            {
+                texture blue.png
+                max_anisotropy 16
+		filtering anisotropic
+            }
+        }
+    }
+}
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+material pu_rotation_x
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            depth_check off
+            scene_blend alpha_blend
+            texture_unit
+            {
+                texture pu_rotation_x.png
+                max_anisotropy 16
+		filtering anisotropic
+            }
+        }
+    }
+}
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+material pu_rotation_z
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            depth_check off
+            scene_blend alpha_blend
+            texture_unit
+            {
+                texture pu_rotation_z.png
+                max_anisotropy 16
+		filtering anisotropic
+            }
+        }
+    }
+}
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+material pu_rotation_y
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            depth_check off
+            scene_blend alpha_blend
+            texture_unit
+            {
+                texture pu_rotation_y.png
+                max_anisotropy 16
+		filtering anisotropic
+            }
+        }
+    }
+}
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+material pu_rotation_select
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            depth_check off
+            scene_blend alpha_blend
+            texture_unit
+            {
+                texture pu_rotation_select.png
+                max_anisotropy 16
+		filtering anisotropic
+            }
+        }
+    }
+}
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+material pu_white
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            depth_check off
+            scene_blend alpha_blend
+            texture_unit
+            {
+                texture pu_white.png
+                max_anisotropy 16
+		filtering anisotropic
+            }
+        }
+    }
+}
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+material pu_gizmo_select
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            depth_check off
+            scene_blend alpha_blend
+            texture_unit
+            {
+                texture yellow.png
+                max_anisotropy 16
+		filtering anisotropic
+            }
+        }
+    }
+}
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+material pu_marker_system
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            depth_check off
+            scene_blend alpha_blend
+            texture_unit
+            {
+                texture orange.png
+                max_anisotropy 16
+		filtering anisotropic
+            }
+        }
+    }
+}
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+material pu_marker_bone
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            depth_check off
+            scene_blend alpha_blend
+            texture_unit
+            {
+                texture red.png
+            }
+        }
+    }
+}
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+material pu_x_ortho
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            depth_check off
+            scene_blend alpha_blend
+            texture_unit
+            {
+                texture red.png
+                max_anisotropy 16
+                filtering anisotropic
+            }
+        }
+    }
+}
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+material pu_z_ortho
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            depth_check off
+            scene_blend alpha_blend
+            texture_unit
+            {
+                texture blue.png
+                max_anisotropy 16
+		filtering anisotropic
+            }
+        }
+    }
+}
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+material pu_y_ortho
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            depth_check off
+            scene_blend alpha_blend
+            texture_unit
+            {
+                texture green.png
+                max_anisotropy 16
+		filtering anisotropic
+            }
+        }
+    }
+}
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+material pu_box_ortho
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            depth_check off
+            texture_unit
+            {
+                texture pu_white.png
+                max_anisotropy 16
+		filtering anisotropic
+            }
+        }
+    }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleAffector.html">Affector&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Line Affector</h2>
+  <p>The Line Affector is typically used in cooperation with the line emitter. Where the line emitter emits particles on the line or at some distance
+     from the line, the line affector updates the particle position. This position however, is still near the given line. The update frequency and the 
+	 matter of movement can both be defined.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <br>
+  <p><strong><i>affector&nbsp;&nbsp;&nbsp;Line&nbsp;&nbsp;&nbsp;[affectorName]&nbsp;&nbsp;&nbsp;{affector properties}</i></strong></p>
+  <p>See ParticleAffector for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+affector                     Line
+{
+   max_deviation             140
+   time_step                 0.03
+   end                       1500 300 0
+   drift                     0.3
+}</pre>
+
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Line end (End position)</h6>
+  <p>Defines the direction and length of the line by means of a 3d vector. Syntax:</p>
+  <p><strong><i>end&nbsp;&nbsp;&nbsp;#x&nbsp;&nbsp;&nbsp;#y&nbsp;&nbsp;&nbsp;#z</i></strong>
+    <br>
+    <br><strong><i>end</i></strong> is the keyword. <font color="#F62217"><strong><em>line_aff_end</em></strong><em> is deprecated from version 1.2</em></font>
+    <br>
+    <strong><i>#x</i></strong> is the x value of the vector. Default: 0.
+    <br><strong><i>#y</i></strong> is the y value of the vector. Default: 0.
+    <br><strong><i>#z</i></strong> is the z value of the vector. Default: 0.</p>
+
+  <h6>Maximum Deviation</h6>
+  <p>Setting the maximum deviation, which defines how far (max.) from the line a particle is repositioned. Syntax:</p>
+  <p><strong><i>max_deviation&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>max_deviation</i></strong> is the keyword. <font color="#F62217"><strong><em>line_aff_max_deviation</em></strong><em> is deprecated from version 1.2</em></font>
+  <br>
+  <strong><i>#value</i></strong> is the maximum distance from the line. Default: 0.</p>
+
+  <h6>Time Step</h6>
+  <p>Defines the update time. The shorter the period, the faster a particle will be repositioned. Very short time steps are good to produce electricity
+     type of behaviour. Syntax:</p>
+  <p><strong><i>time_step&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>time_step</i></strong> is the keyword. <font color="#F62217"><strong><em>line_aff_time_step</em></strong><em> is deprecated from version 1.2</em></font>
+  <br>
+  <strong><i>#value</i></strong> is the update time. Default: 0.0.</p>
+
+  <h6>Drift</h6>
+  <p>With the drift attribute it is possible to define whether the particles' new position is near the previous position or (when the drift value is very high),
+     that the new position is generated totally random. Syntax:</p>
+  <p><strong><i>drift&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>drift</i></strong> is the keyword. <font color="#F62217"><strong><em>line_aff_drift</em></strong><em> is deprecated from version 1.2</em></font>
+    <br>
+    <strong><i>#value</i></strong> is a real value between [0..1]. A lower value 
+    means that the new particle position is near the previous one. Default: 0.0.</p>
+
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

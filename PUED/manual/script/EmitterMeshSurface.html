@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleEmitter.html">Emitter&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Mesh Surface Emitter</h2>
+  <p>Emits particles on the surface of a mesh. Note, that the auto_direction 
+    has a meaning in this emitter. If auto_direction is set to true, the direction is based on the generated normals. The 'angle' property provides a variation 
+    on this direction.
+  <br>
+    The Mesh Surface Emitter and the Vertex Emitter resemble, but there are differences. 
+    The Vertex Emitter follows the contours of a mesh along the edges. The Mesh 
+    Surface Emitter however, generates the emission points random on the surface. 
+    Depending on the distribution type, it uses the edges, the vertices, or the 
+    whole surface of the mesh. The latter means that particles are emitted on 
+    the triangles of which the mesh consists.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>emitter&nbsp;&nbsp;&nbsp;MeshSurface&nbsp;&nbsp;&nbsp;[emitterName]&nbsp;&nbsp;&nbsp;{emitter 
+    properties}</i></strong> 
+  <p>See ParticleEmitter for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+emitter                         MeshSurface
+{
+    emission_rate               5000
+    force_emission              true
+    mesh_name                   ogrehead.mesh
+    mesh_surface_distribution   heterogeneous_2
+    time_to_live                10
+}</pre>
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Mesh Name</h6>
+  <p>Defines the name of the mesh from which particles are emitted. Syntax:</p>
+  <p><strong><i>mesh_name&nbsp;&nbsp;&nbsp;#name</i></strong>
+    <br>
+    <br><strong><i>mesh_name</i></strong> is the keyword. <font color="#F62217"><strong><em>mesh_surface_mesh_name</em></strong><em> is deprecated from version 1.2</em></font>
+    <br><strong><i>#name</i></strong> is the name of the mesh.</p>
+
+  <h6>Distribution</h6>
+  <p>This emitter identifies several types of distribution. These distributions 
+    are: 
+  <ul>
+    <li><i>edge</i> - particles emit random on the edges
+    <li><i>heterogeneous_1</i> - distribute particles over the surface of the mesh, but relatively more 
+      particles on the smaller faces 
+    <li><i>heterogeneous_2</i> - same as above, but now more particles are emitted on 
+      the larger faces 
+    <li><i>homogeneous</i> - distribute particles homogeneous (random) on the mesh surface 
+    <li><i>vertex</i> - particles only emit from the vertices 
+  </ul>
+  <p>Syntax:</p>
+  <p><strong><i>mesh_surface_distribution&nbsp;&nbsp;&nbsp;edge | heterogeneous_1 | heterogeneous_2 | homogeneous | vertex</i></strong>
+    <br>
+    <br><strong><i>mesh_surface_distribution</i></strong> is the keyword.
+    <br><strong><i>edge | heterogeneous_1 | heterogeneous_2 | homogeneous | vertex</i></strong> defines on of the possible distribution type. Default: homogeneous.</p>
+
+  <h6>Scale</h6>
+  <p>It is possible to set the scale of the mesh. This scale is independent of 
+    the scale of the particle system itself. This means 
+    that both scales are taken into account. Syntax:</p>
+  <p><strong><i>mesh_surface_scale&nbsp;&nbsp;&nbsp;#x #y #z</i></strong>
+    <br>
+    <br><strong><i>mesh_surface_scale</i></strong> is the keyword.
+    <br><strong><i>#x</i></strong> represents the x-value of the scale.
+    <br><strong><i>#y</i></strong> represents the y-value of the scale.
+    <br><strong><i>#z</i></strong> represents the z-value of the scale.</p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

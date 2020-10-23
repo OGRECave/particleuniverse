@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="Extern.html">Extern&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Scene Decorator Extern</h2>
+  <p>The Scene Decorator Extern is more like a test class for fast prototyping. The Scene Decorator Extern makes it possible to add scene objects to the scene so it can be viewed in combination with the particle system. It is possible to add more than one Scene Decorator Extern to a technique. Note, that this is used for testing and prototyping. It has no use in a real application.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>extern&nbsp;&nbsp;&nbsp;SceneDecorator&nbsp;&nbsp;&nbsp;[externName]&nbsp;&nbsp;&nbsp;{extern properties}</i></strong>
+  <p>See Extern for explanation of the syntax.</p>
+  <p> Script example:
+  <pre>
+system with_an_extern
+{
+    technique
+    {
+        ....
+        extern                           SceneDecorator
+        {
+            mesh_name                    Barrel.mesh
+            material                     RustyBarrel
+            scene_node_scale             150 10 150
+            scene_node_position          0 -300 0
+        }
+    }
+}</pre>
+  <br>
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Mesh Name</h6>
+  <p>Name of the mesh that must be displayed in the scene. Syntax:</p>
+  <p><strong><i>mesh_name&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>mesh_name</i></strong> is the keyword. <font color="#F62217"><strong><em>scene_mesh_name</em></strong><em> is deprecated from version 1.2</em></font>
+    <br><strong><i>#value</i></strong> is the name of the mesh.</p>
+
+  <h6>Material Name</h6>
+  <p>Material name that is applied to the mesh. Syntax:</p>
+  <p><strong><i>material&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>material</i></strong> is the keyword. <font color="#F62217"><strong><em>scene_material_name</em></strong><em> is deprecated from version 1.2</em></font>
+    <br><strong><i>#value</i></strong> is the material name.</p>
+
+  <h6>Scale</h6>
+  <p>Scale the node to which the mesh (entity) is attached. The node on its turn is a child of the node to which the particle system is attached. Syntax:</p>
+  <p><strong><i>scene_node_scale&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>scene_node_scale</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is the scale applied to the node. Default: Vector3::UNIT_SCALE.</p>
+
+  <h6>Position</h6>
+  <p>Position of the node to which the mesh (entity) is attached. This is relative to the position of node to which the particle system is attached. Syntax:</p>
+  <p><strong><i>scene_node_position&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>scene_node_position</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is . Default: 1.0.</p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

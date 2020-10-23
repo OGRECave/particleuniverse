@@ -1,0 +1,32 @@
+system example_014
+{
+    keep_local                                  true
+    category                                    Examples_11_20
+    technique 
+    {
+        position                                0 0 3
+        visual_particle_quota                   5000
+        material                                PUMediaPack/Flare_01
+        default_particle_width                  0.3
+        default_particle_height                 0.3
+        default_particle_depth                  0.3
+        renderer                                Billboard
+        {
+        }
+        emitter                                 MeshSurface 
+        {
+            emission_rate                       5000
+            angle                               360
+            time_to_live                        dyn_random
+            {
+                min                             1
+                max                             3
+            }
+            velocity                            0.06
+            direction                           0 0 0
+            start_colour_range                  0.52549 0.52549 0.52549 1
+            mesh_name                           fxpression.mesh
+            mesh_surface_scale                  5 5 5
+        }
+    }
+}

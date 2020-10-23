@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="Extern.html">Extern&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Box Collider Extern</h2>
+  <p>Look at <a href="ColliderSphere.html">Sphere Collider</a> for a description. The Box Collider behaves the same with the difference that it is a box.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>extern&nbsp;&nbsp;&nbsp;BoxCollider&nbsp;&nbsp;&nbsp;[externName]&nbsp;&nbsp;&nbsp;{extern properties}</i></strong>
+  <p>See Extern for explanation of the syntax.</p>
+  <p> Script example:
+  <pre>
+system with_an_extern
+{
+    technique
+    {
+        ....
+        extern                        BoxCollider
+        {
+            box_width                 300
+            box_height                300
+            box_depth                 300
+            intersection              point
+            collision_type            bounce
+            bouncyness                1
+        }
+    }
+}</pre>
+  <p> Additional code example to attach the extern to a SceneNode:
+  <pre>
+SceneNode* externNode = mSceneMgr->getRootSceneNode()->createChildSceneNode();
+Attachable* attachable = static_cast&lt;Attachable*&gt;(sys->getTechnique(0)->getExtern(0));
+if (attachable)
+{
+    externNode->attachObject(attachable);
+    externNode->setPosition(Vector3(-300, 100, -100));
+}</pre>
+  <br>
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Distance Threshold</h6>
+  <p>Maximum distance where the collision detection of the Extern Box Collider isn't performed anymore. Syntax:</p>
+  <p><strong><i>distance_threshold&nbsp;&nbsp;&nbsp;#value</i></strong>
+  <br>
+  <br><strong><i>distance_threshold</i></strong> is the keyword. <font color="#F62217"><strong><em>attachable_distance_threshold</em></strong><em> is deprecated from version 1.2</em></font>
+  <br><strong><i>#value</i></strong> is a real value that defines the threshold speed. Default: Infinite.</p>
+
+  <h6>Friction</h6>
+  <p>See <a href="ColliderSphere.html">Sphere Collider</a></p>
+
+  <h6>Bouncyness</h6>
+  <p>See <a href="ColliderSphere.html">Sphere Collider</a></p>
+
+  <h6>Intersection Type</h6>
+  <p>See <a href="ColliderSphere.html">Sphere Collider</a></p>
+
+  <h6>Collision Type</h6>
+  <p>See <a href="ColliderSphere.html">Sphere Collider</a></p>
+
+  <h6>Box Width</h6>
+  <p>See <a href="ColliderBox.html">Box Collider</a></p>
+
+  <h6>Box Height</h6>
+  <p>See <a href="ColliderBox.html">Box Collider</a></p>
+
+  <h6>Box Depth</h6>
+  <p>See <a href="ColliderBox.html">Box Collider</a></p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+system example_027
+{
+    category                                    Examples_21_30
+    technique 
+    {
+        material                                ParticleUniverse/Fish
+        default_particle_width                  1.2
+        default_particle_height                 1.2
+        default_particle_depth                  1.2
+        spatial_hashing_cell_dimension          3
+        spatial_hashing_cell_overlap            1
+        max_velocity                            6
+        renderer                                Entity
+        {
+            mesh_name                           fish.mesh
+            entity_orientation_type             ent_oriented_self_mirrored
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       20
+            angle                               25
+            time_to_live                        50
+            velocity                            6
+            duration                            2
+            position                            -24 0 0
+            direction                           1 0 0
+            box_width                           15
+            box_height                          15
+            box_depth                           15
+        }
+        affector                                Gravity CenterGravity
+        {
+            position                            0 -6 0
+            mass_affector                       0.03
+            gravity                             600
+        }
+        affector                                Gravity TopLeftGravity
+        {
+            enabled                             false
+            position                            -12 6 0
+            mass_affector                       0.03
+            gravity                             600
+        }
+        affector                                Gravity TopRightGravity
+        {
+            enabled                             false
+            position                            12 6 0
+            mass_affector                       0.03
+            gravity                             600
+        }
+        affector                                FlockCentering 
+        {
+            mass_affector                       0.03
+        }
+        affector                                CollisionAvoidance 
+        {
+            mass_affector                       0.03
+            avoidance_radius                    3
+        }
+        affector                                VelocityMatching 
+        {
+            mass_affector                       0.03
+            radius                              3
+        }
+        observer                                OnTime TopLeftGravityObserver
+        {
+            observe_until_event                 true
+            handler                             DoEnableComponent 
+            {
+                enable_component                affector_component CenterGravity false
+            }
+            handler                             DoEnableComponent 
+            {
+                enable_component                affector_component TopLeftGravity true
+            }
+            since_start_system                  true
+            on_time                             greater_than 10
+        }
+        observer                                OnTime TopRightGravityObserver
+        {
+            observe_until_event                 true
+            handler                             DoEnableComponent 
+            {
+                enable_component                affector_component TopLeftGravity false
+            }
+            handler                             DoEnableComponent 
+            {
+                enable_component                affector_component TopRightGravity true
+            }
+            since_start_system                  true
+            on_time                             greater_than 20
+        }
+    }
+}

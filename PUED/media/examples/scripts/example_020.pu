@@ -1,0 +1,28 @@
+system example_020
+{
+    category                                    Examples_11_20
+    technique 
+    {
+        material                                ParticleUniverse/Star
+        default_particle_width                  1.5
+        default_particle_height                 1.5
+        default_particle_depth                  1.5
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       2
+            angle                               360
+            time_to_live                        10
+            velocity                            0.03
+        }
+        affector                                Randomiser 
+        {
+            max_deviation_x                     3
+            max_deviation_y                     3
+            max_deviation_z                     3
+            time_step                           0.2
+        }
+    }
+}

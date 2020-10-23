@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" /></head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleEmitter.html">Emitter&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Vertex Emitter</h2>
+  <p>Emits particles from the surface of a mesh. By traversing through the vertices, the spawn points are generated and particles are emitted from points
+  that match the order of the vertices.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>emitter&nbsp;&nbsp;&nbsp;Vertex&nbsp;&nbsp;&nbsp;[emitterName]&nbsp;&nbsp;&nbsp;{emitter properties}</i></strong>
+  <p>See ParticleEmitter for explanation of the syntax</p>
+  <p> Example:
+  <pre>
+emitter                  Vertex
+{
+   mesh_name             athene.mesh
+   step                  2
+   number_of_segments    3
+   number_of_iterations  2
+   emission_rate         100
+   ...
+}</pre>
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Vertex Step</h6>
+  <p>Instead of traversing through all of the vertices, it is also possible to skip some vertices. The higher the vertex step, the more vertices are skipped. Syntax:</p>
+  <p><strong><i>step&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>step</i></strong> is the keyword. <font color="#F62217"><strong><em>vertex_em_step</em></strong><em> is deprecated from version 1.2</em></font>
+    <br><strong><i>#value</i></strong> is a short value > 0 that defines the step. Default: 1.</p>
+
+  <h6>Number of Segments</h6>
+  <p>The number of segments defines the number of generated spawn points on one edge. Syntax:</p>
+  <p><strong><i>number_of_segments&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>number_of_segments</i></strong> is the keyword. <font color="#F62217"><strong><em>vertex_em_segments</em></strong><em> is deprecated from version 1.2</em></font>
+    <br><strong><i>#value</i></strong> is a short value > 0 that defines in how many segments a edge will be divided. The number of spawnpoints is
+	vertex_em_segments + 1. Default: 1.</p>
+
+  <h6>Number of Iterations</h6>
+  <p>In each particle technique update, a number of spawn points is generated (depends on number of segments). However, it is possible that the number of 
+     requested particles exceeds the number of existing spawn points. This means that the emitter has to wait until enough spawn points are generated 
+	 (Note, that all spawn points are not precreated, but generated gradually). By increasing the number of iterations, the number of generated spawn 
+	 points is also increased. Side-effect is, that increasing the number of iterations decreases the FPS. Syntax:</p>
+  <p><strong><i>number_of_iterations&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br>
+    <strong><i>number_of_iterations</i></strong> is the keyword. <font color="#F62217"><strong><em>vertex_em_iterations</em></strong><em> is deprecated from version 1.2</em></font>
+  <br><strong><i>#value</i></strong> is a short value > 0 that defines the number of iterations used to generate spawn points. Default: 1.</p>
+
+  <h6>Mesh Name</h6>
+  <p>Defines the name of the mesh of which the vertices are used. Syntax:</p>
+  <p><strong><i>mesh_name&nbsp;&nbsp;&nbsp;#name</i></strong>
+    <br>
+    <br><strong><i>mesh_name</i></strong> is the keyword. <font color="#F62217"><strong><em>vertex_em_mesh_name</em></strong><em> is deprecated from version 1.2</em></font>
+    <br><strong><i>#name</i></strong> is the name of the mesh.</p>
+
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

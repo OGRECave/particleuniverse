@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleEmitter.html">Emitter&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Line Emitter</h2>
+  <p>The Line Emitter is used to emit particles on or near a straight line. Because this emitter has several settings, the type of emission changes significantly
+  if certain settings have been choosen. Roughly we distinguish:
+  <br>
+  <br>- Particles are emitted random on a given line.
+  <br>
+    - Particles are emitted random on a certain distance from the line. <br>
+    - Particles are emitted incremental from begin to the end of the line (either on the line or with a certain distance from the line) 
+  <br>
+  <br>Playing with the 'auto_direction', which is a base emitter attribute, and the 'direction' attribute, variations in direction are possible.
+  The 'auto_direction' moves the particles in a direction perpendicular from the line.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>emitter&nbsp;&nbsp;&nbsp;Line&nbsp;&nbsp;&nbsp;[emitterName]&nbsp;&nbsp;&nbsp;{emitter properties}</i></strong>
+  <p>See ParticleEmitter for explanation of the syntax</p>
+  <p> Example:
+  <pre>
+emitter               Line
+{
+   ...
+   end                100 200 300
+   auto_direction     true
+}</pre>
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Line end</h6>
+  <p>Defines the direction and length of the line by means of a 3d vector. Syntax:</p>
+  <p><strong><i>end&nbsp;&nbsp;&nbsp;#x&nbsp;&nbsp;&nbsp;#y&nbsp;&nbsp;&nbsp;#z</i></strong>
+    <br>
+    <br><strong><i>end</i></strong> is the keyword. <font color="#F62217"><strong><em>line_em_end</em></strong><em> is deprecated from version 1.2</em></font>
+    <br><strong><i>#x</i></strong> is the x value of the vector. Default: 0.
+    <br><strong><i>#y</i></strong> is the y value of the vector. Default: 0.
+    <br><strong><i>#z</i></strong> is the z value of the vector. Default: 0.</p>
+
+  <h6>Max Increment</h6>
+  <p>Using increments, it is possible to emit particles incremental from begine to the end of the line. This attribute defines the maximum increment. Syntax:</p>  <p><strong><i>max_increment&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>max_increment</i></strong> is the keyword. <font color="#F62217"><strong><em>line_em_max_increment</em></strong><em> is deprecated from version 1.2</em></font>
+    <br><strong><i>#value</i></strong> Is the maximum size of a line segment. Default: 0.</p>
+
+  <h6>Min Increment</h6>
+  <p>Using increments, it is possible to emit particles incremental from begine to the end of the line. This attribute defines the minimum increment. Syntax:</p>
+  <p><strong><i>min_increment&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>min_increment</i></strong> is the keyword. <font color="#F62217"><strong><em>line_em_min_increment</em></strong><em> is deprecated from version 1.2</em></font>
+    <br><strong><i>#value</i></strong> Is the minimum size of a line segment. Default: 0.</p>
+
+  <h6>Max Deviation</h6>
+  <p>Setting the maximum deviation, which defines how far (max.) from the line a particle emits. Syntax:</p>
+  <p><strong><i>max_deviation&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>max_deviation</i></strong> is the keyword. <font color="#F62217"><strong><em>line_em_max_deviation</em></strong><em> is deprecated from version 1.2</em></font>
+    <br><strong><i>#value</i></strong> is the maximum distance from the line. Default: 0.</p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

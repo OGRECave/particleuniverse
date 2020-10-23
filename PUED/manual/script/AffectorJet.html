@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleAffector.html">Affector&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Jet Affector</h2>
+  <p>The Jet Affector changes the velocity of a particle. The difference between 
+    the Jet affector and the Linear Force affector is, that the Jet affector boosts 
+    the speed in a non-linear manner, while leaving the particle direction intact.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>affector&nbsp;&nbsp;&nbsp;Jet&nbsp;&nbsp;&nbsp;[affectorName]&nbsp;&nbsp;&nbsp;{affector properties}</i></strong>
+  <p>See ParticleAffector for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+affector               Jet
+{
+   acceleration        dyn_random
+   {
+      min              1
+      max              10
+   }
+}</pre>
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Acceleration</h6>
+  <p>Sets the acceleration of the particle. Syntax:</p>
+  <p><strong><i>acceleration
+  <br>&nbsp;&nbsp;&nbsp;#value | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_random {random properties} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_linear {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_spline {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_oscillate {oscillating properties}</i></strong>
+    <p><strong><i>acceleration</i></strong> is the keyword. <font color="#F62217"><strong><em>jet_aff_accel</em></strong><em> is deprecated from version 1.2</em></font>
+  <br></p>
+    <p><strong><i>#value</i></strong> is a real value that defines the acceleration, 
+    which increases (#value > 0.0) or decreases (#value < 0.0) the particle velocity.
+	Default: 1.0.</p>
+
+  <p> <strong><i>dyn_random {random properties}</i></strong> means that the acceleration is generated randomly</p>
+  <p> <strong><i>dyn_curved_linear {control point [control point]}</i></strong> means that the acceleration is determined by means of 1 or more control points.
+    The interpolation between the control points is linear. Note, that if this option is used, acceleration is based on the particles' time-to-live and not based on the time since the start of the particle system. This means the the first value of each control point lies between the interval [0..1].</p>
+  <p> <strong><i>dyn_curved_spline {control point [control point]}</i></strong> means that the acceleration is determined by means of 1 or more control points.
+    The interpolation between the control points is cubic.  Note, that if this option is used, acceleration is based on the particles' time-to-live and not based on the time since the start of the particle system. This means the the first value of each control point lies between the interval [0..1].</p>
+  <p> <strong><i>dyn_oscillate {oscillating properties}</i></strong> means that the acceleration is determined by means of an oscillating function.</p>
+  <p>See also the page <a href="SpecialCases.html">'Special Cases'</a> for an explanation of the 'Dynamic Attribute'.
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

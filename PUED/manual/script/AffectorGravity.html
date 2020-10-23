@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleAffector.html">Affector&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Gravity Affector</h2>
+  <p>The Gravity Affector attracts or rejects particles, using Newton's law of 
+    universal gravitation. The position of the affector is important. This forms 
+    the center of gravity.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>affector&nbsp;&nbsp;&nbsp;Gravity&nbsp;&nbsp;&nbsp;[affectorName]&nbsp;&nbsp;&nbsp;{affector properties}</i></strong>
+  <p>See ParticleAffector for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+affector                   Gravity
+{
+   position                0 500 0
+   gravity                 1000
+}</pre>
+
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Gravity</h6>
+  <p>Defines the gravity of this affector. The gravity causes particles to be attracted (or rejected if negative). It uses Newton's 
+     law of universal gravitation. Syntax:</p>
+  <p><strong><i>gravity&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>gravity</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is a real value that defines the gravity. Default: 1.0.</p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

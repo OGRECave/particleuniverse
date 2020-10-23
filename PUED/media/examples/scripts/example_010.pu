@@ -1,0 +1,35 @@
+system example_010
+{
+    category                                    Examples_1_10
+    technique 
+    {
+        visual_particle_quota                   2000
+        material                                ParticleUniverse/Star
+        default_particle_width                  0.6
+        default_particle_height                 0.6
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Circle 
+        {
+            emission_rate                       300
+            time_to_live                        4
+            velocity                            0.6
+            radius                              3
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    0 1 0 1
+            time_colour                         0.8  0 0 1 1
+            time_colour                         1    0 0 0 1
+        }
+        affector                                Jet 
+        {
+            acceleration                        dyn_random
+            {
+                min                             0.1
+                max                             1
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+system example_025
+{
+    category                                    Examples_21_30
+    technique 
+    {
+        material                                ParticleUniverse/Flare
+        default_particle_width                  3
+        default_particle_height                 3
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Position 
+        {
+            direction                           0 0 0
+            add_position                        6 3 9
+            add_position                        -6 6 -3
+            add_position                        3 3 0
+            add_position                        -9 9 0
+            add_position                        0 0 0
+        }
+        affector                                LinearForce 
+        {
+            force_vector                        0 -6 0
+        }
+    }
+}

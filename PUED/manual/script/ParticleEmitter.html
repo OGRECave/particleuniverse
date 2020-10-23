@@ -1,0 +1,455 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Particle Emitter</h2>
+  <h3>Definition</h3>
+  <p>The syntax of a Particle Emitter definition is:</p>
+  <p><strong><i>emitter&nbsp;&nbsp;&nbsp;emitterType&nbsp;&nbsp;&nbsp;[emitterName]&nbsp;&nbsp;&nbsp;{emitter properties}</i></strong>
+    <br>
+    <br><strong><i>emitter</i></strong> is the keyword.
+    <br><strong><i>emitterType</i></strong> is the type of emitter, for example Point, Box or Line.
+    <br><strong><i>emitterName</i></strong> defines the name of the emitter. The emitterName is optional but required if the emitter must be identified.
+	    This is the case for example if the emitter must be emitted itself.
+    <br>The <strong><i>emitter properties</i></strong> are handled in the paragraph 'Base Properties'.
+	</p>
+	<p> Example:
+  <pre>
+{
+   ...
+   emitter                                 Point
+   {
+       angle                               20
+       emission_rate                       50
+       direction                           0 1 0
+       velocity                            dyn_random
+       {
+            min                            20
+            max                            80
+       }
+       time_to_live                        dyn_random
+       {
+            min                            5
+            max                            9
+       }
+   }
+} </pre>
+
+  <h3>Specific Emitters</h3>
+  <ul>
+    <li><a href="EmitterBox.html">Box Emitter</a>
+	<li><a href="EmitterCircle.html">Circle Emitter</a>
+    <li><a href="EmitterLine.html">Line Emitter</a>
+	<li><a href="EmitterMeshSurface.html">Mesh Surface Emitter</a>
+    <li><a href="EmitterPoint.html">Point Emitter</a>
+	<li><a href="EmitterPosition.html">Position Emitter</a>
+	<li><a href="EmitterSlave.html">Slave Emitter</a>
+    <li><a href="EmitterSphereSurface.html">Sphere Surface Emitter</a>
+    <li><a href="EmitterVertex.html">Vertex Emitter</a>
+  </ul>
+  <br>
+  
+  <h3>Base Properties</h3>
+  <p>The Base Properties apply to all emitters.</p>
+
+  <h6>Enabled</h6>
+  <p>Enables or disables the emitter as soon as the particle system starts. Syntax:</p>
+  <p><strong><i>enabled&nbsp;&nbsp;&nbsp;true | false</i></strong> <br>
+    <br>
+    <strong><i>enabled</i></strong> is the keyword. <br>
+    <strong><i>true | false</i></strong> defines whether the emitter is enabled (true) or disabled (false). Default: true</p>
+
+  <h6>Position</h6>
+  <p>Position of the particle. The position is in local space and defines the relative position with the Particle Technique.
+     Note, that this isn't the position of the emitter itself. Setting the emitter position isn't possible by means of a script.
+     Syntax:</p>
+  <p><strong><i>position&nbsp;&nbsp;&nbsp;#x&nbsp;&nbsp;&nbsp;#y&nbsp;&nbsp;&nbsp;#z</i></strong> <br>
+    <br><strong><i>position</i></strong> is the keyword.
+    <br><strong><i>#x</i></strong> is a real value that defines the x coordinate of the local space position vector. Default: 0.
+    <br><strong><i>#y</i></strong> is a real value that defines the y coordinate of the local space position vector. Default: 0.
+    <br><strong><i>#z</i></strong> is a real value that defines the z coordinate of the local space position vector. Default: 0.</p>
+
+  <h6>Keep Local</h6>
+  <p>If this attribute is set to 'true', the particles are moving relative to the emitter. Beware that this property can also be set in the particle system or the technique, which makes it possible to keep moving emitters, techniques, systems or visual particles local to respectively the particle system or the technique. Syntax:</p>
+  <p><strong><i>keep_local&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>keep_local</i></strong> is the keyword.
+    <br>
+    <strong><i>true | false</i></strong> if set to 'true', the particles are moving relative to the emitter. Default: false.
+
+  <h6>Direction</h6>
+  <p>Direction of the particle as soon as it is emitted. The direction is defined in local space in the script, but internally only world space is used.
+     Syntax:</p>
+  <p><strong><i>direction&nbsp;&nbsp;&nbsp;#x&nbsp;&nbsp;&nbsp;#y&nbsp;&nbsp;&nbsp;#z</i></strong> <br>
+    <br><strong><i>direction</i></strong> is the keyword.
+    <br><strong><i>#x</i></strong> is a real value that defines the x coordinate of the local space direction vector. Default: 0.
+    <br><strong><i>#y</i></strong> is a real value that defines the y coordinate of the local space direction vector. Default: 0.
+    <br><strong><i>#z</i></strong> is a real value that defines the z coordinate of the local space direction vector. Default: 0.</p>
+
+  <h6>Orientation</h6>
+  <p>The orientation of a particle that is emitted. Setting an orientation is only useful for 3D particles, such as Boxes and Spheres. Syntax:</p>
+  <p><strong><i>orientation&nbsp;&nbsp;&nbsp;#w&nbsp;&nbsp;#x&nbsp;&nbsp;#y&nbsp;&nbsp;#z</i></strong>
+    <br>
+    <br><strong><i>orientation</i></strong> is the keyword.
+    <br>
+    <strong><i>#w&nbsp;&nbsp;#x&nbsp;&nbsp;#y&nbsp;&nbsp;#z</i></strong> are the 4 values with which the orientation is identified. Internally these values are assigned to a Quaternion, which represents the orientation.
+
+  <h6>Start Orientation Range</h6>
+  <p>With the use of Range Start and End it is possible to assign an orientation to a particle, which is randomly choosen 'between' a start and an end orientation. The Orientation Range Start represents one part of the interval. Syntax:</p>
+  <p><strong><i>start_orientation_range&nbsp;&nbsp;&nbsp;#w&nbsp;&nbsp;#x&nbsp;&nbsp;#y&nbsp;&nbsp;#z</i></strong>
+    <br>
+    <br><strong><i>start_orientation_range</i></strong> is the keyword. <font color="#F62217"><strong><em>range_start_orientation</em></strong><em> is deprecated from version 1.2</em></font>
+    <br>
+    <strong><i>#w&nbsp;&nbsp;#x&nbsp;&nbsp;#y&nbsp;&nbsp;#z</i></strong> are the 4 values with which the orientation is identified. Internally these values are assigned to a Quaternion, which represents the orientation.
+
+  <h6>End Orientation Range</h6>
+  <p>With the use of Range Start and End it is possible to assign an orientation to a particle, which is randomly choosen 'between' a start and an end orientation. The Orientation Range End represents one part of the interval. Syntax:</p>
+  <p><strong><i>end_orientation_range&nbsp;&nbsp;&nbsp;#w&nbsp;&nbsp;#x&nbsp;&nbsp;#y&nbsp;&nbsp;#z</i></strong>
+    <br>
+    <br><strong><i>end_orientation_range</i></strong> is the keyword. <font color="#F62217"><strong><em>range_end_orientation</em></strong><em> is deprecated from version 1.2</em></font>
+    <br>
+    <strong><i>#w&nbsp;&nbsp;#x&nbsp;&nbsp;#y&nbsp;&nbsp;#z</i></strong> are the 4 values with which the orientation is identified. Internally these values are assigned to a Quaternion, which represents the orientation.
+
+  <h6>Velocity</h6>
+  <p>Defines the initial velocity of a particle as soon as it is emitted. This attributes distinguishes 5 appearance types. Syntax:</p>
+  <p><strong><i>velocity
+  <br>&nbsp;&nbsp;&nbsp;#value | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_random {random properties} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_linear {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_spline {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_oscillate {oscillating properties}</i></strong>
+    <br>
+    <br><strong><i>velocity</i></strong> is the keyword.
+	<br>
+	<br><strong><i>#value</i></strong> is a fixed (real) value > 0 that defines the velocity. Default: 1.
+	<br>
+	<br>Example:
+	<br>
+	<pre>
+velocity                100
+</pre>
+	
+	<p>
+	<br><strong><i>dyn_random {random properties}</i></strong> means that the velocity is randomly generated.  Syntax <strong><i>random properties</i></strong>:
+	<br><strong><i>&nbsp;&nbsp;&nbsp;min&nbsp;&nbsp;&nbsp;#minValue</i></strong> defines the lower bound of the random number.
+	<br><strong><i>&nbsp;&nbsp;&nbsp;max&nbsp;&nbsp;&nbsp;#maxValue</i></strong> defines the upper bound of the random number.
+	<br>
+	<br>Example:
+	<br>
+	<pre>
+velocity                dyn_random
+{   
+    min                 20
+    max                 80
+}</pre>
+	
+	<p>
+	<br><strong><i>dyn_curved_linear {control point [control point]}</i></strong> means that the velocity is determined by means of 1 or more control points.
+	    The interpolation between the control points is linear. Syntax <strong><i>control points</i></strong>:
+	<br><strong><i>&nbsp;&nbsp;&nbsp;control_point&nbsp;&nbsp;&nbsp;#time&nbsp;&nbsp;&nbsp;#value</i></strong>.
+	<br><strong><i>&nbsp;&nbsp;&nbsp;#time</i></strong> is the time since the Particle System was started.
+	<br>
+    <strong><i>&nbsp;&nbsp;&nbsp;#value</i></strong> is a (real) value that defines 
+    the velocity on that time. <br>
+	<br>Example:
+	<br>
+	<pre>
+velocity                dyn_curved_linear
+{
+    control_point       0 300
+    control_point       1 200
+    control_point       3 500
+    control_point       4 10
+}</pre>
+	<p>
+    Note, that control points don't have to be added in a particular order.
+	<p>
+	<br><strong><i>dyn_curved_spline {control point [control point]}</i></strong> means that the velocity is determined by means of 1 or more control points.
+	    The interpolation between the control points is cubic. Syntax see dyn_curved_linear: 
+	<br>
+	<br>Example:
+	<br>
+	<pre>
+velocity                dyn_curved_spline
+{
+    control_point       0 300
+    control_point       1 200
+    control_point       3 500
+    control_point       4 10
+}</pre>
+	<p>
+	<br>
+	<strong><i>dyn_oscillate {oscillating properties}</i></strong> means that the velocity is determined by means of an oscillating function (sine, for example).
+	<br>
+	<br>Example:
+	<br>
+	<pre>
+velocity                 dyn_oscillate
+{
+    oscillate_frequency  0.5
+    oscillate_base       100
+    oscillate_amplitude  60
+    oscillate_type       sine
+}</pre>
+
+<p>See also the page <a href="SpecialCases.html">'Special Cases'</a> for an explanation of the 'Dynamic Attribute'.</p>
+
+  <h6>Duration</h6>
+  <p>Defines the duration of emitting. This attributes distinguishes 4 appearance types. Syntax:</p>
+  <p><strong><i>duration
+  <br>&nbsp;&nbsp;&nbsp;#value | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_random {random properties} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_linear {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_spline {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_oscillate {oscillating properties}</i></strong>
+    <br>
+    <br><strong><i>duration</i></strong> is the keyword.
+    <br>See the 'velocity' property for explanation of the 5 property appearances.</p>
+    <p>See also the page <a href="SpecialCases.html">'Special Cases'</a> for an explanation of the 'Dynamic Attribute'.</p>
+
+  <h6>Repeat / Delay</h6>
+  <p>Repeat/delay is used in combination with duration. Where duration defines the time the emitter emits particles, the repeat/delay property defines
+     after what time the emitter restarts again. Syntax:</p>
+  <p><strong><i>repeat_delay
+  <br>&nbsp;&nbsp;&nbsp;#value | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_random {random properties} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_linear {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_spline {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_oscillate {oscillating properties}</i></strong>
+
+    <br>
+    <br><strong><i>repeat_delay</i></strong> is the keyword.
+    <br>See the 'velocity' property for explanation of the 5 property appearances.</p>
+   <p>See also the page <a href="SpecialCases.html">'Special Cases'</a> for an explanation of the 'Dynamic Attribute'.</p>
+
+  <h6>Angle</h6>
+  <p>Defines the deviation of the particles' direction. Syntax:</p>
+  <p><strong><i>angle
+  <br>&nbsp;&nbsp;&nbsp;#value | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_random {random properties} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_linear {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_spline {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_oscillate {oscillating properties}</i></strong>
+    <br>
+    <br><strong><i>angle</i></strong> is the keyword.
+    <br>See the 'velocity' property for explanation of the 5 property appearances.
+    <br> Remark: If the angle is represented by an #value, that value lies in the interval 0 - 360.
+    If the angle is set to a fixed value of 40, the deviation of the particles' direction is (random) between 0 and 40 degrees. Default: 0</p>
+    <p>See also the page <a href="SpecialCases.html">'Special Cases'</a> for an explanation of the 'Dynamic Attribute'.</p>
+
+  <h6>Emission Rate</h6>
+  <p>The emission rates defines how many particles are emitted in a second. Syntax:</p>
+  <p><strong><i>emission_rate
+  <br>&nbsp;&nbsp;&nbsp;#value | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_random {random properties} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_linear {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_spline {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_oscillate {oscillating properties}</i></strong>
+    <br>
+    <br><strong><i>emission_rate</i></strong> is the keyword.
+    <br>See the 'velocity' property for explanation of the 5 property appearances.
+        See also the page <a href="SpecialCases.html">'Special Cases'</a> for an explanation of the 'Dynamic Attribute'.</p>
+  <p>Note, that emission rate is an attribute that can be influenced by a camera dependency using the << camera_dependency construction.</p>
+
+  <h6>Time To Live</h6>
+  <p>Defines the total lifetime (in seconds) of a particle. Syntax:</p>
+  <p><strong><i>time_to_live
+  <br>&nbsp;&nbsp;&nbsp;#value | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_random {random properties} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_linear {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_spline {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_oscillate {oscillating properties}</i></strong>
+    <br>
+    <br><strong><i>time_to_live</i></strong> is the keyword.
+    <br>See the 'velocity' property for explanation of the 5 property appearances.</p>
+    <p>See also the page <a href="SpecialCases.html">'Special Cases'</a> for an explanation of the 'Dynamic Attribute'.</p>
+
+  <h6>Mass</h6>
+  <p>The mass of a particle. This value is used in some situations, where particles with a mass make sense. Otherwise, this value is ignored. Syntax:</p>
+  <p><strong><i>mass
+  <br>&nbsp;&nbsp;&nbsp;#value | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_random {random properties} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_linear {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_spline {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_oscillate {oscillating properties}</i></strong>
+    <br>
+    <br><strong><i>mass</i></strong> is the keyword.
+    <br>See the 'velocity' property for explanation of the 5 property appearances.</p>
+    <p>See also the page <a href="SpecialCases.html">'Special Cases'</a> for an explanation of the 'Dynamic Attribute'.</p>
+
+  <h6>Texture Coordinates</h6>
+  <p>Set the initial texture coordinates of a particle. This is only useful if multiple texture coords are defined in the renderer (by means of texture_coords_rows and texture_coords_columns). Syntax:</p>
+  <p><strong><i>texture_coords&nbsp;&nbsp;&nbsp;#value</i></strong> <br>
+    <br>
+    <strong><i>texture_coords</i></strong> is the keyword.
+   <br><strong><i>#value</i></strong> defines the texture coordinates. Default: 0 </p>
+
+  <h6>Start Texture Coordinates Range</h6>
+  <p>If no fixed texture coordinates are set, it is also possible to generate a random texture coordinate between a 'start' and an 'end'. This is only useful if multiple texture coords are defined in the renderer. Syntax:</p>
+  <p><strong><i>start_texture_coords_range&nbsp;&nbsp;&nbsp;#value</i></strong> <br>
+    <br>
+    <strong><i>start_texture_coords_range</i></strong> is the keyword. <font color="#F62217"><strong><em>start_texture_coords</em></strong><em> is deprecated from version 1.2</em></font>
+  <br><strong><i>#value</i></strong> defines the lower texture coordinate. Default: 0</p>
+
+  <h6>End Texture Coordinates Range</h6>
+  <p>If no fixed texture coordinates are set, it is also possible to generate a random texture coordinate between a 'start' and an 'end'. This is only useful if multiple texture coords are defined in the renderer. Syntax:</p>
+  <p><strong><i>end_texture_coords_range&nbsp;&nbsp;&nbsp;#value</i></strong> <br>
+    <br>
+    <strong><i>end_texture_coords_range</i></strong> is the keyword. <font color="#F62217"><strong><em>end_texture_coords</em></strong><em> is deprecated from version 1.2</em></font>
+  <br><strong><i>#value</i></strong> defines the upper texture coordinate. Default: 0</p>
+
+  <h6>Colour</h6>
+  <p>Set the initial colour of a particle. Syntax:</p>
+  <p><strong><i>colour&nbsp;&nbsp;&nbsp;#red&nbsp;&nbsp;&nbsp;#green&nbsp;&nbsp;&nbsp;#blue&nbsp;&nbsp;&nbsp;[#alpha]</i></strong> <br>
+    <br>
+    <strong><i>colour</i></strong> is the keyword.
+   <br><strong><i>#red</i></strong> defines the red value (between 0..1).
+   <br><strong><i>#green</i></strong> defines the green value (between 0..1).
+   <br><strong><i>#blue</i></strong> defines the blue value (between 0..1).
+   <br><strong><i>#alpha</i></strong> is an optional value and only added when needed (for example if scene_blend alpha_blend is used in the material). Its
+     value lies between 0..1.
+   <br>Default colour: White</p>
+
+  <h6>Start Colour Range</h6>
+  <p>If no fixed colour is set, it is also possible to generate a random colour between a 'start' colour and an 'end' colour. Syntax:</p>
+  <p><strong><i>start_colour_range&nbsp;&nbsp;&nbsp;#red&nbsp;&nbsp;&nbsp;#green&nbsp;&nbsp;&nbsp;#blue&nbsp;&nbsp;&nbsp;[#alpha]</i></strong> <br>
+    <br>
+    <strong><i>start_colour_range</i></strong> is the keyword.
+   <br><strong><i>#red</i></strong> defines the red value (between 0..1).
+   <br><strong><i>#green</i></strong> defines the green value (between 0..1).
+   <br><strong><i>#blue</i></strong> defines the blue value (between 0..1).
+   <br><strong><i>#alpha</i></strong> is an optional value and only added when needed (for example if scene_blend alpha_blend is used in the material). Its
+     value lies between 0..1.
+   <br>Default colour: Black</p>
+
+  <h6>End Colour Range</h6>
+  <p>If no fixed colour is set, it is also possible to generate a random colour between a 'start' colour and an 'end' colour. Syntax:</p>
+  <p><strong><i>end_colour_range&nbsp;&nbsp;&nbsp;#red&nbsp;&nbsp;&nbsp;#green&nbsp;&nbsp;&nbsp;#blue&nbsp;&nbsp;&nbsp;[#alpha]</i></strong> <br>
+    <br>
+    <strong><i>end_colour_range</i></strong> is the keyword.
+   <br><strong><i>#red</i></strong> defines the red value (between 0..1).
+   <br><strong><i>#green</i></strong> defines the green value (between 0..1).
+   <br><strong><i>#blue</i></strong> defines the blue value (between 0..1).
+   <br><strong><i>#alpha</i></strong> is an optional value and only added when needed (for example if scene_blend alpha_blend is used in the material). Its
+     value lies between 0..1.
+   <br>Default colour: White</p>
+
+  <h6>All Particle Dimensions</h6>
+  <p>Set the own dimensions of a particle. All particle dimensions (x, y, z) will 
+    be set to the same value. This property is useful if particles with different 
+    size must be emitted. Syntax:</p>
+  <p><strong><i>all_particle_dimensions
+  <br>&nbsp;&nbsp;&nbsp;#value | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_random {random properties} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_linear {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_spline {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_oscillate {oscillating properties}</i></strong>
+    <br>
+    <br><strong><i>all_particle_dimensions</i></strong> is the keyword.
+    <br>See the 'velocity' property for explanation of the 5 property appearances.</p>
+    <p>See also the page <a href="SpecialCases.html">'Special Cases'</a> for an explanation of the 'Dynamic Attribute'.</p>
+
+  <h6>Particle Width</h6>
+  <p>Besides setting all dimensions to the same value, it is also possible to set each dimension independant. Syntax:</p>
+  <p><strong><i>particle_width
+  <br>&nbsp;&nbsp;&nbsp;#value | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_random {random properties} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_linear {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_spline {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_oscillate {oscillating properties}</i></strong>
+  <br>
+  <br><strong><i>particle_width</i></strong> is the keyword.
+  <br>See the 'velocity' property for explanation of the 5 property appearances.</p>
+  <p>See also the page <a href="SpecialCases.html">'Special Cases'</a> for an explanation of the 'Dynamic Attribute'.</p>
+
+  <h6>Particle Height</h6>
+  <p>Besides setting all dimensions to the same value, it is also possible to set each dimension independant. Syntax:</p>
+  <p><strong><i>particle_height
+  <br>&nbsp;&nbsp;&nbsp;#value | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_random {random properties} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_linear {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_spline {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_oscillate {oscillating properties}</i></strong>
+  <br>
+  <br><strong><i>particle_height</i></strong> is the keyword.
+  <br>See the 'velocity' property for explanation of the 5 appearances.</p>
+  <p>See also the page <a href="SpecialCases.html">'Special Cases'</a> for an explanation of the 'Dynamic Attribute'.</p>
+
+  <h6>Particle Depth</h6>
+  <p>Besides setting all dimensions to the same value, it is also possible to set each dimension independant. Syntax:</p>
+  <p><strong><i>particle_depth
+  <br>&nbsp;&nbsp;&nbsp;#value | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_random {random properties} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_linear {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_spline {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_oscillate {oscillating properties}</i></strong>
+  <br>
+  <br><strong><i>particle_depth</i></strong> is the keyword.
+  <br>See the 'velocity' property for explanation of the 5 property appearances.</p>
+  <p>See also the page <a href="SpecialCases.html">'Special Cases'</a> for an explanation of the 'Dynamic Attribute'.</p>
+
+  <h6>Auto Direction</h6>
+  <p>Besides setting the particle direction manually, it is also possible to let the system generate the particle direction. This is often done for emitters
+    with a particular shape and not used in all emitters. If this attribute is true, the direction vector that has been set, is ignored.
+	Syntax:</p>
+  <p><strong><i>auto_direction&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>auto_direction</i></strong> is the keyword.
+    <br><strong><i>true | false</i></strong> determines whether auto direction is used (true) or not. Default: false.</p>
+
+  <h6>Force Emission</h6>
+  <p>The emission rate defines the number of particles that are emitted over a period of time. In some cases however, you would like to emit the particle
+    all at once, without any delay. That is the purpose of this attribute. If the Force Emission is set to true, all particles defined in Emission Rate
+	are emitted at once. The emitter stops emitting particles after that.
+  Syntax:</p>
+  <p><strong><i>force_emission&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>force_emission</i></strong> is the keyword.
+    <br><strong><i>true | false</i></strong> determines whether all particles defined in emission_rate are emitted at once (true) or not. Default: false.</p>
+
+  <h6>Emits</h6>
+  <p>Defines the type of emitted particle. The use is very versatile. Besides emitting components that are registered within the same Particle System, also other Particle Systems can be emitted.
+     <br>
+     <br>A word of caution: If you are emitting components that include emitters, which on their turn emit other components, the number of pre-allocated objects can become very large. Use the ..._quota properties in 
+	 the techniques to manage it. Syntax:</p>
+  <p><strong><i>emits&nbsp;&nbsp;&nbsp;visual_particle | emitter_particle | technique_particle | affector_particle | system_particle&nbsp;&nbsp;&nbsp;#name</i></strong>
+    <br>
+    <br><strong><i>emits</i></strong> is the keyword.
+    <br><strong><i>visual_particle | emitter_particle | technique_particle | affector_particle | system_particle</i></strong> One of these 5 literals must used to identify
+	    which type of particle is emitted. Default: visual_particle.
+    <br><strong><i>#name</i></strong> In case no visual particle is emitted, the name (name in the script, not the runtime name) of the particle type must be supplied. So, if the particle type is an
+	emitter, the name of that emitter is needed.</p>
+  <p>Example:</p>
+	<pre>
+// This emitter emits other emitters with the name 'Splash'
+emitter               Point
+{
+    ...
+    emits             emitter_particle      Splash
+}
+<br>
+// This is the named emitter that is emitted
+emitter               Point                 Splash
+{
+    ...
+}</pre>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

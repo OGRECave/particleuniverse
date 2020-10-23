@@ -1,0 +1,2197 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2003-10-04 23:10+0200\n"
+"PO-Revision-Date: 2012-02-01 13:27+0100\n"
+"Last-Translator: FXPression\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+msgid "System"
+msgstr "Systeem"
+
+msgid "Technique"
+msgstr "Techniek"
+
+msgid "Renderer"
+msgstr "Renderer"
+
+msgid "Emitter"
+msgstr "Emitter"
+
+msgid "Affector"
+msgstr "Beïnvloeder"
+
+msgid "Observer"
+msgstr "Waarnemer"
+
+msgid "Handler"
+msgstr "Handler"
+
+msgid "Behaviour"
+msgstr "Gedrag"
+
+msgid "Extern"
+msgstr "Extern"
+
+msgid "Visual"
+msgstr "Visueel"
+
+msgid "<undefined>"
+msgstr "<niet gedefineerd>"
+
+msgid "Beam"
+msgstr "Straal"
+
+msgid "Billboard"
+msgstr "Billboard"
+
+msgid "Entity"
+msgstr "Entity"
+
+msgid "Light"
+msgstr "Licht"
+
+msgid "RibbonTrail"
+msgstr "Lintspoor"
+
+msgid "Circle"
+msgstr "Cirkel"
+
+msgid "Line"
+msgstr "Lijn"
+
+msgid "MeshSurface"
+msgstr "Mesh oppervlak"
+
+msgid "Slave"
+msgstr "Slaaf"
+
+msgid "SphereSurface"
+msgstr "Bol oppervlak"
+
+msgid "Align"
+msgstr "Richten"
+
+msgid "BoxCollider"
+msgstr "Box botsen"
+
+msgid "CollisionAvoidance"
+msgstr "Vermijd botsen"
+
+msgid "Colour"
+msgstr "Kleur"
+
+msgid "FlockCentering"
+msgstr "Kudde centreren"
+
+msgid "ForceField"
+msgstr "Krachtveld"
+
+msgid "GeometryRotator"
+msgstr "Geometrie rotatie"
+
+msgid "InterParticleCollider"
+msgstr "Interparticle botsen"
+
+msgid "Jet"
+msgstr "Jet"
+
+msgid "LinearForce"
+msgstr "Lineaire kracht"
+
+msgid "ParticleFollower"
+msgstr "Particle volgen"
+
+msgid "PathFollower"
+msgstr "Pad volgen"
+
+msgid "PlaneCollider"
+msgstr "Vlak botsen"
+
+msgid "Randomiser"
+msgstr "Willekeurig"
+
+msgid "Scale"
+msgstr "Schaal"
+
+msgid "ScaleVelocity"
+msgstr "Schaal snelheid"
+
+msgid "SineForce"
+msgstr "Sinus kracht"
+
+msgid "SphereCollider"
+msgstr "Bol botsen"
+
+msgid "TextureAnimator"
+msgstr "Afbeelding animatie"
+
+msgid "TextureRotator"
+msgstr "Afbeelding rotatie"
+
+msgid "VelocityMatching"
+msgstr "Snelheid aanpassen"
+
+msgid "Vortex"
+msgstr "Draaikolk"
+
+msgid "OnClear"
+msgstr "Als leeg"
+
+msgid "OnCollision"
+msgstr "Als botsing"
+
+msgid "OnCount"
+msgstr "Als totaal"
+
+msgid "OnEmission"
+msgstr "Als emissie"
+
+msgid "OnEventFlag"
+msgstr "Als eventvlag"
+
+msgid "OnExpire"
+msgstr "Als verstreken"
+
+msgid "OnPosition"
+msgstr "Als positie"
+
+msgid "OnQuota"
+msgstr "Als quota"
+
+msgid "OnRandom"
+msgstr "Als willekeurig"
+
+msgid "OnTime"
+msgstr "Als tijd"
+
+msgid "OnVelocity"
+msgstr "Als snelheid"
+
+msgid "DoAffector"
+msgstr "Schakel beïnvloeder in"
+
+msgid "DoEnableComponent"
+msgstr "Schakel component in"
+
+msgid "DoExpire"
+msgstr "Verstrijk"
+
+msgid "DoFreeze"
+msgstr "Bevries"
+
+msgid "DoPlacementParticle"
+msgstr "Plaats een particle"
+
+msgid "DoScale"
+msgstr "Schaal"
+
+msgid "DoStopSystem"
+msgstr "Stop particle systeem"
+
+msgid "PhysXActor"
+msgstr "PhysX actor"
+
+msgid "PhysXFluid"
+msgstr "PhysX vloeistof"
+
+msgid "&File"
+msgstr "Bestand"
+
+msgid "List &items"
+msgstr "Acties"
+
+msgid "&Build"
+msgstr "Bouwen"
+
+msgid "&Gizmo"
+msgstr "&Gizmo"
+
+msgid "&Camera"
+msgstr "&Camera"
+
+msgid "&Tools"
+msgstr "&Gereedschap"
+
+msgid "&Help"
+msgstr "&Help"
+
+msgid "New"
+msgstr "Nieuw"
+
+msgid "&New\tCtrl+N"
+msgstr "&Nieuw\tCtrl+N"
+
+msgid "New particle system"
+msgstr "Nieuw particle systeem"
+
+msgid "Create a new particle system"
+msgstr "Creëer een nieuw particle system"
+
+msgid "Load"
+msgstr "Laden"
+
+msgid "&Load file\tCtrl+L"
+msgstr "&Laad bestand\tCtrl+L"
+
+msgid "Load a *.pu or *.pua file"
+msgstr "Laad een *.pu of *.pua bestand"
+
+msgid "File name:"
+msgstr "Bestandsnaam:"
+
+msgid "Save"
+msgstr "Opslaan"
+
+msgid "Cancel"
+msgstr "Annuleren"
+
+msgid "File name exists already."
+msgstr "Bestandsnaam bestaat al."
+
+msgid "Error"
+msgstr "Fout"
+
+msgid "Warning"
+msgstr "Waarschuwing"
+
+msgid "&Save\tCtrl+S"
+msgstr "Op&slaan\tCtrl+S"
+
+msgid "Save a *.pu or *.pua file"
+msgstr "Sla het script op als *.pu of *.pua bestand"
+
+msgid "Save as type:"
+msgstr "Sla op als type:"
+
+msgid "Add &resource location\tCtrl+R"
+msgstr "&Resource pad toevoegen\tCtrl+R"
+
+msgid "Load all resources from a directory"
+msgstr "Laad alle door Particle Universe te gebruiken bestanden in een directory"
+
+msgid "Add resource location"
+msgstr "Resource pad toevoegen"
+
+msgid "Add a resource location"
+msgstr "Resource pad toevoegen"
+
+msgid "Save As\tCtrl+Shift+S"
+msgstr "Opslaan als\tCtrl+Shift+S"
+
+msgid "Save As"
+msgstr "Bestand opslaan als"
+
+msgid "&Quit\tCtrl+Q"
+msgstr "&Afsluiten\tCtrl+A"
+
+msgid "Quit"
+msgstr "Particle Universe afsluiten"
+
+msgid "Rewind"
+msgstr "Terugspoelen"
+
+msgid "Get the previous particle system from the list"
+msgstr "Ga na het vorige particle systeem uit de lijst"
+
+msgid "Pause\tF8"
+msgstr "Pauze\tF8"
+
+msgid "Pause"
+msgstr "Pauze"
+
+msgid "Pause the current particle system"
+msgstr "Pauzeer het particle systeem dat momenteel is gestart"
+
+msgid "Play\tF6"
+msgstr "Starten\tF6"
+
+msgid "Run the current particle system"
+msgstr "Start het huidige geselecteerde particle systeem"
+
+msgid "Play"
+msgstr "Starten"
+
+msgid "Stop\tF9"
+msgstr "Stop\tF9"
+
+msgid "Stop"
+msgstr "Stop"
+
+msgid "Stop the current particle system"
+msgstr "Stop het particle particle systeem dat momenteel is gestart"
+
+msgid "Record\tF7"
+msgstr "Opnemen\tF7"
+
+msgid "Record"
+msgstr "Opnemen"
+
+msgid "Record the current particle system"
+msgstr "Neem het geselecteerde particle systeem op"
+
+msgid "Wind"
+msgstr "Doorspoelen"
+
+msgid "Get the next particle system from the list"
+msgstr "Ga na het volgende particle systeem uit de lijst"
+
+msgid "Remove"
+msgstr "Verwijderen"
+
+msgid "Clone"
+msgstr "Dupliceren"
+
+msgid "Compile\tF5"
+msgstr "Compileren\tF5"
+
+msgid "Compile"
+msgstr "Compileren"
+
+msgid "Compilation OK"
+msgstr "Compilatie OK"
+
+msgid "Move"
+msgstr "Verplaats"
+
+msgid "Gizmo move\tShift+M"
+msgstr "Gizmo verplaatsen"
+
+msgid "Gizmo move"
+msgstr "Gizmo verplaatsen"
+
+msgid "Set the gizmo to move"
+msgstr "Zet gizmo naar 'verplaatsen'"
+
+msgid "Rotate"
+msgstr "Roteer"
+
+msgid "Gizmo rotate\tShift+R"
+msgstr "Gizmo roteren"
+
+msgid "Gizmo rotate"
+msgstr "Gizmo roteren"
+
+msgid "Set the gizmo to rotate"
+msgstr "Zet gizmo naar 'roteren'"
+
+msgid "Gizmo scale\tShift+S"
+msgstr "Gizmo schalen"
+
+msgid "Gizmo scale"
+msgstr "Gizmo schalen"
+
+msgid "Set the gizmo to scale"
+msgstr "Zet gizmo naar 'schalen'"
+
+msgid "Toggle gizmo"
+msgstr "Gizmo aan/uit"
+
+msgid "Gizmo on/off\tCtrl+G"
+msgstr "Gizmo aan/uit"
+
+msgid "Gizmo on/off"
+msgstr "Gizmo aan/uit"
+
+msgid "Gizmo in world/object space\tCtrl+P"
+msgstr "Gizmo in world/object space\tCtrl+P"
+
+msgid "Enable/disable the gizmo"
+msgstr "Zet de gizmo aan/uit"
+
+msgid "Gizmo manipulation is in global (world) space"
+msgstr "Gizmo manipulatie is in global (world) space"
+
+msgid "Gizmo manipulation is in local (object) space"
+msgstr "Gizmo manipulatie is in local (object) space"
+
+msgid "Reset camera\tCtrl+Z"
+msgstr "Reset Camera positie\tCtrl+Z"
+
+msgid "Reset camera"
+msgstr "Reset camera positie"
+
+msgid "Camera Reset"
+msgstr "Camera Reset"
+
+msgid "Reset the camera position"
+msgstr "Reset de positie van de camera"
+
+msgid "Save camera\tShift+C"
+msgstr "Opslaan camera positie\tShift+C"
+
+msgid "Save camera"
+msgstr "Sla de camera positie op"
+
+msgid "Save camera position"
+msgstr "Sla de camera positie op"
+
+msgid "Save the position of the camera"
+msgstr "Sla de camera positie op"
+
+msgid "Toggle camera projection\tShift+P"
+msgstr "Wissel camera projectie\tShift+P"
+
+msgid "Toggle camera projection"
+msgstr "Wissel camera projectie (loodrecht/45 graden)"
+
+msgid "Toggle camera angle\tCtrl+A"
+msgstr "Wissel camera hoek\tCtrl+A"
+
+msgid "Toggle camera angle"
+msgstr "Wissel camera hoek"
+
+msgid "Centre object\tCtrl+C"
+msgstr "Centreer object\tCtrl+C"
+
+msgid "Centre object"
+msgstr "Centreer object"
+
+msgid "Move selected object to the centre of the scene"
+msgstr "Verplaats geselecteerd object naar het centrum van de scene"
+
+msgid "Background colour\tCtrl+B"
+msgstr "Achtergrond kleur\tCtrl+B"
+
+msgid "Background colour"
+msgstr "Achtergrond kleur"
+
+msgid "Change the backgroundcolour of the renderwindow"
+msgstr "Wijzig de achtergrondkleur van het 3D scherm"
+
+msgid "Toggle statistics\tCtrl+I"
+msgstr "Statistieken aan/uit\tCtrl+I"
+
+msgid "Toggle statistics"
+msgstr "Statistieken aan/uit"
+
+msgid "Enable/disable the statistics overlay"
+msgstr "Statistieken aan/uit"
+
+msgid "Toggle grid plane\tCtrl+T"
+msgstr "Rooster aan/uit\tCtrl+T"
+
+msgid "Toggle grid plane"
+msgstr "Rooster aan/uit"
+
+msgid "Enable/disable the grid plane"
+msgstr "Rooster aan/uit"
+
+msgid "Add mesh to scene\tCtrl+M"
+msgstr "Voeg mesh toe\tCtrl+M"
+
+msgid "Add mesh to scene"
+msgstr "Voeg een mesh toe aan de scene"
+
+msgid "Add a mesh to the scene"
+msgstr "Voeg een mesh toe aan de scene"
+
+msgid "Remove mesh from scene\tCtrl+X"
+msgstr "Verwijder mesh"
+
+msgid "Remove mesh from scene"
+msgstr "Verwijder een mesh van de scene"
+
+msgid "Remove a mesh from the scene"
+msgstr "Verwijder een mesh van de scene"
+
+msgid "Toggle light\tCtrl+D"
+msgstr "Licht aan/uit\tCtrl+D"
+
+msgid "Toggle light"
+msgstr "Licht aan/uit"
+
+msgid "Add/remove light to/from scene"
+msgstr "Licht aan/uit"
+
+msgid "Add or remove a light to/from the scene"
+msgstr "Licht aan/uit"
+
+msgid "Reset time\tCtrl+K"
+msgstr "Reset tijd\tCtrl+K"
+
+msgid "Reset time"
+msgstr "Reset tijd"
+
+msgid "Reset the time settings"
+msgstr "Reset tijd"
+
+msgid "Options\tCtrl+O"
+msgstr "Opties\tCtrl+O"
+
+msgid "Options"
+msgstr "Opties"
+
+msgid "About\tF1"
+msgstr "Info\tF1"
+
+msgid "About"
+msgstr "Info"
+
+msgid "        Play"
+msgstr "        Starten"
+
+msgid "        Clone item"
+msgstr "        Dupliceer particle systeem"
+
+msgid "        Remove from list"
+msgstr "        Verwijder uit de lijst"
+
+msgid "Set orthographic camera"
+msgstr "Zet orthografische camera"
+
+msgid "Set angle perpendicular"
+msgstr "Zet hoek loodrecht"
+
+msgid "Set perspective camera"
+msgstr "Zet loodrechte camera"
+
+msgid "Set angle 45 degrees"
+msgstr "Zet 45 graden hoek"
+
+msgid "Material Selector"
+msgstr "Materiaal Selector"
+
+msgid "Resize"
+msgstr "Vergroten/verkleinen"
+
+msgid "Box width"
+msgstr "Box breedte"
+
+msgid "Box height"
+msgstr "Box hoogte"
+
+msgid "Box depth"
+msgstr "Box diepte"
+
+msgid "Inner Collision"
+msgstr "Interne botsing"
+
+msgid "Avoidance radius"
+msgstr "Ontwijking straal"
+
+msgid "Time and Colour"
+msgstr "Kleurverloop"
+
+msgid "Time/Colour"
+msgstr "Kleurverloop"
+
+msgid "Colour instance"
+msgstr "Kleur"
+
+msgid "Colour operation"
+msgstr "Kleur operatie"
+
+msgid "Set"
+msgstr "Toekennen"
+
+msgid "Multiply"
+msgstr "Vermenigvuldigen"
+
+msgid "        Select colour"
+msgstr "        Selecteer kleur"
+
+msgid "        Set alpha"
+msgstr "        Zet alfa"
+
+msgid "Forcefield type"
+msgstr "Forcefield type"
+
+msgid "Realtime"
+msgstr "Realtime"
+
+msgid "Matrix"
+msgstr "Matrix"
+
+msgid "Delta"
+msgstr "Delta"
+
+msgid "Force"
+msgstr "Kracht"
+
+msgid "Octaves"
+msgstr "Octaven"
+
+msgid "Frequency"
+msgstr "Frequentie"
+
+msgid "Amplitude"
+msgstr "Amplitude"
+
+msgid "Persistence"
+msgstr "Persistentie"
+
+msgid "Forcefield size"
+msgstr "Forcefield grootte"
+
+msgid "Worldsize"
+msgstr "Wereld grootte"
+
+msgid "Ignore -x"
+msgstr "Negeer -x"
+
+msgid "Ignore -y"
+msgstr "Negeer -y"
+
+msgid "Ignore -z"
+msgstr "Negeer -z"
+
+msgid "Movement"
+msgstr "Beweging"
+
+msgid "Movement frequency"
+msgstr "Bewegings frequentie"
+
+msgid "Use own rotation"
+msgstr "Gebruik eigen rotatie"
+
+msgid "Gravity"
+msgstr "Zwaartekracht"
+
+msgid "Adjustment"
+msgstr "Aanpassing"
+
+msgid "Collision response"
+msgstr "Botsing resultaat"
+
+msgid "Average velocity"
+msgstr "Gemiddelde snelheid"
+
+msgid "Angle based velocity"
+msgstr "Hoek snelheid"
+
+msgid "Acceleration"
+msgstr "Versnelling"
+
+msgid "End position"
+msgstr "Eind positie"
+
+msgid "Drift"
+msgstr "Drift"
+
+msgid "Minimum distance"
+msgstr "Minimale afstand"
+
+msgid "Maximum distance"
+msgstr "Maximale afstand"
+
+msgid "Add Position"
+msgstr "Voeg positie toe"
+
+msgid "Plane normal"
+msgstr "Vlak normaal"
+
+msgid "Random direction"
+msgstr "Willekeurige richting"
+
+msgid "Scale x, y and z"
+msgstr "Schaal x, y en z"
+
+msgid "Scale x"
+msgstr "Schaal x"
+
+msgid "Scale y"
+msgstr "Schaal y"
+
+msgid "Scale z"
+msgstr "Schaal z"
+
+msgid "Scale velocity"
+msgstr "Schaal snelheid"
+
+msgid "Stop at flip"
+msgstr "Stop na flip"
+
+msgid "Minimum frequency"
+msgstr "Minimum frequentie"
+
+msgid "Maximum frequency"
+msgstr "Maximum frequentie"
+
+msgid "Sphere radius"
+msgstr "Straal bol"
+
+msgid "Animation type"
+msgstr "Animatie type"
+
+msgid "Loop"
+msgstr "Loop"
+
+msgid "Up - Down"
+msgstr "Heen en terug"
+
+msgid "Random"
+msgstr "Willekeurige waarde"
+
+msgid "Texture coordinate start"
+msgstr "Afbeelding coördinaat begin"
+
+msgid "Texture coordinate end"
+msgstr "Afbeelding coördinaat eind"
+
+msgid "Start random"
+msgstr "Start willekeurig"
+
+msgid "Use own speed"
+msgstr "Gebruik eigen snelheid"
+
+msgid "Velocity matching radius"
+msgstr "Straal aanpassen snelheid"
+
+msgid "Circle Radius"
+msgstr "Cirkel straal"
+
+msgid "Circle Step"
+msgstr "Cirkel stap"
+
+msgid "Circle angle"
+msgstr "Cirkel hoek"
+
+msgid "Circle Random"
+msgstr "Cirkel willekeurig"
+
+msgid "Circle normal"
+msgstr "Cirkel normaal"
+
+msgid "Line end"
+msgstr "Lijn end"
+
+msgid "Line max increment"
+msgstr "Lijn max increment"
+
+msgid "Line min increment"
+msgstr "Lijn min increment"
+
+msgid "Line deviation"
+msgstr "Lijn afwijking"
+
+msgid "Mesh name"
+msgstr "Mesh naam"
+
+msgid "Mesh surface distribution"
+msgstr "Mesh oppervlak distributie"
+
+msgid "Mesh surface scale"
+msgstr "Mesh oppervlak schaal"
+
+msgid "Edge"
+msgstr "Edge"
+
+msgid "Heterogeneous_1"
+msgstr "Heterogeen 1"
+
+msgid "Heterogeneous_2"
+msgstr "Heterogeneen 2"
+
+msgid "Homogeneus"
+msgstr "Homogeen"
+
+msgid "Vertex"
+msgstr "Vertex"
+
+msgid "Add particle position"
+msgstr "Voeg particle positie toe"
+
+msgid "Position randomize"
+msgstr "Willekeurige positie"
+
+msgid "Sphere Radius"
+msgstr "Bol straal"
+
+msgid "Vertex step"
+msgstr "Vertex stap"
+
+msgid "Vertex segments"
+msgstr "Vertex segmenten"
+
+msgid "Vertex iterations"
+msgstr "Vertex iteraties"
+
+msgid "Vertex meshname"
+msgstr "Vertex meshnaam"
+
+msgid "Perform pre/post processing"
+msgstr "Perform pre/post processing"
+
+msgid "Enable component"
+msgstr "Component inschakelen"
+
+msgid "Number of particles"
+msgstr "Aantal particles"
+
+msgid "Inherit position"
+msgstr "Overerf positie"
+
+msgid "Inherit direction"
+msgstr "Overerf richting"
+
+msgid "Inherit orientation"
+msgstr "Overerf oriëntatie"
+
+msgid "Inherit time to live"
+msgstr "Overerf levensduur"
+
+msgid "Inherit mass"
+msgstr "Overerf massa"
+
+msgid "Inherit texture coord"
+msgstr "Overerf afbeelding coörd"
+
+msgid "Inherit colour"
+msgstr "Overerf kleur"
+
+msgid "Inherit particle width"
+msgstr "Overerf particle breedte"
+
+msgid "Inherit particle height"
+msgstr "Overerf particle hoogte"
+
+msgid "Inherit particle depth"
+msgstr "Overerf particle diepte"
+
+msgid "Scale fraction"
+msgstr "Scale fraction"
+
+msgid "Scale type"
+msgstr "Scale type"
+
+msgid "Time to live"
+msgstr "Levensduur"
+
+msgid "Velocity"
+msgstr "Initiële snelheid"
+
+msgid "Shape type"
+msgstr "Shape type"
+
+msgid "Shape collision group"
+msgstr "Shape collision group"
+
+msgid "Group mask"
+msgstr "Group mask"
+
+msgid "Angular velocity"
+msgstr "Angular velocity"
+
+msgid "Angular damping"
+msgstr "Angular damping"
+
+msgid "Material index"
+msgstr "Materiaal index"
+
+msgid "Box"
+msgstr "Box"
+
+msgid "Sphere"
+msgstr "Bol"
+
+msgid "Capsule"
+msgstr "Capsule"
+
+msgid "Rest particle per meter"
+msgstr "Rest particle per meter"
+
+msgid "Rest density"
+msgstr "Rest density"
+
+msgid "Kernel radius multiplier"
+msgstr "Kernel radius multiplier"
+
+msgid "Motion limit multiplier"
+msgstr "Motion limit multiplier"
+
+msgid "Collision dist. multiplier"
+msgstr "Collision dist. multiplier"
+
+msgid "Packet size multiplier"
+msgstr "Packet size multiplier"
+
+msgid "Stiffness"
+msgstr "Stiffness"
+
+msgid "Viscosity"
+msgstr "Viscosity"
+
+msgid "Surface tension"
+msgstr "Surface tension"
+
+msgid "Damping"
+msgstr "Damping"
+
+msgid "External acceleration"
+msgstr "External acceleration"
+
+msgid "Restitution static shapes"
+msgstr "Restitution static shapes"
+
+msgid "Dyn. friction static shapes"
+msgstr "Dyn. friction static shapes"
+
+msgid "Static friction static shapes"
+msgstr "Static friction static shapes"
+
+msgid "Attraction static shapes"
+msgstr "Attraction static shapes"
+
+msgid "Restitution dynamic shapes"
+msgstr "Restitution dynamic shapes"
+
+msgid "Dyn. friction dyn. shapes"
+msgstr "Dyn. friction dyn. shapes"
+
+msgid "Static friction dyn. shapes"
+msgstr "Static friction dyn. shapes"
+
+msgid "Attraction dynamic shapes"
+msgstr "Attraction dynamic shapes"
+
+msgid "Collision response coeff."
+msgstr "Collision response coeff."
+
+msgid "Simulation method"
+msgstr "Simulatie methode"
+
+msgid "Collision method"
+msgstr "Botsing methode"
+
+msgid "Visualisation"
+msgstr "Visualisatie"
+
+msgid "Disable gravity"
+msgstr "Uitschakelen zwaartekracht"
+
+msgid "Collision twoway"
+msgstr "Botsing tweeweg"
+
+msgid "Fluid enabled"
+msgstr "Vloeistof ingeschakeld"
+
+msgid "Hardware"
+msgstr "Hardware"
+
+msgid "Priority mode"
+msgstr "Prioriterings mode"
+
+msgid "Project to plane"
+msgstr "Projecteer naar vlak"
+
+msgid "Strict cooking format"
+msgstr "Strict cooking formaat"
+
+msgid "Intercollision"
+msgstr "Interne botsing"
+
+msgid "Non-intercollision"
+msgstr "Niet-interne botsing"
+
+msgid "Mixed intercollision"
+msgstr "Gemixte botsing"
+
+msgid "Static"
+msgstr "Statisch"
+
+msgid "Dynamic"
+msgstr "Dynamisch"
+
+msgid "On count compare"
+msgstr "On count compare"
+
+msgid "On count threshold"
+msgstr "On count threshold"
+
+msgid "Event Flag"
+msgstr "Event Flag"
+
+msgid "Position compare x"
+msgstr "Positie vergelijk x"
+
+msgid "Position compare y"
+msgstr "Positie vergelijk y"
+
+msgid "Position compare z"
+msgstr "Positie vergelijk z"
+
+msgid "Position.x threshold"
+msgstr "Position.x threshold"
+
+msgid "Position.y threshold"
+msgstr "Position.y threshold"
+
+msgid "Position.z threshold"
+msgstr "Position.z threshold"
+
+msgid "Random threshold"
+msgstr "Willekeurige Drempel"
+
+msgid "On time compare"
+msgstr "Vergelijk tijd"
+
+msgid "On time threshold"
+msgstr "Drempel tijd"
+
+msgid "Velocity compare"
+msgstr "Vergelijk snelheid"
+
+msgid "Velocity threshold"
+msgstr "Drempel snelheid"
+
+msgid "Update interval"
+msgstr "Update interval"
+
+msgid "Deviation"
+msgstr "Afwijking"
+
+msgid "Number of segments"
+msgstr "Aantal segmenten"
+
+msgid "Jump"
+msgstr "Spring"
+
+msgid "Texture direction"
+msgstr "Afbeelding richting"
+
+msgid "TCD_U"
+msgstr "TCD_U"
+
+msgid "TCD_V"
+msgstr "TCD_V"
+
+msgid "Billboard type"
+msgstr "Billboard type"
+
+msgid "Point"
+msgstr "Punt"
+
+msgid "Orientation type"
+msgstr "Oriëntatie type"
+
+msgid "Oriented self mirrored"
+msgstr "Zelf oriëntatie gespiegeld"
+
+msgid "Oriented Common"
+msgstr "Normale oriëntatie"
+
+msgid "Oriented Self"
+msgstr "Zelf oriëntatie"
+
+msgid "Oriented self"
+msgstr "Zelf oriëntatie"
+
+msgid "Perpendicular Common"
+msgstr "Loodrecht normaal"
+
+msgid "Perpendicular Self"
+msgstr "Loodrecht zelf oriëntatie"
+
+msgid "Oriented Shape"
+msgstr "Oriëntatie volgt vorm"
+
+msgid "Oriented shape"
+msgstr "Oriëntatie volgt vorm"
+
+msgid "Origin"
+msgstr "Beginpunt"
+
+msgid "Top-left"
+msgstr "Links boven"
+
+msgid "Top-center"
+msgstr "Centrum boven"
+
+msgid "Top-right"
+msgstr "Rechts boven"
+
+msgid "Center-left"
+msgstr "Links midden"
+
+msgid "Center-right"
+msgstr "Rechts midden"
+
+msgid "Center"
+msgstr "Centrum"
+
+msgid "Bottom-left"
+msgstr "Links beneden"
+
+msgid "Bottom-right"
+msgstr "Rechts beneden"
+
+msgid "Bottom-center"
+msgstr "Centrum beneden"
+
+msgid "Rotation type"
+msgstr "Rotatie type"
+
+msgid "Texture coordinates"
+msgstr "Afbeelding coördinaten"
+
+msgid "Common direction"
+msgstr "Normale richting"
+
+msgid "Up Vector"
+msgstr "Vector omhoog"
+
+msgid "Point Rendering"
+msgstr "Punt rendering"
+
+msgid "Accurate Facing"
+msgstr "Correct aanzicht"
+
+msgid "On"
+msgstr "Aan"
+
+msgid "Off"
+msgstr "Uit"
+
+msgid "Light type"
+msgstr "Licht type"
+
+msgid "Spot"
+msgstr "Schijnwerper"
+
+msgid "Attenuation range"
+msgstr "Verzwakking reeks"
+
+msgid "Attenuation constant"
+msgstr "Constante verzwakking"
+
+msgid "Attenuation linear"
+msgstr "Lineaire verzwakking"
+
+msgid "Attenuation quadratic"
+msgstr "Kubische verzwakking"
+
+msgid "spot inner angle"
+msgstr "Schijnwerper interne hoek"
+
+msgid "spot outer angle"
+msgstr "Schijnwerper externe hoek"
+
+msgid "Falloff"
+msgstr "Falloff"
+
+msgid "Powerscale"
+msgstr "Powerscale"
+
+msgid "Flash frequency"
+msgstr "Flits frequentie"
+
+msgid "Flash length"
+msgstr "Flits lengte"
+
+msgid "Flash random"
+msgstr "Flits willekeurig"
+
+msgid "Use vertex colours"
+msgstr "Gerbuik vertex kleuren"
+
+msgid "Maximum elements"
+msgstr "Maximaal aantal elementen"
+
+msgid "Trail length"
+msgstr "Spoor lengte"
+
+msgid "Trail width"
+msgstr "Spoor breedte"
+
+msgid "Random initial colour"
+msgstr "Willekeurige initiële kleur"
+
+msgid "Initial colour"
+msgstr "Initiële kleur"
+
+msgid "Colour change"
+msgstr "Kleurverloop"
+
+msgid "includes"
+msgstr "bevat"
+
+msgid "included by"
+msgstr "zit in"
+
+msgid "excludes"
+msgstr "sluit uit"
+
+msgid "excluded by"
+msgstr "uitgesloten door"
+
+msgid "handles"
+msgstr "behandelen"
+
+msgid "handled by"
+msgstr "behandeld door"
+
+msgid "emits"
+msgstr "emitteerd"
+
+msgid "emitted by"
+msgstr "geëmitteerd door"
+
+msgid "affects"
+msgstr "beinvloed"
+
+msgid "affected by"
+msgstr "beinvloed door"
+
+msgid "observes"
+msgstr "observeerd"
+
+msgid "observed by"
+msgstr "geobserveerd door"
+
+msgid "interfaces"
+msgstr "interfaces"
+
+msgid "interfaced by"
+msgstr "ge-interfaced door"
+
+msgid "slaves"
+msgstr "maakt slaaf van"
+
+msgid "slave of"
+msgstr "is slaaf van"
+
+msgid "master of"
+msgstr "is meester van"
+
+msgid "enables"
+msgstr "gaat inschakelen"
+
+msgid "enabled by"
+msgstr "ingeschakeld door"
+
+msgid "forces"
+msgstr "beinvloed"
+
+msgid "forced by"
+msgstr "beinvloed door"
+
+msgid "places"
+msgstr "plaatst"
+
+msgid "placed by"
+msgstr "geplaatst door"
+
+msgid "connection with"
+msgstr "verbonden met"
+
+msgid "Position"
+msgstr "Positie"
+
+msgid "Fixed"
+msgstr "Vaste waarde"
+
+msgid "Curved"
+msgstr "Curve"
+
+msgid " - Curved"
+msgstr " - Curve"
+
+msgid "Oscillate"
+msgstr "Oscillerende waarde"
+
+msgid "Linear"
+msgstr "Lineair"
+
+msgid "Spline"
+msgstr "Spline"
+
+msgid "Friction"
+msgstr "Frictie"
+
+msgid "Bouncyness"
+msgstr "Stuiter factor"
+
+msgid "Intersection type"
+msgstr "Intersectie type"
+
+msgid "Collision type"
+msgstr "Botsing type"
+
+msgid "None"
+msgstr "Geen"
+
+msgid "Bounce"
+msgstr "Stuiteren"
+
+msgid "Flow"
+msgstr "Vloeiend"
+
+msgid "Force vector"
+msgstr "Kracht vector"
+
+msgid "Application"
+msgstr "Kracht"
+
+msgid "Add"
+msgstr "Toevoegen"
+
+msgid "Average"
+msgstr "Gemiddeld"
+
+msgid "Maximum deviation"
+msgstr "Maximum afwijking"
+
+msgid "Time step"
+msgstr "Tijd stap"
+
+msgid "Rotation"
+msgstr "Rotatie"
+
+msgid "Rotation speed"
+msgstr "Rotatie snelheid"
+
+msgid "Rotation axis"
+msgstr "Rotatie  as"
+
+msgid "Diffuse"
+msgstr "Diffuus"
+
+msgid "Specular"
+msgstr "Spiegeling"
+
+msgid "Particle type"
+msgstr "Particle type"
+
+msgid "All types"
+msgstr "Alle types"
+
+msgid "Distance threshold"
+msgstr "Afstand drempelwaarde"
+
+msgid "Not used"
+msgstr "Niet in gebruik"
+
+msgid "Less than"
+msgstr "Minder dan"
+
+msgid "Greater than"
+msgstr "Meer dan"
+
+msgid "Equals"
+msgstr "Is gelijk aan"
+
+msgid "Affector type"
+msgstr "Beïnvloeder type"
+
+msgid "Mass"
+msgstr "Massa"
+
+msgid "Specialisation"
+msgstr "Specialisatie"
+
+msgid "Default"
+msgstr "Standaard"
+
+msgid "Increment by time to live"
+msgstr "Increment door levensduur"
+
+msgid "Decrement by time to live"
+msgstr "Decrement door levensduur"
+
+msgid "Behaviour type"
+msgstr "Gedrag type"
+
+msgid "Emitter type"
+msgstr "Emitter type"
+
+msgid "Keep local"
+msgstr "Blijf locaal"
+
+msgid "Direction"
+msgstr "Richting"
+
+msgid "Orientation"
+msgstr "Oriëntatie"
+
+msgid "Orientation range start"
+msgstr "Oriëntatie reeks begin"
+
+msgid "Orientation range end"
+msgstr "Oriëntatie reeks eind"
+
+msgid "Duration"
+msgstr "Duur"
+
+msgid "Repeat - Delay"
+msgstr "Herhaal - uitstellen"
+
+msgid "Angle"
+msgstr "Hoek"
+
+msgid "Emission rate"
+msgstr "Emissie snelheid"
+
+msgid "Texture coordinate"
+msgstr "Afbeelding coördinaat"
+
+msgid "Colour range start"
+msgstr "Kleur reeks begin"
+
+msgid "Colour range end"
+msgstr "Kleur reeks eind"
+
+msgid "All particle dimensions"
+msgstr "Alle particle dimensies"
+
+msgid "Particle width"
+msgstr "Particle breedte"
+
+msgid "Particle height"
+msgstr "Particle hoogte"
+
+msgid "Particle depth"
+msgstr "Particle diepte"
+
+msgid "Auto direction"
+msgstr "Auto richting"
+
+msgid "Force emission"
+msgstr "Emissie forceren"
+
+msgid "Event handler type"
+msgstr "Event handler type"
+
+msgid "Extern type"
+msgstr "Extern type"
+
+msgid "Collision group"
+msgstr "Collision group"
+
+msgid "Observer type"
+msgstr "Waarnemer type"
+
+msgid "Observer until event"
+msgstr "Neem waar tot event"
+
+msgid "Observe interval"
+msgstr "Observatie interval"
+
+msgid "Name"
+msgstr "Naam"
+
+msgid "Enabled"
+msgstr "Ingeschakeld"
+
+msgid "RGB"
+msgstr "RGB"
+
+msgid "Alpha"
+msgstr "Alfa"
+
+msgid ".w"
+msgstr ".w"
+
+msgid ".x"
+msgstr ".x"
+
+msgid ".y"
+msgstr ".y"
+
+msgid ".z"
+msgstr ".z"
+
+msgid "Attribute type"
+msgstr "Attribuut type"
+
+msgid "Value"
+msgstr "Waarde"
+
+msgid "Minimum"
+msgstr "Minimum"
+
+msgid "Maximum"
+msgstr "Maximum"
+
+msgid "Oscillation type"
+msgstr "Oscillatie type"
+
+msgid "Sine"
+msgstr "Sinus"
+
+msgid "Square"
+msgstr "Blok"
+
+msgid "Phase"
+msgstr "Fase"
+
+msgid "Base"
+msgstr "Basis"
+
+msgid "Interpolation"
+msgstr "Interpolatie"
+
+msgid "Control Point"
+msgstr "Control Point"
+
+msgid "Since start system"
+msgstr "Sinds start particle systeem"
+
+msgid "Renderer type"
+msgstr "Renderer type"
+
+msgid "Render queue group"
+msgstr "Render queue groep"
+
+msgid "Sorting"
+msgstr "Sorteren"
+
+msgid "Texture coords define"
+msgstr "Afbeelding coörd definitie"
+
+msgid "Texture coords set"
+msgstr "Zet afbeelding coörd"
+
+msgid "Texture coords rows"
+msgstr "Afbeelding coörd rijen"
+
+msgid "Texture coords columns"
+msgstr "Afbeelding coörd kolommen"
+
+msgid "Use soft particles"
+msgstr "Gebruik soft particles"
+
+msgid "Soft particles contrast power"
+msgstr "Soft particles contrast power"
+
+msgid "Soft particles scale"
+msgstr "Soft particles schaal"
+
+msgid "Soft particles delta"
+msgstr "Soft particles delta"
+
+msgid "Category"
+msgstr "Categorie"
+
+msgid "Iteration interval"
+msgstr "Iteratie interval"
+
+msgid "Fixed timeout"
+msgstr "Vaste time-out"
+
+msgid "Nonvisible update timeout"
+msgstr "Niet zichtbaar time-out"
+
+msgid "Lod distances"
+msgstr "Lod afstanden"
+
+msgid "Smooth lod"
+msgstr "Zacht lod verloop"
+
+msgid "Fast forward"
+msgstr "Snel vooruit"
+
+msgid "Time"
+msgstr "Tijd"
+
+msgid "Interval"
+msgstr "Interval"
+
+msgid "Main camera name"
+msgstr "Naam hoofdcamera"
+
+msgid "Scale time"
+msgstr "Schaal tijd"
+
+msgid "Scale dimensions"
+msgstr "Schaal dimensies"
+
+msgid "Use tight bounding box"
+msgstr "Gebruik vaste omsluitings box"
+
+msgid "Particle Systems"
+msgstr "Particle Systemen"
+
+msgid "General"
+msgstr "Algemeen"
+
+msgid "Visual particle quota"
+msgstr "Visuele particles quota"
+
+msgid "Emitted emitter quota"
+msgstr "Geëmitterde emitter quota"
+
+msgid "Emitted affector quota"
+msgstr "Geëmitterde beïnvloeder quota"
+
+msgid "Emitted technique quota"
+msgstr "Geëmitterde techniek quota"
+
+msgid "Emitted system quota"
+msgstr "Geëmitterde systeem quota"
+
+msgid "Material"
+msgstr "Materiaal"
+
+msgid "Lod index"
+msgstr "Lod index"
+
+msgid "Default particle width"
+msgstr "Standaard particle breedte"
+
+msgid "Default particle height"
+msgstr "Standaard particle hoogte"
+
+msgid "Default particle depth"
+msgstr "Standaard particle diepte"
+
+msgid "Spatial hashing cell dimension"
+msgstr "Spatial hashing cel dimensies"
+
+msgid "Spatial hashing cell overlap"
+msgstr "Spatial hashing cel overlap"
+
+msgid "Spatial hashtable size"
+msgstr "Spatial hashtable grootte"
+
+msgid "Spatial hashing update interval"
+msgstr "Spatial hashing update interval"
+
+msgid "Maximum velocity"
+msgstr "Maximum snelheid"
+
+msgid "0%                                                          % Time to live ->                                                          100%"
+msgstr "0%                                                          % Levensduur ->                                                          100%"
+
+msgid "Reset"
+msgstr "Reset"
+
+msgid "Colour Affector"
+msgstr "Kleur beïnvloeder"
+
+msgid "Animations"
+msgstr "Animaties"
+
+msgid "Mesh"
+msgstr "Mesh"
+
+msgid "Animation"
+msgstr "Animatie"
+
+msgid "Loop Animation"
+msgstr "Loop Animatie"
+
+msgid "Directories"
+msgstr "Directories"
+
+msgid "PhysX"
+msgstr "PhysX"
+
+msgid "Filter"
+msgstr "Filter"
+
+msgid "Auto rendering on/off"
+msgstr "Auto rendering aan/uit"
+
+msgid "Highlight keywords on/off"
+msgstr "Accentueren keywords aan/uit"
+
+msgid "Statistics overlay on/off"
+msgstr "Statistieken aan/uit"
+
+msgid "Point light on/off"
+msgstr "Puntlicht aan/uit"
+
+msgid "Gridplane on/off"
+msgstr "Rooster aan/uit"
+
+msgid "Gridplane distance"
+msgstr "Rooster afstand"
+
+msgid "Gridplane scale"
+msgstr "Rooster schaal"
+
+msgid "Output directory"
+msgstr "Media directory uit"
+
+msgid "Image size"
+msgstr "Afbeeldingsgrootte"
+
+msgid "Media type"
+msgstr "Media type"
+
+msgid ".png"
+msgstr ".png"
+
+msgid ".jpg"
+msgstr ".jpg"
+
+msgid ".tiff"
+msgstr ".tiff"
+
+msgid ".avi"
+msgstr ".avi"
+
+msgid ".swf"
+msgstr ".swf"
+
+msgid ".wmv"
+msgstr ".wmv"
+
+msgid ".mp4"
+msgstr ".mp4"
+
+msgid "352x240"
+msgstr "352x240"
+
+msgid "352x288"
+msgstr "352x288"
+
+msgid "720x480"
+msgstr "720x480"
+
+msgid "720x576"
+msgstr "720x576"
+
+msgid "1024x768"
+msgstr "1024x768"
+
+msgid "1280x720"
+msgstr "1280x720"
+
+msgid "1440x1080"
+msgstr "1440x1080"
+
+msgid "1920x1080"
+msgstr "1920x1080"
+
+msgid "Frames per second"
+msgstr "Frames per seconde"
+
+msgid "No filtering"
+msgstr "Geen filtering"
+
+msgid "Alpha from luminance"
+msgstr "Alfa vanuit luminantie"
+
+msgid "Alpha from background colour"
+msgstr "Alfa vanuit achtergrond kleur"
+
+msgid "Calibration pause"
+msgstr "Calibratie pauze"
+
+msgid "Plane distance"
+msgstr "Rooster afstand"
+
+msgid "videopath"
+msgstr "videopath"
+
+msgid "imagewidth"
+msgstr "imagewidth"
+
+msgid "mediatype"
+msgstr "mediatype"
+
+msgid "videosize"
+msgstr "videosize"
+
+msgid "fps"
+msgstr "fps"
+
+msgid "Select colour"
+msgstr "Selecteer kleur"
+
+msgid "Set alpha"
+msgstr "Set alfa"
+
+msgid "&Linear interpolation"
+msgstr "&Lineaire interpolatie"
+
+msgid "&Spline interpolation"
+msgstr "&Spline interpolatie"
+
+msgid "canvas"
+msgstr "canvas"
+
+msgid "Render"
+msgstr "Render"
+
+msgid "Edit"
+msgstr "Edit"
+
+msgid "Script"
+msgstr "Script"
+
+msgid "Message"
+msgstr "Boodschap"
+
+msgid "Tools"
+msgstr "Gereedschap"
+
+msgid "Cursor"
+msgstr "Cursor"
+
+msgid "Connect"
+msgstr "Verbind"
+
+msgid "Disconnect"
+msgstr "Ontkoppel"
+
+msgid "Help"
+msgstr "Help"
+
+msgid "file"
+msgstr "bestand"
+
+msgid "files"
+msgstr "bestanden"
+
+msgid "FileSystem"
+msgstr "FileSystem"
+
+msgid "Transparent alpha"
+msgstr "Transparante alfa"
+
+msgid "Transparent colour"
+msgstr "Transparante kleur"
+
+msgid "Modulate"
+msgstr "Modulatie"
+
+msgid "Replace"
+msgstr "Vervang"
+
+msgid "Source colour - One"
+msgstr "Kleur bron - 1"
+
+msgid "Source colour - Zero"
+msgstr "Kleur bron - 0"
+
+msgid "Source colour - Destination colour"
+msgstr "Kleur bron - Kleur bestemming"
+
+msgid "Destination colour - One"
+msgstr "Kleur bestemming - 1"
+
+msgid "Destination colour - Source colour"
+msgstr "Kleur bestemming - Kleur bron"
+
+msgid "Wrap"
+msgstr "Wikkelen"
+
+msgid "Mirror"
+msgstr "Spiegelen"
+
+msgid "Clamp"
+msgstr "Vastklampen"
+
+msgid "New material"
+msgstr "Nieuw materiaal"
+
+msgid "Pass"
+msgstr "Pass"
+
+msgid "Lighting"
+msgstr "Belichting"
+
+msgid "Ambient"
+msgstr "Ambient"
+
+msgid "Emissive"
+msgstr "Uitstralend"
+
+msgid "Depth check"
+msgstr "Controleren diepte"
+
+msgid "Depth write"
+msgstr "Doordrukken"
+
+msgid "Scene blend"
+msgstr "Vermengen"
+
+msgid "Texture"
+msgstr "Afbeelding"
+
+msgid "Address mode"
+msgstr "Address mode"
+
+msgid "Load a texture"
+msgstr "Laad een afbeelding"
+
+msgid "Textures (*.*)|*.*"
+msgstr "Afbeeldingen (*.*)|*.*"
+
+msgid "Mesh Selector"
+msgstr "Selecteer Mesh"
+
+msgid "system"
+msgstr "system"
+
+msgid "technique"
+msgstr "techniek"
+
+msgid "renderer"
+msgstr "renderer"
+
+msgid "emitter"
+msgstr "emitter"
+
+msgid "affector"
+msgstr "beïnvloeder"
+
+msgid "observer"
+msgstr "waarnemer"
+
+msgid "handler"
+msgstr "handler"
+
+msgid "behaviour"
+msgstr "gedrag"
+
+msgid "extern"
+msgstr "extern"
+
+msgid "wxOgreControl creation failed"
+msgstr "wxOgreControl creatie mislukt"
+
+msgid "Value must be less than"
+msgstr "Waarde moet minder zijn dan"
+
+msgid "Value must be less than "
+msgstr "Waarde moet minder zijn dan "
+
+msgid " (but positive or 0)"
+msgstr " (maar positief of 0)"
+
+msgid "Inherit bone orientation"
+msgstr "Overerven bone oriëntation"
+
+msgid "Attach particle system"
+msgstr "Vastkoppelen particle systeem"
+
+msgid "Detach particle system"
+msgstr "Loskoppelen particle systeem"
+
+msgid "Current mesh does not have a skeleton"
+msgstr "De huidige mesh heeft geen skelet"
+
+msgid "Select bone to attach particle system"
+msgstr "Selecteer een 'bone' om particle systeem te koppelen"
+
+msgid "Edgelist build: Yes"
+msgstr "Edgelist opbouwen: Ja"
+
+msgid "Edgelist build: No"
+msgstr "Edgelist opbouwen: Nee"
+
+msgid "Material submesh(%u): %s"
+msgstr "Materiaal submesh(%u): %s"
+
+msgid "Total number of vertices: %u"
+msgstr "Totaal aantal vertices: %u"
+
+msgid "Total number of indices: %u"
+msgstr "Totaal aantal indices: %u"
+
+msgid "Number of bones: %d"
+msgstr "Totaal aantal bones: %d"
+
+msgid "Boundingsphere radius: %f"
+msgstr "Boundingsphere straal: %f"
+
+msgid "Number of LOD levels: %u"
+msgstr "Aantal LOD levels: %u"
+
+msgid "Boundingsphere radius: "
+msgstr "Boundingsphere straal: "
+
+msgid "Number of LOD levels: "
+msgstr "Aantal LOD levels: "
+
+msgid "Display PhysX detection dialog at startup? (Restart the application to apply the settings!)"
+msgstr "Tonen PhysX detectie dialoog bij opstarten van de applicatie? (Herstart de applicatie om de voorkeur toe te passen!)"
+
+msgid "Are you sure you want to delete this group?"
+msgstr "Weet u zeker dat u deze groep wilt verwijderen?"
+
+msgid "overview of existing connections"
+msgstr "Overzicht van bestaande verbindingen"
+
+msgid "Existing connections"
+msgstr "Bestaande verbinding"
+
+msgid "Select a connection to be deleted"
+msgstr "Selecteer een verbinding welke verwijderd moet worden"
+
+msgid "Delete a connection"
+msgstr "Verwijder een verbinding"
+
+msgid "Select a connection type"
+msgstr "Selecteer een verbindings type"
+
+msgid "Add a connection"
+msgstr "Voeg een verbinding toe"
+
+msgid "Load a scriptfile"
+msgstr "Laad een script bestand"
+
+msgid "Particle and Alias scripts (*.pu;*.pua)|*.pu;*.pua"
+msgstr "Particle en Alias scripts (*.pu;*.pua)|*.pu;*.pua"
+
+msgid "Select a directory that contains *.pu and .pua scripts"
+msgstr "Selecteer een directory welke *.pu and .pua scripts bevat"
+
+msgid "Save the script"
+msgstr "Sla script op"
+
+msgid "Save the script as"
+msgstr "Sla script op als"
+
+msgid "Particle Universe Editor V1.5"
+msgstr "Particle Universe Editor - V1.5"
+
+msgid "Particle Universe Editor - DEMO V1.5"
+msgstr "Particle Universe Editor - DEMO V1.5"
+
+msgid "Copyright (c)"
+msgstr "Copyright (c)"
+
+msgid "Add a new technique"
+msgstr "Voeg een nieuwe techniek toe"
+
+msgid "Add a new renderer"
+msgstr "Voeg een nieuwe renderer toe"
+
+msgid "Add a new emitter"
+msgstr "Voeg een nieuwe emitter toe"
+
+msgid "Add a new affector"
+msgstr "Voeg een nieuwe beïnvloeder toe"
+
+msgid "Add a new observer"
+msgstr "Voeg een nieuwe waarnemer toe"
+
+msgid "Add a new handler"
+msgstr "Voeg een nieuwe handler toe"
+
+msgid "Add a new behaviour"
+msgstr "Voeg een nieuw gedrag object toe"
+
+msgid "Add a new extern"
+msgstr "Voeg een nieuwe extern toe"
+
+msgid "Reset to default cursor"
+msgstr "Reset de standaard cursor"
+
+msgid "Make connection between two components"
+msgstr "Maak een verbinding tussen twee componenten"
+
+msgid "Delete a connection between two components"
+msgstr "Verbreek de verbinding tussen twee componenten"
+
+msgid "Display help of current component"
+msgstr "Toon 'help' voor het geselecteerde component"
+
+msgid "No files are dropped"
+msgstr "Er zijn geen bestanden 'gedropped'"
+
+msgid "Drag/drop a file"
+msgstr "Drag/drop een bestand"
+
+msgid "File format *."
+msgstr "File formaat *."
+
+msgid " is not supported. No "
+msgstr " wordt niet ondersteund. Aantal "
+
+msgid " loaded."
+msgstr " geladen."
+
+msgid ") cannot be found. Select a directory where it can be loaded"
+msgstr ") kan niet worden gevonden. Selecteer een directory waar het kan worden geladen"
+
+msgid " was not succesfully loaded"
+msgstr " was niet succesvol geladen"
+
+msgid " files succesfully loaded"
+msgstr "bestanden succesvol geladen"
+
+msgid "Compile a particle script"
+msgstr "Compileer een particle script"
+
+msgid "Select a material"
+msgstr "Seleceer een materiaal"
+
+msgid "Save the material"
+msgstr "Sla materiaal op"
+
+msgid "material scripts (*.material;*.osm)|*.material;*.osm"
+msgstr "materiaal scripts (*.material;*.osm)|*.material;*.osm"
+
+msgid "Textures (*.*)"
+msgstr "Afbeeldingen (*.*)"
+
+msgid "Select a mesh"
+msgstr "Selecteer een mesh"
+
+msgid "No spaces allowed"
+msgstr "Geen spaties toegestaan"
+
+msgid "Value must be between "
+msgstr "Waarde moet vallen binnen"
+
+msgid " and "
+msgstr " en "
+
+msgid "Value must be positive"
+msgstr "Waarde moet positief zijn"
+
+msgid "True"
+msgstr "Ja"
+
+msgid "true"
+msgstr "Ja"
+
+msgid "False"
+msgstr "Nee"
+
+msgid "false"
+msgstr "Nee"
+
+msgid "It seems that PhysX is installed on this computer. Do you want to make use of the PhysX features?"
+msgstr "PhysX is gedetecteerd op deze computer. Wilt u gebruik maken van de PhysX mogelijkheden?"
+
+msgid "It seems that PhysX is NOT installed on this computer. Do you still want to try to use PhysX?"
+msgstr "PhysX is NIET gedetecteerd op deze computer. Wilt u toch proberen gebruik te maken van PhysX?"
+
+msgid "You have selected a different Particle System. Do you want to save "
+msgstr "U heeft een ander particle systeem geselecteerd. Wilt u opslaan "
+
+msgid "This particle system template is in an incorrect state and cannot be used anymore"
+msgstr "Dit particle systeem template is in een foutieve staat en niet niet meer worden gebruikt"
+
+msgid ""
+"Particle Universe Editor V1.5\n"
+"Copyright (c) 2011 Henry van Merode\n"
+"\n"
+"The lightbulb image is royalty free from FreeDigitalPhotos.net\n"
+"\n"
+msgstr ""
+"Particle Universe Editor V1.5\n"
+"Copyright (c) 2011 Henry van Merode\n"
+"\n"
+"De lichtafbeelding is zonder royalties van FreeDigitalPhotos.net\n"
+"\n"
+
+msgid ""
+"Particle Universe Editor DEMO V1.5\n"
+"Copyright (c) 2011 Henry van Merode\n"
+"\n"
+"The lightbulb image is royalty free from FreeDigitalPhotos.net\n"
+"\n"
+msgstr ""
+"Particle Universe Editor DEMO V1.5\n"
+"Copyright (c) 2011 Henry van Merode\n"
+"\n"
+"De lichtafbeelding is zonder royalties van FreeDigitalPhotos.net\n"
+"\n"
+

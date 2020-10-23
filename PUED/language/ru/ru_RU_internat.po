@@ -1,0 +1,2196 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2003-10-04 23:10+0200\n"
+"PO-Revision-Date: 2012-01-30 19:37+0100\n"
+"Last-Translator: FXPression\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+msgid "System"
+msgstr "Система"
+
+msgid "Technique"
+msgstr "Техника"
+
+msgid "Renderer"
+msgstr "Визуализатор"
+
+msgid "Emitter"
+msgstr "Излучатель"
+
+msgid "Affector"
+msgstr "Воздействие"
+
+msgid "Observer"
+msgstr "Наблюдатель"
+
+msgid "Handler"
+msgstr "Обработчик"
+
+msgid "Behaviour"
+msgstr "Поведение"
+
+msgid "Extern"
+msgstr "Внешний"
+
+msgid "Visual"
+msgstr "Визуальный"
+
+msgid "<undefined>"
+msgstr "<Неопределён>"
+
+msgid "Beam"
+msgstr "Луч"
+
+msgid "Billboard"
+msgstr "Билборд"
+
+msgid "Entity"
+msgstr "Объект"
+
+msgid "Light"
+msgstr "Источник света"
+
+msgid "RibbonTrail"
+msgstr "Ленточный След"
+
+msgid "Circle"
+msgstr "Круг"
+
+msgid "Line"
+msgstr "Линия"
+
+msgid "MeshSurface"
+msgstr "Поверхность модели"
+
+msgid "Slave"
+msgstr "Подчиненный"
+
+msgid "SphereSurface"
+msgstr "Поверхность сферы"
+
+msgid "Align"
+msgstr "Выравнивать"
+
+msgid "BoxCollider"
+msgstr "Коллайдер прямоугольников"
+
+msgid "CollisionAvoidance"
+msgstr "Избежание Столкновений"
+
+msgid "Colour"
+msgstr "Цвет"
+
+msgid "FlockCentering"
+msgstr "Центрирование пучка"
+
+msgid "ForceField"
+msgstr "Силовое поле"
+
+msgid "GeometryRotator"
+msgstr "Вращатель геометрии"
+
+msgid "InterParticleCollider"
+msgstr "Внутренний коллайдер"
+
+msgid "Jet"
+msgstr "Реактивный"
+
+msgid "LinearForce"
+msgstr "Линейная Сила"
+
+msgid "ParticleFollower"
+msgstr "Последователь частиц"
+
+msgid "PathFollower"
+msgstr "Последователь пути"
+
+msgid "PlaneCollider"
+msgstr "Плоскостной коллайдер"
+
+msgid "Randomiser"
+msgstr "Генератор случайных чисел"
+
+msgid "Scale"
+msgstr "Масштабирование"
+
+msgid "ScaleVelocity"
+msgstr "Масштабирование скорости"
+
+msgid "SineForce"
+msgstr "Тригонометрическая Сила"
+
+msgid "SphereCollider"
+msgstr "Сферический Коллайдер"
+
+msgid "TextureAnimator"
+msgstr "Текстурный Аниматор"
+
+msgid "TextureRotator"
+msgstr "Текстурный Вращатель"
+
+msgid "VelocityMatching"
+msgstr "Согласование скорости"
+
+msgid "Vortex"
+msgstr "Вихрь"
+
+msgid "OnClear"
+msgstr "При Очистке"
+
+msgid "OnCollision"
+msgstr "При Столкновении"
+
+msgid "OnCount"
+msgstr "При Счете"
+
+msgid "OnEmission"
+msgstr "При Излучении"
+
+msgid "OnEventFlag"
+msgstr "При Событии"
+
+msgid "OnExpire"
+msgstr "При Завершении"
+
+msgid "OnPosition"
+msgstr "При Позиции"
+
+msgid "OnQuota"
+msgstr "При Ограничении"
+
+msgid "OnRandom"
+msgstr "Случайно"
+
+msgid "OnTime"
+msgstr "При Времени"
+
+msgid "OnVelocity"
+msgstr "При Скорости"
+
+msgid "DoAffector"
+msgstr "Выполнить Воздействие"
+
+msgid "DoEnableComponent"
+msgstr "Выполнить Включение Компонента"
+
+msgid "DoExpire"
+msgstr "Выполнить Завершение"
+
+msgid "DoFreeze"
+msgstr "Выполнить Паузу"
+
+msgid "DoPlacementParticle"
+msgstr "Выполнить Размещение Частицы"
+
+msgid "DoScale"
+msgstr "Выполнить Масштабирование"
+
+msgid "DoStopSystem"
+msgstr "Выполнить Останоку Системы"
+
+msgid "PhysXActor"
+msgstr "PhysXActor"
+
+msgid "PhysXFluid"
+msgstr "PhysXFluid"
+
+msgid "&File"
+msgstr "&Файл"
+
+msgid "List &items"
+msgstr "Список &элементов"
+
+msgid "&Build"
+msgstr "&Компоновка"
+
+msgid "&Gizmo"
+msgstr "&Манипуляторы"
+
+msgid "&Camera"
+msgstr "&Камера"
+
+msgid "&Tools"
+msgstr "&Инструменты"
+
+msgid "&Help"
+msgstr "&Помощь"
+
+msgid "New"
+msgstr "Новый"
+
+msgid "&New\tCtrl+N"
+msgstr "&Новый\tCtrl+N"
+
+msgid "New particle system"
+msgstr "Новая система частиц"
+
+msgid "Create a new particle system"
+msgstr "Создать новую систему частиц"
+
+msgid "Load"
+msgstr "Открыть"
+
+msgid "&Load file\tCtrl+L"
+msgstr "&Открыть файл\tCtrl+L"
+
+msgid "Load a *.pu or *.pua file"
+msgstr "Открыть *.pu или *.pua файл"
+
+msgid "File name:"
+msgstr "Имя файла:"
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "File name exists already."
+msgstr "Имя файла уже существует"
+
+msgid "Error"
+msgstr "Ошибка"
+
+msgid "Warning"
+msgstr "Предупреждение"
+
+msgid "&Save\tCtrl+S"
+msgstr "&Сохранить\tCtrl+S"
+
+msgid "Save a *.pu or *.pua file"
+msgstr "Сохранить *.pu или *.pua файл"
+
+msgid "Save as type:"
+msgstr "Сохранить как тип:"
+
+msgid "Add &resource location\tCtrl+R"
+msgstr "Добавить &расположение ресурсов\tCtrl+R"
+
+msgid "Load all resources from a directory"
+msgstr "Загрузить все ресурсы из директории"
+
+msgid "Add resource location"
+msgstr "Добавить каталог ресурсов"
+
+msgid "Add a resource location"
+msgstr "Добавить каталог ресурсов"
+
+msgid "Save As\tCtrl+Shift+S"
+msgstr "Сохранить как\tCtrl+Shift+S"
+
+msgid "Save As"
+msgstr "Сохранить как"
+
+msgid "&Quit\tCtrl+Q"
+msgstr "&Выйти\tCtrl+Q"
+
+msgid "Quit"
+msgstr "Выйти"
+
+msgid "Rewind"
+msgstr "Перемотать назад"
+
+msgid "Get the previous particle system from the list"
+msgstr "Получить предыдущую систему частиц из списка"
+
+msgid "Pause\tF8"
+msgstr "Пауза\tF8"
+
+msgid "Pause"
+msgstr "Пауза"
+
+msgid "Pause the current particle system"
+msgstr "Приостановить текущую систему частиц"
+
+msgid "Play\tF6"
+msgstr "Воспроизведение\tF6"
+
+msgid "Run the current particle system"
+msgstr "Запустить текущую систему частиц"
+
+msgid "Play"
+msgstr "Воспроизвести"
+
+msgid "Stop\tF9"
+msgstr "Стоп\tF9"
+
+msgid "Stop"
+msgstr "Стоп"
+
+msgid "Stop the current particle system"
+msgstr "Остановить текущую систему частиц"
+
+msgid "Record\tF7"
+msgstr "Запись\tF7"
+
+msgid "Record"
+msgstr "Запись"
+
+msgid "Record the current particle system"
+msgstr "Записать текущую систему частиц"
+
+msgid "Wind"
+msgstr "Перемотать вперед"
+
+msgid "Get the next particle system from the list"
+msgstr "Получить следующую систему частиц из списка"
+
+msgid "Remove"
+msgstr "Удалить из списка"
+
+msgid "Clone"
+msgstr "Клонировать"
+
+msgid "Compile\tF5"
+msgstr "Компилировать\tF5"
+
+msgid "Compile"
+msgstr "Компилировать"
+
+msgid "Compilation OK"
+msgstr "Компилирование выполнено успешно"
+
+msgid "Move"
+msgstr "Перемещение"
+
+msgid "Gizmo move\tShift+M"
+msgstr "Перемещение\tShift+M"
+
+msgid "Gizmo move"
+msgstr "Перемещение"
+
+msgid "Set the gizmo to move"
+msgstr "Установить манипулятор в режим перемещения"
+
+msgid "Rotate"
+msgstr "Вращение"
+
+msgid "Gizmo rotate\tShift+R"
+msgstr "Вращение"
+
+msgid "Gizmo rotate"
+msgstr "Вращение"
+
+msgid "Set the gizmo to rotate"
+msgstr "Установить манипулятор в режим вращения"
+
+msgid "Gizmo scale\tShift+S"
+msgstr "Масштабирование"
+
+msgid "Gizmo scale"
+msgstr "Масштабирование"
+
+msgid "Set the gizmo to scale"
+msgstr "Установить манипулятор в режим масштабирования"
+
+msgid "Toggle gizmo"
+msgstr "Переключить состояние Манипулатора"
+
+msgid "Gizmo on/off\tCtrl+G"
+msgstr "Вкл./Выкл. Манипулятор\tCtrl+G"
+
+msgid "Gizmo on/off"
+msgstr "Вкл./Выкл. Манипулятор"
+
+msgid "Gizmo in world/object space\tCtrl+P"
+msgstr "Координаты манипулятора: Мировые/Локальные \tCtrl+P"
+
+msgid "Enable/disable the gizmo"
+msgstr "Вкл./Выкл. Манипулятор"
+
+msgid "Gizmo manipulation is in global (world) space"
+msgstr "Манипулятор работает в глобальных (мировых) координатах"
+
+msgid "Gizmo manipulation is in local (object) space"
+msgstr "Манипулятор работает в локальных координатах (координатах объекта)"
+
+msgid "Reset camera\tCtrl+Z"
+msgstr "Сохранённое положение\tCtrl+Z"
+
+msgid "Reset camera"
+msgstr "Сохранённое положение"
+
+msgid "Camera Reset"
+msgstr "Сохранённое положение"
+
+msgid "Reset the camera position"
+msgstr "Сброс положения камеры"
+
+msgid "Save camera\tShift+C"
+msgstr "Сохранить положение камеры \tShift+C"
+
+msgid "Save camera"
+msgstr "Сохранить положение камеры"
+
+msgid "Save camera position"
+msgstr "Сохранить положение камеры"
+
+msgid "Save the position of the camera"
+msgstr "Сохранить положение камеры"
+
+msgid "Toggle camera projection\tShift+P"
+msgstr "Изменить проекцию камеры\tShift+P"
+
+msgid "Toggle camera projection"
+msgstr "Изменить проекцию камеры"
+
+msgid "Toggle camera angle\tCtrl+A"
+msgstr "Изменить угол камеры\tCtrl+A"
+
+msgid "Toggle camera angle"
+msgstr "Изменить  угол обзор"
+
+msgid "Centre object\tCtrl+C"
+msgstr "Центрировать на объекте\tCtrl+C"
+
+msgid "Centre object"
+msgstr "Центрировать на объекте"
+
+msgid "Move selected object to the centre of the scene"
+msgstr "Поместить выбранный объект в центр сцены"
+
+msgid "Background colour\tCtrl+B"
+msgstr "Цвет фона\tCtrl+B"
+
+msgid "Background colour"
+msgstr "Цвет фона"
+
+msgid "Change the backgroundcolour of the renderwindow"
+msgstr "Изменить цвет фона окна вывода"
+
+msgid "Toggle statistics\tCtrl+I"
+msgstr "Вкл./Выкл. статистику\tCtrl+I"
+
+msgid "Toggle statistics"
+msgstr "Вкл./Выкл. статистику"
+
+msgid "Enable/disable the statistics overlay"
+msgstr "Вкл./Выкл. статистику поверх всего"
+
+msgid "Toggle grid plane\tCtrl+T"
+msgstr "Вкл./Выкл. сетку\tCtrl+T"
+
+msgid "Toggle grid plane"
+msgstr "Вкл./Выкл. сетку"
+
+msgid "Enable/disable the grid plane"
+msgstr "Вкл./Выкл. сетку"
+
+msgid "Add mesh to scene\tCtrl+M"
+msgstr "Добавить модель в сцену\tCtrl+M"
+
+msgid "Add mesh to scene"
+msgstr "Добавить модель в сцену"
+
+msgid "Add a mesh to the scene"
+msgstr "Добавить модель в сцену"
+
+msgid "Remove mesh from scene\tCtrl+X"
+msgstr "Удалить модель из сцены\tCtrl+X"
+
+msgid "Remove mesh from scene"
+msgstr "Удалить модель из сцены"
+
+msgid "Remove a mesh from the scene"
+msgstr "Удалить модель из сцены"
+
+msgid "Toggle light\tCtrl+D"
+msgstr "Вкл./Выкл. освещение\tCtrl+D"
+
+msgid "Toggle light"
+msgstr "Вкл./Выкл. освещение"
+
+msgid "Add/remove light to/from scene"
+msgstr "Добавить/Удалить источник света"
+
+msgid "Add or remove a light to/from the scene"
+msgstr "Добавить/Удалить источник света"
+
+msgid "Reset time\tCtrl+K"
+msgstr "Сбросить время\tCtrl+K"
+
+msgid "Reset time"
+msgstr "Сбросить время"
+
+msgid "Reset the time settings"
+msgstr "Сбросить настройки времени"
+
+msgid "Options\tCtrl+O"
+msgstr "Опции\tCtrl+O"
+
+msgid "Options"
+msgstr "Опции"
+
+msgid "About\tF1"
+msgstr "О программе\tF1"
+
+msgid "About"
+msgstr "О программе"
+
+msgid "        Play"
+msgstr "        Воспроизвести"
+
+msgid "        Clone item"
+msgstr "        Клонировать"
+
+msgid "        Remove from list"
+msgstr "        Удалить из списка"
+
+msgid "Set orthographic camera"
+msgstr "Установить ортогональную проекцию"
+
+msgid "Set angle perpendicular"
+msgstr "Установить угол в 90 градусов"
+
+msgid "Set perspective camera"
+msgstr "Установить перспективную проекцию"
+
+msgid "Set angle 45 degrees"
+msgstr "Установить угол в 45 градусов"
+
+msgid "Material Selector"
+msgstr "Выбор материала"
+
+msgid "Resize"
+msgstr "Изменить размер"
+
+msgid "Box width"
+msgstr "Ширина прямоугольника"
+
+msgid "Box height"
+msgstr "Высота прямоугольника"
+
+msgid "Box depth"
+msgstr "Глубина прямоугольника"
+
+msgid "Inner Collision"
+msgstr "Внутренний Коллайдер"
+
+msgid "Avoidance radius"
+msgstr "Радиус анулирования"
+
+msgid "Time and Colour"
+msgstr "Время и цвет"
+
+msgid "Time/Colour"
+msgstr "Время/Цвет"
+
+msgid "Colour instance"
+msgstr "Экземпляр цвета"
+
+msgid "Colour operation"
+msgstr "Операция с цветом"
+
+msgid "Set"
+msgstr "Установить"
+
+msgid "Multiply"
+msgstr "Перемножить"
+
+msgid "        Select colour"
+msgstr "        Выбрать цвет"
+
+msgid "        Set alpha"
+msgstr "        Установить прозрачность (alpha)"
+
+msgid "Forcefield type"
+msgstr "Тип силового поля"
+
+msgid "Realtime"
+msgstr "Реальное время"
+
+msgid "Matrix"
+msgstr "Матрица"
+
+msgid "Delta"
+msgstr "Дельта"
+
+msgid "Force"
+msgstr "Сила"
+
+msgid "Octaves"
+msgstr "Октавы"
+
+msgid "Frequency"
+msgstr "Частота"
+
+msgid "Amplitude"
+msgstr "Амплитуда"
+
+msgid "Persistence"
+msgstr "Сопротивляемость"
+
+msgid "Forcefield size"
+msgstr "Размер силового поля"
+
+msgid "Worldsize"
+msgstr "Размер мира"
+
+msgid "Ignore -x"
+msgstr "Игнорировать -x"
+
+msgid "Ignore -y"
+msgstr "Игнорировать -y"
+
+msgid "Ignore -z"
+msgstr "Игнорировать -z"
+
+msgid "Movement"
+msgstr "Движение"
+
+msgid "Movement frequency"
+msgstr "Частота движения"
+
+msgid "Use own rotation"
+msgstr "Использовать собственное вращение"
+
+msgid "Gravity"
+msgstr "Гравитация"
+
+msgid "Adjustment"
+msgstr "Приспособление (регулировка)"
+
+msgid "Collision response"
+msgstr "Реакция на Коллизию"
+
+msgid "Average velocity"
+msgstr "Средняя скорость"
+
+msgid "Angle based velocity"
+msgstr "Скорость зависимая от угла"
+
+msgid "Acceleration"
+msgstr "Ускорение"
+
+msgid "End position"
+msgstr "Конечная позиция"
+
+msgid "Drift"
+msgstr "Дрейф (снос)"
+
+msgid "Minimum distance"
+msgstr "Минимальная дистанция"
+
+msgid "Maximum distance"
+msgstr "Максимальная дистанция"
+
+msgid "Add Position"
+msgstr "Добавить позицию"
+
+msgid "Plane normal"
+msgstr "Нормаль плоскости"
+
+msgid "Random direction"
+msgstr "Случайное направление"
+
+msgid "Scale x, y and z"
+msgstr "Масштабировать X Y Z"
+
+msgid "Scale x"
+msgstr "Масштабировать X"
+
+msgid "Scale y"
+msgstr "Масштабировать Y"
+
+msgid "Scale z"
+msgstr "Масштабировать Z"
+
+msgid "Scale velocity"
+msgstr "Изменить скорость"
+
+msgid "Stop at flip"
+msgstr "Остановиться при возврате"
+
+msgid "Minimum frequency"
+msgstr "Минимальная частота"
+
+msgid "Maximum frequency"
+msgstr "Максимальная частота"
+
+msgid "Sphere radius"
+msgstr "Радиус сферы"
+
+msgid "Animation type"
+msgstr "Тип анимации"
+
+msgid "Loop"
+msgstr "Цикл"
+
+msgid "Up - Down"
+msgstr "Вверх - Вниз"
+
+msgid "Random"
+msgstr "Случайно"
+
+msgid "Texture coordinate start"
+msgstr "Начало текстурных координат"
+
+msgid "Texture coordinate end"
+msgstr "Конец текстурных координат"
+
+msgid "Start random"
+msgstr "Запустить генератор случайных чисел"
+
+msgid "Use own speed"
+msgstr "Использовать собственную скорость"
+
+#, fuzzy
+msgid "Velocity matching radius"
+msgstr "Приведение в соответствие радиуса скорости"
+
+msgid "Circle Radius"
+msgstr "Радиус круга"
+
+msgid "Circle Step"
+msgstr "Шаг круга"
+
+msgid "Circle angle"
+msgstr "Угол круга"
+
+msgid "Circle Random"
+msgstr "Рандом Круга"
+
+#, fuzzy
+msgid "Circle normal"
+msgstr "Нормаль Круга"
+
+msgid "Line end"
+msgstr "Конец линии"
+
+msgid "Line max increment"
+msgstr "Максимальный инкремент линии"
+
+msgid "Line min increment"
+msgstr "Минимальный инкремент линии"
+
+msgid "Line deviation"
+msgstr "Отклонение от линии"
+
+msgid "Mesh name"
+msgstr "Имя модели"
+
+msgid "Mesh surface distribution"
+msgstr "Распределение на поверхности модели"
+
+msgid "Mesh surface scale"
+msgstr "Масштабирование поверхности модели"
+
+msgid "Edge"
+msgstr "Грань"
+
+msgid "Heterogeneous_1"
+msgstr "Неоднородный_1"
+
+msgid "Heterogeneous_2"
+msgstr "Неоднородный_2"
+
+msgid "Homogeneus"
+msgstr "Однородный"
+
+msgid "Vertex"
+msgstr "Вершина"
+
+msgid "Add particle position"
+msgstr "Добавить позицию частицы"
+
+msgid "Position randomize"
+msgstr "Случайная позиция"
+
+msgid "Sphere Radius"
+msgstr "Радиус сферы"
+
+msgid "Vertex step"
+msgstr "Шаг вершины"
+
+msgid "Vertex segments"
+msgstr "Сегменты вершины"
+
+msgid "Vertex iterations"
+msgstr "Повторение вершин"
+
+msgid "Vertex meshname"
+msgstr "Имя модели вершины"
+
+msgid "Perform pre/post processing"
+msgstr "Выполнить пре/пост обработку"
+
+msgid "Enable component"
+msgstr "Включить компонент"
+
+msgid "Number of particles"
+msgstr "Число частиц"
+
+msgid "Inherit position"
+msgstr "Наследовать позицию"
+
+msgid "Inherit direction"
+msgstr "Наследовать направление"
+
+msgid "Inherit orientation"
+msgstr "Наследовать ориентацию"
+
+msgid "Inherit time to live"
+msgstr "Наследовать время жизни"
+
+msgid "Inherit mass"
+msgstr "Наследовать массу"
+
+msgid "Inherit texture coord"
+msgstr "Наследовать текстурные координаты"
+
+msgid "Inherit colour"
+msgstr "Наследовать цвет"
+
+msgid "Inherit particle width"
+msgstr "Наследовать ширину частицы"
+
+msgid "Inherit particle height"
+msgstr "Наследовать высоту частицы"
+
+msgid "Inherit particle depth"
+msgstr "Наследовать глубину частицы"
+
+msgid "Scale fraction"
+msgstr "Увеличить часть"
+
+msgid "Scale type"
+msgstr "Тип Масштабирования"
+
+msgid "Time to live"
+msgstr "Время жизни"
+
+msgid "Velocity"
+msgstr "Скорость"
+
+msgid "Shape type"
+msgstr "Тип Формы"
+
+msgid "Shape collision group"
+msgstr "Форма объекта расчета столкновений"
+
+msgid "Group mask"
+msgstr "Маска группы"
+
+msgid "Angular velocity"
+msgstr "Угловая скорость"
+
+msgid "Angular damping"
+msgstr "Угловое затухание"
+
+msgid "Material index"
+msgstr "Индекс Материала"
+
+msgid "Box"
+msgstr "Куб"
+
+msgid "Sphere"
+msgstr "Сфера"
+
+msgid "Capsule"
+msgstr "Капсула"
+
+msgid "Rest particle per meter"
+msgstr "Уменьшение числа частиц на метр"
+
+msgid "Rest density"
+msgstr "Уменьшение плотности"
+
+msgid "Kernel radius multiplier"
+msgstr "Множитель радиуса центра"
+
+msgid "Motion limit multiplier"
+msgstr "Множитель предела движения"
+
+msgid "Collision dist. multiplier"
+msgstr "Множитель дистанции столкновений"
+
+msgid "Packet size multiplier"
+msgstr "Множитель размера пачки"
+
+msgid "Stiffness"
+msgstr "Жёсткость"
+
+msgid "Viscosity"
+msgstr "Вязкость"
+
+msgid "Surface tension"
+msgstr "Напряжение поверхности"
+
+msgid "Damping"
+msgstr "Затухание"
+
+msgid "External acceleration"
+msgstr "Внешнее ускорение"
+
+msgid "Restitution static shapes"
+msgstr "Восстановление формы"
+
+msgid "Dyn. friction static shapes"
+msgstr "Динамич. трение формы"
+
+msgid "Static friction static shapes"
+msgstr "Статич. трение формы"
+
+msgid "Attraction static shapes"
+msgstr "Притяжение статич. формы"
+
+msgid "Restitution dynamic shapes"
+msgstr "Восстановление динамической формы"
+
+msgid "Dyn. friction dyn. shapes"
+msgstr "Динамич. трение динамич. формы"
+
+msgid "Static friction dyn. shapes"
+msgstr "Статич. трение динамич. формы"
+
+msgid "Attraction dynamic shapes"
+msgstr "Притяжение динамич. формы"
+
+msgid "Collision response coeff."
+msgstr "Коефициент реакции на столкновение"
+
+msgid "Simulation method"
+msgstr "Метод симуляции"
+
+msgid "Collision method"
+msgstr "Метод столкновения"
+
+msgid "Visualisation"
+msgstr "Визуализация"
+
+msgid "Disable gravity"
+msgstr "Выкл. гравитацию"
+
+msgid "Collision twoway"
+msgstr "Двувидовая коллизия"
+
+msgid "Fluid enabled"
+msgstr "Вкл. жидкость"
+
+msgid "Hardware"
+msgstr "Аппаратный"
+
+msgid "Priority mode"
+msgstr "Приоритет"
+
+msgid "Project to plane"
+msgstr "Проекция на плоскость"
+
+msgid "Strict cooking format"
+msgstr "Формат заготовки"
+
+msgid "Intercollision"
+msgstr "Взаимн. столкновение"
+
+msgid "Non-intercollision"
+msgstr "Не взаимн.столкновение"
+
+msgid "Mixed intercollision"
+msgstr "Смешанное столкновение"
+
+msgid "Static"
+msgstr "Статично"
+
+msgid "Dynamic"
+msgstr "Динамично"
+
+msgid "On count compare"
+msgstr "На счет сравнение"
+
+msgid "On count threshold"
+msgstr "На счет границ"
+
+msgid "Event Flag"
+msgstr "Флаг события"
+
+msgid "Position compare x"
+msgstr "Позиция сравнения x"
+
+msgid "Position compare y"
+msgstr "Позиция сравнения y"
+
+msgid "Position compare z"
+msgstr "Позиция сравнения z"
+
+msgid "Position.x threshold"
+msgstr "x значение границы"
+
+msgid "Position.y threshold"
+msgstr "y значение границы"
+
+msgid "Position.z threshold"
+msgstr "z значение границы"
+
+msgid "Random threshold"
+msgstr "Случайное значение границ"
+
+msgid "On time compare"
+msgstr "Сравнение по времени"
+
+msgid "On time threshold"
+msgstr "Ограничение по времени"
+
+msgid "Velocity compare"
+msgstr "Сравнение скорости"
+
+msgid "Velocity threshold"
+msgstr "Порог скорости"
+
+msgid "Update interval"
+msgstr "Интервал обновления"
+
+msgid "Deviation"
+msgstr "Отклонение"
+
+msgid "Number of segments"
+msgstr "Количество сегментов"
+
+msgid "Jump"
+msgstr "Скачок"
+
+msgid "Texture direction"
+msgstr "Напрвление текстуры"
+
+msgid "TCD_U"
+msgstr "TCD_U"
+
+msgid "TCD_V"
+msgstr "TCD_V"
+
+msgid "Billboard type"
+msgstr "Тип Билборда"
+
+msgid "Point"
+msgstr "Точка"
+
+msgid "Orientation type"
+msgstr "Тип ориентации"
+
+msgid "Oriented self mirrored"
+msgstr "Отраженный"
+
+msgid "Oriented Common"
+msgstr "Обще-направленный"
+
+msgid "Oriented Self"
+msgstr "Само-направленный"
+
+msgid "Oriented self"
+msgstr "Само-направленный"
+
+msgid "Perpendicular Common"
+msgstr "Обще-перпендикулярно"
+
+msgid "Perpendicular Self"
+msgstr "Само-перпендикулярно"
+
+msgid "Oriented Shape"
+msgstr "По форме"
+
+msgid "Oriented shape"
+msgstr "По форме"
+
+msgid "Origin"
+msgstr "Источник"
+
+msgid "Top-left"
+msgstr "Верх-лево"
+
+msgid "Top-center"
+msgstr "Верх-центр"
+
+msgid "Top-right"
+msgstr "Верх-право"
+
+msgid "Center-left"
+msgstr "Центр-лево"
+
+msgid "Center-right"
+msgstr "Центр-право"
+
+msgid "Center"
+msgstr "Центр"
+
+msgid "Bottom-left"
+msgstr "Низ-лево"
+
+msgid "Bottom-right"
+msgstr "Низ-право"
+
+msgid "Bottom-center"
+msgstr "Низ-центр"
+
+msgid "Rotation type"
+msgstr "Тип вращения"
+
+msgid "Texture coordinates"
+msgstr "Текстурные координаты"
+
+msgid "Common direction"
+msgstr "Общее направление"
+
+msgid "Up Vector"
+msgstr "Up Вектор"
+
+msgid "Point Rendering"
+msgstr "Точечная визуализация"
+
+msgid "Accurate Facing"
+msgstr "Точное ориентирование"
+
+msgid "On"
+msgstr "Включено"
+
+msgid "Off"
+msgstr "Выключено"
+
+msgid "Light type"
+msgstr "Тип Освещения"
+
+msgid "Spot"
+msgstr "Пятно"
+
+msgid "Attenuation range"
+msgstr "Дистанция рассеивания"
+
+msgid "Attenuation constant"
+msgstr "Постоянное рассеивания"
+
+msgid "Attenuation linear"
+msgstr "Линейное рассеивание"
+
+msgid "Attenuation quadratic"
+msgstr "Квадратичное рассеивание"
+
+msgid "spot inner angle"
+msgstr "Внутренний угол"
+
+msgid "spot outer angle"
+msgstr "Внешний угол"
+
+msgid "Falloff"
+msgstr "Уменьшение"
+
+msgid "Powerscale"
+msgstr "Шкала мощности"
+
+msgid "Flash frequency"
+msgstr "Частота мерцания"
+
+msgid "Flash length"
+msgstr "Длина мерцания"
+
+msgid "Flash random"
+msgstr "Случайное мерцание"
+
+msgid "Use vertex colours"
+msgstr "Использовать цвет вершин"
+
+msgid "Maximum elements"
+msgstr "Максимум элементов"
+
+msgid "Trail length"
+msgstr "Длина следа"
+
+msgid "Trail width"
+msgstr "Ширина следа"
+
+msgid "Random initial colour"
+msgstr "Случайные исходный цвет"
+
+msgid "Initial colour"
+msgstr "Исходный цвет"
+
+msgid "Colour change"
+msgstr "Изменение цвета"
+
+msgid "includes"
+msgstr "Подключить"
+
+msgid "included by"
+msgstr "Подключён"
+
+msgid "excludes"
+msgstr "Исключить"
+
+msgid "excluded by"
+msgstr "Исключён"
+
+msgid "handles"
+msgstr "Обрабатывать"
+
+msgid "handled by"
+msgstr "Обрабатывается"
+
+msgid "emits"
+msgstr "Испускать"
+
+msgid "emitted by"
+msgstr "Испускаем"
+
+msgid "affects"
+msgstr "Воздействовать"
+
+msgid "affected by"
+msgstr "Под воздействием"
+
+msgid "observes"
+msgstr "Наблюдать"
+
+msgid "observed by"
+msgstr "Под наблюдением"
+
+msgid "interfaces"
+msgstr "Соединять"
+
+msgid "interfaced by"
+msgstr "Соединён с"
+
+msgid "slaves"
+msgstr "Подчинить"
+
+msgid "slave of"
+msgstr "Подчинён"
+
+msgid "master of"
+msgstr "Владелец"
+
+msgid "enables"
+msgstr "Включать"
+
+msgid "enabled by"
+msgstr "Включён"
+
+msgid "forces"
+msgstr "Силы"
+
+msgid "forced by"
+msgstr "Под воздействием силы"
+
+msgid "places"
+msgstr "Разместить"
+
+msgid "placed by"
+msgstr "Размещен"
+
+msgid "connection with"
+msgstr "Соединение с"
+
+msgid "Position"
+msgstr "Позиция"
+
+msgid "Fixed"
+msgstr "Фиксированный"
+
+msgid "Curved"
+msgstr "Изогнутый"
+
+msgid " - Curved"
+msgstr "- Изогнутый"
+
+msgid "Oscillate"
+msgstr "Колеблющийся"
+
+msgid "Linear"
+msgstr "Линейный"
+
+msgid "Spline"
+msgstr "Сплайн"
+
+msgid "Friction"
+msgstr "Трение"
+
+msgid "Bouncyness"
+msgstr "Отскакивание"
+
+msgid "Intersection type"
+msgstr "Тип пересечения"
+
+msgid "Collision type"
+msgstr "Тип столкновения"
+
+msgid "None"
+msgstr "Никто"
+
+msgid "Bounce"
+msgstr "Отскок"
+
+msgid "Flow"
+msgstr "Поток"
+
+msgid "Force vector"
+msgstr "Вектор силы"
+
+msgid "Application"
+msgstr "Применение"
+
+msgid "Add"
+msgstr "Добавить"
+
+msgid "Average"
+msgstr "Среднее"
+
+msgid "Maximum deviation"
+msgstr "Максимальное отклонение"
+
+msgid "Time step"
+msgstr "Интервал времени"
+
+msgid "Rotation"
+msgstr "Вращение"
+
+msgid "Rotation speed"
+msgstr "Скорость вращения"
+
+msgid "Rotation axis"
+msgstr "Ось вращения"
+
+msgid "Diffuse"
+msgstr "Освещение (Diffuse)"
+
+msgid "Specular"
+msgstr "Отблик (Specular)"
+
+msgid "Particle type"
+msgstr "Тип частицы"
+
+msgid "All types"
+msgstr "Все типы"
+
+msgid "Distance threshold"
+msgstr "Дальность ограничения"
+
+msgid "Not used"
+msgstr "Не используется"
+
+msgid "Less than"
+msgstr "Меньше чем"
+
+msgid "Greater than"
+msgstr "Больше чем"
+
+msgid "Equals"
+msgstr "Равный"
+
+msgid "Affector type"
+msgstr "Тип воздействия"
+
+msgid "Mass"
+msgstr "Вес"
+
+msgid "Specialisation"
+msgstr "Специализация"
+
+msgid "Default"
+msgstr "По умолчанию"
+
+msgid "Increment by time to live"
+msgstr "Инкримент времени жизни"
+
+msgid "Decrement by time to live"
+msgstr "Декремент времени жизни"
+
+msgid "Behaviour type"
+msgstr "Тип поведения"
+
+msgid "Emitter type"
+msgstr "Тип излучателя"
+
+msgid "Keep local"
+msgstr "Сохранять локально"
+
+msgid "Direction"
+msgstr "Направление"
+
+msgid "Orientation"
+msgstr "Ориентация"
+
+msgid "Orientation range start"
+msgstr "Ориентация начала"
+
+msgid "Orientation range end"
+msgstr "Ориентация конца "
+
+msgid "Duration"
+msgstr "Продолжительность"
+
+msgid "Repeat - Delay"
+msgstr "Пауза перед повтором"
+
+msgid "Angle"
+msgstr "Угол"
+
+msgid "Emission rate"
+msgstr "Скорость излучения"
+
+msgid "Texture coordinate"
+msgstr "Текстурные координаты"
+
+msgid "Colour range start"
+msgstr "Начальный цветовой ряд"
+
+msgid "Colour range end"
+msgstr "Конечный цветовой ряд"
+
+msgid "All particle dimensions"
+msgstr "Общие размеры частицы"
+
+msgid "Particle width"
+msgstr "Ширина частицы"
+
+msgid "Particle height"
+msgstr "Высота частицы"
+
+msgid "Particle depth"
+msgstr "Глубина частицы"
+
+msgid "Auto direction"
+msgstr "Авто направление"
+
+msgid "Force emission"
+msgstr "Сила излучения"
+
+msgid "Event handler type"
+msgstr "Тип событий обработчика"
+
+msgid "Extern type"
+msgstr "Тип экстерна"
+
+msgid "Collision group"
+msgstr "Группа расчета столкновения"
+
+msgid "Observer type"
+msgstr "Тип наблюдателя"
+
+msgid "Observer until event"
+msgstr "Наблюдать до события"
+
+msgid "Observe interval"
+msgstr "Интервал наблюдения"
+
+msgid "Name"
+msgstr "Имя"
+
+msgid "Enabled"
+msgstr "Включено"
+
+msgid "RGB"
+msgstr "RGB"
+
+msgid "Alpha"
+msgstr "Прозрачность"
+
+msgid ".w"
+msgstr " - w"
+
+msgid ".x"
+msgstr " - x"
+
+msgid ".y"
+msgstr " - y"
+
+msgid ".z"
+msgstr " - z"
+
+msgid "Attribute type"
+msgstr "Тип Атрибута"
+
+msgid "Value"
+msgstr "Значение"
+
+msgid "Minimum"
+msgstr "Минимум"
+
+msgid "Maximum"
+msgstr "Максимум"
+
+msgid "Oscillation type"
+msgstr "Тип колебания"
+
+msgid "Sine"
+msgstr "Синус"
+
+msgid "Square"
+msgstr "Квадрат"
+
+msgid "Phase"
+msgstr "Фаза"
+
+msgid "Base"
+msgstr "База"
+
+msgid "Interpolation"
+msgstr "Интерполяция"
+
+msgid "Control Point"
+msgstr "Управляющая точка"
+
+msgid "Since start system"
+msgstr "Со старта системы"
+
+msgid "Renderer type"
+msgstr "Тип визуализации"
+
+msgid "Render queue group"
+msgstr "Очередь визуализации"
+
+msgid "Sorting"
+msgstr "Сортировка"
+
+msgid "Texture coords define"
+msgstr "Определить текстурные координаты"
+
+msgid "Texture coords set"
+msgstr "установка текстурных координат"
+
+msgid "Texture coords rows"
+msgstr "Строки текстурных координат"
+
+msgid "Texture coords columns"
+msgstr "Колонки текстурных координат"
+
+msgid "Use soft particles"
+msgstr "Использовать мягкие частицы"
+
+msgid "Soft particles contrast power"
+msgstr "Контраст мягких частиц"
+
+msgid "Soft particles scale"
+msgstr "Размер мягких частиц"
+
+msgid "Soft particles delta"
+msgstr "Дельта мягких частиц"
+
+msgid "Category"
+msgstr "Категория"
+
+msgid "Iteration interval"
+msgstr "Интервал итераций"
+
+msgid "Fixed timeout"
+msgstr "Лимит времени"
+
+msgid "Nonvisible update timeout"
+msgstr "Лимит времени обновления "
+
+msgid "Lod distances"
+msgstr "LOD дальность"
+
+msgid "Smooth lod"
+msgstr "LOD сглаживание"
+
+msgid "Fast forward"
+msgstr "Перемотка вперед"
+
+msgid "Time"
+msgstr "Время"
+
+msgid "Interval"
+msgstr "Интервал"
+
+msgid "Main camera name"
+msgstr "Имя камеры"
+
+msgid "Scale time"
+msgstr "Изменить время"
+
+msgid "Scale dimensions"
+msgstr "Изменить размер"
+
+msgid "Use tight bounding box"
+msgstr "Ограничить объем"
+
+msgid "Particle Systems"
+msgstr "Системы частиц"
+
+msgid "Visual particle quota"
+msgstr "Ограничение числа визуал. частиц"
+
+msgid "Emitted emitter quota"
+msgstr "Ограничение числа эмиттеров"
+
+msgid "Emitted affector quota"
+msgstr "Ограничение числа аффекторов"
+
+msgid "Emitted technique quota"
+msgstr "Ограничение числа техник"
+
+msgid "Emitted system quota"
+msgstr "Ограничение числа систем"
+
+msgid "Material"
+msgstr "Материал"
+
+msgid "Lod index"
+msgstr "LOD индекс"
+
+msgid "Default particle width"
+msgstr "Ширина частицы по умолчанию"
+
+msgid "Default particle height"
+msgstr "Высота частицы по умолчанию"
+
+msgid "Default particle depth"
+msgstr "Глубина частицы по умолчанию"
+
+msgid "Spatial hashing cell dimension"
+msgstr "Объем хэш. ед. измерения"
+
+msgid "Spatial hashing cell overlap"
+msgstr "Объем хэш. ед. наложения"
+
+msgid "Spatial hashtable size"
+msgstr "Объем хэш. таблиц"
+
+msgid "Spatial hashing update interval"
+msgstr "Хэш. интервал обновления"
+
+msgid "Maximum velocity"
+msgstr "Максимальная скорость"
+
+msgid "0%                                                          % Time to live ->                                                          100%"
+msgstr "0%                                                          % Время жизни ->                                                          100%"
+
+msgid "Reset"
+msgstr "Сбросить"
+
+msgid "Colour Affector"
+msgstr "Воздействие на цвет"
+
+msgid "Animations"
+msgstr "Анимации"
+
+msgid "Mesh"
+msgstr "Модель"
+
+msgid "Animation"
+msgstr "Анимация"
+
+msgid "Loop Animation"
+msgstr "Циклическая Анимация"
+
+msgid "Directories"
+msgstr "Директория"
+
+msgid "PhysX"
+msgstr "PhysX"
+
+msgid "Filter"
+msgstr "Фильтр"
+
+msgid "Auto rendering on/off"
+msgstr "Авто Визуализация вкл./выкл."
+
+msgid "Highlight keywords on/off"
+msgstr "Подсветка клавиш вкл./выкл."
+
+msgid "Statistics overlay on/off"
+msgstr "Статистика вкл./выкл."
+
+msgid "Point light on/off"
+msgstr "Источник света  вкл./выкл."
+
+msgid "Gridplane on/off"
+msgstr "Сетка вкл./выкл."
+
+msgid "Gridplane distance"
+msgstr "Дистанция сетки"
+
+msgid "Gridplane scale"
+msgstr "Размер сетки"
+
+msgid "Output directory"
+msgstr "Директория для сохранения"
+
+msgid "Image size"
+msgstr "Размер изображения"
+
+msgid "Media type"
+msgstr "Тип файла"
+
+msgid ".png"
+msgstr ".png"
+
+msgid ".jpg"
+msgstr ".jpg"
+
+msgid ".tiff"
+msgstr ".tiff"
+
+msgid ".avi"
+msgstr ".avi"
+
+msgid ".swf"
+msgstr ".swf"
+
+msgid ".wmv"
+msgstr ".wmv"
+
+msgid ".mp4"
+msgstr ".mp4"
+
+msgid "352x240"
+msgstr "352x240"
+
+msgid "352x288"
+msgstr "352x288"
+
+msgid "720x480"
+msgstr "720x480"
+
+msgid "720x576"
+msgstr "720x576"
+
+msgid "1024x768"
+msgstr "1024x768"
+
+msgid "1280x720"
+msgstr "1280x720"
+
+msgid "1440x1080"
+msgstr "1440x1080"
+
+msgid "1920x1080"
+msgstr "1920x1080"
+
+msgid "Frames per second"
+msgstr "Кадры в секунду"
+
+msgid "No filtering"
+msgstr "Без фильтра"
+
+msgid "Alpha from luminance"
+msgstr "Прозрачность из яркости"
+
+msgid "Alpha from background colour"
+msgstr "Прозрачность из заднего фона"
+
+msgid "Calibration pause"
+msgstr "Пауза калибровки"
+
+msgid "Plane distance"
+msgstr "Дистанция плоскости"
+
+msgid "videopath"
+msgstr "Путь видео"
+
+msgid "imagewidth"
+msgstr "Ширина картинки"
+
+msgid "mediatype"
+msgstr "Медиатип"
+
+msgid "videosize"
+msgstr "Разрешение"
+
+msgid "fps"
+msgstr "fps"
+
+msgid "Select colour"
+msgstr "Выбрать цвет"
+
+msgid "Set alpha"
+msgstr "Установить прозрачность"
+
+msgid "&Linear interpolation"
+msgstr "Линейная интерполяция"
+
+msgid "&Spline interpolation"
+msgstr "Сплайн интерполяция"
+
+msgid "canvas"
+msgstr "Полотно"
+
+msgid "Render"
+msgstr "Визуализация"
+
+msgid "Edit"
+msgstr "Редактор"
+
+msgid "Script"
+msgstr "Скрипт"
+
+msgid "Message"
+msgstr "Сообщение"
+
+msgid "Tools"
+msgstr "Инструменты"
+
+msgid "Cursor"
+msgstr "Курсор"
+
+msgid "Connect"
+msgstr "Присоединиться"
+
+msgid "Disconnect"
+msgstr "Отсоединиться"
+
+msgid "Help"
+msgstr "Помощь"
+
+msgid "file"
+msgstr "файл"
+
+msgid "files"
+msgstr "файлы"
+
+msgid "FileSystem"
+msgstr "Файловая система"
+
+msgid "Transparent alpha"
+msgstr "Прозрачность Alpha"
+
+msgid "Transparent colour"
+msgstr "Прозрачность - цвет"
+
+msgid "Modulate"
+msgstr "Модулировать"
+
+msgid "Replace"
+msgstr "Переместить"
+
+msgid "Source colour - One"
+msgstr "Источник цвета -1"
+
+msgid "Source colour - Zero"
+msgstr "Источник цвета - 0"
+
+msgid "Source colour - Destination colour"
+msgstr "Источник цвета - Назначенный цвет"
+
+msgid "Destination colour - One"
+msgstr "Назначенный цвет - Один"
+
+msgid "Destination colour - Source colour"
+msgstr "Назначенный цвет -  Источник цвета"
+
+msgid "Wrap"
+msgstr "Оболочка"
+
+msgid "Mirror"
+msgstr "Отразить"
+
+msgid "Clamp"
+msgstr "Присоединить"
+
+msgid "New material"
+msgstr "Новый материал"
+
+msgid "Pass"
+msgstr "Путь"
+
+msgid "Lighting"
+msgstr "Освещение"
+
+msgid "Ambient"
+msgstr "Внешний"
+
+msgid "Emissive"
+msgstr "Излучение"
+
+msgid "Depth check"
+msgstr "Глубина проверки"
+
+msgid "Depth write"
+msgstr "Глубина записи"
+
+msgid "Scene blend"
+msgstr "Смешивание сцен"
+
+msgid "Texture"
+msgstr "Текстура"
+
+msgid "Address mode"
+msgstr "Вид адресса"
+
+msgid "Load a texture"
+msgstr "Открыть текстуру"
+
+msgid "Textures (*.*)|*.*"
+msgstr "Текстуры(*.*)|*.*"
+
+msgid "Mesh Selector"
+msgstr "Выборщик модели"
+
+msgid "system"
+msgstr "система"
+
+msgid "technique"
+msgstr "техника"
+
+msgid "renderer"
+msgstr "визуализатор"
+
+msgid "emitter"
+msgstr "излучатель"
+
+msgid "affector"
+msgstr "воздействие"
+
+msgid "observer"
+msgstr "наблюдатель"
+
+msgid "handler"
+msgstr "обработчик"
+
+msgid "behaviour"
+msgstr "поведение"
+
+msgid "extern"
+msgstr "экстерн"
+
+msgid "wxOgreControl creation failed"
+msgstr "Создание wxOgreControl не удалось"
+
+msgid "Value must be less than"
+msgstr "Значение должно быть больше чем"
+
+msgid "Value must be less than "
+msgstr "Значение должно быть больше чем"
+
+msgid " (but positive or 0)"
+msgstr " (но положителен или 0)"
+
+msgid "Inherit bone orientation"
+msgstr "Наследовать ориентацию кости"
+
+msgid "Attach particle system"
+msgstr "Присоединить систему частиц"
+
+msgid "Detach particle system"
+msgstr "Отсоединить систему частиц"
+
+msgid "Current mesh does not have a skeleton"
+msgstr "Выбранная модель не имеет скелета"
+
+msgid "Select bone to attach particle system"
+msgstr "Выбрать кость для привязки системы частиц"
+
+msgid "Edgelist build: Yes"
+msgstr "Список рёбер: Да"
+
+msgid "Edgelist build: No"
+msgstr "Список рёбер: Нет"
+
+msgid "Material submesh(%u): %s"
+msgstr "Материал дочерней модели(%u): %s"
+
+msgid "Total number of vertices: %u"
+msgstr "Общее число вершин: %u"
+
+msgid "Total number of indices: %u"
+msgstr "Общее число индексов: %u"
+
+msgid "Number of bones: %d"
+msgstr "Число костей: %d"
+
+msgid "Boundingsphere radius: %f"
+msgstr "Радиус ограничивающей сферы: %f"
+
+msgid "Number of LOD levels: %u"
+msgstr "Число LOD уровней: %u"
+
+msgid "Boundingsphere radius: "
+msgstr "Радиус ограничивающей сферы: "
+
+msgid "Number of LOD levels: "
+msgstr "Число LOD уровней: "
+
+msgid "Display PhysX detection dialog at startup? (Restart the application to apply the settings!)"
+msgstr "Показывать диалог обнаружения PhysX при запуске? (перезапуск приложения)"
+
+msgid "Are you sure you want to delete this group?"
+msgstr "Вы действительно хотите удалить выбранную группу?"
+
+msgid "overview of existing connections"
+msgstr "Обзор существующих соединений"
+
+msgid "Existing connections"
+msgstr "Существующие соединения"
+
+msgid "Select a connection to be deleted"
+msgstr "Выбрать соединение для удаления"
+
+msgid "Delete a connection"
+msgstr "Удалить соединение"
+
+msgid "Select a connection type"
+msgstr "Выбрать тип соединения"
+
+msgid "Add a connection"
+msgstr "Добавить соединение"
+
+msgid "Load a scriptfile"
+msgstr "Открыть Скрипт"
+
+msgid "Particle and Alias scripts (*.pu;*.pua)|*.pu;*.pua"
+msgstr "Частицы и Скрипты（*. PU;*. PUA）|*. PU;*. PUA"
+
+msgid "Select a directory that contains *.pu and .pua scripts"
+msgstr "Указать директорию содержащую *.pu и *.pua скрипты"
+
+msgid "Save the script"
+msgstr "Сохранить скрипт"
+
+msgid "Save the script as"
+msgstr "Сохранить скрипт как"
+
+msgid "Particle Universe Editor V1.5"
+msgstr "Particle Universe Editor V1.5"
+
+msgid "Particle Universe Editor - DEMO V1.5"
+msgstr "Particle Universe Editor - ДЕМО V1.5"
+
+msgid "Copyright (c)"
+msgstr "Copyright（c）"
+
+msgid "Add a new technique"
+msgstr "Новая техника"
+
+msgid "Add a new renderer"
+msgstr "Новый рендер"
+
+msgid "Add a new emitter"
+msgstr "Новый эмиттер"
+
+msgid "Add a new affector"
+msgstr "Новый аффектор"
+
+msgid "Add a new observer"
+msgstr "Новый обозреватель"
+
+msgid "Add a new handler"
+msgstr "Новый обработчик"
+
+msgid "Add a new behaviour"
+msgstr "Новое поведение"
+
+msgid "Add a new extern"
+msgstr "Новый экстерн"
+
+msgid "Reset to default cursor"
+msgstr "сбросить по умолчанию"
+
+msgid "Make connection between two components"
+msgstr "Создать соединение между двумя компонентами"
+
+msgid "Delete a connection between two components"
+msgstr "Удалить соединение между двумя компонентами"
+
+msgid "Display help of current component"
+msgstr "Отобразить справку о текущем компоненте"
+
+msgid "No files are dropped"
+msgstr "Нет файлов для переноса"
+
+msgid "Drag/drop a file"
+msgstr "Перетащите файл"
+
+msgid "File format *."
+msgstr "Формат файла *."
+
+msgid " is not supported. No "
+msgstr "не поддерживается. Нет"
+
+msgid " loaded."
+msgstr " загружен."
+
+msgid ") cannot be found. Select a directory where it can be loaded"
+msgstr ") не найден. Выберите директорию, откуда можно згрузить"
+
+msgid " was not succesfully loaded"
+msgstr "не был успешно загружен"
+
+msgid " files succesfully loaded"
+msgstr "Файлы успешно загружены"
+
+msgid "Compile a particle script"
+msgstr "Компилировать скрипт системы частиц"
+
+msgid "Select a material"
+msgstr "Выбрать материал"
+
+msgid "Save the material"
+msgstr "Сохранить материал"
+
+msgid "material scripts (*.material;*.osm)|*.material;*.osm"
+msgstr "скрипт материала (*.material;*.osm)|*.material;*.osm"
+
+msgid "Textures (*.*)"
+msgstr "Текстуры (*.*)"
+
+msgid "Select a mesh"
+msgstr "Выберите меш (модель)"
+
+msgid "No spaces allowed"
+msgstr "Без использования пробелов"
+
+msgid "Value must be between "
+msgstr "Значение должно быть в диапазоне"
+
+msgid " and "
+msgstr " и "
+
+msgid "Value must be positive"
+msgstr "Значение должно быть положительным"
+
+msgid "True"
+msgstr "Да"
+
+msgid "true"
+msgstr "да"
+
+msgid "False"
+msgstr "Нет"
+
+msgid "false"
+msgstr "нет"
+
+msgid "It seems that PhysX is installed on this computer. Do you want to make use of the PhysX features?"
+msgstr "Вероятно PhysX установлен на этот компьютер. Хотите ли Вы использовать возможности PhysX?"
+
+msgid "It seems that PhysX is NOT installed on this computer. Do you still want to try to use PhysX?"
+msgstr "Вероятно PhysX НЕ установлен на этот компьютер. Вы хотите использовать возможности PhysX?"
+
+msgid "You have selected a different Particle System. Do you want to save "
+msgstr "Вы выбрали другую систему частиц. Вы хотите сохранить?"
+
+msgid "This particle system template is in an incorrect state and cannot be used anymore"
+msgstr "Шаблон этой системы частиц имеет некорректное состояние и не может быть использован"
+
+msgid ""
+"Particle Universe Editor V1.5\n"
+"Copyright (c) 2011 Henry van Merode\n"
+"\n"
+"The lightbulb image is royalty free from FreeDigitalPhotos.net\n"
+"\n"
+msgstr ""
+"Particle Universe Editor V1.5\n"
+"Copyright (c) 2011 Henry van Merode\n"
+"\n"
+"The lightbulb image is royalty free from FreeDigitalPhotos.net\n"
+"\n"
+
+msgid ""
+"Particle Universe Editor DEMO V1.5\n"
+"Copyright (c) 2011 Henry van Merode\n"
+"\n"
+"The lightbulb image is royalty free from FreeDigitalPhotos.net\n"
+"\n"
+msgstr ""
+"Particle Universe Editor DEMO V1.5\n"
+"Copyright (c) 2011 Henry van Merode\n"
+"\n"
+"The lightbulb image is royalty free from FreeDigitalPhotos.net\n"
+"\n"
+

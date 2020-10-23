@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleAffector.html">Affector&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Force Field Affector</h2>
+  <p>The Force Field Affector attracts or rejects particles, based on the position of a particle in the forcefield. The forcefield is based on a calculated 3D noise. Two types of forcefield calculations are possible:
+  <br><br><b>Realtime</b>: All calculations are done in realtime. This gives less memory overhead, but is slower.</li>
+  <br><br><b>Matrix</b>: A precreated forcefield is generated and stored in memory. This is faster, but also consumes more memory. Another downside is, that it takes a considerable amount of time to precreate the forcefield. Because the calculation is done in the prepare() function of the particle system, it can be done up-front. Additionally, if threading in Ogre is activated, the generation of the forcefield is done in a separate workqueue (thread).</li>
+</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>affector&nbsp;&nbsp;&nbsp;ForceField &nbsp;&nbsp;&nbsp;[affectorName]&nbsp;&nbsp;&nbsp;{affector properties}</i></strong>
+  <p>See ParticleAffector for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+affector                   ForceField 
+{
+   forcefield_type         matrix
+   delta                   0.001
+   force                   300
+   persistence             2
+   worldsize               1000 1000 1000
+   movement                200 20 200
+   movement_frequency      10
+}</pre>
+
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Forcefield Type</h6>
+  <p>As explained above, two types of forcefield calculations are possible. The 'realtime' forcefield provides calculations in realtime, the 'matrix' provides a precalculated forcefield. Syntax:</p>
+  <p><strong><i>forcefield_type&nbsp;&nbsp;&nbsp;realtime | matrix</i></strong>
+    <br>
+    <br><strong><i>forcefield_type</i></strong> is the keyword.
+    <br><strong><i>realtime | matrix</i></strong> determine the type of forcefield. Default: realtime</p>
+
+  <h6>Delta</h6>
+  <p>Delta defines the radius around the position that contributes to the calculation of the force. This value is only applicable if the Forcefield type is 'realtime'. Syntax:</p>
+  <p><strong><i>delta&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>delta</i></strong> is the keyword.
+    <br>
+    <strong><i>#value</i></strong> is a real value that defines the radius around the particle that takes the forces into account. Default: 1.0</p>
+
+  <h6>Force</h6>
+  <p>Scaling factor used in calculation of the direction vector of the particle. Syntax:</p>
+  <p><strong><i>force&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>force</i></strong> is the keyword.
+    <br>
+    <strong><i>#value</i></strong> is a real value that defines the force. Default: 400.0</p>
+
+  <h6>Octaves</h6>
+  <p>The Octaves property defines how many iterations of the noise function are summed up. Syntax:</p>
+  <p><strong><i>octaves&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>octaves</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is a real value that defines the number of octaves. Default: 2</p>
+
+  <h6>Frequency</h6>
+  <p>Frequency defines how much the noise is repeated. Syntax:</p>
+  <p><strong><i>frequency&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>frequency</i></strong> is the keyword.
+    <br>
+    <strong><i>#value</i></strong> is a real value that defines the frequency. Default: 1.0</p>
+
+  <h6>Amplitude</h6>
+  <p>Amplitude defines the differences between min and max values in the noise. Syntax:</p>
+  <p><strong><i>amplitude&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>amplitude</i></strong> is the keyword.
+    <br>
+    <strong><i>#value</i></strong> is a real value that defines the amplitude. Default: 1.0</p>
+
+  <h6>Persistence</h6>
+  <p>Persistence defines how much the amplitude changes after each iteration (noise calculation). Syntax:</p>
+  <p><strong><i>persistence&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>persistence</i></strong> is the keyword.
+    <br>
+    <strong><i>#value</i></strong> is a real value that defines the persistence. Default: 3.0</p>
+
+  <h6>Forcefield Size</h6>
+  <p>The internal size of the forcefield. This value only has a meaning in case the Forcefield type is 'matrix'. A value of 64 for example, defines a forcefield size of 64x64x64. The
+  size of the forcefield in case of a 'realtime' type is always 1x1x1 (unit-cube). A larger forcefield size results in a forcefield with a higher resolution (better quality).
+  Syntax:</p>
+  <p><strong><i>forcefield_size&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>forcefield_size</i></strong> is the keyword.
+    <br>
+    <strong><i>#value</i></strong> is a real value that defines the size. Default: 64</p>
+
+  <h6>Worldsize</h6>
+  <p>The size of the forcefield in the 3d scene. The world size is defined by an x, y and z component, which means that the forcefield is not restricted to a cube shape in the 3d scene (although internally it uses a cube for calculations). Syntax:</p>
+  <p><strong><i>worldsize&nbsp;&nbsp;&nbsp;#x&nbsp;#y&nbsp;#z</i></strong>
+    <br>
+    <br><strong><i>worldsize</i></strong> is the keyword.
+    <br>
+    <strong><i>#x&nbsp;#y&nbsp;#z</i></strong> define the dimensions of the forcefield. Default: 500 500 500</p>
+
+  <h6>Ignore Negative X</h6>
+  <p>A force can have both a positive and negative value. If this flag is set to true, then all negative x values are ignored. This is useful if particles are restricted to move just in one x direction. Syntax:</p>
+  <p><strong><i>ignore_negative_x&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>ignore_negative_x</i></strong> is the keyword.
+    <br><strong><i>true | false</i></strong> define whether negative x values are ignored. Default: false</p>
+
+  <h6>Ignore Negative Y</h6>
+  <p>A force can have both a positive and negative value. If this flag is set to true, then all negative y values are ignored. This is useful if particles are restricted to move just in one y direction. Syntax:</p>
+  <p><strong><i>ignore_negative_y&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>ignore_negative_x</i></strong> is the keyword.
+    <br><strong><i>true | false</i></strong> define whether negative y values are ignored. Default: false</p>
+
+  <h6>Ignore Negative Z</h6>
+  <p>A force can have both a positive and negative value. If this flag is set to true, then all negative z values are ignored. This is useful if particles are restricted to move just in one z direction. Syntax:</p>
+  <p><strong><i>ignore_negative_z&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>ignore_negative_x</i></strong> is the keyword.
+    <br><strong><i>true | false</i></strong> define whether negative z values are ignored. Default: false</p>
+
+  <h6>Movement</h6>
+  <p>By default, the forcefield is static and particles are always attracted/rejected the same if they are on a certain position in the forcefield. The movement vector internally shifts the forcefield, so the forces are changed over time. Syntax:</p>
+  <p><strong><i>movement&nbsp;&nbsp;&nbsp;#x&nbsp;#y&nbsp;#z</i></strong>
+    <br>
+    <br><strong><i>movement</i></strong> is the keyword.
+    <br><strong><i>#x&nbsp;#y&nbsp;#z</i></strong> define the movement. Default: 500 0 0</p>
+
+  <h6>Movement Frequency</h6>
+  <p>The Movement Frequency defines the speed of movement and basicly controls the time-factor. Syntax:</p>
+  <p><strong><i>movement_frequency&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>movement_frequency</i></strong> is the keyword.
+    <br>
+    <strong><i>#value</i></strong> is a real value that defines the movement frequency. Default: 5.0</p>
+
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

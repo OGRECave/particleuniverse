@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleEventHandler.html">EventHandler&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Do Affector Event Handler</h2>
+  <p>Forces an affector to affect the particle. This might look odd, because if 
+    a Particle Technique contains the Particle Affector, the particles are already 
+    affected. The reason why this Event Handler exists is that in some situations 
+    for example, you only want to affect the particle once (at a certain event). 
+    Using this Event Handler has a few restrictions: <br>
+    - the _preProcessParticles() and the _postProcessParticles() of the Particle 
+    Affector are <strong>not</strong> called by default; only the _affect() function is called.
+	However, you are able to set an indication to perform the  _preProcessParticles() and _postProcessParticles,
+	but this is done per particle!<br>
+    - the Particle Affector must still be included in the Particle Technique. 
+    If the Particle Affector is enabled, an additional call to the affector is 
+    executed when a certain event occurs. If the Particle Affector is disabled, 
+    the 'affect' is executed only once when a certain event occurs.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>handler&nbsp;&nbsp;&nbsp;DoAffector&nbsp;&nbsp;&nbsp;[handlerName]&nbsp;&nbsp;&nbsp;{handler properties}</i></strong>
+  <p>See ParticleEventHandler for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+observer                     OnExpire
+{
+   handler                   DoAffector
+   {
+      force_affector         myAffector
+   }
+}</pre>
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Pre/Post Processing</h6>
+  <p>Indication to determine that the_preProcessParticles() and the _postProcessParticles() must also be executed. Syntax:</p>
+  <p><strong><i>pre_post&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>pre_post</i></strong> is the keyword.
+    <br><strong><i>true | false</i></strong> is a boolean value to indicate that the_preProcessParticles() and the _postProcessParticles() must also be executed. Default: false</p>
+
+  <h6>Force Affector</h6>
+  <p>This defines the name of the affector that is forced. The affector will be searched in the technique that also contains this event handler. If the
+     affector cannot be found, it will search in the other techniques. Syntax:</p>
+  <p><strong><i>force_affector&nbsp;&nbsp;&nbsp;#affectorName</i></strong>
+    <br>
+    <br><strong><i>force_affector</i></strong> is the keyword.
+    <br><strong><i>#affectorName</i></strong> is the name of the affector.</p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

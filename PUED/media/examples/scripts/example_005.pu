@@ -1,0 +1,38 @@
+system example_005
+{
+    keep_local                                  true
+    scale                                       0.15 0.15 0.15
+    category                                    Examples_1_10
+    technique 
+    {
+        visual_particle_quota                   2500
+        material                                ParticleUniverse/Star
+        default_particle_width                  6
+        default_particle_height                 6
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Vertex 
+        {
+            emission_rate                       200
+            angle                               360
+            time_to_live                        7
+            velocity                            0
+            step                                20
+            number_of_segments                  3
+            number_of_iterations                50
+            mesh_name                           athene.mesh
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 0 0 1
+            time_colour                         1    0 0 0 1
+        }
+        extern                                  SceneDecorator 
+        {
+            mesh_name                           athene.mesh
+            material                            ParticleUniverse/Stone
+            scene_node_scale                    0.144 0.144 0.144
+        }
+    }
+}

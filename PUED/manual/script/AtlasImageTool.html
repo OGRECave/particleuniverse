@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Atlas Image Tool</h2>
+  <p>The Atlas Image Tool is used to create atlas images (textures), which are supported by the Particle Universe plugin. For example, an atlas textures is used in combination with the Texture Animator. This affector uses an atlas texture and takes parts of the texture (defined by texture coordinates) to create an animation.</p>
+  <p>The Atlas Image Tool is a commandline tool that reads a configuration file and creates an atlas image. Syntax:</p>
+  <p><strong><i>AtlasImageTool &nbsp;&nbsp;&nbsp;configFileName</i></strong>
+
+  <h3>Creation of an atlas image</h3>
+  <p>The configuration file contains the settings, needed to create an atlas texture. Example:</p>
+  <pre>
+// Set the path of all image files
+ImagePath = ../../images
+<br>
+// Define the input files
+InputImage = flare.png; smoke.png; smoke.png
+<br>
+// Alpha correction
+Alpha = 1.0; 1.0; 0.0
+<br>
+// Define the output (atlas) file
+OutputImage = interpolate.png
+</pre>
+  <p><strong><i>ImagePath</i></strong> is a keyword and identifies the relative directory where the images are stored.
+  <br>
+  <strong><i>InputImage</i></strong> is a keyword and identifies a list of imagefiles of which the atlas image is constructed.
+  A restriction is that all imagefiles must have the same dimensions (width and height), the same format and no mipmaps.<br>
+  <strong><i>Alpha</i></strong> is an optional keyword and identifies a list of values. Each value is used to correct the alpha component of its related imagefile.
+  <br><strong><i>OutputImage</i></strong> is a keyword and identifies the name of the atlas image that is created.
+  </p>
+
+  <h3>Interpolation between images</h3>
+  <p>An optional feature is to generate image frames between the specified input images. For example, if image1.png and image2.png are defined with the InputImage keyword, and frame 0 and 10 are assigned to it (by means of the Frame keyword), image frames 1..9 are automatically generated. The images are interpolated between image1.png and image2.png.</p>
+  <pre>
+// Define the input files
+InputImage = image1.png; image2.png
+<br>
+// Relate every inputfile to a frame (intermediate frames are interpolated)
+Frame = 0; 10
+</pre>
+  <p><strong><i>Frame</i></strong> is a keyword and identifies a list of framenumbers that is related to the list with input images.
+
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>	

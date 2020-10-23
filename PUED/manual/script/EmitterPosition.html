@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleEmitter.html">Emitter&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Position Emitter</h2>
+  <p>Emits particles at one or more positions, which are added to this emitter. This emitter is usable to create a structure (a 'wall' for example) of particles, where the emitter contains
+  all positions of that structure. Adding physical behaviour to the particles enables the structure to behave naturally (i.e. collapses after impact).</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>emitter&nbsp;&nbsp;&nbsp;Position&nbsp;&nbsp;&nbsp;[emitterName]&nbsp;&nbsp;&nbsp;{emitter properties}</i></strong>
+  <p>See ParticleEmitter for explanation of the syntax</p>
+  <p> Example:
+  <pre>
+emitter                Position
+{
+    emission_rate      10
+    force_emission     true
+    time_to_live       100
+    random_position    false
+    add_position       200 100 300
+    add_position       250 100 300
+    add_position       300 100 300
+    add_position       350 100 300
+    add_position       400 100 300
+}</pre>
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Add Position</h6>
+  <p>Positions can be added to this emitter and particles are emitted from these positions. Don´t confuse this property with the 'position' property. The 'position' property sets the position of the emitter as a whole (relative to its parent), while the 'add_position' property defines positions relative to the emitter. Syntax:</p>
+  <p><strong><i>add_position&nbsp;&nbsp;&nbsp;#x #y #z</i></strong>
+    <br>
+    <br><strong><i>add_position</i></strong> is the keyword.
+    <br><strong><i>#x</i></strong> is the x-value of the position.
+    <br><strong><i>#y</i></strong> is the y-value of the position.
+  <br><strong><i>#z</i></strong> is the z-value of the position.</p>
+
+  <h6>Random Position</h6>
+  <p>Particles are emitted at one of the positions that are added to this emitter. The position can be picked random from the list, or the positions are picked in the order they where added. Note, that if the emission_rate value is larger than the number of added positions and force_emission has been set to true, the number of emitted particles is not determined by the emission_rate value, but by the number of added positions. Syntax:</p>
+  <p><strong><i>random_position&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>random_position</i></strong> is the keyword.
+    <br><strong><i>true | false</i></strong> defines whether the particles must be emitted random or not. Default: true.</p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

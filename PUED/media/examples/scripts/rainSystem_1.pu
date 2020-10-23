@@ -1,0 +1,113 @@
+system rainSystem_1
+{
+    fast_forward                                1 1
+    category                                    Nature
+    technique 
+    {
+        visual_particle_quota                   1000
+        material                                ParticleUniverse/Rain_01
+        default_particle_width                  0.06
+        default_particle_height                 3
+        renderer                                Billboard
+        {
+            billboard_type                      oriented_self
+            billboard_origin                    top_center
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       500
+            angle                               1
+            time_to_live                        20
+            velocity                            75
+            position                            0 15 0
+            direction                           0.2 -1 0
+            box_width                           60
+            box_height                          1
+            box_depth                           60
+        }
+        observer                                OnPosition 
+        {
+            handler                             DoPlacementParticle 
+            {
+                force_emitter                   CircleEmitter
+            }
+            handler                             DoPlacementParticle 
+            {
+                force_emitter                   SplashEmitter
+            }
+            handler                             DoExpire 
+            {
+            }
+            position_y                          less_than -5.85
+        }
+    }
+    technique 
+    {
+        material                                ParticleUniverse/Circle
+        default_particle_width                  1
+        default_particle_height                 1
+        renderer                                Billboard
+        {
+            billboard_type                      perpendicular_common
+            common_direction                    0 1 0
+            common_up_vector                    0 0 1
+        }
+        emitter                                 Point CircleEmitter
+        {
+            emission_rate                       0
+            angle                               0
+            time_to_live                        dyn_random
+            {
+                min                             1
+                max                             2
+            }
+            velocity                            0
+            direction                           0 0 0
+        }
+        affector                                Scale 
+        {
+            xyz_scale                           1.2
+        }
+    }
+    technique 
+    {
+        material                                ParticleUniverse/Flare
+        default_particle_width                  0.15
+        default_particle_height                 0.15
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point SplashEmitter
+        {
+            emission_rate                       0
+            time_to_live                        dyn_random
+            {
+                min                             0.01
+                max                             0.05
+            }
+            direction                           0 0 0
+            emits                               emitter_particle Splash
+        }
+        emitter                                 Point Splash
+        {
+            emission_rate                       80
+            time_to_live                        1
+            velocity                            dyn_random
+            {
+                min                             3.6
+                max                             5.4
+            }
+        }
+        affector                                LinearForce 
+        {
+            force_vector                        0 -18 0
+        }
+        observer                                OnPosition 
+        {
+            handler                             DoExpire 
+            {
+            }
+            position_y                          less_than -6
+        }
+    }
+}

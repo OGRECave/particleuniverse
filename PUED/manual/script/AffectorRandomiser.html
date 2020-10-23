@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleAffector.html">Affector&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Randomiser</h2>
+  <p>With the Randomiser it is possible to reposition or redirect a particle at a given interval.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>affector&nbsp;&nbsp;&nbsp;Randomiser&nbsp;&nbsp;&nbsp;[affectorName]&nbsp;&nbsp;&nbsp;{affector properties}</i></strong>
+  <p>See ParticleAffector for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+affector                        Randomiser
+{
+   max_deviation_x              10
+   max_deviation_y              10
+   max_deviation_z              10
+   time_step                    0.1
+   use_direction           false
+}</pre>
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Maximum deviation - x value</h6>
+  <p>Defines the x value of the maximum position- or direction change. Syntax:</p>
+  <p><strong><i>max_deviation_x&nbsp;&nbsp;&nbsp;#x</i></strong>
+    <br>
+    <br><strong><i>max_deviation_x</i></strong> is the keyword. <font color="#F62217"><strong><em>rand_aff_max_deviation_x</em></strong><em> is deprecated from version 1.2</em></font>
+  <br>
+  <strong><i>#x</i></strong> is the max. x value of the deviation. Default: 1.0.</p>
+
+  <h6>Maximum deviation - y value</h6>
+  <p>Defines the y value of the maximum position- or direction change. Syntax:</p>
+  <p><strong><i>max_deviation_y&nbsp;&nbsp;&nbsp;#y</i></strong>
+    <br>
+    <br><strong><i>max_deviation_y</i></strong> is the keyword. <font color="#F62217"><strong><em>rand_aff_max_deviation_y</em></strong><em> is deprecated from version 1.2</em></font>
+  <br>
+  <strong><i>#y</i></strong> is the max. y value of the deviation. Default: 1.0.</p>
+
+  <h6>Maximum deviation - z value</h6>
+  <p>Defines the z value of the maximum position- or direction change. Syntax:</p>
+  <p><strong><i>max_deviation_z&nbsp;&nbsp;&nbsp;#z</i></strong>
+    <br>
+    <br><strong><i>max_deviation_z</i></strong> is the keyword. <font color="#F62217"><strong><em>rand_aff_max_deviation_z</em></strong><em> is deprecated from version 1.2</em></font>
+  <br>
+  <strong><i>#z</i></strong> is the max. z value of the deviation. Default: 1.0.</p>
+
+  <h6>Random Direction</h6>
+  <p>By default, the direction of a particle is changed, but it is also possible to let the position change. Syntax:</p>
+  <p><strong><i>use_direction&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br>
+    <strong><i>use_direction</i></strong> is the keyword. <font color="#F62217"><strong><em>rand_aff_direction</em></strong><em> is deprecated from version 1.2</em></font>
+  <br><strong><i>true | false</i></strong> indicates whether the direction changes (=true) or the position. Default: true.</p>
+
+  <h6>Time Step</h6>
+  <p>Time Step defines the update interval. After each time step, the particle is repositioned or gets another direction. Syntax:</p>
+  <p><strong><i>time_step&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>time_step</i></strong> is the keyword. <font color="#F62217"><strong><em>rand_aff_time_step</em></strong><em> is deprecated from version 1.2</em></font>
+  <br>
+  <strong><i>#value</i></strong> is a real value that indicates the update interval. Default: 0.</p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

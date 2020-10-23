@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleAffector.html">Affector&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Path Follower</h2>
+  <p>The Path Follower makes it possible to define a path over which the particle moves. By adding points to the Path Follower, the path is calculated by interpolation
+     between the points. The path is defined for the lifetime of the particle, so if the particles' time to live is decreased, it it still follows the whole path.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>affector&nbsp;&nbsp;&nbsp;PathFollower&nbsp;&nbsp;&nbsp;[affectorName]&nbsp;&nbsp;&nbsp;{affector properties}</i></strong>
+  <p>See ParticleAffector for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+affector                    PathFollower
+{
+    path_follower_point     -40 -10 -40
+    path_follower_point     -10 50 40
+    path_follower_point     -10 -20 -10
+    path_follower_point     40 -50 70
+    path_follower_point     -100 -10 -60
+}</pre>
+
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Control Points (Add Position)</h6>
+  <p>The points added to this affector are used to calculate the path, by using 
+    smooth interpolation. Syntax:</p>
+  <p><strong><i>path_follower_point&nbsp;&nbsp;&nbsp;#x&nbsp;&nbsp;&nbsp;#y&nbsp;&nbsp;&nbsp;#z</i></strong>
+    <br>
+    <br><strong><i>path_follower_point</i></strong> is the keyword. Multiple 'path_follower_point' attributes can be added. <br>
+    <strong><i>#x</i></strong> defines the x value of the point. <br>
+    <strong><i>#y</i></strong> defines the y value of the point. <br>
+    <strong><i>#z</i></strong> defines the z value of the point. <br>
+   </p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

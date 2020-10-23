@@ -1,0 +1,126 @@
+=================================================================================================================
+Release V2.0
+--------------------------------------------------
+- VSync on/off
+- Statistics are not yet translated (possible?)
+- Determine a way to detect that de GpuProgram was loaded and compiled !!!!!
+- Beter resource management. Use 'projects'. Configuration per project (i.e. resource directories) is possible. Also store the positions of the components
+  for each particle system.
+- New meshes picklist, with the meshes themselves displayed.
+- Dynamic attribute property: Visual dialog on which control points can be added.
+- Group components together into 'templates'. This is comparable to the aliasses in a script. The templates/aliasses can be defined in 
+  the editor and dragged into the canvas of the editor (where all properties can be tuned again).
+- Renderer Property Window: Define "Texture coords set" by means of texture frame where the rectangle is presented visually 
+  and can be selected by means of the mouse.
+- Tool: Performance analyser to determine appropriate quota; present overview and apply dynamically.
+- Tool: Analyser to determine the distribution of particles in the spatial hashing cells (in case the spatial hashtable is used).
+- Tool: Analyse FPS.
+- Tool: Create atlas texture.
+- Tool: Deployer, which exports all materials, scripts, textures, etc. to target directories, which can be configured per project.
+- Tool: Create online or offline mesh from a text (using FTGL). This mesh is used as a Vertex emitter. See also
+  http://www.ogre3d.org/forums/viewtopic.php?t=27982&highlight=
+- Renderer Property Window: If "Use soft particles" is set to false, the contrast power, scale and delta attributes must be hidden. This
+  applies to more settings.
+- Some connections are possible with the editor, but not with the plugin. For instance, exclude an emitter (in an Affector) that 
+  is part of another technique.
+- Implement: PhysXActorExternPropertyWindow
+- Dropdownlistbox with selection of skyboxes.
+- ParticleUniverseRendererPropertyWindow: Implement Texture coords set
+- Static linking of both Ogre and the PU plugin
+- All particle dimensions versus individual particle width, height and depth => disable properties, they are mutual exclusive.
+- Implement 'SceneDecorator'
+- Keys left, right, up, down to move the particle system in the render window.
+- CTRL-F for searching a text in the script.
+- If the application is quit, display a message if the particle system has been changed, but not been saved
+- Add logo to the 'About' dialog box.
+- Collapse all option to quickly collapse the property window.
+- Tooltip for all properties (with text from the manual).
+- Add refresh button in the Edit tab toolbox. This recreates a complete new particle system from the script. This is sometimes needed in
+  case an attribute is not changed in realtime (i.e. emitted techniques).
+- Move mMainSceneNode->attachObject(mCurrentParticleSystemForRenderer); from OnPlay to CreateNewSystem. Same for OgreControlComponent.
+- Don't disable the play icons when the script tab is selected, but if play (F6) is selected, open the 'render' tab.
+- After clicking a component, set the same colour in the header of the property window, so it is clear which type
+  of component is selected based on the colour. Also set the component type for colourblind people.
+- Add a (*) to the particle system in the list indicating it has been changed
+- Display runtime statistics other than FPS, number of particles: This means memory consumption over time.
+- Change order play icons.
+- Improvements: http://www.fxpression.com/phpBB3/viewtopic.php?f=6&t=414
+ :arrow: Editor: Add background images and/or skyboxes ([color=#00BF00]Moves to 1.5[/color]).
+ :arrow: Editor: Visual picklist for meshes ([color=#00BF00]Moves to 1.5[/color]).
+ :arrow: Editor: Visual picklist for materials ([color=#00BF00]Moves to 1.5[/color]).
+ :arrow: Editor: Add context menu for material list (MaterialTab) with clone and remove ([color=#FF0000]0 %[/color]).
+ :arrow: Editor: DynamicAttribute Curved dialog: Mouseover controlpoints displays x,y values.
+ :arrow: Editor: See http://www.fxpression.com/phpBB3/viewtopic.php?f=6&t=441&p=1388#p1388
+ :arrow: Editor: See http://www.fxpression.com/phpBB3/viewtopic.php?f=8&t=428
+ :arrow: Editor: Add background images and/or skyboxes ([color=#00BF00]Moves to 1.5[/color]).
+ :arrow: Editor: Visual picklist for materials ([color=#00BF00]Moves to 1.5[/color]).
+ :arrow: Editor: Visual picklist for meshes ([color=#00BF00]Moves to 1.5[/color]).
+ :arrow: Editor: Changes in edittab: http://www.fxpression.com/phpBB3/viewtopic.php?f=8&t=509&sid=5b946ffbb71af5a6346af37d88a90918 ([color=#FF0000]0 %[/color]).
+ :arrow: Editor: Support dds format in displaying textures (needs dds support in wxWidgets).
+ :arrow: Editor: New material picklist with images of the materials.
+ :arrow: Editor: Split window for edit tab (split between edit and render part).
+- For better mousepicking of the rotation gizmo, take the surrounding pixels into account (nice to have).
+- Nice to have: Allocated memory
+- Nice to have: Add box/panels in 'movement' gizmo for free-format move.
+- Nice to have: When zooming in in ortho, the course grid has think lines. Irritating when the camera rotates.
+- Nice to have: Disable grid does not work in perpendicular ortho mode.
+
+=================================================================================================================
+Release V1.5.1:
+--------------------------------------------------
+:arrow: Editor: Multi-language support.
+
+=================================================================================================================
+Release V1.5
+--------------------------------------------------
+:arrow: Editor: Object (mesh, particle system) manipulation by means of move, rotate and scale gizmo's that work in both world- and object space, 
+ similar to packages like Unity 3D, Max 3D, etc.
+:arrow: Editor: Object rotation by entering Euler angles.
+:arrow: Editor: Importing (skinned) meshes by means of drag and drop from the file explorer to the Particle Universe Editor; this automatically
+ opens a directory dialog to select the location(s) of dependent resources (skeleton files, materials, textures, ...).
+:arrow: Editor: Select a bone from a skeleton and attach a particle system to it. Meshes with animation can be played (including the attached 
+ particle system). Particle systems can be oriented relative to the bone by means of the gizmo.
+:arrow: Editor: Orthogonal and Perspective camera views. The orthogonal camera view includes options to view from a perpendicular or 45 degree 
+ angle view. Orientation is done by a ortho camera gizmo. The perspective camera view has a free rotating camera.
+
+ 
+=================================================================================================================
+Release V1.4
+--------------------------------------------------
+ :arrow: Editor: Update documentation ([color=#FF0000]0 %[/color]).
+ :arrow: Editor: Replace wxListbox with particle systems with wxTreeCtrl, to categorize them ([color=#00BF00]DONE[/color]).
+ :arrow: Editor: Added 'time' slider that increases/decreases time. Usesful for watching particle systems in slow motion ([color=#00BF00]DONE[/color]).
+ :arrow: Editor: Visual creation of control points by means of a dialog ([color=#00BF00]DONE[/color]).
+ :arrow: Editor: Define time and colour of the ColourAffector by means of a timeline window where the colours can be added ([color=#00BF00]DONE[/color]).
+ :arrow: Editor: Mousewheel in edittab results in scrolling the window up/down instead of zooming the components. Zooming can still be done by means of the PageUp and PageDown buttons ([color=#00BF00]DONE[/color]).
+ :arrow: Editor: The toolbar in the edit window has become a floating toolbar and does not scroll anymore when the window scrolls ([color=#00BF00]DONE[/color]).
+ :arrow: Editor: Remove the rendering inside the system component and make it a separate splitted window, that is updated in realtime ([color=#00BF00]DONE[/color]).
+ :arrow: Editor: A new created particle system already contains a technique, renderer and emitter ([color=#00BF00]DONE[/color]).
+ :arrow: Editor: Various features. See http://www.fxpression.com/phpBB3/viewtopic.php?f=8&t=428 ([color=#00BF00]Main part done, rest to later version[/color]).
+ :arrow: Editor: New tab with simple material editor ([color=#00BF00]DONE[/color]).
+ :arrow: Editor: Update documentation ([color=#FF0000]0 %[/color]).
+
+
+=================================================================================================================
+Release V1.3.1
+--------------------------------------------------
+
+=================================================================================================================
+Release V1.3
+--------------------------------------------------
+- (DONE) Add optional mesh and light to the scene. It is possible to attach and detach the particle system to the mesh, 
+         using a relative offset and orientation.
+- (DONE) Add statistics to the scene (FPS, distance between camera and particle system, number of particles in the scene, ...)
+- (DONE) Highlight syntax in script
+- (DONE) Context sensitive Help (Using HTML pages)
+- (DONE) Create grid to have more sense of the particle dimensions
+- (DONE) Change order of play-, stop-, pause- and record- buttons
+
+
+=================================================================================================================
+Release V1.2
+--------------------------------------------------
+- (DONE) Improved Zoom options. This is for support for smaller scaled particle systems.
+- (DONE) Edit BeamRenderer.
+- (DONE) Edit PhysX types (Actor- and Fluid based particles). The editor automatically detects whether PhysX is installed.
+- (DONE) Record to AVI, SWF and WMV.

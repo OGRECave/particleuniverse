@@ -1,0 +1,2194 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2003-10-04 23:10+0200\n"
+"PO-Revision-Date: 2012-01-03 22:13+0100\n"
+"Last-Translator: FXPression\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+msgid "System"
+msgstr "Систем"
+
+msgid "Technique"
+msgstr "Техника"
+
+msgid "Renderer"
+msgstr "Рендерер"
+
+msgid "Emitter"
+msgstr "Емитер"
+
+msgid "Affector"
+msgstr "Ефектор"
+
+msgid "Observer"
+msgstr "Набљудувач"
+
+msgid "Handler"
+msgstr "Обработувач"
+
+msgid "Behaviour"
+msgstr "Однесување"
+
+msgid "Extern"
+msgstr "Надворешен"
+
+msgid "Visual"
+msgstr "Визуелен"
+
+msgid "<undefined>"
+msgstr "<недефинирано>"
+
+msgid "Beam"
+msgstr "Сноп"
+
+msgid "Billboard"
+msgstr "Билборд"
+
+msgid "Entity"
+msgstr "Ентитет"
+
+msgid "Light"
+msgstr "Светло"
+
+msgid "RibbonTrail"
+msgstr "Рибон Трака"
+
+msgid "Circle"
+msgstr "Круг"
+
+msgid "Line"
+msgstr "Линија"
+
+msgid "MeshSurface"
+msgstr "Површина на модел"
+
+msgid "Slave"
+msgstr "Роб"
+
+msgid "SphereSurface"
+msgstr "Површина на сфера"
+
+msgid "Align"
+msgstr "Усогласување"
+
+msgid "BoxCollider"
+msgstr "Коцка Судирач"
+
+msgid "CollisionAvoidance"
+msgstr "Избегнување на Судар"
+
+msgid "Colour"
+msgstr "Боја"
+
+msgid "FlockCentering"
+msgstr "Центрирање на Сноп"
+
+msgid "ForceField"
+msgstr "Силно Поле"
+
+msgid "GeometryRotator"
+msgstr "Ротатор на објекти"
+
+msgid "InterParticleCollider"
+msgstr "Интер-Честички Судирач"
+
+msgid "Jet"
+msgstr "Млаз"
+
+msgid "LinearForce"
+msgstr "Линеарна Сила"
+
+msgid "ParticleFollower"
+msgstr "Следач на Честички"
+
+msgid "PathFollower"
+msgstr "Следач на Пат"
+
+msgid "PlaneCollider"
+msgstr "Рамнински Судирач"
+
+msgid "Randomiser"
+msgstr "Рандомизер"
+
+msgid "Scale"
+msgstr "Големина"
+
+msgid "ScaleVelocity"
+msgstr "Брзина на Зголемување"
+
+msgid "SineForce"
+msgstr "Синусна Сила"
+
+msgid "SphereCollider"
+msgstr "Сферичен Судирач"
+
+msgid "TextureAnimator"
+msgstr "Аниматор на Текстура"
+
+msgid "TextureRotator"
+msgstr "Ротатор на Текстура"
+
+msgid "VelocityMatching"
+msgstr "Изедначување на Брзина"
+
+msgid "Vortex"
+msgstr "Вортекс"
+
+msgid "OnClear"
+msgstr "НаИсчистување"
+
+msgid "OnCollision"
+msgstr "НаСудар"
+
+msgid "OnCount"
+msgstr "НаОдбројување"
+
+msgid "OnEmission"
+msgstr "НаЕмисија"
+
+msgid "OnEventFlag"
+msgstr "НаОзнакаНаНастан"
+
+msgid "OnExpire"
+msgstr "НаИстек"
+
+msgid "OnPosition"
+msgstr "НаПозиција"
+
+msgid "OnQuota"
+msgstr "НаКвота"
+
+msgid "OnRandom"
+msgstr "НаРандом"
+
+msgid "OnTime"
+msgstr "НаВреме"
+
+msgid "OnVelocity"
+msgstr "НаБрзина"
+
+msgid "DoAffector"
+msgstr "НаправиВклучиЕфектор"
+
+msgid "DoEnableComponent"
+msgstr "НаправиВклучиКомпонент"
+
+msgid "DoExpire"
+msgstr "НаправиИстечи"
+
+msgid "DoFreeze"
+msgstr "НаправиСмрзни"
+
+msgid "DoPlacementParticle"
+msgstr "НаправиПоставиЧестичка"
+
+msgid "DoScale"
+msgstr "НаправиЗголеми"
+
+msgid "DoStopSystem"
+msgstr "НаправиПрекиниСистем"
+
+msgid "PhysXActor"
+msgstr "PhysXАктер"
+
+msgid "PhysXFluid"
+msgstr "PhysXТечност"
+
+msgid "&File"
+msgstr "Датотека"
+
+msgid "List &items"
+msgstr "Листа Предмети"
+
+msgid "&Build"
+msgstr "Изгради"
+
+msgid "&Gizmo"
+msgstr "Манипулатор"
+
+msgid "&Camera"
+msgstr "Камера"
+
+msgid "&Tools"
+msgstr "Алатки"
+
+msgid "&Help"
+msgstr "Помош"
+
+msgid "New"
+msgstr "Ново"
+
+msgid "&New\tCtrl+N"
+msgstr "Ново\tCtrl+N"
+
+msgid "New particle system"
+msgstr "Нов Систем за Честички"
+
+msgid "Create a new particle system"
+msgstr "Креирај нов систем за честички"
+
+msgid "Load"
+msgstr "Отвори"
+
+msgid "&Load file\tCtrl+L"
+msgstr "Отвори датотека\tCtrl+L"
+
+msgid "Load a *.pu or *.pua file"
+msgstr "Отвори *.pu или *.pua датотека"
+
+msgid "File name:"
+msgstr "Име на датотека:"
+
+msgid "Save"
+msgstr "Зачувај"
+
+msgid "Cancel"
+msgstr "Откажи"
+
+msgid "File name exists already."
+msgstr "Датотеката веќе постои."
+
+msgid "Error"
+msgstr "Грешка"
+
+msgid "Warning"
+msgstr "Предупредување"
+
+msgid "&Save\tCtrl+S"
+msgstr "Зачувај\tCtrl+S"
+
+msgid "Save a *.pu or *.pua file"
+msgstr "Зачувај *.pu или *.pua датотека"
+
+msgid "Save as type:"
+msgstr "Зачувај како:"
+
+msgid "Add &resource location\tCtrl+R"
+msgstr "Додај локација со ресурси\tCtrl+R"
+
+msgid "Load all resources from a directory"
+msgstr "Отвори ги сите ресурси од папка"
+
+msgid "Add resource location"
+msgstr "Додај локација со ресурси"
+
+msgid "Add a resource location"
+msgstr "Додај локација со ресурси"
+
+msgid "Save As\tCtrl+Shift+S"
+msgstr "Зачувај како\tCtrl+Shift+S"
+
+msgid "Save As"
+msgstr "Зачувај Како"
+
+msgid "&Quit\tCtrl+Q"
+msgstr "Излез\tCtrl+Q"
+
+msgid "Quit"
+msgstr "Излез"
+
+msgid "Rewind"
+msgstr "Врати Назад"
+
+msgid "Get the previous particle system from the list"
+msgstr "Земи го претходниот систем за честички од листата"
+
+msgid "Pause\tF8"
+msgstr "Пауза\tF8"
+
+msgid "Pause"
+msgstr "Пауза"
+
+msgid "Pause the current particle system"
+msgstr "Паузирај го моменталниот систем за честички"
+
+msgid "Play\tF6"
+msgstr "Плеј\tF6"
+
+msgid "Run the current particle system"
+msgstr "Отпочни го моменталниот систем за честички"
+
+msgid "Play"
+msgstr "Плеј"
+
+msgid "Stop\tF9"
+msgstr "Стоп\tF9"
+
+msgid "Stop"
+msgstr "Стоп"
+
+msgid "Stop the current particle system"
+msgstr "Стопирај го моменталниот систем за честички"
+
+msgid "Record\tF7"
+msgstr "Снимај\tF7"
+
+msgid "Record"
+msgstr "Снимај"
+
+msgid "Record the current particle system"
+msgstr "Снимај го моменталниот систем за честички"
+
+msgid "Wind"
+msgstr "Ветер"
+
+msgid "Get the next particle system from the list"
+msgstr "Земи го следниот систем за честички од листата"
+
+msgid "Remove"
+msgstr "Избриши"
+
+msgid "Clone"
+msgstr "Клонирај"
+
+msgid "Compile\tF5"
+msgstr "Компајлирај\tF5"
+
+msgid "Compile"
+msgstr "Компајлирај"
+
+msgid "Compilation OK"
+msgstr "Успешно Компајлирање"
+
+msgid "Move"
+msgstr "Помести"
+
+msgid "Gizmo move\tShift+M"
+msgstr "Манипулатор за поместување\tShift+M"
+
+msgid "Gizmo move"
+msgstr "Манипулатор за поместување"
+
+msgid "Set the gizmo to move"
+msgstr "Намести го манипулаторот на мод за поместување"
+
+msgid "Rotate"
+msgstr "Ротирај"
+
+msgid "Gizmo rotate\tShift+R"
+msgstr "Манипулатор за ротација"
+
+msgid "Gizmo rotate"
+msgstr "Манипулатор за ротација"
+
+msgid "Set the gizmo to rotate"
+msgstr "Намести го манипулаторот на мод за ротација"
+
+msgid "Gizmo scale\tShift+S"
+msgstr "Манипулатор за големина"
+
+msgid "Gizmo scale"
+msgstr "Манипулатор за големина"
+
+msgid "Set the gizmo to scale"
+msgstr "Намести го манипулаторот на мод за големина"
+
+msgid "Toggle gizmo"
+msgstr "Вклучи/Исклучи Манипулатор"
+
+msgid "Gizmo on/off\tCtrl+G"
+msgstr "Вклучи/Исклучи Манипулатор\tCtrl+G"
+
+msgid "Gizmo on/off"
+msgstr "Вклучи/Исклучи Манипулатор"
+
+msgid "Gizmo in world/object space\tCtrl+P"
+msgstr "Начин на работа на манипулаторот (глобална/објектна оска)\tCtrl+P"
+
+msgid "Enable/disable the gizmo"
+msgstr "Вклучи/Исклучи Манипулатор"
+
+msgid "Gizmo manipulation is in global (world) space"
+msgstr "Манипулаторот работи во однос на глобалната оска"
+
+msgid "Gizmo manipulation is in local (object) space"
+msgstr "Манипулаторот работи во однос на локална оска"
+
+msgid "Reset camera\tCtrl+Z"
+msgstr "Ресетирај камера\tCtrl+Z"
+
+msgid "Reset camera"
+msgstr "Ресетирај камера"
+
+msgid "Camera Reset"
+msgstr "Ресетирај камера"
+
+msgid "Reset the camera position"
+msgstr "Ресетирај позиција на камера"
+
+msgid "Save camera\tShift+C"
+msgstr "Зачувај камера\tShift+C"
+
+msgid "Save camera"
+msgstr "Зачувај камера"
+
+msgid "Save camera position"
+msgstr "Зачувај позиција на камерата"
+
+msgid "Save the position of the camera"
+msgstr "Зачувај позиција на камерата"
+
+msgid "Toggle camera projection\tShift+P"
+msgstr "Смени проекција на камерата\tShift+P"
+
+msgid "Toggle camera projection"
+msgstr "Смени проекција на камерата"
+
+msgid "Toggle camera angle\tCtrl+A"
+msgstr "Смени агол на камерата\tCtrl+A"
+
+msgid "Toggle camera angle"
+msgstr "Смени агол на камерата"
+
+msgid "Centre object\tCtrl+C"
+msgstr "Центрирај објект\tCtrl+C"
+
+msgid "Centre object"
+msgstr "Центрирај објект"
+
+msgid "Move selected object to the centre of the scene"
+msgstr "Помести го избраниот објект до цетарот на сцената"
+
+msgid "Background colour\tCtrl+B"
+msgstr "Боја на позадина\tCtrl+B"
+
+msgid "Background colour"
+msgstr "Боја на позадина"
+
+msgid "Change the backgroundcolour of the renderwindow"
+msgstr "Промени ја бојата на позадината на прозорецот"
+
+msgid "Toggle statistics\tCtrl+I"
+msgstr "Вклучи/Исклучи Статистики\tCtrl+I"
+
+msgid "Toggle statistics"
+msgstr "Вклучи/Исклучи Статистики"
+
+msgid "Enable/disable the statistics overlay"
+msgstr "Вклучи/Исклучи Статистички оверлеј"
+
+msgid "Toggle grid plane\tCtrl+T"
+msgstr "Вклучи/Исклучи Мрежа\tCtrl+T"
+
+msgid "Toggle grid plane"
+msgstr "Вклучи/Исклучи Мрежа"
+
+msgid "Enable/disable the grid plane"
+msgstr "Вклучи/Исклучи Мрежа"
+
+msgid "Add mesh to scene\tCtrl+M"
+msgstr "Додај модел на сцената\tCtrl+M"
+
+msgid "Add mesh to scene"
+msgstr "Додај модел на сцената"
+
+msgid "Add a mesh to the scene"
+msgstr "Додај модел на сцената"
+
+msgid "Remove mesh from scene\tCtrl+X"
+msgstr "Избриши модел од сцената"
+
+msgid "Remove mesh from scene"
+msgstr "Избриши модел од сцената"
+
+msgid "Remove a mesh from the scene"
+msgstr "Избриши модел од сцената"
+
+msgid "Toggle light\tCtrl+D"
+msgstr "Вклучи/Исклучи Светло\tCtrl+D"
+
+msgid "Toggle light"
+msgstr "Вклучи/Исклучи Светло"
+
+msgid "Add/remove light to/from scene"
+msgstr "Додај/Извади светло на/од сцената"
+
+msgid "Add or remove a light to/from the scene"
+msgstr "Додај/Извади светло на/од сцената"
+
+msgid "Reset time\tCtrl+K"
+msgstr "Ресетирај време\tCtrl+K"
+
+msgid "Reset time"
+msgstr "Ресетирај време"
+
+msgid "Reset the time settings"
+msgstr "Ресетирај подесувања за време"
+
+msgid "Options\tCtrl+O"
+msgstr "Опции\tCtrl+O"
+
+msgid "Options"
+msgstr "Опции"
+
+msgid "About\tF1"
+msgstr "За\tF1"
+
+msgid "About"
+msgstr "За"
+
+msgid "        Play"
+msgstr "        Плеј"
+
+msgid "        Clone item"
+msgstr "        Клонирај"
+
+msgid "        Remove from list"
+msgstr "        Избриши од листата"
+
+msgid "Set orthographic camera"
+msgstr "Постави ортографска камера"
+
+msgid "Set angle perpendicular"
+msgstr "Постави паралелен агол"
+
+msgid "Set perspective camera"
+msgstr "Постави перспективна камера"
+
+msgid "Set angle 45 degrees"
+msgstr "Постави агол на 45 степени"
+
+msgid "Material Selector"
+msgstr "Селектор на Материјали"
+
+msgid "Resize"
+msgstr "Промени Големина"
+
+msgid "Box width"
+msgstr "Ширина на Коцката"
+
+msgid "Box height"
+msgstr "Висина на Коцката"
+
+msgid "Box depth"
+msgstr "Длабочина на Коцката"
+
+msgid "Inner Collision"
+msgstr "Внатрешно Судирање"
+
+msgid "Avoidance radius"
+msgstr "Радиус на Избегнување"
+
+msgid "Time and Colour"
+msgstr "Време и Боја"
+
+msgid "Time/Colour"
+msgstr "Време/Боја"
+
+msgid "Colour instance"
+msgstr "Инстанца на Боја"
+
+msgid "Colour operation"
+msgstr "Операција со Боја"
+
+msgid "Set"
+msgstr "Постави"
+
+msgid "Multiply"
+msgstr "Помножи"
+
+msgid "        Select colour"
+msgstr "        Избери Боја"
+
+msgid "        Set alpha"
+msgstr "        Постави Проѕирност"
+
+msgid "Forcefield type"
+msgstr "Тип на Силнополе"
+
+msgid "Realtime"
+msgstr "Реално-време"
+
+msgid "Matrix"
+msgstr "Матрица"
+
+msgid "Delta"
+msgstr "Делта"
+
+msgid "Force"
+msgstr "Сила"
+
+msgid "Octaves"
+msgstr "Октави"
+
+msgid "Frequency"
+msgstr "Фрекфенција"
+
+msgid "Amplitude"
+msgstr "Амплитуда"
+
+msgid "Persistence"
+msgstr "Упорност"
+
+msgid "Forcefield size"
+msgstr "Големина на Силно Поле"
+
+msgid "Worldsize"
+msgstr "Големина на Светот"
+
+msgid "Ignore -x"
+msgstr "Игнорирај -X"
+
+msgid "Ignore -y"
+msgstr "Игнорирај -Y"
+
+msgid "Ignore -z"
+msgstr "Игнорирај -Z"
+
+msgid "Movement"
+msgstr "Движење"
+
+msgid "Movement frequency"
+msgstr "Фрекфенција на Движење"
+
+msgid "Use own rotation"
+msgstr "Користи своја ротација"
+
+msgid "Gravity"
+msgstr "Гравитација"
+
+msgid "Adjustment"
+msgstr "Прилагодување"
+
+msgid "Collision response"
+msgstr "Одговор на Судар"
+
+msgid "Average velocity"
+msgstr "Средна Брзина"
+
+msgid "Angle based velocity"
+msgstr "Брзина Базирана на Агол"
+
+msgid "Acceleration"
+msgstr "Забрзување"
+
+msgid "End position"
+msgstr "Крајна Позиција"
+
+msgid "Drift"
+msgstr "Отстапување"
+
+msgid "Minimum distance"
+msgstr "Минимална далечина"
+
+msgid "Maximum distance"
+msgstr "Максимална далечина"
+
+msgid "Add Position"
+msgstr "Додај Позиција"
+
+msgid "Plane normal"
+msgstr "Нормала на рамнина"
+
+msgid "Random direction"
+msgstr "Рандом насока"
+
+msgid "Scale x, y and z"
+msgstr "Промени големина на X, Y и Z"
+
+msgid "Scale x"
+msgstr "Промени големина на X"
+
+msgid "Scale y"
+msgstr "Промени големина на Y"
+
+msgid "Scale z"
+msgstr "Промени големина на Z"
+
+msgid "Scale velocity"
+msgstr "Зголеми Брзина"
+
+msgid "Stop at flip"
+msgstr "Стопирај на обратно"
+
+msgid "Minimum frequency"
+msgstr "Минимална фрекфенција"
+
+msgid "Maximum frequency"
+msgstr "Максимална фрекфенција"
+
+msgid "Sphere radius"
+msgstr "Радиус на Сфера"
+
+msgid "Animation type"
+msgstr "Тип на анимација"
+
+msgid "Loop"
+msgstr "Повторување"
+
+msgid "Up - Down"
+msgstr "Горе - Доле"
+
+msgid "Random"
+msgstr "Рандом"
+
+msgid "Texture coordinate start"
+msgstr "Старт на координати за текстури"
+
+msgid "Texture coordinate end"
+msgstr "Крај на координати за текстури"
+
+msgid "Start random"
+msgstr "Почни рандом"
+
+msgid "Use own speed"
+msgstr "Користи своја брзина"
+
+msgid "Velocity matching radius"
+msgstr "Брзина еднаква на радиусот"
+
+msgid "Circle Radius"
+msgstr "Радиус на Круг"
+
+msgid "Circle Step"
+msgstr "Чекор на Круг"
+
+msgid "Circle angle"
+msgstr "Агол на Круг"
+
+msgid "Circle Random"
+msgstr "Рандом Круг"
+
+msgid "Circle normal"
+msgstr "Нормала на Круг"
+
+msgid "Line end"
+msgstr "Крај на Линија"
+
+msgid "Line max increment"
+msgstr "Максимално зголемуање на линија"
+
+msgid "Line min increment"
+msgstr "Минимално зголемуање на линија"
+
+msgid "Line deviation"
+msgstr "Девиација на Линија"
+
+msgid "Mesh name"
+msgstr "Име на модел"
+
+msgid "Mesh surface distribution"
+msgstr "Дистрибуција на површина на модел"
+
+msgid "Mesh surface scale"
+msgstr "Големина на површина на модел"
+
+msgid "Edge"
+msgstr "Раб"
+
+msgid "Heterogeneous_1"
+msgstr "Хетероген_1"
+
+msgid "Heterogeneous_2"
+msgstr "Хетероген_2"
+
+msgid "Homogeneus"
+msgstr "Хомоген"
+
+msgid "Vertex"
+msgstr "Теме"
+
+msgid "Add particle position"
+msgstr "Додај позиција на честичка"
+
+msgid "Position randomize"
+msgstr "Рандомизирај позиција"
+
+msgid "Sphere Radius"
+msgstr "Радиус на сфера"
+
+msgid "Vertex step"
+msgstr "Чекор на темиња"
+
+msgid "Vertex segments"
+msgstr "Сегменти на Темиња"
+
+msgid "Vertex iterations"
+msgstr "Повторување на Темиња"
+
+msgid "Vertex meshname"
+msgstr "Име на модел од теме"
+
+msgid "Perform pre/post processing"
+msgstr "Изврши пре/пост процесирање"
+
+msgid "Enable component"
+msgstr "Вклучи компонент"
+
+msgid "Number of particles"
+msgstr "Број на честички"
+
+msgid "Inherit position"
+msgstr "Наследи позиција"
+
+msgid "Inherit direction"
+msgstr "Наследи насока"
+
+msgid "Inherit orientation"
+msgstr "Наследи ориентација"
+
+msgid "Inherit time to live"
+msgstr "Наследи време на живеење"
+
+msgid "Inherit mass"
+msgstr "Наследи маса"
+
+msgid "Inherit texture coord"
+msgstr "Наследи текстурни координати"
+
+msgid "Inherit colour"
+msgstr "Наследи боја"
+
+msgid "Inherit particle width"
+msgstr "Наследи ширина на честичка"
+
+msgid "Inherit particle height"
+msgstr "Наследи висина на честичка"
+
+msgid "Inherit particle depth"
+msgstr "Наследи длабочина на честичка"
+
+msgid "Scale fraction"
+msgstr "Фракционално Зголемување"
+
+msgid "Scale type"
+msgstr "Тип на зголемување"
+
+msgid "Time to live"
+msgstr "Време на живеење"
+
+msgid "Velocity"
+msgstr "Брзина"
+
+msgid "Shape type"
+msgstr "Тип на форма"
+
+msgid "Shape collision group"
+msgstr "Група на судирања за форма"
+
+msgid "Group mask"
+msgstr "Маска на група"
+
+msgid "Angular velocity"
+msgstr "Аголна брзина"
+
+msgid "Angular damping"
+msgstr "Аголно забавување"
+
+msgid "Material index"
+msgstr "Индекс на Материјал"
+
+msgid "Box"
+msgstr "Коцка"
+
+msgid "Sphere"
+msgstr "Сфера"
+
+msgid "Capsule"
+msgstr "Капсула"
+
+msgid "Rest particle per meter"
+msgstr "Одмори честичка по метар"
+
+msgid "Rest density"
+msgstr "Густина на одмор"
+
+msgid "Kernel radius multiplier"
+msgstr "Множач на радиус на кернел"
+
+msgid "Motion limit multiplier"
+msgstr "Множач на ограничување на движење"
+
+msgid "Collision dist. multiplier"
+msgstr "Множач на оддалеченост од судар"
+
+msgid "Packet size multiplier"
+msgstr "Множач на големина на пакет"
+
+msgid "Stiffness"
+msgstr "Вкочанување"
+
+msgid "Viscosity"
+msgstr "Вискозност"
+
+msgid "Surface tension"
+msgstr "Напнатост на Површина"
+
+msgid "Damping"
+msgstr "Забавување"
+
+msgid "External acceleration"
+msgstr "Надворешно забрзување"
+
+msgid "Restitution static shapes"
+msgstr "Реституција на статички форми"
+
+msgid "Dyn. friction static shapes"
+msgstr "Динамичко триење на статички форми"
+
+msgid "Static friction static shapes"
+msgstr "Статичко триење на статички форми"
+
+msgid "Attraction static shapes"
+msgstr "Атракција на статички форми"
+
+msgid "Restitution dynamic shapes"
+msgstr "Реституција на диманички форми"
+
+msgid "Dyn. friction dyn. shapes"
+msgstr "Динамичко триење на динамички форми"
+
+msgid "Static friction dyn. shapes"
+msgstr "Статичко триење на динамички форми"
+
+msgid "Attraction dynamic shapes"
+msgstr "Атракција на динамички форми"
+
+msgid "Collision response coeff."
+msgstr "Коефициент на одговор на судари"
+
+msgid "Simulation method"
+msgstr "Метод на симулација"
+
+msgid "Collision method"
+msgstr "Метод на судар"
+
+msgid "Visualisation"
+msgstr "Визуелизација"
+
+msgid "Disable gravity"
+msgstr "Исклучи гравитација"
+
+msgid "Collision twoway"
+msgstr "Двонасочен судар"
+
+msgid "Fluid enabled"
+msgstr "Течност вклучена"
+
+msgid "Hardware"
+msgstr "Хардвер"
+
+msgid "Priority mode"
+msgstr "Мод на приоритет"
+
+msgid "Project to plane"
+msgstr "Проектирај на рамнина"
+
+msgid "Strict cooking format"
+msgstr "Строг формат за готвење"
+
+msgid "Intercollision"
+msgstr "Интерсудирање"
+
+msgid "Non-intercollision"
+msgstr "Не-интерсудирање"
+
+msgid "Mixed intercollision"
+msgstr "Измешано интерсудирање"
+
+msgid "Static"
+msgstr "Статичко"
+
+msgid "Dynamic"
+msgstr "Динамичко"
+
+msgid "On count compare"
+msgstr "На крај на компарација на одбројувањето"
+
+msgid "On count threshold"
+msgstr "На граница на одбројување"
+
+msgid "Event Flag"
+msgstr "Ознака на Настан"
+
+msgid "Position compare x"
+msgstr "Спореди позиција x"
+
+msgid "Position compare y"
+msgstr "Спореди позиција y"
+
+msgid "Position compare z"
+msgstr "Спореди позиција z"
+
+msgid "Position.x threshold"
+msgstr "Граница на позиција x"
+
+msgid "Position.y threshold"
+msgstr "Граница на позиција y"
+
+msgid "Position.z threshold"
+msgstr "Граница на позиција z"
+
+msgid "Random threshold"
+msgstr "Рандом граница"
+
+msgid "On time compare"
+msgstr "На споредување на време"
+
+msgid "On time threshold"
+msgstr "На временска граница"
+
+msgid "Velocity compare"
+msgstr "Споредба на брзина"
+
+msgid "Velocity threshold"
+msgstr "Граница на брзина"
+
+msgid "Update interval"
+msgstr "Интервал на ажурирање"
+
+msgid "Deviation"
+msgstr "Девиација"
+
+msgid "Number of segments"
+msgstr "Број на сегменти"
+
+msgid "Jump"
+msgstr "Скок"
+
+msgid "Texture direction"
+msgstr "Насока на текстура"
+
+msgid "TCD_U"
+msgstr "TCD_U"
+
+msgid "TCD_V"
+msgstr "TCD_V"
+
+msgid "Billboard type"
+msgstr "Тип на билборд"
+
+msgid "Point"
+msgstr "Точка"
+
+msgid "Orientation type"
+msgstr "Тип на ориентација"
+
+msgid "Oriented self mirrored"
+msgstr "Oriented self mirrored"
+
+msgid "Oriented Common"
+msgstr "Oriented Common"
+
+msgid "Oriented Self"
+msgstr "Oriented Self"
+
+msgid "Oriented self"
+msgstr "Oriented self"
+
+msgid "Perpendicular Common"
+msgstr "Perpendicular Common"
+
+msgid "Perpendicular Self"
+msgstr "Perpendicular Self"
+
+msgid "Oriented Shape"
+msgstr "Oriented Shape"
+
+msgid "Oriented shape"
+msgstr "Oriented shape"
+
+msgid "Origin"
+msgstr "Потекло"
+
+msgid "Top-left"
+msgstr "Горе-лево"
+
+msgid "Top-center"
+msgstr "Горе-центар"
+
+msgid "Top-right"
+msgstr "Горе-десно"
+
+msgid "Center-left"
+msgstr "Центар-лево"
+
+msgid "Center-right"
+msgstr "Центар-десно"
+
+msgid "Center"
+msgstr "Центар"
+
+msgid "Bottom-left"
+msgstr "Доле-лево"
+
+msgid "Bottom-right"
+msgstr "Доле-десно"
+
+msgid "Bottom-center"
+msgstr "Доле-центар"
+
+msgid "Rotation type"
+msgstr "Тип на ротација"
+
+msgid "Texture coordinates"
+msgstr "Координати на текстура"
+
+msgid "Common direction"
+msgstr "Заедничка насока"
+
+msgid "Up Vector"
+msgstr "Вектор за нагоре"
+
+msgid "Point Rendering"
+msgstr "Рендерирање на точки"
+
+msgid "Accurate Facing"
+msgstr "Точна Ориентација"
+
+msgid "On"
+msgstr "Вклучено"
+
+msgid "Off"
+msgstr "Исклучено"
+
+msgid "Light type"
+msgstr "Тип на светло"
+
+msgid "Spot"
+msgstr "Spot"
+
+msgid "Attenuation range"
+msgstr "Опсег на слабеење"
+
+msgid "Attenuation constant"
+msgstr "Константа на ослабување"
+
+msgid "Attenuation linear"
+msgstr "Линеарно ослабување"
+
+msgid "Attenuation quadratic"
+msgstr "Квадратно ослабување"
+
+msgid "spot inner angle"
+msgstr "spot внатрешен агол"
+
+msgid "spot outer angle"
+msgstr "spot надворешен агол"
+
+msgid "Falloff"
+msgstr "Опаѓање"
+
+msgid "Powerscale"
+msgstr "Обем на моќност"
+
+msgid "Flash frequency"
+msgstr "Фрекфенција на светкање"
+
+msgid "Flash length"
+msgstr "Должина на светкање"
+
+msgid "Flash random"
+msgstr "Рандом светкање"
+
+msgid "Use vertex colours"
+msgstr "Користи бои на темиња"
+
+msgid "Maximum elements"
+msgstr "Максимум елементи"
+
+msgid "Trail length"
+msgstr "Должина на трага"
+
+msgid "Trail width"
+msgstr "Ширина на трага"
+
+msgid "Random initial colour"
+msgstr "Случајна почетна боја"
+
+msgid "Initial colour"
+msgstr "Почетна боја"
+
+msgid "Colour change"
+msgstr "Промена на боја"
+
+msgid "includes"
+msgstr "вклучува"
+
+msgid "included by"
+msgstr "вклучува од"
+
+msgid "excludes"
+msgstr "исклучува"
+
+msgid "excluded by"
+msgstr "исклучува од"
+
+msgid "handles"
+msgstr "управува"
+
+msgid "handled by"
+msgstr "е управуван од"
+
+msgid "emits"
+msgstr "емитира"
+
+msgid "emitted by"
+msgstr "е емитиран од"
+
+msgid "affects"
+msgstr "ефектира"
+
+msgid "affected by"
+msgstr "е ефектиран од"
+
+msgid "observes"
+msgstr "го набљудува"
+
+msgid "observed by"
+msgstr "е набљудуван од"
+
+msgid "interfaces"
+msgstr "поврзува со"
+
+msgid "interfaced by"
+msgstr "поврзано од"
+
+msgid "slaves"
+msgstr "робови"
+
+msgid "slave of"
+msgstr "роб на"
+
+msgid "master of"
+msgstr "господар на"
+
+msgid "enables"
+msgstr "вклучува"
+
+msgid "enabled by"
+msgstr "е вклучен од"
+
+msgid "forces"
+msgstr "присилува"
+
+msgid "forced by"
+msgstr "е присилен од"
+
+msgid "places"
+msgstr "става"
+
+msgid "placed by"
+msgstr "е ставен од"
+
+msgid "connection with"
+msgstr "поврзува со"
+
+msgid "Position"
+msgstr "Позиција"
+
+msgid "Fixed"
+msgstr "Фиксирана"
+
+msgid "Curved"
+msgstr "Заоблена"
+
+msgid " - Curved"
+msgstr "- Заоблена"
+
+msgid "Oscillate"
+msgstr "Осцилаторно"
+
+msgid "Linear"
+msgstr "Линеарно"
+
+msgid "Spline"
+msgstr "Шпонка"
+
+msgid "Friction"
+msgstr "Триење"
+
+msgid "Bouncyness"
+msgstr "Отскокување"
+
+msgid "Intersection type"
+msgstr "Тип на пресек"
+
+msgid "Collision type"
+msgstr "Тип на судир"
+
+msgid "None"
+msgstr "Нема"
+
+msgid "Bounce"
+msgstr "Отскок"
+
+msgid "Flow"
+msgstr "Тек"
+
+msgid "Force vector"
+msgstr "Вектор на сила"
+
+msgid "Application"
+msgstr "Апликација"
+
+msgid "Add"
+msgstr "Додај"
+
+msgid "Average"
+msgstr "Средна Вредност"
+
+msgid "Maximum deviation"
+msgstr "Максимална девиација"
+
+msgid "Time step"
+msgstr "Временски чекор"
+
+msgid "Rotation"
+msgstr "Ротација"
+
+msgid "Rotation speed"
+msgstr "Брзина на ротација"
+
+msgid "Rotation axis"
+msgstr "Оска на ротација"
+
+msgid "Diffuse"
+msgstr "Дифузна"
+
+msgid "Specular"
+msgstr "Спекуларна"
+
+msgid "Particle type"
+msgstr "Тип на честичка"
+
+msgid "All types"
+msgstr "Сите типови"
+
+msgid "Distance threshold"
+msgstr "Граница на сила"
+
+msgid "Not used"
+msgstr "Не искористен"
+
+msgid "Less than"
+msgstr "Помало од"
+
+msgid "Greater than"
+msgstr "Поголемо од"
+
+msgid "Equals"
+msgstr "Еднакво на"
+
+msgid "Affector type"
+msgstr "Тип на ефектор"
+
+msgid "Mass"
+msgstr "Маса"
+
+msgid "Specialisation"
+msgstr "Специјализација"
+
+msgid "Default"
+msgstr "Зададено"
+
+msgid "Increment by time to live"
+msgstr "Зголемувај по време на живеење"
+
+msgid "Decrement by time to live"
+msgstr "Намалувај по време на живеење"
+
+msgid "Behaviour type"
+msgstr "Тип на однесување"
+
+msgid "Emitter type"
+msgstr "Тип на емитер"
+
+msgid "Keep local"
+msgstr "Држи локално"
+
+msgid "Direction"
+msgstr "Насока"
+
+msgid "Orientation"
+msgstr "Ориентација"
+
+msgid "Orientation range start"
+msgstr "Почеток на опсег на ориентација"
+
+msgid "Orientation range end"
+msgstr "Крај на опсег на ориентација"
+
+msgid "Duration"
+msgstr "Траење"
+
+msgid "Repeat - Delay"
+msgstr "Доцнење пред повторување"
+
+msgid "Angle"
+msgstr "Агол"
+
+msgid "Emission rate"
+msgstr "Стапка на емисија"
+
+msgid "Texture coordinate"
+msgstr "Текстурен координат"
+
+msgid "Colour range start"
+msgstr "Почеток на обсег на боја"
+
+msgid "Colour range end"
+msgstr "Крај на опсег на боја"
+
+msgid "All particle dimensions"
+msgstr "Сите димензии на честички"
+
+msgid "Particle width"
+msgstr "Ширина на честичка"
+
+msgid "Particle height"
+msgstr "Висина на честичка"
+
+msgid "Particle depth"
+msgstr "Длабочина на честичка"
+
+msgid "Auto direction"
+msgstr "Автоматска насока"
+
+msgid "Force emission"
+msgstr "Сила на емисија"
+
+msgid "Event handler type"
+msgstr "Тип на справувач со настани"
+
+msgid "Extern type"
+msgstr "Тип на екстернант"
+
+msgid "Collision group"
+msgstr "Група на судири"
+
+msgid "Observer type"
+msgstr "Тип на набљудувач"
+
+msgid "Observer until event"
+msgstr "Набљудувач до настан"
+
+msgid "Observe interval"
+msgstr "Интервал на набљудување"
+
+msgid "Name"
+msgstr "Име"
+
+msgid "Enabled"
+msgstr "Вклучено"
+
+msgid "RGB"
+msgstr "RGB"
+
+msgid "Alpha"
+msgstr "Проѕирност"
+
+msgid ".w"
+msgstr ".w"
+
+msgid ".x"
+msgstr ".x"
+
+msgid ".y"
+msgstr ".y"
+
+msgid ".z"
+msgstr ".z"
+
+msgid "Attribute type"
+msgstr "Тип на атрибут"
+
+msgid "Value"
+msgstr "Вредност"
+
+msgid "Minimum"
+msgstr "Минимум"
+
+msgid "Maximum"
+msgstr "Максимум"
+
+msgid "Oscillation type"
+msgstr "Тип на осцилација"
+
+msgid "Sine"
+msgstr "Синус"
+
+msgid "Square"
+msgstr "Квадрат"
+
+msgid "Phase"
+msgstr "Фаза"
+
+msgid "Base"
+msgstr "База"
+
+msgid "Interpolation"
+msgstr "Интерполација"
+
+msgid "Control Point"
+msgstr "Контролна Точка"
+
+msgid "Since start system"
+msgstr "Од старт на системот"
+
+msgid "Renderer type"
+msgstr "Тип на рендерер"
+
+msgid "Render queue group"
+msgstr "Број на ред за рендерирање"
+
+msgid "Sorting"
+msgstr "Сортирање"
+
+msgid "Texture coords define"
+msgstr "Дефиниција на текстурни коорд."
+
+msgid "Texture coords set"
+msgstr "Сет на текстурни коорд."
+
+msgid "Texture coords rows"
+msgstr "Редови на текстурни коорд."
+
+msgid "Texture coords columns"
+msgstr "Колони на текстурни коорд."
+
+msgid "Use soft particles"
+msgstr "Користи меки честички"
+
+msgid "Soft particles contrast power"
+msgstr "Контрастна моќ на меки честички"
+
+msgid "Soft particles scale"
+msgstr "Големина на меки честички"
+
+msgid "Soft particles delta"
+msgstr "Делта на меки честички"
+
+msgid "Category"
+msgstr "Категорија"
+
+msgid "Iteration interval"
+msgstr "Интервал на повторување"
+
+msgid "Fixed timeout"
+msgstr "Фиксиран тајмаут"
+
+msgid "Nonvisible update timeout"
+msgstr "Невидлив тајмаут за ажурирање"
+
+msgid "Lod distances"
+msgstr "LOD Далечини"
+
+msgid "Smooth lod"
+msgstr "Мазен LOD"
+
+msgid "Fast forward"
+msgstr "Премотување напред"
+
+msgid "Time"
+msgstr "Време"
+
+msgid "Interval"
+msgstr "Интервал"
+
+msgid "Main camera name"
+msgstr "Име на главна камера"
+
+msgid "Scale time"
+msgstr "Време на промена на големина"
+
+msgid "Scale dimensions"
+msgstr "Димензија на промена на големина"
+
+msgid "Use tight bounding box"
+msgstr "Користи тесна Bounding Box"
+
+msgid "Particle Systems"
+msgstr "Системи на Честички"
+
+msgid "Visual particle quota"
+msgstr "Квота на визуелни честички"
+
+msgid "Emitted emitter quota"
+msgstr "Квота на емитирани емитери"
+
+msgid "Emitted affector quota"
+msgstr "Квота на емитирани ефектори"
+
+msgid "Emitted technique quota"
+msgstr "Квота на емитирани техники"
+
+msgid "Emitted system quota"
+msgstr "Квота на емитирани системи"
+
+msgid "Material"
+msgstr "Материјал"
+
+msgid "Lod index"
+msgstr "Индекс на LOD"
+
+msgid "Default particle width"
+msgstr "Зададена ширина на честичка"
+
+msgid "Default particle height"
+msgstr "Зададена висина на честичка"
+
+msgid "Default particle depth"
+msgstr "Зададена длабочина на честичка"
+
+msgid "Spatial hashing cell dimension"
+msgstr "Димензија на ќелија за просторно хаширање"
+
+msgid "Spatial hashing cell overlap"
+msgstr "Преклопување на ќелија за просторно хаширање"
+
+msgid "Spatial hashtable size"
+msgstr "Големина на ќелија за просторно хаширање"
+
+msgid "Spatial hashing update interval"
+msgstr "Интервал на ажурирање на хаширање"
+
+msgid "Maximum velocity"
+msgstr "Максимална брзина"
+
+msgid "0%                                                          % Time to live ->                                                          100%"
+msgstr "0%                                                          % Време на живот ->                                                          100%"
+
+msgid "Reset"
+msgstr "Ресет"
+
+msgid "Colour Affector"
+msgstr "Ефектор на боја"
+
+msgid "Animations"
+msgstr "Анимации"
+
+msgid "Mesh"
+msgstr "Модел"
+
+msgid "Animation"
+msgstr "Анимациа"
+
+msgid "Loop Animation"
+msgstr "Повторување на Анимација"
+
+msgid "Directories"
+msgstr "Директориуми"
+
+msgid "PhysX"
+msgstr "PhysX"
+
+msgid "Filter"
+msgstr "Филтер"
+
+msgid "Auto rendering on/off"
+msgstr "Ауто рендерирање вкл./искл."
+
+msgid "Highlight keywords on/off"
+msgstr "Нагласување на клучни зборови вкл./искл."
+
+msgid "Statistics overlay on/off"
+msgstr "Статистички оверлеј вкл./искл."
+
+msgid "Point light on/off"
+msgstr "Point светло вкл./искл."
+
+msgid "Gridplane on/off"
+msgstr "Мрежна рамнина вкл./искл."
+
+msgid "Gridplane distance"
+msgstr "Далечина на мрежна рамнина"
+
+msgid "Gridplane scale"
+msgstr "Големина на мрежна рамнина"
+
+msgid "Output directory"
+msgstr "Излезна локација"
+
+msgid "Image size"
+msgstr "Големина на слика"
+
+msgid "Media type"
+msgstr "Тип на медиа"
+
+msgid ".png"
+msgstr ".png"
+
+msgid ".jpg"
+msgstr ".jpg"
+
+msgid ".tiff"
+msgstr ".tiff"
+
+msgid ".avi"
+msgstr ".avi"
+
+msgid ".swf"
+msgstr ".swf"
+
+msgid ".wmv"
+msgstr ".wmv"
+
+msgid ".mp4"
+msgstr ".mp4"
+
+msgid "352x240"
+msgstr "352x240"
+
+msgid "352x288"
+msgstr "352x288"
+
+msgid "720x480"
+msgstr "720x480"
+
+msgid "720x576"
+msgstr "720x576"
+
+msgid "1024x768"
+msgstr "1024x768"
+
+msgid "1280x720"
+msgstr "1280x720"
+
+msgid "1440x1080"
+msgstr "1440x1080"
+
+msgid "1920x1080"
+msgstr "1920x1080"
+
+msgid "Frames per second"
+msgstr "Рамки во секунда"
+
+msgid "No filtering"
+msgstr "Без филтрирање"
+
+msgid "Alpha from luminance"
+msgstr "Проѕирност од светлост"
+
+msgid "Alpha from background colour"
+msgstr "Проѕирност од боја на позадина"
+
+msgid "Calibration pause"
+msgstr "Пауза за калибрација"
+
+msgid "Plane distance"
+msgstr "Далечина на рамнина"
+
+msgid "videopath"
+msgstr "патвидео"
+
+msgid "imagewidth"
+msgstr "ширинаслика"
+
+msgid "mediatype"
+msgstr "медиатип"
+
+msgid "videosize"
+msgstr "гоелминанавидео"
+
+msgid "fps"
+msgstr "рвс"
+
+msgid "Select colour"
+msgstr "Избери боја"
+
+msgid "Set alpha"
+msgstr "Постави проѕизност"
+
+msgid "&Linear interpolation"
+msgstr "Линеарна интерполација"
+
+msgid "&Spline interpolation"
+msgstr "Шпонка интерполација"
+
+msgid "canvas"
+msgstr "платно"
+
+msgid "Render"
+msgstr "Рендер"
+
+msgid "Edit"
+msgstr "Измени"
+
+msgid "Script"
+msgstr "Скрипта"
+
+msgid "Message"
+msgstr "Порака"
+
+msgid "Tools"
+msgstr "Алатки"
+
+msgid "Cursor"
+msgstr "Покажувач"
+
+msgid "Connect"
+msgstr "Конектирај"
+
+msgid "Disconnect"
+msgstr "Дисконектирај"
+
+msgid "Help"
+msgstr "Помош"
+
+msgid "file"
+msgstr "фајл"
+
+msgid "files"
+msgstr "фајлови"
+
+msgid "FileSystem"
+msgstr "Даточен Систем"
+
+msgid "Transparent alpha"
+msgstr "Транспарентна проѕирност"
+
+msgid "Transparent colour"
+msgstr "Транспарентна боја"
+
+msgid "Modulate"
+msgstr "Модулирај"
+
+msgid "Replace"
+msgstr "Промени"
+
+msgid "Source colour - One"
+msgstr "Изворна боја - 1"
+
+msgid "Source colour - Zero"
+msgstr "Изворна боја - 0"
+
+msgid "Source colour - Destination colour"
+msgstr "Изворна боја - Боја на дестинација"
+
+msgid "Destination colour - One"
+msgstr "Боја на дестинација - 1"
+
+msgid "Destination colour - Source colour"
+msgstr "Боја на дестинација - Изворна боја"
+
+msgid "Wrap"
+msgstr "Обвивка"
+
+msgid "Mirror"
+msgstr "Огледало"
+
+msgid "Clamp"
+msgstr "Прицврстување"
+
+msgid "New material"
+msgstr "Нов материјал"
+
+msgid "Pass"
+msgstr "Помин"
+
+msgid "Lighting"
+msgstr "Осветлување"
+
+msgid "Ambient"
+msgstr "Амбиент"
+
+msgid "Emissive"
+msgstr "Емитивна"
+
+msgid "Depth check"
+msgstr "Проверка на длабочина"
+
+msgid "Depth write"
+msgstr "Запишување на длабочина"
+
+msgid "Scene blend"
+msgstr "Блендирање со сцената"
+
+msgid "Texture"
+msgstr "Текстура"
+
+msgid "Address mode"
+msgstr "Мод на адреса"
+
+msgid "Load a texture"
+msgstr "Отвори текстура"
+
+msgid "Textures (*.*)|*.*"
+msgstr "Текстури(*.*)|*.*"
+
+msgid "Mesh Selector"
+msgstr "Избор на Модел"
+
+msgid "system"
+msgstr "систем"
+
+msgid "technique"
+msgstr "техника"
+
+msgid "renderer"
+msgstr "рендерер"
+
+msgid "emitter"
+msgstr "емитер"
+
+msgid "affector"
+msgstr "ефектор"
+
+msgid "observer"
+msgstr "набљудувач"
+
+msgid "handler"
+msgstr "справувач"
+
+msgid "behaviour"
+msgstr "однесување"
+
+msgid "extern"
+msgstr "екстернант"
+
+msgid "wxOgreControl creation failed"
+msgstr "Креација на wxOgreControl не успеа"
+
+msgid "Value must be less than"
+msgstr "Вредноста мора да е помала од"
+
+msgid "Value must be less than "
+msgstr "Вредноста мора да е помала од"
+
+msgid " (but positive or 0)"
+msgstr " (но позитивна или 0)"
+
+msgid "Inherit bone orientation"
+msgstr "Наследи ориентација на коска"
+
+msgid "Attach particle system"
+msgstr "Прикачи систем на честички"
+
+msgid "Detach particle system"
+msgstr "Откачи систем на честички"
+
+msgid "Current mesh does not have a skeleton"
+msgstr "Моменталниот модел нема коски"
+
+msgid "Select bone to attach particle system"
+msgstr "Избери боја на која да се закачи системот"
+
+msgid "Edgelist build: Yes"
+msgstr "Изградена листа на рабови: Да"
+
+msgid "Edgelist build: No"
+msgstr "Изградена листа на рабови: Не"
+
+msgid "Material submesh(%u): %s"
+msgstr "Материјал на под-модел(%u): %s"
+
+msgid "Total number of vertices: %u"
+msgstr "Број на темиња: %u"
+
+msgid "Total number of indices: %u"
+msgstr "Број на индекси: %u"
+
+msgid "Number of bones: %d"
+msgstr "Број на коски: %d"
+
+msgid "Boundingsphere radius: %f"
+msgstr "Радиус на опколна сфера: %f"
+
+msgid "Number of LOD levels: %u"
+msgstr "Број на LOD нивоа: %u"
+
+msgid "Boundingsphere radius: "
+msgstr "Радиус на опколна сфера: "
+
+msgid "Number of LOD levels: "
+msgstr "Број на LOD нивоа: "
+
+msgid "Display PhysX detection dialog at startup? (Restart the application to apply the settings!)"
+msgstr "Прикажи порака за детекција на PhysX на старт？ （Треба рестарт за да има ефект！）"
+
+msgid "Are you sure you want to delete this group?"
+msgstr "Сигурно сакате да ја избришете оваа група ?"
+
+msgid "overview of existing connections"
+msgstr "преглет на постоечки конекции"
+
+msgid "Existing connections"
+msgstr "Постоечки конекции"
+
+msgid "Select a connection to be deleted"
+msgstr "Изберете конекција за бришење"
+
+msgid "Delete a connection"
+msgstr "Избриши конекција"
+
+msgid "Select a connection type"
+msgstr "Избери тип на конекција"
+
+msgid "Add a connection"
+msgstr "Додај конекција"
+
+msgid "Load a scriptfile"
+msgstr "Отвори скрипта"
+
+msgid "Particle and Alias scripts (*.pu;*.pua)|*.pu;*.pua"
+msgstr "Фајлови на честички и Алиас скрипти（*. PU;*. PUA）|*. PU;*. PUA"
+
+msgid "Select a directory that contains *.pu and .pua scripts"
+msgstr "Избери локација што содржи *. PU и PUA скрипти"
+
+msgid "Save the script"
+msgstr "Зачувај скрипта"
+
+msgid "Save the script as"
+msgstr "Зачувај скрипта како"
+
+msgid "Particle Universe Editor V1.5"
+msgstr "Particle Universe Editor V1.5"
+
+msgid "Particle Universe Editor - DEMO V1.5"
+msgstr "Particle Universe Editor - ДЕМО V1.5"
+
+msgid "Copyright (c)"
+msgstr "Copyright（c）"
+
+msgid "Add a new technique"
+msgstr "Додај нова техника"
+
+msgid "Add a new renderer"
+msgstr "Додај нов рендерер"
+
+msgid "Add a new emitter"
+msgstr "Додај нов емитер"
+
+msgid "Add a new affector"
+msgstr "Додај нов ефектор"
+
+msgid "Add a new observer"
+msgstr "Додај нов набљудувач"
+
+msgid "Add a new handler"
+msgstr "Додај нов управувач"
+
+msgid "Add a new behaviour"
+msgstr "Додај ново однесување"
+
+msgid "Add a new extern"
+msgstr "Додај нов екстернант"
+
+msgid "Reset to default cursor"
+msgstr "Ресетирај на зададениот покажувач"
+
+msgid "Make connection between two components"
+msgstr "Направи конекција меѓу два компоненти"
+
+msgid "Delete a connection between two components"
+msgstr "Избриши конекција меѓу два компоненти"
+
+msgid "Display help of current component"
+msgstr "Прикажи помош за моменталниот компонент"
+
+msgid "No files are dropped"
+msgstr "Нема фајлови оставено"
+
+msgid "Drag/drop a file"
+msgstr "Повлечи фајл"
+
+msgid "File format *."
+msgstr "Формат *,"
+
+msgid " is not supported. No "
+msgstr "не е поддржан. Не"
+
+msgid " loaded."
+msgstr " лоадиран."
+
+msgid ") cannot be found. Select a directory where it can be loaded"
+msgstr ") не е пронајден. Избери ја локацијата каде што може да е отворен"
+
+msgid " was not succesfully loaded"
+msgstr " не беше успешно лоадиран"
+
+msgid " files succesfully loaded"
+msgstr " фајловите беа успешно лоадирани"
+
+msgid "Compile a particle script"
+msgstr "Компајлирај скрипта за честички"
+
+msgid "Select a material"
+msgstr "Избери материјал"
+
+msgid "Save the material"
+msgstr "Зачувај материјал"
+
+msgid "material scripts (*.material;*.osm)|*.material;*.osm"
+msgstr "материјал скрипти（*.材料;*. OSM）|*.材料;*. OSM"
+
+msgid "Textures (*.*)"
+msgstr "Текстури (*.*)"
+
+msgid "Select a mesh"
+msgstr "Избери модел"
+
+msgid "No spaces allowed"
+msgstr "Не се дозволени празни места"
+
+msgid "Value must be between "
+msgstr "Вредноста мора да е меѓу"
+
+msgid " and "
+msgstr " и "
+
+msgid "Value must be positive"
+msgstr "Вредноста мора да е позитивна"
+
+msgid "True"
+msgstr "Точно"
+
+msgid "true"
+msgstr "точно"
+
+msgid "False"
+msgstr "Неточно"
+
+msgid "false"
+msgstr "неточно"
+
+msgid "It seems that PhysX is installed on this computer. Do you want to make use of the PhysX features?"
+msgstr "Изгледа дека PhysX е инсталирана на овој компјутер. Дали сепак сакате да ги користите PhysX опциите ?"
+
+msgid "It seems that PhysX is NOT installed on this computer. Do you still want to try to use PhysX?"
+msgstr "Изгледа дека PhysX НЕ Е инсталирана на овој компјутер. Дали сепак сакате да пробате да користите PhysX ?"
+
+msgid "You have selected a different Particle System. Do you want to save "
+msgstr "Избравте друг систем на честички. Дали сакате да зачувате ?"
+
+msgid "This particle system template is in an incorrect state and cannot be used anymore"
+msgstr "Овој образец за систем на честички е во некоректна состојба и неможе да се користи повеќе"
+
+msgid ""
+"Particle Universe Editor V1.5\n"
+"Copyright (c) 2011 Henry van Merode\n"
+"\n"
+"The lightbulb image is royalty free from FreeDigitalPhotos.net\n"
+"\n"
+msgstr ""
+"Particle Universe Editor V1.5\n"
+"Copyright (c) 2011 Henry van Merode\n"
+"\n"
+"Сликата со сијалицата е бесплатна слика без хонорари од FreeDigitalPhotos.net\n"
+"\n"
+
+msgid ""
+"Particle Universe Editor DEMO V1.5\n"
+"Copyright (c) 2011 Henry van Merode\n"
+"\n"
+"The lightbulb image is royalty free from FreeDigitalPhotos.net\n"
+"\n"
+msgstr ""
+"Particle Universe Editor ДЕМО V1.5\n"
+"Copyright (c) 2011 Henry van Merode\n"
+"\n"
+"Сликата со сијалицата е бесплатна слика без хонорари од FreeDigitalPhotos.net\n"
+"\n"
+

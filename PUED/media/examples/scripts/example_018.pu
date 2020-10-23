@@ -1,0 +1,28 @@
+system example_018
+{
+    category                                    Examples_11_20
+    technique 
+    {
+        material                                ParticleUniverse/Hart
+        default_particle_width                  1.5
+        default_particle_height                 1.5
+        default_particle_depth                  1.5
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       50
+            angle                               360
+            time_to_live                        5
+            velocity                            12
+        }
+        observer                                OnCount 
+        {
+            handler                             DoStopSystem 
+            {
+            }
+            count_threshold                     greater_than 200
+        }
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleEventHandler.html">EventHandler&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Do Scale Event Handler</h2>
+  <p>Scale one of the particles' attributes.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>handler&nbsp;&nbsp;&nbsp;DoScale&nbsp;&nbsp;&nbsp;[handlerName]&nbsp;&nbsp;&nbsp;{handler properties}</i></strong>
+  <p>See ParticleEventHandler for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+handler                 DoScale
+{
+    scale_fraction      0.5
+    scale_type          st_time_to_live
+}</pre>
+
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Scale Fraction</h6>
+  <p>The fraction with which the particle attribute is scaled. The scaling is 
+    done by means of scaleFraction * timeSinceLastUpdate * attributeValue. Syntax:</p>
+  <p><strong><i>scale_fraction&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>scale_fraction</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is the value of the scale fraction. Default: 0.2</p>
+
+  <h6>Scale Type</h6>
+  <p>The particle attribute that is scaled. Syntax:</p>
+  <p><strong><i>scale_type&nbsp; &nbsp;&nbsp;time_to_live | velocity </i></strong>
+    <br>
+    <br><strong><i>scale_type</i></strong> is the keyword.
+    <br><strong><i>time_to_live | velocity</i></strong> scales either the time_to_live or the particle velocity. Default: time_to_live
+    <font color="#F62217"><strong><em>sc_time_to_live</em></strong><em>and <strong><em>sc_velocity</em></strong><em> are deprecated from version 1.2</em></font></p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

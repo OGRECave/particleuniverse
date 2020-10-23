@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleAffector.html">Affector&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Scale Affector</h2>
+  <p>The Scale Affector changes the size of a particle with a certain rate. The particle size can be enlarged or reduced.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>affector&nbsp;&nbsp;&nbsp;Scale&nbsp;&nbsp;&nbsp;[affectorName]&nbsp;&nbsp;&nbsp;{affector properties}</i></strong>
+  <p>See ParticleAffector for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+affector               Scale
+{
+   xyz_scale           10
+}</pre>
+
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Scale X, Y and Z</h6>
+  <p>Sets the rate with which the particle size increases or decreases equally in all 3 directions. Syntax:</p>
+  <p><strong><i>xyz_scale
+  <br>&nbsp;&nbsp;&nbsp;#value | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_random {random properties} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_linear {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_spline {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_oscillate {oscillating properties}</i></strong>
+    <br>
+    <br>
+    <p><strong><i>xyz_scale</i></strong> is the keyword.</p>
+    <p><strong><i>#value</i></strong> is a real value that defines the rate with which the particle size increases (rate > 1.0) or decreases (rate < 1.0).
+	  All dimensions are scaled with the same value. Default: 1.0.</p>
+    <p><strong><i>dyn_random {random properties}</i></strong> means that scaling is generated randomly</p>
+    <p><strong><i>dyn_curved_linear {control point [control point]}</i></strong> means that scaling is determined by means of 1 or more control points.
+    The interpolation between the control points is linear. Note, that if this option is used, scaling is done based on the particles' time-to-live and not based on the time since the start of the particle system. This means the the first value of each control point lies between the interval [0..1].</p>
+  <p> <strong><i>dyn_curved_spline {control point [control point]}</i></strong> means that scaling is determined by means of 1 or more control points.
+    The interpolation between the control points is cubic. Note, that if this option is used, scaling is done based on the particles' time-to-live and not based on the time since the start of the particle system. This means the the first value of each control point lies between the interval [0..1].</p>
+  <p> <strong><i>dyn_oscillate {oscillating properties}</i></strong> means that scaling is determined by means of an oscillating function.
+  <p>See also the page <a href="SpecialCases.html">'Special Cases'</a> for an explanation of the 'Dynamic Attribute'.</p>
+
+  <h6>Scale X</h6>
+  <p>Sets the rate with which the particle size increases or decreases in the x-direction. Syntax:</p>
+  <p><strong><i>x_scale
+  <br>&nbsp;&nbsp;&nbsp;#value | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_random {random properties} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_linear {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_spline {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_oscillate {oscillating properties}</i></strong>
+    <br>
+    <br><strong><i>x_scale</i></strong> is the keyword.
+	<br>For explanation of the values, see 'scale', with the difference that scaling is applied in the x-direction.
+    <p>Note, that if  <strong><i>dyn_curved_linear</i></strong> or <strong><i>dyn_curved_spline</i></strong> is used, scaling is done based on the particles' time-to-live and not based on the time since the start of the particle system. This means the the first value of each control point lies between the interval [0..1].
+    
+  <p>See also the page <a href="SpecialCases.html">'Special Cases'</a> for an explanation of the 'Dynamic Attribute'.</p>
+
+  <h6>Scale Y</h6>
+  <p>Sets the rate with which the particle size increases or decreases in the y-direction. Syntax:</p>
+  <p><strong><i>y_scale
+  <br>&nbsp;&nbsp;&nbsp;#value | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_random {random properties} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_linear {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_spline {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_oscillate {oscillating properties}</i></strong>
+    <br>
+    <br><strong><i>y_scale</i></strong> is the keyword.
+	<br>For explanation of the values, see 'scale', with the difference that scaling is applied in the y-direction.
+    <p>Note, that if <strong><i>dyn_curved_linear</i></strong> or <strong><i>dyn_curved_spline</i></strong> is used, scaling is done based on the particles' time-to-live and not based on the time since the start of the particle system. This means the the first value of each control point lies between the interval [0..1].
+  
+    <p>See also the page <a href="SpecialCases.html">'Special Cases'</a> for an explanation of the 'Dynamic Attribute'.
+  
+  <h6>Scale Z</h6>
+  <p>Sets the rate with which the particle size increases or decreases in the z-direction. Syntax:</p>
+  <p><strong><i>z_scale
+  <br>&nbsp;&nbsp;&nbsp;#value | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_random {random properties} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_linear {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_spline {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_oscillate {oscillating properties}</i></strong>
+    <br>
+    <br><strong><i>z_scale</i></strong> is the keyword.
+	<br>For explanation of the values, see 'scale', with the difference that scaling is applied in the z-direction.
+    <p>Note, that if <strong><i>dyn_curved_linear</i></strong> or <strong><i>dyn_curved_spline</i></strong> is used, scaling is done based on the particles' time-to-live and not based on the time since the start of the particle system. This means the the first value of each control point lies between the interval [0..1].
+  
+  <p>See also the page <a href="SpecialCases.html">'Special Cases'</a> for an explanation of the 'Dynamic Attribute'.
+  
+  <h6>Since Start System</h6>
+  <p>Since Start System is an indication that determines whether scaling of the particles is determined from the start of the particle system or refers to the time fraction since the particle was emitted. Setting this property only has a meaning in cases where a curved (linear or spline) scaling type is used. If this property is set to true, the first value of each control point is the number of seconds from the start of the system. If the property is set to false, the first value of a control point is the fraction of the lifetime of a particle (lifetime particle / total lifetime). In the latter case, the first value of a control point lies in the range [0..1]. Syntax:</p>
+  <p><strong><i>since_start_system&nbsp;&nbsp;&nbsp;true | false</i></strong> <br>
+    <br><strong><i>since_start_system</i></strong> is the keyword.
+    <br><strong><i>true | false</i></strong> refers to the time since the Particle System was started (true) or the time fraction of a particle. Default: false.</p>
+  
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

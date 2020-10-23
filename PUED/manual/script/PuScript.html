@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">*.pu script</h2>
+  <p>A *.pu script (<strong>P</strong>article <strong>U</strong>niverse script) is the actual script in which you define your Particle System.
+    Each Particle System definition in the script is stored by the ParticleSystemManager as a template. New instances of the Particle System can be 
+	created using the template as a blueprint for the new Particle System. An example of a Particle System definition using 2 aliasses:</p>
+  <pre>system simplesystem
+{
+   technique
+   {
+      // use the billboard renderer defined in the *.pua script
+      use_alias                          defaultBillboardRenderer
+
+      material                           ParticleUniverse/Blueball
+      default_particle_width             20
+      default_particle_height            20
+      visual_particle_quota              500
+
+      // use the emitter defined in the *.pua script
+      use_alias                          simpleEmitter
+      
+      affector                           linearForce
+      {
+         force_aff_vector                0 -100 0
+      }
+   }
+}</pre>
+  <p>Note, that aliasses can also be defined in a *.pu script, but in that case 
+    it is not guaranteed that the alias is also parsed before the actual usage 
+    of the alias, which would cause an error. That is the reason why it is strongly 
+    recommended to define all aliasses in one or more *.pua scripts.</p>
+ 
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>	

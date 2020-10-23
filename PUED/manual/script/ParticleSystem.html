@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Particle System</h2>
+  <h3>Definition</h3>
+  <p>A Particle System is the 'container' that includes all Particle Universe functionality. After creation of a Particle System it must be attached to a (Scene)Node and started to make it work. 
+  <p>Since verison 1.0 there are some changes concerning orientation/rotation and a how a Particle System behaves. These changes covers updating the particle position as soon as the
+    SceneNode to which the Particle System is attached, changes its orientation. This enables rotation of all particles, including the already emitted ones. This is, however not always straightforward and needs some explanation. In some cases, rotation must be taken into account and in other cases it must not. Summarized:
+    <br>
+    <br>
+  &#8226; By default, already emitted particles do not rotate if the SceneNode to which the Particle System is attached, rotates. However,
+    if keep_local has been set to 'true', all particles do rotate with the SceneNode. <br>
+    &#8226; If keep_local is set to true in the Particle System, all particles rotate as soon as the node rotates. <br>
+  &#8226; If keep_local is set to true in the Particle Technique, only particles in that Particle Technique rotate as soon as the node rotates. <br>
+  &#8226; If a node rotates, particles are emitted in a direction that is changed according to the rotation of the node. <br>
+  &#8226; By default, Particle Affectors ignore the fact that the node rotates. This means that a LinearForce affector always affects the particles 
+    in the same way (using the same force vector). <br>
+    &#8226; Some affectors may deviate from this rule (LineAffector, VortexAffector), usually because they change the position of a particle 
+    directly. This means that the affector keeps rotation of the node into account, which affects all particle positions. 
+    Setting keep_local to true isn´t needed in these cases. <br>
+  &#8226; By default, Particle Emitters do take into account that the node rotates. This means that the 'box' of a BoxEmitter, rotates if the SceneNode
+    rotates. <br>
+  &#8226; Some emiters may deviate from this rule (PositionEmitter), usually because the purpose of the emitter just has to ignore the rotation
+    of a SceneNode, because it doesn´t make any sense in that context. <br>
+  &#8226; If you use an EntityRenderer, RibbontrailRenderer or LightRenderer, the particles are always rotated if the SceneNode rotates,
+    even if keep_local is set to false (= default). This is because these renderers secretly use SceneNodes that are childs from the
+    SceneNode to which the Particle System is attached, so they automatically rotate if the parent rotates. <br>
+    <br>
+    The syntax of a Particle System definition is:</p>
+  <p><strong><i>system&nbsp;&nbsp;&nbsp;systemName&nbsp;&nbsp;&nbsp;{particle system properties}</i></strong>
+    <br>
+    <br><strong><i>system</i></strong> is the keyword.<br>
+    <strong><i>systemName</i></strong> is a unique template name and is used to create a new ParticleSystem from a template.
+    <br>The <strong><i>particle system properties</i></strong> are handled in the paragraph 'Properties'.</p>
+	<p> Example:
+  <pre>system                       exampleSystem
+{
+   fixed_timeout             10
+   fast_forward              1 1
+   technique
+   {
+      ...
+   }
+} </pre>
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Category</h6>
+  <p>The category is pure for administration. There is no functionality involved with this property. Its purpose is to catagorize a particle system. This is how it is used in the Particle Universe Editor. Syntax:</p>
+  <p><strong><i>category&nbsp;&nbsp;&nbsp;#categoryName</i></strong>
+    <br>
+    <br>
+    <strong><i>category</i></strong> is the keyword. <br>
+    <strong><i>#categoryName</i></strong> The name of the category. This must be a string value without any spaces. Default: empty.</p>
+
+  <h6>Keep Local</h6>
+  <p>If this attribute is set to 'true', the particles are moving relative to the Node at which the ParticleSystem is attached or relative to an emitted ParticleSystem. Beware that this property can also be set in the technique or the emitter, which makes it possible to keep moving emitters, techniques, systems or visual particles local to respectively the technique or the emitter. Syntax:</p>
+  <p><strong><i>keep_local&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>keep_local</i></strong> is the keyword.
+    <br>
+    <strong><i>true | false</i></strong> if set to 'true', the particles are emitted relative to the particle system / particle system node. Default: false.
+
+  <h6>Iteration interval</h6>
+  <p>Value that determines at which interval the ParticleSystem must be the updated. 
+    Syntax:</p>
+  <p><strong><i>iteration_interval&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>iteration_interval</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is a real value > 0. If value is 0, the iteration_interval is not used. Default: 0.</p>
+
+  <h6>Fixed timeout</h6>
+  <p>Stops the ParticleSystem (immediately) after a certain amount of time since it was started. Syntax:</p>
+  <p><strong><i>fixed_timeout&nbsp;&nbsp;&nbsp;#timeout</i></strong>
+    <br>
+    <br>
+    <strong><i>fixed_timeout</i></strong> is the keyword.
+	<br><strong><i>#timeout</i></strong> is a real value > 0. It defines the amount of time (from start) after which the ParticleSystem is stopped. </p>
+
+  <h6>Nonvisible update timeout</h6>
+  <p>Doesn't update the Particle System anymore if it hasn't been visible for a certain period. Syntax:</p>
+  <p><strong><i>nonvisible_update_timeout&nbsp;&nbsp;&nbsp;#timeout</i></strong> 
+    <br>
+    <br>
+    <strong><i>nonvisible_update_timeout</i></strong> is the keyword.
+	<br>
+    <strong><i>#timeout</i></strong> is a real value > 0. It defines the amount of time that a ParticleSystem is not visible, resulting in the fact 
+	that the ParticleSystem isn't updated anymore.</p>
+
+  <h6>Lod Distances</h6>
+  <p>This attribute controls the distances at which different (particle) techniques can come into effect. This is similar to ogre's material scripts. Syntax:</p>
+  <p><strong><i>lod_distances&nbsp;&nbsp;&nbsp;#value&nbsp;&nbsp;&nbsp;[#value]</i></strong>
+    <br>
+    <br>
+    <strong><i>lod_distances</i></strong> is the keyword. <br>
+    <strong><i>#value</i></strong> is is an array of upwards real values. Every <strong><i>#value</i></strong> is associated with a 
+	ParticleTechniques' lod_index.</p>
+
+  <h6>Smooth Lod</h6>
+  <p>Causing a smoother LOD (Level Of Detail) transition. As soon as the lod transition of another technique comes into effect, the already emitted particles
+     of the previous technique are still alive until they finally expire. The previous technique however doesn't emit new particles anymore. Syntax:</p>
+  <p><strong><i>smooth_lod&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br>
+    <strong><i>smooth_lod</i></strong> is the keyword. <br>
+    <strong><i>true | false</i></strong> defines whether the smooth LOD is enabled (true) or disabled (false).</p>
+
+  <h6>Fast Forward</h6>
+  <p>Fast forwards the Particle System, meaning that the particles look like they have already been emitted for some time. Think about rain; if a 
+     scene starts, it should look like the rain is already going on for a while and not that it just starts to rain. Syntax:</p>
+  <p><strong><i>fast_forward&nbsp;&nbsp;&nbsp;#time&nbsp;&nbsp;&nbsp;#interval</i></strong>
+    <br>
+    <br><strong><i>fast_forward</i></strong> is the keyword.
+    <br><strong><i>#time</i></strong> is a real value > 0 and defines how long (seconds) the Particle System must be fast forwarded.
+    <br><strong><i>#interval</i></strong> is a real value > 0 and defines the size of the intervals (seconds) in which <strong><i>#time</i></strong> 
+	is divided. </p>
+
+  <h6>Main Camera Name</h6>
+  <p>The LOD mechanism determines - based on the distance between the camera and the Particle System - which Particle Technique is enabled. In a 
+     multi-camera setup this doesn't work properly, because it is undetermined for which camera this must be done and in practice the last created 
+	 camera is used. Also in cases where there is a dependency between the camera and the particle technique it is possible to specify for which 
+	 particle camera this dependency applies (otherwise the camera dependency is undetermined).
+	 To prevent this, it is possible to define a specific camera by means of its name (note, that applying LOD to all cameras would be complex and 
+	 doesn't benefit the framerate at all). Syntax:</p>
+  <p><strong><i>main_camera_name&nbsp;&nbsp;&nbsp;#name</i></strong>
+    <br>
+    <br>
+    <strong><i>main_camera_name</i></strong> is the keyword. <br>
+    <strong><i>#name</i></strong> is the runtime name of the camera. This is the name that is given to the camera when it was created.</p>
+
+  <h6>Scale Velocity</h6>
+  <p>Scale the velocity of the particles in the Particle System. Scaling the velocity has been seperated from scaling the positions and dimensions. Syntax:</p>
+  <p><strong><i>scale_velocity&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>scale_velocity</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is scale factor of the velocity. Default: 1.0
+
+  <h6>Scale Time</h6>
+  <p>Scales the time of a Particle Systems, which basicly means that it speeds up / slows down the Particle System time as a whole. Syntax:</p>
+  <p><strong><i>scale_time&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>scale_time</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is scale factor of the time. Default: 1.0
+
+  <h6>Scale (Dimensions)</h6>
+  <p>Scale the Particle System. Basicly, scaling includes (relative) positions and particle dimensions. The scale of the SceneNode to which a Particle System is attached, is ignored. For example, this makes it possible to alter scaling a Particle System independent of an Entity that is also attached to the same node. Velocity and time are not scaled by this property. Syntax:</p>
+  <p><strong><i>scale&nbsp;&nbsp;&nbsp;#x #y #z</i></strong>
+    <br>
+    <br><strong><i>scale</i></strong> is the keyword.
+    <br><strong><i>#x</i></strong> is the x-representation of the scale. Default: 1.0
+    <br><strong><i>#y</i></strong> is the y-representation of the scale. Default: 1.0
+    <br><strong><i>#z</i></strong> is the z-representation of the scale. Default: 1.0</p>
+
+  <h6>Use Tight Bounding Box</h6>
+  <p>There are 2 methods to update the bounding box. The default method is to let the bounding box grow with the particle system after which it doesn´t shrink again. At some point this prevents that the node to which the particle system is attached, is updated constantly. The other method is to tightly wrap the bounding box around the particle system. The bounding box will exactly follow the contours of the particle system. Syntax:</p>
+  <p><strong><i>tight_bounding_box&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>tight_bounding_box</i></strong> is the keyword.
+    <br><strong><i>true | false</i></strong> defines whether the bounding box is wrapped tight around the particle system (= 'true'). Default: false
+
+  <h6>Use alias</h6>
+  <p>Use an alias. Within a Particle System, it can only be a Technique. Syntax: </p>
+  <p><strong><i>use_alias&nbsp;&nbsp;&nbsp;aliasName</i></strong>
+    <br>
+    <br>
+    <strong><i>use_alias</i></strong> is the keyword. <br>
+    <strong><i>aliasName</i></strong> is the name of an alias defined previously. In case of a ParticleSystem, the aliasName can only refer to a
+	technique.</p>
+
+  <h6>Technique</h6>
+  <p>Adds a ParticleTechnique to the ParticleSystem. See <a href="ParticleTechnique.html">ParticleTechnique</a> for the syntax.</p>
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>	

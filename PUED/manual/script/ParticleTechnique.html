@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Particle Technique</h2>
+  <h3>Definition</h3>
+  <p>The syntax of a Particle Technique definition is:</p>
+  <p><strong><i>technique&nbsp;&nbsp;&nbsp;[techniqueName]&nbsp;&nbsp;&nbsp;{technique properties}</i></strong>
+    <br>
+    <br><strong><i>technique</i></strong> is the keyword.
+    <br><strong><i>techniqueName</i></strong> is a an optional name to identify a technique. If you want to perform certain activities with this technique
+	- emitting the technique for example - the name must be provided. There are no restrictions to the name.
+    <br>The <strong><i>technique properties</i></strong> are handled in the paragraph 'Properties'.</p>
+	<p> Example:
+  <pre>system                              exampleSystem
+{
+   technique                        exampleSystem::exampleTechnique
+   {
+       visual_particle_quota        1500
+       material                     exampleMaterial
+       use_alias                    myDefaultBillboardRenderer
+       emitter
+       {
+          ...
+       }
+   }
+} </pre>
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Enabled</h6>
+  <p>Enables or disables the technique as soon as the particle system starts. It can be convenient to disable the technique by default and enable it 
+     by means of another technique or through code. Syntax:</p>
+  <p><strong><i>enabled&nbsp;&nbsp;&nbsp;true | false</i></strong> <br>
+    <br>
+    <strong><i>enabled</i></strong> is the keyword. <br>
+    <strong><i>true | false</i></strong> defines whether the technique is enabled (true) or disabled (false). Default: true</p>
+
+  <h6>Position</h6>
+  <p>Position applies to the relative position of this technique in respect to the Particle System. Syntax:</p>
+  <p><strong><i>position&nbsp;&nbsp;&nbsp;#x #y #z</i></strong>
+    <br>
+    <br><strong><i>position</i></strong> is the keyword.
+    <br><strong><i>#x</i></strong> is a real value that defines the x coordinate of the techniques' position. Default: 0.
+    <br><strong><i>#y</i></strong> is a real value that defines the y coordinate of the techniques' position. Default: 0.
+    <br><strong><i>#z</i></strong> is a real value that defines the z coordinate of the techniques' position. Default: 0.</p>
+
+  <h6>Keep Local</h6>
+  <p>If this attribute is set to 'true', the particles are moving relative to the technique. Beware that this property can also be set in the particle system or the emitter, which makes it  possible to keep emitted emitters, techniques, systems or visual particles local to respectively the particle system or the emitter. Syntax:</p>
+  <p><strong><i>keep_local&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>keep_local</i></strong> is the keyword.
+    <br><strong><i>true | false</i></strong> if set to 'true', the particles are moving relative to the technique. Default: false.
+
+  <h6>Visual Particle Quota</h6>
+  <p>The maximum number of visual particles that can be emitted. Syntax:</p>
+  <p><strong><i>visual_particle_quota&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>visual_particle_quota</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is a real value > 0 that defines the maximum number of visual particles that can be emitted. Default: 500.</p>
+
+  <h6>Emitted Emitter Quota</h6>
+  <p>The maximum number of emitter particles that can be emitted. Syntax:</p>
+  <p><strong><i>emitted_emitter_quota&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>emitted_emitter_quota</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is a real value > 0 that defines the maximum number of emitter particles that can be emitted. Default: 0.</p>
+
+  <h6>Emitted Affector Quota</h6>
+  <p>The maximum number of affector particles that can be emitted. Syntax:</p>
+  <p><strong><i>emitted_affector_quota&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>emitted_affector_quota</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is a real value > 0 that defines the maximum number of affector particles that can be emitted. Default: 0.</p>
+
+  <h6>Emitted Technique Quota</h6>
+  <p>The maximum number of technique particles that can be emitted. Syntax:</p>
+  <p><strong><i>emitted_technique_quota&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>emitted_technique_quota</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is a real value > 0 that defines the maximum number of technique particles that can be emitted. Default: 0.</p>
+
+  <h6>Emitted System Quota</h6>
+  <p>The maximum number of particle system particles that can be emitted. Syntax:</p>
+  <p><strong><i>emitted_system_quota&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>emitted_system_quota</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is a real value > 0 that defines the maximum number of particle system particles that can be emitted. Default: 0.</p>
+
+  <h6>Material</h6>
+  <p>Set the material used in the renderer. Although the material is used in the renderer, it is defined in the technique. If the renderer is defined as
+     an alias script (and an alias is assigned to it), it must be generic. Setting a material in the renderer is not considered 'generic'.
+	 
+	  Syntax:</p>
+  <p><strong><i>material&nbsp;&nbsp;&nbsp;#materialName</i></strong>
+    <br>
+    <br><strong><i>material</i></strong> is the keyword.
+    <br><strong><i>#materialName</i></strong> is the name of the material defined in a *.material script (or created by code of course). 
+	  Default: "BaseWhite"</p>
+
+  <h6>Lod index</h6>
+  <p>Assign a level-of-detail (LOD) index to this Technique. The distance at which a LOD level is applied is determined by the lod_distances 
+     attribute of the containing Particle System. If lod_distances is not defined in the Particle System, lod_index has no meaning. Increasing indexes 
+	 denote lower levels of detail. Note, that a lower level of detail can be accomplished by using a billboard renderer instead of a mesh renderer, but 
+	 also the use of physics in near particles and not in particles that are further away. Syntax:</p>
+  <p><strong><i>lod_index&nbsp;&nbsp;&nbsp;#index</i></strong>
+    <br>
+    <br><strong><i>lod_index</i></strong> is the keyword.
+    <br><strong><i>#index</i></strong> is a real value > 0 that defines the index that corresponds with a certain LOD distance. Default: 0.</p>
+
+  <h6>Default Particle Width</h6>
+  <p>Set the default width of a particle. All particles in the Particle Technique can have either defaults dimensions, which means that all particles
+     have the same width, height and depth, or own dimensions, which means that every particle has its own width, height and depth. Syntax:</p>
+  <p><strong><i>default_particle_width&nbsp;&nbsp;&nbsp;#width</i></strong>
+    <br>
+    <br><strong><i>default_particle_width</i></strong> is the keyword.
+    <br><strong><i>#width</i></strong> is a real value > 0 that defines the default width. Default: 20.</p>
+  <p>Note, that default particle width is an attribute that can be influenced by a camera dependency using the << camera_dependency construction.</p>
+
+  <h6>Default Particle Height</h6>
+  <p>Similar to default particle width. Syntax:</p>
+  <p><strong><i>default_particle_height&nbsp;&nbsp;&nbsp;#height</i></strong>
+    <br>
+    <br><strong><i>default_particle_height</i></strong> is the keyword.
+    <br><strong><i>#height</i></strong> is a real value > 0 that defines the height. Default: 20.</p>
+  <p>Note, that default particle height is an attribute that can be influenced by a camera dependency using the << camera_dependency construction.</p>
+
+  <h6>Default Particle Depth</h6>
+  <p>Similar to default particle width. Syntax:</p>
+  <p><strong><i>default_particle_depth&nbsp;&nbsp;&nbsp;#depth</i></strong>
+    <br>
+    <br><strong><i>default_particle_depth</i></strong> is the keyword.
+    <br><strong><i>#depth</i></strong> is a real value > 0 that defines the depth. Default: 20.</p>
+  <p>Note, that default particle depth is an attribute that can be influenced by a camera dependency using the << camera_dependency construction.</p>
+
+  <h6>Spatial Hashing Cell Dimension</h6>
+  <p>Spatial Hashing is a method that employs a hash a function for compressing a potentially infinite regular spatial grid. The Spatial Hashing method can be used in the Particle Technique in cases where the distance between particles is required. Examples are interparticle collision, flocking behaviour and avoidance. 
+  Activation of this algorithm is transparent and done by the affectors.<br>
+  The 3d space is divided in grid cells with a certain dimension (size). The cell size is equal for x, y and z dimension. This attribute defines the cell dimension. Syntax: </p>
+  <p><strong><i>spatial_hashing_cell_dimension&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br>
+    <strong><i>spatial_hashing_cell_dimension</i></strong> is the keyword. <br>
+    <strong><i>#value</i></strong> defines the x, y and z dimension of a cel. Default: 15</p>
+
+  <h6>Spatial Hashing Cell Overlap</h6>
+  <p>The cell overlap is used to put a particle in multiple cells if needed. This is a better way to determine nearby particles. A particle in one cell is not considered nearby in relation 
+  to a particle in another cel, although they can be nearby in terms of their world position. If you want to inspect all particles positioned in a radius around a central particle, and that particle is close to the border of a cel, you miss a few particles in the neighbouring cell that are nearby. By defining an overlap you duplicate particles in multiple cells, but you are able to determine all  nearby particles. Syntax: </p>
+  <p><strong><i>spatial_hashing_cell_overlap&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br>
+    <strong><i>spatial_hashing_cell_overlap</i></strong> is the keyword. <br>
+    <strong><i>#value</i></strong> is amount ov overlap between two cells. Default: 0.0 (no overlap)</p>
+
+  <h6>Spatial Hashtable Size</h6>
+  <p>The effectivity of the Spatial Hashing algorithm depends on the size of the hashtable. If the table becomes too large, particles clusters are spread out too much and groups of particles
+  are no longer distinguished (if only one particle exists in a table row, collision detection is not executed for that row). If the table is too small, the whole idea of spatial clustering is lost. With a small table, a hashtable row may contain a lot of particles that all have to be validated with each other for collision. Defining the appropriate size of the table needs a little tuning. Use an appropriate combination of cell dimension, table size and update interval. Syntax: </p>
+  <p><strong><i>spatial_hashtable_size&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br>
+    <strong><i>spatial_hashtable_size</i></strong> is the keyword. <br>
+    <strong><i>#value</i></strong> defines the size of the hashtable. Default: 50</p>
+
+  <h6>Spatial Hashing Update Interval</h6>
+  <p>When used, the (spatial) hashtable is by default updated every frame. This update interval offers the possibilty to update it after a specfied amount of time. Syntax: </p>
+  <p><strong><i>spatial_hashing_update_interval&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br>
+    <strong><i>spatial_hashing_update_interval</i></strong> is the keyword. <br>
+    <strong><i>#value</i></strong> defines after which amount of time the hashtable is updated. Default: 0.05</p>
+
+  <h6>Maximum Velocity</h6>
+  <p>In some cases it is desirable to limit the velocity. If the particle system represents a flock of birds, it looks strange if the velocity of a bird becomes unnaturally high. This property limits the velocity to a maximum value. Syntax:</p>
+  <p><strong><i>max_velocity&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>max_velocity</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> is the maximum velocity of a particle. Default: Infinite.</p>
+
+  <h6>Use alias</h6>
+  <p>Use an alias. Renderers, Affectors, Emitters, Observers, Behaviours and Externs can all be defined in an alias script, which can be used in the 
+     technique. On the position of the 'use_alias', that piece of alias script is inserted. Syntax: </p>
+  <p><strong><i>use_alias&nbsp;&nbsp;&nbsp;aliasName</i></strong>
+    <br>
+    <br>
+    <strong><i>use_alias</i></strong> is the keyword. <br>
+    <strong><i>aliasName</i></strong> is the name of an alias defined previously.</p>
+
+  <h6>Renderer</h6>
+  <p>Adds a ParticleRenderer to the ParticleTechnique. See <a href="ParticleRenderer.html">ParticleRenderer</a> for the syntax.</p>
+
+  <h6>Emitter</h6>
+  <p>Adds a ParticleEmitter to the ParticleTechnique. See <a href="ParticleEmitter.html">ParticleEmitter</a> for the syntax.</p>
+
+  <h6>Affector</h6>
+  <p>Adds a ParticleAffector to the ParticleTechnique. See <a href="ParticleAffector.html">ParticleAffector</a> for the syntax.</p>
+
+  <h6>Observer</h6>
+  <p>Adds a ParticleObserver to the ParticleTechnique. See <a href="ParticleObserver.html">ParticleObserver</a> for the syntax.</p>
+
+  <h6>Behaviour</h6>
+  <p>Adds a ParticleBehaviour to the ParticleTechnique. See <a href="ParticleBehaviour.html">ParticleBehaviour</a> for the syntax.</p>
+
+  <h6>Extern</h6>
+  <p>Adds an Extern to the ParticleTechnique. See <a href="Extern.html">Extern</a> for the syntax.</p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>	

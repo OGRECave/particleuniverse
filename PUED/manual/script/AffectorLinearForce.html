@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleAffector.html">Affector&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content"> Linear Force Affector</h2>
+  <p>The Linear Force Affector applies a constant force to a particle. This 'forces' the particle to a certain direction.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>affector&nbsp;&nbsp;&nbsp;LinearForce&nbsp;&nbsp;&nbsp;[affectorName]&nbsp;&nbsp;&nbsp;{affector properties}</i></strong>
+  <p>See ParticleAffector for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+affector               LinearForce
+{
+   force_vector        0 -100 0
+}</pre>
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Force Vector</h6>
+  <p>Defines the direction to which the force applies. Syntax:</p>
+  <p><strong><i>force_vector&nbsp;&nbsp;&nbsp;#x #y #z</i></strong> <br>
+    <br>
+    <strong><i>force_vector</i></strong> is the keyword. <font color="#F62217"><strong><em>force_aff_vector</em></strong><em> is deprecated from version 1.2</em></font>
+    <br>
+    <strong><i>#x</i></strong> is a real value that defines the x coordinate of 
+    the force vector. Default: 0. <br>
+    <strong><i>#y</i></strong> is a real value that defines the y coordinate of 
+    the force vector. Default: 0. <br>
+    <strong><i>#z</i></strong> is a real value that defines the z coordinate of 
+    the force vector. Default: 0.</p>
+
+  <h6>Force Application</h6>
+  <p>Defines how the force vector is applied. Syntax:</p>
+  <p><strong><i>force_application&nbsp;&nbsp;&nbsp;add | average</i></strong>
+    <br>
+    <br><strong><i>force_application</i></strong> is the keyword. <font color="#F62217"><strong><em>force_aff_application</em></strong><em> is deprecated from version 1.2</em></font>
+    <br><strong><i>add | average</i></strong>. The 'add' value adds a fraction of the force vector to the particles' direction vector, which causes the
+	  particles' movement being affected. In case of average, an average value of the particles' direction and the force vector is calculated. Default: add.</p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

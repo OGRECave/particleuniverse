@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleEventHandler.html">EventHandler&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Do Placement Particle Event Handler</h2>
+  <p>Force the emission of one or more new particles. The position at which the particles are emitted is defined by the particle that has been observed by
+     the observer at which this event handler is registered. One application where you can use the Placement Particle Event Handler is to put a splash on
+	 the position where a raindrop hits the ground.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>handler&nbsp;&nbsp;&nbsp;DoPlacementParticle&nbsp;&nbsp;&nbsp;[handlerName]&nbsp;&nbsp;&nbsp;{handler properties}</i></strong>
+  <p>See ParticleEventHandler for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+handler                   DoPlacementParticle
+{
+   force_emitter          myEmitter
+   number_of_particles    1
+}</pre>
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Number of Particles</h6>
+  <p>The number of particles that are definately emitted. Syntax:</p>
+  <p><strong><i>number_of_particles&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>number_of_particles</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> defines the number of particles to be emitted.</p>
+
+  <h6>Force Emitter</h6>
+  <p>This property sets the name of the emitter that is forced to emit one or more particles. Syntax:</p>
+  <p><strong><i>force_emitter&nbsp;&nbsp;&nbsp;#emitterName</i></strong>
+    <br>
+    <br><strong><i>force_emitter</i></strong> is the keyword.
+    <br><strong><i>#emitterName</i></strong> is the name of the emitter that is forced to emit one or more particles.</p>
+
+  <h6>Inherit Position</h6>
+  <p>Defines whether the placed particle initially (when emitted)  gets the same position as the particle for which an event occurs (particle expires, freezes, emits). Syntax:</p>
+  <p><strong><i>inherit_position&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br> 
+    <strong><i>inherit_position</i></strong> is the keyword.
+    <br> 
+    <strong><i>true | false</i></strong> determines whether the placed particle gets the same position during emission. Default: true</p>
+
+  <h6>Inherit Direction</h6>
+  <p>Defines whether the placed particle initially (when emitted) gets the same direction as the particle for which an event occurs (particle expires, freezes, emits). Syntax:</p>
+  <p><strong><i>inherit_direction&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br> 
+    <strong><i>inherit_direction </i></strong>is the keyword.
+    <br> 
+    <strong><i>true | false</i></strong> determines whether the placed particle gets the same position during emission. Default: false</p>
+
+  <h6>Inherit Orientation</h6>
+  <p>Defines whether the placed particle initially (when emitted)  gets the same orientation as the particle for which an event occurs (particle expires, freezes, emits). Syntax:</p>
+  <p><strong><i>inherit_orientation&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br> 
+    <strong><i>inherit_orientation </i></strong>is the keyword.
+    <br> 
+    <strong><i>true | false</i></strong> determines whether the placed particle gets the same orientation during emission. Default: false</p>
+
+  <h6>Inherit Time To Live</h6>
+  <p>Defines whether the placed particle initially (when emitted)  gets the same time to live as the particle for which an event occurs (particle expires, freezes, emits). Syntax:</p>
+  <p><strong><i>inherit_time_to_live&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br> 
+    <strong><i>inherit_time_to_live </i></strong>is the keyword.
+    <br> 
+    <strong><i>true | false</i></strong> determines whether the placed particle gets the same time to live during emission. Default: false</p>
+
+  <h6>Inherit Mass</h6>
+  <p>Defines whether the placed particle initially (when emitted)  gets the same massas the particle for which an event occurs (particle expires, freezes, emits). Syntax:</p>
+  <p><strong><i>inherit_mass&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br> 
+    <strong><i>inherit_mass </i></strong>is the keyword.
+    <br> 
+    <strong><i>true | false</i></strong> determines whether the placed particle gets the same mass during emission. Default: false</p>
+
+  <h6>Inherit Textures Coordinate</h6>
+  <p>Defines whether the placed particle initially (when emitted)  gets the same texture coordinate as the particle for which an event occurs (particle expires, freezes, emits). Syntax:</p>
+  <p><strong><i>inherit_texture_coord&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br> 
+    <strong><i>inherit_texture_coord </i></strong>is the keyword.
+    <br> 
+    <strong><i>true | false</i></strong> determines whether the placed particle gets the same texture coordinate during emission. Default: false</p>
+
+  <h6>Inherit Colour</h6>
+  <p>Defines whether the placed particle initially (when emitted)  gets the same colour as the particle for which an event occurs (particle expires, freezes, emits). Syntax:</p>
+  <p><strong><i>inherit_colour&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br> 
+    <strong><i>inherit_colour </i></strong>is the keyword.
+    <br> 
+    <strong><i>true | false</i></strong> determines whether the placed particle gets the same colour during emission. Default: false</p>
+
+  <h6>Inherit Width</h6>
+  <p>Defines whether the placed particle initially (when emitted)  gets the same width as the particle for which an event occurs (particle expires, freezes, emits). Syntax:</p>
+  <p><strong><i>inherit_width&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br> 
+    <strong><i>inherit_width </i></strong>is the keyword.
+    <br> 
+    <strong><i>true | false</i></strong> determines whether the placed particle gets the same width during emission. Default: false</p>
+
+  <h6>Inherit Height</h6>
+  <p>Defines whether the placed particle initially (when emitted)  gets the same height as the particle for which an event occurs (particle expires, freezes, emits). Syntax:</p>
+  <p><strong><i>inherit_height&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br> 
+    <strong><i>inherit_height </i></strong>is the keyword.
+    <br> 
+    <strong><i>true | false</i></strong> determines whether the placed particle gets the same height during emission. Default: false</p>
+
+  <h6>Inherit Depth</h6>
+  <p>Defines whether the placed particle initially (when emitted)  gets the same depth as the particle for which an event occurs (particle expires, freezes, emits). Syntax:</p>
+  <p><strong><i>inherit_depth&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br> 
+    <strong><i>inherit_depth</i></strong> is the keyword.
+    <br> 
+    <strong><i>true | false</i></strong> determines whether the placed particle gets the same position during emission. Default: false</p>
+
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

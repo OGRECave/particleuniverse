@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleRenderer.html">Renderer&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+
+<div id="maincol"> 
+  <h2 id="content">Ribbon Trail Renderer</h2>
+  <p>Renders particles as ribbontrails.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>renderer&nbsp;&nbsp;&nbsp;RibbonTrail&nbsp;&nbsp;&nbsp;{renderer properties}</i></strong>
+  <p>See ParticleRenderer for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+technique
+{
+    renderer                                RibbonTrail
+    {
+        use_vertex_colours                  true
+        max_elements                        60
+        ribbontrail_length                  600
+        ribbontrail_width                   10
+        random_initial_colour               true
+        colour_change                       0.8 0.8 0.8 0.8
+    }
+}</pre>
+
+  <h3>Properties</h3>
+
+  <h6>Use Vertex Colours</h6>
+  <p>Set indication whether to use vertex colours or not. If set to true, use 
+    the Colour properties to set initial colours and colour changes . Syntax:</p>
+  <p><strong><i>use_vertex_colours&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>use_vertex_colours</i></strong> is the keyword. <font color="#F62217"><strong><em>ribbontrail_vertex_colours</em></strong><em> is deprecated from version 1.2</em></font>
+    <br>
+    <strong><i>true | false</i></strong> If set to true, vertex colours are used. 
+    Default: true</p>
+
+  <h6>Max Chain Elements</h6>
+  <p>Maximum number of elements in a chain. The more elements, the smoother the 
+    trails. Syntax:</p>
+  <p><strong><i>max_elements&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>max_elements</i></strong> is the keyword. <font color="#F62217"><strong><em>ribbontrail_max_elements</em></strong><em> is deprecated from version 1.2</em></font>
+  <br><strong><i>#value</i></strong> Maximum of chain elements. Default: 10</p>
+
+  <h6>Trail Length</h6>
+  <p>The length of the ribbontrail. If the length is not defined, the default length of the particle is used (default length is defined in the technique). Syntax:</p>
+  <p><strong><i>ribbontrail_length&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>ribbontrail_length</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> defines the length of the ribbontrail. Default: 400</p>
+
+  <h6>Trail Width</h6>
+  <p>The width of the ribbontrail. If the width is not defined, the default width of the particle is used (default width is defined in the technique). Syntax:</p>
+  <p><strong><i>ribbontrail_width&nbsp;&nbsp;&nbsp;#value</i></strong>
+    <br>
+    <br><strong><i>ribbontrail_width</i></strong> is the keyword.
+    <br><strong><i>#value</i></strong> defines the width of the ribbontrail. Default: 5</p>
+
+  <h6>Random Initial Colour</h6>
+  <p>Determine whether the initial colour of all chains is set manually or whether 
+    the colour of each chain is randomised. This value is only meaningfull if 
+    'ribbontrail_vertex_colours' is set to true. Syntax:</p>
+  <p><strong><i>random_initial_colour&nbsp;&nbsp;&nbsp;true | false</i></strong>
+    <br>
+    <br><strong><i>random_initial_colour</i></strong> is the keyword. <font color="#F62217"><strong><em>ribbontrail_random_initial_colour</em></strong><em> is deprecated from version 1.2</em></font>
+  <br><strong><i>true | false</i></strong> If set to true, initial colours are randomised. Default: true .</p>
+
+  <h6>Initial Colour</h6>
+  <p>Set the starting colour of all ribbontrails.
+     This value is only meaningfull if 'ribbontrail_vertex_colours' is set to true. Syntax:</p>
+  <p><strong><i>initial_colour&nbsp;&nbsp;&nbsp;#red&nbsp;&nbsp;&nbsp;#green&nbsp;&nbsp;&nbsp;#blue&nbsp;&nbsp;&nbsp;[#alpha]</i></strong>
+    <br>
+    <br><strong><i>initial_colour</i></strong> is the keyword. <font color="#F62217"><strong><em>ribbontrail_initial_colour</em></strong><em> is deprecated from version 1.2</em></font>
+  <br><strong><i>#red&nbsp;&nbsp;&nbsp;#green&nbsp;&nbsp;&nbsp;#blue&nbsp;&nbsp;&nbsp;[#alpha]</i></strong> defines the initial colour. Default: White</p>
+
+  <h6>Colour Change</h6>
+  <p>Define the colourvalue that is subtracted from the ribbontrail colour each 
+    second. This value is only meaningfull if 'ribbontrail_vertex_colours' is 
+    set to true. Syntax:</p>
+  <p><strong><i>colour_change&nbsp;&nbsp;&nbsp;#red&nbsp;&nbsp;&nbsp;#green&nbsp;&nbsp;&nbsp;#blue&nbsp;&nbsp;&nbsp;[#alpha]</i></strong>
+    <br>
+    <br><strong><i>colour_change</i></strong> is the keyword. <font color="#F62217"><strong><em>ribbontrail_colour_change</em></strong><em> is deprecated from version 1.2</em></font>
+  <br>
+  <strong><i>#red&nbsp;&nbsp;&nbsp;#green&nbsp;&nbsp;&nbsp;#blue&nbsp;&nbsp;&nbsp;[#alpha]</i></strong> defines the colour change. Default: 0.5 0.5 0.5 0.5</p>
+
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

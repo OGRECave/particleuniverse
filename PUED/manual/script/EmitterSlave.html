@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleEmitter.html">Emitter&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Slave Emitter</h2>
+  <p>The Slave Emitter is no real emitter in a strict sense. As the name suggests, it acts as a slave. The Master is another emitter, usually from another technique. Its use? Well, the Slave
+  Emitter places a particle on the same position (and with the same direction) as the 'master' particle. Using the right materials and renderers it is possible to create complex effects. To expand the possibilities, you can use it in combination with a SlaveBehaviour. If both a Slave Emitter and Slave Behaviour are included in the technique, the emitted particle will not only have the same initial position and direction of its master-particle, but also continues to follow it, regarding the movement of the master-particle.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>emitter&nbsp;&nbsp;&nbsp;Slave&nbsp;&nbsp;&nbsp;[emitterName]&nbsp;&nbsp;&nbsp;{emitter properties}</i></strong>
+  <p>See ParticleEmitter for explanation of the syntax</p>
+  <p> Example:
+  <pre>
+emitter                      Slave
+{
+   ...
+   master_technique_name     flareTechnique
+   master_emitter_name       flareEmitter
+}</pre>
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Master Technique Name</h6>
+  <p>The Slave Emitter emits a particle as soon as a particle is emitted from an emitter in the technique that is specified with this name. Syntax:</p>
+  <p><strong><i>master_technique_name&nbsp;&nbsp;&nbsp;#name</i></strong>
+    <br>
+    <br><strong><i>master_technique_name</i></strong> is the keyword.
+    <br><strong><i>#name</i></strong> is the name of the master technique.</p>
+
+  <h6>Master Emitter Name</h6>
+  <p>If also the master emitter name is set, you can narrow the particles that act as a master. Only particles that have been emitted from the emitter with this name are followed. Note, that the name of the master technique is mandatory, while the name of the master emitter is optional. Syntax:</p>
+  <p><strong><i>master_emitter_name&nbsp;&nbsp;&nbsp;#name</i></strong>
+    <br>
+    <br><strong><i>master_emitter_name</i></strong> is the keyword.
+    <br><strong><i>#name</i></strong> is the name of the master emitter.</p>
+
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

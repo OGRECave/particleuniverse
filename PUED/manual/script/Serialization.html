@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Serialization - writing to script</h2>
+  <p>Deserialization - parsing a Particle Universe script - is a standard feature of the plugin and the manual covers the script options extensively. Serialization - creating a script from a Particle System - is an additional feature that is usually used in combination with an editor. Although the Particle Universe package doesn't contain an official editor yet, this serialization feature is one step in that direction. It is also usable for 3rd party editors and because it is part of the core, it is maintained and updated for every new version.</p>
+
+  <h3>Usage</h3>
+  <p>If you have created a Particle System by code, you can serialize it to a file by means of:</p>
+  <pre>ParticleUniverse::ParticleSystemManager::getSingleton().writeScript(mSystem, "script_name.pu");</pre>
+  <p><strong><i>mSystem</i></strong> is a pointer to a created ParticleUniverse::ParticleSystem object.
+  <br><strong><i>"script_name.pu"</i></strong> is the name of the script file; "script_name.pu" is just an example.</p>
+  <p>It is possible to configure the serialization settings by means of the ParticleScriptSerializer. An example:</p>
+  <pre>ParticleUniverse::ParticleScriptSerializer* serializer = 
+    ParticleUniverse::ParticleSystemManager::getSingleton().getParticleScriptSerializer();
+serializer->setPath(../../);</pre>
+  <p>There is a second signature of the writeScript function. If the filename omits, the functions returns the script as a string:</p>
+  <pre>Ogre::String scriptString = ParticleUniverse::ParticleSystemManager::getSingleton().writeScript(mSystem);</pre>
+
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>	

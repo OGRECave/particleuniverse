@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleRenderer.html">Renderer&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+
+<div id="maincol"> 
+  <h2 id="content">Entity Renderer</h2>
+  <p>Renders particles as an entity, using the material set in the technique.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>renderer&nbsp;&nbsp;&nbsp;Entity&nbsp;&nbsp;&nbsp;{renderer properties}</i></strong>
+  <p>See ParticleRenderer for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+technique
+{
+    renderer                          Entity
+    {
+        mesh_name                     pu_stone.mesh
+    }
+}
+</pre>
+
+  <h3>Properties</h3>
+
+  <h6>Mesh Name</h6>
+  <p>Defines the name of the mesh that is rendered (as an entity). Syntax:</p>
+  <p><strong><i>mesh_name&nbsp;&nbsp;&nbsp;#name</i></strong>
+    <br>
+    <br><strong><i>mesh_name</i></strong> is the keyword. <font color="#F62217"><strong><em>entity_renderer_mesh_name</em></strong><em> is deprecated from version 1.2</em></font>
+    <br><strong><i>#name</i></strong> is the name of the mesh.</p>
+
+  <h6>Orientation Type</h6>
+  <p>With this setting, the orientation of the entity particle can be changed. By default, the orientation of the particle itself is used, but that can be overruled eith other settings, for example aligning the particle towards its direction. Syntax:</p>
+  <p><strong><i>entity_orientation_type&nbsp;&nbsp;&nbsp;ent_oriented_self | ent_oriented_self_mirrored | ent_oriented_shape</i></strong>
+    <br>
+    <br><strong><i>entity_orientation_type</i></strong> is the keyword.
+    <br><strong><i>ent_oriented_self</i></strong> means that the entity particle is aligned towards its direction. This setting overrules the orientation of the particle itself.
+    <br><strong><i>ent_oriented_self_mirrored</i></strong> means that the entity particle is aligned towards its direction, but the model is mirrored. This setting overrules the orientation of the particle itself.
+    <br><strong><i>ent_oriented_shape</i></strong> means that the orientation of the particle is taken into account. This is the default setting.</p>
+ </div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

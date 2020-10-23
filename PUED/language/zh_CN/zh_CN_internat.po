@@ -1,0 +1,2194 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2003-10-04 23:10+0200\n"
+"PO-Revision-Date: 2011-12-27 22:32+0100\n"
+"Last-Translator: FXPression\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+msgid "System"
+msgstr "系统"
+
+msgid "Technique"
+msgstr "技术"
+
+msgid "Renderer"
+msgstr "渲染"
+
+msgid "Emitter"
+msgstr "发射器"
+
+msgid "Affector"
+msgstr "影响者"
+
+msgid "Observer"
+msgstr "观察员"
+
+msgid "Handler"
+msgstr "处理程序"
+
+msgid "Behaviour"
+msgstr "行为"
+
+msgid "Extern"
+msgstr "外部"
+
+msgid "Visual"
+msgstr "视觉"
+
+msgid "<undefined>"
+msgstr "<未定义>"
+
+msgid "Beam"
+msgstr "梁"
+
+msgid "Billboard"
+msgstr "广告牌"
+
+msgid "Entity"
+msgstr "实体"
+
+msgid "Light"
+msgstr "光"
+
+msgid "RibbonTrail"
+msgstr "带状铁"
+
+msgid "Circle"
+msgstr "圈"
+
+msgid "Line"
+msgstr "线"
+
+msgid "MeshSurface"
+msgstr "网面"
+
+msgid "Slave"
+msgstr "从"
+
+msgid "SphereSurface"
+msgstr "球体表面"
+
+msgid "Align"
+msgstr "对齐"
+
+msgid "BoxCollider"
+msgstr "盒对撞机"
+
+msgid "CollisionAvoidance"
+msgstr "防撞"
+
+msgid "Colour"
+msgstr "彩色"
+
+msgid "FlockCentering"
+msgstr "羊群围绕"
+
+msgid "ForceField"
+msgstr "力场"
+
+msgid "GeometryRotator"
+msgstr "几何旋转"
+
+msgid "InterParticleCollider"
+msgstr "国米的粒子对撞机"
+
+msgid "Jet"
+msgstr "喷射"
+
+msgid "LinearForce"
+msgstr "线性力"
+
+msgid "ParticleFollower"
+msgstr "粒子跟随"
+
+msgid "PathFollower"
+msgstr "路径跟随"
+
+msgid "PlaneCollider"
+msgstr "平面对撞机"
+
+msgid "Randomiser"
+msgstr "随机化"
+
+msgid "Scale"
+msgstr "大规模"
+
+msgid "ScaleVelocity"
+msgstr "规模速度"
+
+msgid "SineForce"
+msgstr "正弦队"
+
+msgid "SphereCollider"
+msgstr "球对撞机"
+
+msgid "TextureAnimator"
+msgstr "纹理动画"
+
+msgid "TextureRotator"
+msgstr "纹理肩"
+
+msgid "VelocityMatching"
+msgstr "速度匹配"
+
+msgid "Vortex"
+msgstr "涡旋"
+
+msgid "OnClear"
+msgstr "清晰"
+
+msgid "OnCollision"
+msgstr "相撞"
+
+msgid "OnCount"
+msgstr "在计数"
+
+msgid "OnEmission"
+msgstr "对排放"
+
+msgid "OnEventFlag"
+msgstr "在事件标志"
+
+msgid "OnExpire"
+msgstr "在过期"
+
+msgid "OnPosition"
+msgstr "作为位置"
+
+msgid "OnQuota"
+msgstr "配额"
+
+msgid "OnRandom"
+msgstr "随机"
+
+msgid "OnTime"
+msgstr "开启时间"
+
+msgid "OnVelocity"
+msgstr "对速度"
+
+msgid "DoAffector"
+msgstr "关闭影响者在"
+
+msgid "DoEnableComponent"
+msgstr "开关元件"
+
+msgid "DoExpire"
+msgstr "到期"
+
+msgid "DoFreeze"
+msgstr "冻结"
+
+msgid "DoPlacementParticle"
+msgstr "放置粒子"
+
+msgid "DoScale"
+msgstr "规模"
+
+msgid "DoStopSystem"
+msgstr "停止粒子系统"
+
+msgid "PhysXActor"
+msgstr "PhysX的演员"
+
+msgid "PhysXFluid"
+msgstr "PhysX的流体"
+
+msgid "&File"
+msgstr "文件"
+
+msgid "List &items"
+msgstr "列表项"
+
+msgid "&Build"
+msgstr "生成"
+
+msgid "&Gizmo"
+msgstr "小玩意儿"
+
+msgid "&Camera"
+msgstr "相机"
+
+msgid "&Tools"
+msgstr "工具"
+
+msgid "&Help"
+msgstr "帮助"
+
+msgid "New"
+msgstr "新"
+
+msgid "&New\tCtrl+N"
+msgstr "新"
+
+msgid "New particle system"
+msgstr "新的粒子系统"
+
+msgid "Create a new particle system"
+msgstr "创建一个新的粒子系统"
+
+msgid "Load"
+msgstr "负载"
+
+msgid "&Load file\tCtrl+L"
+msgstr "加载文件"
+
+msgid "Load a *.pu or *.pua file"
+msgstr "载入*. PU或*. PUA文件"
+
+msgid "File name:"
+msgstr "文件名："
+
+msgid "Save"
+msgstr "保存"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "File name exists already."
+msgstr "文件名已存在"
+
+msgid "Error"
+msgstr "错误"
+
+msgid "Warning"
+msgstr "警告"
+
+msgid "&Save\tCtrl+S"
+msgstr "保存"
+
+msgid "Save a *.pu or *.pua file"
+msgstr "保存*. PU或*. PUA文件"
+
+msgid "Save as type:"
+msgstr "保存类型："
+
+msgid "Add &resource location\tCtrl+R"
+msgstr "新增资源的位置"
+
+msgid "Load all resources from a directory"
+msgstr "负载从一个目录中的所有资源"
+
+msgid "Add resource location"
+msgstr "新增资源的位置"
+
+msgid "Add a resource location"
+msgstr "添加一个资源的位置"
+
+msgid "Save As\tCtrl+Shift+S"
+msgstr "另存为"
+
+msgid "Save As"
+msgstr "另存为"
+
+msgid "&Quit\tCtrl+Q"
+msgstr "退出"
+
+msgid "Quit"
+msgstr "退出"
+
+msgid "Rewind"
+msgstr "倒带"
+
+msgid "Get the previous particle system from the list"
+msgstr "从列表中获取以前的粒子系统"
+
+msgid "Pause\tF8"
+msgstr "暂停"
+
+msgid "Pause"
+msgstr "暂停"
+
+msgid "Pause the current particle system"
+msgstr "暂停当前的粒子系统"
+
+msgid "Play\tF6"
+msgstr "播放"
+
+msgid "Run the current particle system"
+msgstr "运行当前的粒子系统"
+
+msgid "Play"
+msgstr "播放"
+
+msgid "Stop\tF9"
+msgstr "停止"
+
+msgid "Stop"
+msgstr "停止"
+
+msgid "Stop the current particle system"
+msgstr "停止当前的粒子系统"
+
+msgid "Record\tF7"
+msgstr "记录"
+
+msgid "Record"
+msgstr "记录"
+
+msgid "Record the current particle system"
+msgstr "记录当前的粒子系统"
+
+msgid "Wind"
+msgstr "红晕"
+
+msgid "Get the next particle system from the list"
+msgstr "从列表中获取下一个粒子系统"
+
+msgid "Remove"
+msgstr "删除"
+
+msgid "Clone"
+msgstr "克隆"
+
+msgid "Compile\tF5"
+msgstr "编译"
+
+msgid "Compile"
+msgstr "编译"
+
+msgid "Compilation OK"
+msgstr "编译行"
+
+msgid "Move"
+msgstr "移动"
+
+msgid "Gizmo move\tShift+M"
+msgstr "小玩意儿移动"
+
+msgid "Gizmo move"
+msgstr "小玩意儿移动"
+
+msgid "Set the gizmo to move"
+msgstr "小玩意儿移动"
+
+msgid "Rotate"
+msgstr "旋转"
+
+msgid "Gizmo rotate\tShift+R"
+msgstr "小玩意儿旋转"
+
+msgid "Gizmo rotate"
+msgstr "小玩意儿旋转"
+
+msgid "Set the gizmo to rotate"
+msgstr "小玩意儿旋转"
+
+msgid "Gizmo scale\tShift+S"
+msgstr "小玩意儿规模"
+
+msgid "Gizmo scale"
+msgstr "小玩意儿规模"
+
+msgid "Set the gizmo to scale"
+msgstr "小玩意儿规模"
+
+msgid "Toggle gizmo"
+msgstr "切换小发明"
+
+msgid "Gizmo on/off\tCtrl+G"
+msgstr "小玩意儿上的开/关"
+
+msgid "Gizmo on/off"
+msgstr "小玩意儿上的开/关"
+
+msgid "Gizmo in world/object space\tCtrl+P"
+msgstr "在世界/对象空间的小玩意儿"
+
+msgid "Enable/disable the gizmo"
+msgstr "启用/禁用小发明"
+
+msgid "Gizmo manipulation is in global (world) space"
+msgstr "小玩意儿操纵在全球（世界）空间"
+
+msgid "Gizmo manipulation is in local (object) space"
+msgstr "小玩意儿的操作是在本地（对象）的空间"
+
+msgid "Reset camera\tCtrl+Z"
+msgstr "复位相机"
+
+msgid "Reset camera"
+msgstr "复位相机"
+
+msgid "Camera Reset"
+msgstr "复位相机"
+
+msgid "Reset the camera position"
+msgstr "复位摄像机的位置"
+
+msgid "Save camera\tShift+C"
+msgstr "保存相机"
+
+msgid "Save camera"
+msgstr "保存相机"
+
+msgid "Save camera position"
+msgstr "保存相机位置"
+
+msgid "Save the position of the camera"
+msgstr "保存相机的位置"
+
+msgid "Toggle camera projection\tShift+P"
+msgstr "切换相机投影"
+
+msgid "Toggle camera projection"
+msgstr "切换相机投影"
+
+msgid "Toggle camera angle\tCtrl+A"
+msgstr "切换摄影机角度"
+
+msgid "Toggle camera angle"
+msgstr "切换摄影机角度"
+
+msgid "Centre object\tCtrl+C"
+msgstr "中心对象"
+
+msgid "Centre object"
+msgstr "中心对象"
+
+msgid "Move selected object to the centre of the scene"
+msgstr "移动选定的对象到中心现场"
+
+msgid "Background colour\tCtrl+B"
+msgstr "背景颜色"
+
+msgid "Background colour"
+msgstr "背景颜色"
+
+msgid "Change the backgroundcolour of the renderwindow"
+msgstr "更改背景颜色的渲染窗口"
+
+msgid "Toggle statistics\tCtrl+I"
+msgstr "切换统计"
+
+msgid "Toggle statistics"
+msgstr "切换统计"
+
+msgid "Enable/disable the statistics overlay"
+msgstr "启用/禁用统计覆盖"
+
+msgid "Toggle grid plane\tCtrl+T"
+msgstr "切换网格平面"
+
+msgid "Toggle grid plane"
+msgstr "切换网格平面"
+
+msgid "Enable/disable the grid plane"
+msgstr "启用/禁用网格平面"
+
+msgid "Add mesh to scene\tCtrl+M"
+msgstr "目场景"
+
+msgid "Add mesh to scene"
+msgstr "目场景"
+
+msgid "Add a mesh to the scene"
+msgstr "网状现场"
+
+msgid "Remove mesh from scene\tCtrl+X"
+msgstr "从现场取出网格"
+
+msgid "Remove mesh from scene"
+msgstr "从现场取出网格"
+
+msgid "Remove a mesh from the scene"
+msgstr "从现场取出一个网格"
+
+msgid "Toggle light\tCtrl+D"
+msgstr "切换光"
+
+msgid "Toggle light"
+msgstr "切换光"
+
+msgid "Add/remove light to/from scene"
+msgstr "添加/删除到/从现场的光"
+
+msgid "Add or remove a light to/from the scene"
+msgstr "添加/删除到/从现场的光"
+
+msgid "Reset time\tCtrl+K"
+msgstr "复位时间"
+
+msgid "Reset time"
+msgstr "复位时间"
+
+msgid "Reset the time settings"
+msgstr "复位时间"
+
+msgid "Options\tCtrl+O"
+msgstr "选项"
+
+msgid "Options"
+msgstr "选项"
+
+msgid "About\tF1"
+msgstr "关于"
+
+msgid "About"
+msgstr "关于"
+
+msgid "        Play"
+msgstr "        播放"
+
+msgid "        Clone item"
+msgstr "        克隆项目"
+
+msgid "        Remove from list"
+msgstr "        从列表中删除"
+
+msgid "Set orthographic camera"
+msgstr "设置正交相机"
+
+msgid "Set angle perpendicular"
+msgstr "设置角度垂直"
+
+msgid "Set perspective camera"
+msgstr "设置角度摄像头"
+
+msgid "Set angle 45 degrees"
+msgstr "设置角度为45度"
+
+msgid "Material Selector"
+msgstr "材料选择"
+
+msgid "Resize"
+msgstr "调整"
+
+msgid "Box width"
+msgstr "包装盒宽度"
+
+msgid "Box height"
+msgstr "框的高度"
+
+msgid "Box depth"
+msgstr "包装盒厚度"
+
+msgid "Inner Collision"
+msgstr "内蒙古碰撞"
+
+msgid "Avoidance radius"
+msgstr "避免半径"
+
+msgid "Time and Colour"
+msgstr "时间和颜色"
+
+msgid "Time/Colour"
+msgstr "时间/彩色"
+
+msgid "Colour instance"
+msgstr "颜色的实例"
+
+msgid "Colour operation"
+msgstr "颜色操作"
+
+msgid "Set"
+msgstr "设置"
+
+msgid "Multiply"
+msgstr "乘"
+
+msgid "        Select colour"
+msgstr "        选择颜色"
+
+msgid "        Set alpha"
+msgstr "        设置阿尔法"
+
+msgid "Forcefield type"
+msgstr "力场类型"
+
+msgid "Realtime"
+msgstr "实际时间"
+
+msgid "Matrix"
+msgstr "矩阵"
+
+msgid "Delta"
+msgstr "三角洲"
+
+msgid "Force"
+msgstr "队"
+
+msgid "Octaves"
+msgstr "八度"
+
+msgid "Frequency"
+msgstr "频率"
+
+msgid "Amplitude"
+msgstr "幅度"
+
+msgid "Persistence"
+msgstr "持久"
+
+msgid "Forcefield size"
+msgstr "力场大小"
+
+msgid "Worldsize"
+msgstr "世界的大小"
+
+msgid "Ignore -x"
+msgstr "忽略- X"
+
+msgid "Ignore -y"
+msgstr "忽略- Y"
+
+msgid "Ignore -z"
+msgstr "忽略- Z"
+
+msgid "Movement"
+msgstr "运动"
+
+msgid "Movement frequency"
+msgstr "运动频率"
+
+msgid "Use own rotation"
+msgstr "用自己的旋转"
+
+msgid "Gravity"
+msgstr "重力"
+
+msgid "Adjustment"
+msgstr "调整"
+
+msgid "Collision response"
+msgstr "碰撞响应"
+
+msgid "Average velocity"
+msgstr "平均速度"
+
+msgid "Angle based velocity"
+msgstr "角度根据速度"
+
+msgid "Acceleration"
+msgstr "加速"
+
+msgid "End position"
+msgstr "结束位置"
+
+msgid "Drift"
+msgstr "漂移"
+
+msgid "Minimum distance"
+msgstr "最小距离"
+
+msgid "Maximum distance"
+msgstr "最大距离"
+
+msgid "Add Position"
+msgstr "添加位置"
+
+msgid "Plane normal"
+msgstr "平面的法线"
+
+msgid "Random direction"
+msgstr "随机方向"
+
+msgid "Scale x, y and z"
+msgstr "缩放X，Y和Z"
+
+msgid "Scale x"
+msgstr "缩放X"
+
+msgid "Scale y"
+msgstr "缩放Y"
+
+msgid "Scale z"
+msgstr "规模ž"
+
+msgid "Scale velocity"
+msgstr "规模速度"
+
+msgid "Stop at flip"
+msgstr "停止在翻转"
+
+msgid "Minimum frequency"
+msgstr "最小频率"
+
+msgid "Maximum frequency"
+msgstr "最大频率"
+
+msgid "Sphere radius"
+msgstr "球体的半径"
+
+msgid "Animation type"
+msgstr "动画类型"
+
+msgid "Loop"
+msgstr "环路"
+
+msgid "Up - Down"
+msgstr "返回"
+
+msgid "Random"
+msgstr "随机"
+
+msgid "Texture coordinate start"
+msgstr "纹理坐标开始"
+
+msgid "Texture coordinate end"
+msgstr "纹理坐标结束"
+
+msgid "Start random"
+msgstr "随机启动"
+
+msgid "Use own speed"
+msgstr "使用自己的速度"
+
+msgid "Velocity matching radius"
+msgstr "速度匹配半径"
+
+msgid "Circle Radius"
+msgstr "圆的半径"
+
+msgid "Circle Step"
+msgstr "圈步"
+
+msgid "Circle angle"
+msgstr "圆角"
+
+msgid "Circle Random"
+msgstr "圈随机"
+
+msgid "Circle normal"
+msgstr "圈正常"
+
+msgid "Line end"
+msgstr "行结束"
+
+msgid "Line max increment"
+msgstr "行的最大增量"
+
+msgid "Line min increment"
+msgstr "线的最小增量"
+
+msgid "Line deviation"
+msgstr "线偏差"
+
+msgid "Mesh name"
+msgstr "网名"
+
+msgid "Mesh surface distribution"
+msgstr "网面分布"
+
+msgid "Mesh surface scale"
+msgstr "网面规模"
+
+msgid "Edge"
+msgstr "边缘"
+
+msgid "Heterogeneous_1"
+msgstr "异构之一"
+
+msgid "Heterogeneous_2"
+msgstr "异构两个"
+
+msgid "Homogeneus"
+msgstr "同质"
+
+msgid "Vertex"
+msgstr "顶点"
+
+msgid "Add particle position"
+msgstr "添加粒子的位置"
+
+msgid "Position randomize"
+msgstr "位置随机"
+
+msgid "Sphere Radius"
+msgstr "球体的半径"
+
+msgid "Vertex step"
+msgstr "顶点一步"
+
+msgid "Vertex segments"
+msgstr "顶点细分"
+
+msgid "Vertex iterations"
+msgstr "顶点迭代"
+
+msgid "Vertex meshname"
+msgstr "顶点网格名称"
+
+msgid "Perform pre/post processing"
+msgstr "执行前处理和后处理"
+
+msgid "Enable component"
+msgstr "启用组件"
+
+msgid "Number of particles"
+msgstr "粒子数"
+
+msgid "Inherit position"
+msgstr "继承的立场"
+
+msgid "Inherit direction"
+msgstr "继承方向"
+
+msgid "Inherit orientation"
+msgstr "继承方向"
+
+msgid "Inherit time to live"
+msgstr "继承的生存时间"
+
+msgid "Inherit mass"
+msgstr "继承大众"
+
+msgid "Inherit texture coord"
+msgstr "继承纹理坐标"
+
+msgid "Inherit colour"
+msgstr "继承的颜色"
+
+msgid "Inherit particle width"
+msgstr "继承粒子的宽度"
+
+msgid "Inherit particle height"
+msgstr "继承粒子高度"
+
+msgid "Inherit particle depth"
+msgstr "继承粒子深入"
+
+msgid "Scale fraction"
+msgstr "量表分数"
+
+msgid "Scale type"
+msgstr "规模型"
+
+msgid "Time to live"
+msgstr "生存时间"
+
+msgid "Velocity"
+msgstr "速度"
+
+msgid "Shape type"
+msgstr "形状类型"
+
+msgid "Shape collision group"
+msgstr "形状碰撞组"
+
+msgid "Group mask"
+msgstr "集团面膜"
+
+msgid "Angular velocity"
+msgstr "角速度"
+
+msgid "Angular damping"
+msgstr "角阻尼"
+
+msgid "Material index"
+msgstr "材料指数"
+
+msgid "Box"
+msgstr "盒"
+
+msgid "Sphere"
+msgstr "领域"
+
+msgid "Capsule"
+msgstr "胶囊"
+
+msgid "Rest particle per meter"
+msgstr "每米休息颗粒"
+
+msgid "Rest density"
+msgstr "休息密度"
+
+msgid "Kernel radius multiplier"
+msgstr "内核半径乘数"
+
+msgid "Motion limit multiplier"
+msgstr "运动极限的乘数"
+
+msgid "Collision dist. multiplier"
+msgstr "碰撞距离乘数"
+
+msgid "Packet size multiplier"
+msgstr "数据包大小乘数"
+
+msgid "Stiffness"
+msgstr "刚性"
+
+msgid "Viscosity"
+msgstr "粘度"
+
+msgid "Surface tension"
+msgstr "表面张力"
+
+msgid "Damping"
+msgstr "减震"
+
+msgid "External acceleration"
+msgstr "外部加速"
+
+msgid "Restitution static shapes"
+msgstr "归还静态形状"
+
+msgid "Dyn. friction static shapes"
+msgstr "动态摩擦的静态形状"
+
+msgid "Static friction static shapes"
+msgstr "静摩擦静态形状"
+
+msgid "Attraction static shapes"
+msgstr "景点静态形状"
+
+msgid "Restitution dynamic shapes"
+msgstr "归还动态形状"
+
+msgid "Dyn. friction dyn. shapes"
+msgstr "动态摩擦的动态形状"
+
+msgid "Static friction dyn. shapes"
+msgstr "静摩擦的动态形状"
+
+msgid "Attraction dynamic shapes"
+msgstr "景点动态形状"
+
+msgid "Collision response coeff."
+msgstr "碰撞响应系数"
+
+msgid "Simulation method"
+msgstr "模拟方法"
+
+msgid "Collision method"
+msgstr "碰撞方法"
+
+msgid "Visualisation"
+msgstr "可视化"
+
+msgid "Disable gravity"
+msgstr "禁用重力"
+
+msgid "Collision twoway"
+msgstr "碰撞双向"
+
+msgid "Fluid enabled"
+msgstr "流体启用"
+
+msgid "Hardware"
+msgstr "硬件"
+
+msgid "Priority mode"
+msgstr "优先模式"
+
+msgid "Project to plane"
+msgstr "项目平面"
+
+msgid "Strict cooking format"
+msgstr "严格的烹饪格式"
+
+msgid "Intercollision"
+msgstr "间的碰撞"
+
+msgid "Non-intercollision"
+msgstr "非间的碰撞"
+
+msgid "Mixed intercollision"
+msgstr "混合间的碰撞"
+
+msgid "Static"
+msgstr "静态"
+
+msgid "Dynamic"
+msgstr "动态"
+
+msgid "On count compare"
+msgstr "在计数比较"
+
+msgid "On count threshold"
+msgstr "在计数阈值"
+
+msgid "Event Flag"
+msgstr "事件标志"
+
+msgid "Position compare x"
+msgstr "位置比较x"
+
+msgid "Position compare y"
+msgstr "位置比较Ÿ"
+
+msgid "Position compare z"
+msgstr "位置比较Ž"
+
+msgid "Position.x threshold"
+msgstr "位置X门槛"
+
+msgid "Position.y threshold"
+msgstr "位置的y门槛"
+
+msgid "Position.z threshold"
+msgstr "位置ž门槛"
+
+msgid "Random threshold"
+msgstr "随机门槛"
+
+msgid "On time compare"
+msgstr "比较时间"
+
+msgid "On time threshold"
+msgstr "在时间阈值"
+
+msgid "Velocity compare"
+msgstr "速度比较"
+
+msgid "Velocity threshold"
+msgstr "速度阈值"
+
+msgid "Update interval"
+msgstr "更新间隔"
+
+msgid "Deviation"
+msgstr "偏差"
+
+msgid "Number of segments"
+msgstr "段数"
+
+msgid "Jump"
+msgstr "跳转"
+
+msgid "Texture direction"
+msgstr "纹理方向"
+
+msgid "TCD_U"
+msgstr "TCD_U"
+
+msgid "TCD_V"
+msgstr "TCD_V"
+
+msgid "Billboard type"
+msgstr "广告牌类型"
+
+msgid "Point"
+msgstr "点"
+
+msgid "Orientation type"
+msgstr "定位类型"
+
+msgid "Oriented self mirrored"
+msgstr "面向自我镜像"
+
+msgid "Oriented Common"
+msgstr "面向普通"
+
+msgid "Oriented Self"
+msgstr "面向自"
+
+msgid "Oriented self"
+msgstr "面向自"
+
+msgid "Perpendicular Common"
+msgstr "垂直常见"
+
+msgid "Perpendicular Self"
+msgstr "垂直自我"
+
+msgid "Oriented Shape"
+msgstr "面向形状"
+
+msgid "Oriented shape"
+msgstr "面向形状"
+
+msgid "Origin"
+msgstr "原产"
+
+msgid "Top-left"
+msgstr "左上角"
+
+msgid "Top-center"
+msgstr "首页中心"
+
+msgid "Top-right"
+msgstr "右上角"
+
+msgid "Center-left"
+msgstr "中间偏左"
+
+msgid "Center-right"
+msgstr "中间偏右"
+
+msgid "Center"
+msgstr "中心"
+
+msgid "Bottom-left"
+msgstr "左下"
+
+msgid "Bottom-right"
+msgstr "右下角"
+
+msgid "Bottom-center"
+msgstr "底中心"
+
+msgid "Rotation type"
+msgstr "旋转式"
+
+msgid "Texture coordinates"
+msgstr "纹理坐标"
+
+msgid "Common direction"
+msgstr "共同的方向"
+
+msgid "Up Vector"
+msgstr "向上向量"
+
+msgid "Point Rendering"
+msgstr "点渲染"
+
+msgid "Accurate Facing"
+msgstr "精确面对"
+
+msgid "On"
+msgstr "在"
+
+msgid "Off"
+msgstr "关闭"
+
+msgid "Light type"
+msgstr "光种类"
+
+msgid "Spot"
+msgstr "现货"
+
+msgid "Attenuation range"
+msgstr "衰减范围"
+
+msgid "Attenuation constant"
+msgstr "衰减常数"
+
+msgid "Attenuation linear"
+msgstr "衰减线性"
+
+msgid "Attenuation quadratic"
+msgstr "衰减二次"
+
+msgid "spot inner angle"
+msgstr "现场内角"
+
+msgid "spot outer angle"
+msgstr "现场外角"
+
+msgid "Falloff"
+msgstr "衰减"
+
+msgid "Powerscale"
+msgstr "电规模"
+
+msgid "Flash frequency"
+msgstr "闪光频率"
+
+msgid "Flash length"
+msgstr "闪光的长度"
+
+msgid "Flash random"
+msgstr "闪存随机"
+
+msgid "Use vertex colours"
+msgstr "使用顶点颜色"
+
+msgid "Maximum elements"
+msgstr "最大的元素"
+
+msgid "Trail length"
+msgstr "径长度"
+
+msgid "Trail width"
+msgstr "步道宽度"
+
+msgid "Random initial colour"
+msgstr "随机初始颜色"
+
+msgid "Initial colour"
+msgstr "初始颜色"
+
+msgid "Colour change"
+msgstr "颜色变化"
+
+msgid "includes"
+msgstr "包括"
+
+msgid "included by"
+msgstr "包括由"
+
+msgid "excludes"
+msgstr "排除"
+
+msgid "excluded by"
+msgstr "排除"
+
+msgid "handles"
+msgstr "处理"
+
+msgid "handled by"
+msgstr "处理"
+
+msgid "emits"
+msgstr "发射"
+
+msgid "emitted by"
+msgstr "所排放的"
+
+msgid "affects"
+msgstr "影响"
+
+msgid "affected by"
+msgstr "受"
+
+msgid "observes"
+msgstr "观察"
+
+msgid "observed by"
+msgstr "观察"
+
+msgid "interfaces"
+msgstr "接口"
+
+msgid "interfaced by"
+msgstr "接口通过"
+
+msgid "slaves"
+msgstr "奴隶"
+
+msgid "slave of"
+msgstr "奴"
+
+msgid "master of"
+msgstr "掌握"
+
+msgid "enables"
+msgstr "使"
+
+msgid "enabled by"
+msgstr "启用"
+
+msgid "forces"
+msgstr "部队"
+
+msgid "forced by"
+msgstr "迫于"
+
+msgid "places"
+msgstr "地方"
+
+msgid "placed by"
+msgstr "放置"
+
+msgid "connection with"
+msgstr "与此"
+
+msgid "Position"
+msgstr "位置"
+
+msgid "Fixed"
+msgstr "固定"
+
+msgid "Curved"
+msgstr "弯曲"
+
+msgid " - Curved"
+msgstr "- 弯曲"
+
+msgid "Oscillate"
+msgstr "摆动"
+
+msgid "Linear"
+msgstr "线性"
+
+msgid "Spline"
+msgstr "花键"
+
+msgid "Friction"
+msgstr "摩擦"
+
+msgid "Bouncyness"
+msgstr "弹性"
+
+msgid "Intersection type"
+msgstr "交叉口类型"
+
+msgid "Collision type"
+msgstr "碰撞类别"
+
+msgid "None"
+msgstr "没有"
+
+msgid "Bounce"
+msgstr "弹跳"
+
+msgid "Flow"
+msgstr "流"
+
+msgid "Force vector"
+msgstr "力矢量"
+
+msgid "Application"
+msgstr "应用"
+
+msgid "Add"
+msgstr "添加"
+
+msgid "Average"
+msgstr "平均"
+
+msgid "Maximum deviation"
+msgstr "最大偏差"
+
+msgid "Time step"
+msgstr "时间步长"
+
+msgid "Rotation"
+msgstr "旋转"
+
+msgid "Rotation speed"
+msgstr "旋转速度"
+
+msgid "Rotation axis"
+msgstr "旋转轴"
+
+msgid "Diffuse"
+msgstr "漫射"
+
+msgid "Specular"
+msgstr "镜面"
+
+msgid "Particle type"
+msgstr "颗粒型"
+
+msgid "All types"
+msgstr "所有类型"
+
+msgid "Distance threshold"
+msgstr "距离阈值"
+
+msgid "Not used"
+msgstr "未使用"
+
+msgid "Less than"
+msgstr "小于"
+
+msgid "Greater than"
+msgstr "大于"
+
+msgid "Equals"
+msgstr "等于"
+
+msgid "Affector type"
+msgstr "影响者类型"
+
+msgid "Mass"
+msgstr "地下"
+
+msgid "Specialisation"
+msgstr "专长"
+
+msgid "Default"
+msgstr "默认"
+
+msgid "Increment by time to live"
+msgstr "生存时间递增"
+
+msgid "Decrement by time to live"
+msgstr "生存时间减"
+
+msgid "Behaviour type"
+msgstr "行为类型"
+
+msgid "Emitter type"
+msgstr "发射器类型"
+
+msgid "Keep local"
+msgstr "保持局部"
+
+msgid "Direction"
+msgstr "方向"
+
+msgid "Orientation"
+msgstr "取向"
+
+msgid "Orientation range start"
+msgstr "系列的初始取向"
+
+msgid "Orientation range end"
+msgstr "定位范围的结束"
+
+msgid "Duration"
+msgstr "时间"
+
+msgid "Repeat - Delay"
+msgstr "重复 - 延时"
+
+msgid "Angle"
+msgstr "角"
+
+msgid "Emission rate"
+msgstr "排放率"
+
+msgid "Texture coordinate"
+msgstr "纹理坐标"
+
+msgid "Colour range start"
+msgstr "色彩范围的开始"
+
+msgid "Colour range end"
+msgstr "色彩范围的结束"
+
+msgid "All particle dimensions"
+msgstr "所有粒子的尺寸"
+
+msgid "Particle width"
+msgstr "粒子的宽度"
+
+msgid "Particle height"
+msgstr "粒子的高度"
+
+msgid "Particle depth"
+msgstr "粒子深入"
+
+msgid "Auto direction"
+msgstr "自动方向"
+
+msgid "Force emission"
+msgstr "部队发射"
+
+msgid "Event handler type"
+msgstr "事件处理程序的类型"
+
+msgid "Extern type"
+msgstr "外部类型"
+
+msgid "Collision group"
+msgstr "碰撞集团"
+
+msgid "Observer type"
+msgstr "观察员类型"
+
+msgid "Observer until event"
+msgstr "事件观察，直到"
+
+msgid "Observe interval"
+msgstr "观察间隔"
+
+msgid "Name"
+msgstr "名称"
+
+msgid "Enabled"
+msgstr "启用"
+
+msgid "RGB"
+msgstr "RGB"
+
+msgid "Alpha"
+msgstr "阿尔法"
+
+msgid ".w"
+msgstr ".w"
+
+msgid ".x"
+msgstr ".x"
+
+msgid ".y"
+msgstr ".y"
+
+msgid ".z"
+msgstr ".z"
+
+msgid "Attribute type"
+msgstr "属性类型"
+
+msgid "Value"
+msgstr "价值"
+
+msgid "Minimum"
+msgstr "最低"
+
+msgid "Maximum"
+msgstr "最大"
+
+msgid "Oscillation type"
+msgstr "振荡型"
+
+msgid "Sine"
+msgstr "正弦"
+
+msgid "Square"
+msgstr "广场"
+
+msgid "Phase"
+msgstr "期"
+
+msgid "Base"
+msgstr "基地"
+
+msgid "Interpolation"
+msgstr "插值"
+
+msgid "Control Point"
+msgstr "控制点"
+
+msgid "Since start system"
+msgstr "自启动系统"
+
+msgid "Renderer type"
+msgstr "渲染器类型"
+
+msgid "Render queue group"
+msgstr "渲染队列组"
+
+msgid "Sorting"
+msgstr "排序"
+
+msgid "Texture coords define"
+msgstr "纹理坐标定义"
+
+msgid "Texture coords set"
+msgstr "纹理坐标设置"
+
+msgid "Texture coords rows"
+msgstr "纹理坐标行"
+
+msgid "Texture coords columns"
+msgstr "纹理坐标列"
+
+msgid "Use soft particles"
+msgstr "使用软颗粒"
+
+msgid "Soft particles contrast power"
+msgstr "软颗粒对比能力"
+
+msgid "Soft particles scale"
+msgstr "软颗粒规模"
+
+msgid "Soft particles delta"
+msgstr "三角洲软颗粒"
+
+msgid "Category"
+msgstr "分类"
+
+msgid "Iteration interval"
+msgstr "迭代间隔"
+
+msgid "Fixed timeout"
+msgstr "固定超时"
+
+msgid "Nonvisible update timeout"
+msgstr "不可见的更新超时"
+
+msgid "Lod distances"
+msgstr "等级详细的距离"
+
+msgid "Smooth lod"
+msgstr "细节层次顺利"
+
+msgid "Fast forward"
+msgstr "快进"
+
+msgid "Time"
+msgstr "时间"
+
+msgid "Interval"
+msgstr "区间"
+
+msgid "Main camera name"
+msgstr "主摄像头的名称"
+
+msgid "Scale time"
+msgstr "秤的时间"
+
+msgid "Scale dimensions"
+msgstr "缩放尺寸"
+
+msgid "Use tight bounding box"
+msgstr "使用严密的边界框"
+
+msgid "Particle Systems"
+msgstr "粒子系统"
+
+msgid "Visual particle quota"
+msgstr "可视化粒子配额"
+
+msgid "Emitted emitter quota"
+msgstr "发射发射配额"
+
+msgid "Emitted affector quota"
+msgstr "影响者排放配额"
+
+msgid "Emitted technique quota"
+msgstr "发射技术配额"
+
+msgid "Emitted system quota"
+msgstr "排放配额制"
+
+msgid "Material"
+msgstr "材料"
+
+msgid "Lod index"
+msgstr "详细程度指数"
+
+msgid "Default particle width"
+msgstr "默认粒子宽度"
+
+msgid "Default particle height"
+msgstr "默认粒子高度"
+
+msgid "Default particle depth"
+msgstr "默认粒子深入"
+
+msgid "Spatial hashing cell dimension"
+msgstr "空间散列单元尺寸"
+
+msgid "Spatial hashing cell overlap"
+msgstr "空间散列细胞重叠"
+
+msgid "Spatial hashtable size"
+msgstr "空间哈希表大小"
+
+msgid "Spatial hashing update interval"
+msgstr "空间散列更新间隔"
+
+msgid "Maximum velocity"
+msgstr "最大速度"
+
+msgid "0%                                                          % Time to live ->                                                          100%"
+msgstr "0%                                                          % 生存时间 ->                                                          100%"
+
+msgid "Reset"
+msgstr "复位"
+
+msgid "Colour Affector"
+msgstr "颜色影响者"
+
+msgid "Animations"
+msgstr "动画"
+
+msgid "Mesh"
+msgstr "网"
+
+msgid "Animation"
+msgstr "动画"
+
+msgid "Loop Animation"
+msgstr "循环动画"
+
+msgid "Directories"
+msgstr "目录"
+
+msgid "PhysX"
+msgstr "PhysX"
+
+msgid "Filter"
+msgstr "过滤器"
+
+msgid "Auto rendering on/off"
+msgstr "开/关自动渲染"
+
+msgid "Highlight keywords on/off"
+msgstr "高亮关键字开/关"
+
+msgid "Statistics overlay on/off"
+msgstr "统计叠加开/关"
+
+msgid "Point light on/off"
+msgstr "点光源开/关"
+
+msgid "Gridplane on/off"
+msgstr "网格平面开/关"
+
+msgid "Gridplane distance"
+msgstr "网格平面的距离"
+
+msgid "Gridplane scale"
+msgstr "网格平面规模"
+
+msgid "Output directory"
+msgstr "输出目录"
+
+msgid "Image size"
+msgstr "图像大小"
+
+msgid "Media type"
+msgstr "媒体类型"
+
+msgid ".png"
+msgstr ".png"
+
+msgid ".jpg"
+msgstr ".jpg"
+
+msgid ".tiff"
+msgstr ".tiff"
+
+msgid ".avi"
+msgstr ".avi"
+
+msgid ".swf"
+msgstr ".swf"
+
+msgid ".wmv"
+msgstr ".wmv"
+
+msgid ".mp4"
+msgstr ".mp4"
+
+msgid "352x240"
+msgstr "352x240"
+
+msgid "352x288"
+msgstr "352x288"
+
+msgid "720x480"
+msgstr "720x480"
+
+msgid "720x576"
+msgstr "720x576"
+
+msgid "1024x768"
+msgstr "1024x768"
+
+msgid "1280x720"
+msgstr "1280x720"
+
+msgid "1440x1080"
+msgstr "1440x1080"
+
+msgid "1920x1080"
+msgstr "1920x1080"
+
+msgid "Frames per second"
+msgstr "帧每秒"
+
+msgid "No filtering"
+msgstr "没有过滤"
+
+msgid "Alpha from luminance"
+msgstr "阿尔法从亮度"
+
+msgid "Alpha from background colour"
+msgstr "阿尔法从背景颜色"
+
+msgid "Calibration pause"
+msgstr "校准暂停"
+
+msgid "Plane distance"
+msgstr "平面的距离"
+
+msgid "videopath"
+msgstr "视频路径"
+
+msgid "imagewidth"
+msgstr "图像的宽度"
+
+msgid "mediatype"
+msgstr "媒体类型"
+
+msgid "videosize"
+msgstr "视频大小"
+
+msgid "fps"
+msgstr "帧每秒"
+
+msgid "Select colour"
+msgstr "选择颜色"
+
+msgid "Set alpha"
+msgstr "设置阿尔法"
+
+msgid "&Linear interpolation"
+msgstr "直线插补"
+
+msgid "&Spline interpolation"
+msgstr "样条插补"
+
+msgid "canvas"
+msgstr "帆布"
+
+msgid "Render"
+msgstr "给予"
+
+msgid "Edit"
+msgstr "编辑"
+
+msgid "Script"
+msgstr "脚本"
+
+msgid "Message"
+msgstr "消息"
+
+msgid "Tools"
+msgstr "工具"
+
+msgid "Cursor"
+msgstr "光标"
+
+msgid "Connect"
+msgstr "连接"
+
+msgid "Disconnect"
+msgstr "断开"
+
+msgid "Help"
+msgstr "帮助"
+
+msgid "file"
+msgstr "文件"
+
+msgid "files"
+msgstr "文件"
+
+msgid "FileSystem"
+msgstr "文件系统"
+
+msgid "Transparent alpha"
+msgstr "透明阿尔法"
+
+msgid "Transparent colour"
+msgstr "透明色"
+
+msgid "Modulate"
+msgstr "调制"
+
+msgid "Replace"
+msgstr "替换"
+
+msgid "Source colour - One"
+msgstr "源颜色 - 1"
+
+msgid "Source colour - Zero"
+msgstr "源色彩 - 0"
+
+msgid "Source colour - Destination colour"
+msgstr "来源颜色 - 目的地颜色"
+
+msgid "Destination colour - One"
+msgstr "目标颜色 - 1"
+
+msgid "Destination colour - Source colour"
+msgstr "目标颜色 - 源色彩"
+
+msgid "Wrap"
+msgstr "包裹"
+
+msgid "Mirror"
+msgstr "镜象"
+
+msgid "Clamp"
+msgstr "钳"
+
+msgid "New material"
+msgstr "新材料"
+
+msgid "Pass"
+msgstr "通"
+
+msgid "Lighting"
+msgstr "照明"
+
+msgid "Ambient"
+msgstr "环境"
+
+msgid "Emissive"
+msgstr "发射的"
+
+msgid "Depth check"
+msgstr "深入的检查"
+
+msgid "Depth write"
+msgstr "深度写"
+
+msgid "Scene blend"
+msgstr "场景交融"
+
+msgid "Texture"
+msgstr "纹理"
+
+msgid "Address mode"
+msgstr "地址模式"
+
+msgid "Load a texture"
+msgstr "载入纹理"
+
+msgid "Textures (*.*)|*.*"
+msgstr "纹理(*.*)|*.*"
+
+msgid "Mesh Selector"
+msgstr "网选择"
+
+msgid "system"
+msgstr "系统"
+
+msgid "technique"
+msgstr "技术"
+
+msgid "renderer"
+msgstr "渲染"
+
+msgid "emitter"
+msgstr "发射器"
+
+msgid "affector"
+msgstr "影响者"
+
+msgid "observer"
+msgstr "观察员"
+
+msgid "handler"
+msgstr "处理程序"
+
+msgid "behaviour"
+msgstr "行为"
+
+msgid "extern"
+msgstr "外部"
+
+msgid "wxOgreControl creation failed"
+msgstr "wxOgreControl创建失败"
+
+msgid "Value must be less than"
+msgstr "值必须小于"
+
+msgid "Value must be less than "
+msgstr "值必须小于 "
+
+msgid " (but positive or 0)"
+msgstr " （但正数或0）"
+
+msgid "Inherit bone orientation"
+msgstr "继承骨方向"
+
+msgid "Attach particle system"
+msgstr "连接粒子系统"
+
+msgid "Detach particle system"
+msgstr "分离的粒子系统"
+
+msgid "Current mesh does not have a skeleton"
+msgstr "当前网格没有骨架"
+
+msgid "Select bone to attach particle system"
+msgstr "选择附加粒子系统的骨"
+
+msgid "Edgelist build: Yes"
+msgstr "边列表生成：是"
+
+msgid "Edgelist build: No"
+msgstr "边列表生成：无"
+
+msgid "Material submesh(%u): %s"
+msgstr "材料分网(%u): %s"
+
+msgid "Total number of vertices: %u"
+msgstr "顶点的总数: %u"
+
+msgid "Total number of indices: %u"
+msgstr "总指数: %u"
+
+msgid "Number of bones: %d"
+msgstr "骨骼的数量: %d"
+
+msgid "Boundingsphere radius: %f"
+msgstr "包围球半径: %f"
+
+msgid "Number of LOD levels: %u"
+msgstr "距离水平等级数: %u"
+
+msgid "Boundingsphere radius: "
+msgstr "包围球半径： "
+
+msgid "Number of LOD levels: "
+msgstr "距离水平等级："
+
+msgid "Display PhysX detection dialog at startup? (Restart the application to apply the settings!)"
+msgstr "在启动时显示的PhysX检测对话框？ （重新启动应用程序申请设置！）"
+
+msgid "Are you sure you want to delete this group?"
+msgstr "你确定要删除本组吗？"
+
+msgid "overview of existing connections"
+msgstr "概述现有的连接"
+
+msgid "Existing connections"
+msgstr "现有的连接"
+
+msgid "Select a connection to be deleted"
+msgstr "选择要删除的连接"
+
+msgid "Delete a connection"
+msgstr "删除连接"
+
+msgid "Select a connection type"
+msgstr "选择连接类型"
+
+msgid "Add a connection"
+msgstr "添加连接"
+
+msgid "Load a scriptfile"
+msgstr "加载一个脚本文件"
+
+msgid "Particle and Alias scripts (*.pu;*.pua)|*.pu;*.pua"
+msgstr "粒子和别名脚本（*. PU;*. PUA）|*. PU;*. PUA"
+
+msgid "Select a directory that contains *.pu and .pua scripts"
+msgstr "选择一个目录，其中包含*. PU和PUA脚本"
+
+msgid "Save the script"
+msgstr "保存脚本"
+
+msgid "Save the script as"
+msgstr "保存脚本"
+
+msgid "Particle Universe Editor V1.5"
+msgstr "粒子宇宙编辑器V1.5"
+
+msgid "Particle Universe Editor - DEMO V1.5"
+msgstr "粒子宇宙编辑器 - 演示V1.5"
+
+msgid "Copyright (c)"
+msgstr "版权所有（c）"
+
+msgid "Add a new technique"
+msgstr "添加一种新技术"
+
+msgid "Add a new renderer"
+msgstr "添加一个新的渲染"
+
+msgid "Add a new emitter"
+msgstr "添加一个新的发射器"
+
+msgid "Add a new affector"
+msgstr "添加一个新的影响者，以"
+
+msgid "Add a new observer"
+msgstr "添加一个新的观察员"
+
+msgid "Add a new handler"
+msgstr "添加一个新的处理程序"
+
+msgid "Add a new behaviour"
+msgstr "添加一个新的行为"
+
+msgid "Add a new extern"
+msgstr "添加一个新的外部"
+
+msgid "Reset to default cursor"
+msgstr "重置为默认光标"
+
+msgid "Make connection between two components"
+msgstr "两个组件之间的连接"
+
+msgid "Delete a connection between two components"
+msgstr "删除两个组件之间的的连接"
+
+msgid "Display help of current component"
+msgstr "显示当前组件的帮助"
+
+msgid "No files are dropped"
+msgstr "没有文件被丢弃"
+
+msgid "Drag/drop a file"
+msgstr "拖/放一个文件"
+
+msgid "File format *."
+msgstr "文件格式为*."
+
+msgid " is not supported. No "
+msgstr "不支持。数"
+
+msgid " loaded."
+msgstr "加载。"
+
+msgid ") cannot be found. Select a directory where it can be loaded"
+msgstr "）无法找到。选择一个可以载入目录"
+
+msgid " was not succesfully loaded"
+msgstr "没有被成功加载"
+
+msgid " files succesfully loaded"
+msgstr "成功加载文件"
+
+msgid "Compile a particle script"
+msgstr "编译一个粒子脚本"
+
+msgid "Select a material"
+msgstr "选择材料"
+
+msgid "Save the material"
+msgstr "节省材料"
+
+msgid "material scripts (*.material;*.osm)|*.material;*.osm"
+msgstr "材质脚本（*.材料;*. OSM）|*.材料;*. OSM"
+
+msgid "Textures (*.*)"
+msgstr "纹理(*.*)"
+
+msgid "Select a mesh"
+msgstr "选择一个网格"
+
+msgid "No spaces allowed"
+msgstr "不允许有空格"
+
+msgid "Value must be between "
+msgstr "值必须介于 "
+
+msgid " and "
+msgstr " 和 "
+
+msgid "Value must be positive"
+msgstr "值必须为正"
+
+msgid "True"
+msgstr "真正的"
+
+msgid "true"
+msgstr "是"
+
+msgid "False"
+msgstr "假"
+
+msgid "false"
+msgstr "没有"
+
+msgid "It seems that PhysX is installed on this computer. Do you want to make use of the PhysX features?"
+msgstr "看来，此计算机上安装了PhysX物理。你想使用的PhysX功能？"
+
+msgid "It seems that PhysX is NOT installed on this computer. Do you still want to try to use PhysX?"
+msgstr "看来，是不是此计算机上安装的PhysX。你仍想尝试使用的PhysX？"
+
+msgid "You have selected a different Particle System. Do you want to save "
+msgstr "您选择了不同的粒子系统。你要保存 "
+
+msgid "This particle system template is in an incorrect state and cannot be used anymore"
+msgstr "这个粒子系统模板是不正确的状态，不能再使用"
+
+msgid ""
+"Particle Universe Editor V1.5\n"
+"Copyright (c) 2011 Henry van Merode\n"
+"\n"
+"The lightbulb image is royalty free from FreeDigitalPhotos.net\n"
+"\n"
+msgstr ""
+"粒子宇宙编辑器V1.5\n"
+"版权所有（C）2011 Henry van Merode\n"
+"\n"
+"灯泡的形象是皇室从 FreeDigitalPhotos.net\n"
+"\n"
+
+msgid ""
+"Particle Universe Editor DEMO V1.5\n"
+"Copyright (c) 2011 Henry van Merode\n"
+"\n"
+"The lightbulb image is royalty free from FreeDigitalPhotos.net\n"
+"\n"
+msgstr ""
+"粒子宇宙编辑器演示V1.5\n"
+"版权所有（C）2011 Henry van Merode\n"
+"\n"
+"灯泡的形象是皇室从 FreeDigitalPhotos.net\n"
+"\n"
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="ParticleAffector.html">Affector&nbsp;&nbsp;&nbsp; <a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">Scale Velocity Affector</h2>
+  <p>The Scale Velocity Affector changes the velocity of a particle with a certain rate, without affecting the direction.</p>
+
+  <h3>Definition</h3>
+  <p>Syntax:
+  <br>
+  <p><strong><i>affector&nbsp;&nbsp;&nbsp;ScaleVelocity&nbsp;&nbsp;&nbsp;[affectorName]&nbsp;&nbsp;&nbsp;{affector properties}</i></strong>
+  <p>See ParticleAffector for explanation of the syntax.</p>
+  <p> Example:
+  <pre>
+affector                  ScaleVelocity
+{
+    velocity_scale        dyn_curved_linear
+    {
+        control_point     0 -1800
+        control_point     0.14 -50
+    }
+}</pre>
+
+
+  <h3>Properties</h3>
+  <br>
+
+  <h6>Velocity Scale</h6>
+  <p>Sets the rate with which the particle velocity decreases (or increases). Syntax:</p>
+  <p><strong><i>velocity_scale
+  <br>&nbsp;&nbsp;&nbsp;#value | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_random {random properties} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_linear {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_curved_spline {control point [control point]} | 
+  <br>&nbsp;&nbsp;&nbsp;dyn_oscillate {oscillating properties}</i></strong>
+    <br>
+    <br>
+    <p><strong><i>velocity_scale</i></strong> is the keyword.</p>
+    <p><strong><i>#value</i></strong> is a real value that defines the rate with which the particle velocity increases (> 1.0) or decreases (< 1.0).
+	  Default: 1.0.</p>
+  <p><strong><i>dyn_random {random properties}</i></strong> means that velocity scaling is generated randomly</p>
+    <p><strong><i>dyn_curved_linear {control point [control point]}</i></strong> means that velocity scaling is determined by means of 1 or more control points.
+    The interpolation between the control points is linear. Note, that if this option is used, velocity scaling is done based on the particles' time-to-live and not based on the time since the start of the particle system. This means the the first value of each control point lies between the interval [0..1].</p>
+  <p> <strong><i>dyn_curved_spline {control point [control point]}</i></strong> means that velocity scaling is determined by means of 1 or more control points.
+    The interpolation between the control points is cubic. Note, that if this option is used, velocity scaling is done based on the particles' time-to-live and not based on the time since the start of the particle system. This means the the first value of each control point lies between the interval [0..1].</p>
+  <p> <strong><i>dyn_oscillate {oscillating properties}</i></strong> means that velocity scaling is determined by means of an oscillating function.
+  <p>See also the page <a href="SpecialCases.html">'Special Cases'</a> for an explanation of the 'Dynamic Attribute'.</p>
+
+  <h6>Since Start System</h6>
+  <p>Since Start System is an indication that determines whether velocity scaling is determined from the start of the particle system or refers to the time fraction since the particle was emitted. Setting this property only has a meaning in cases where a curved (linear or spline) scaling type is used. If this property is set to true, the first value of each control point is the number of seconds from the start of the system. If the property is set to false, the first value of a control point is the fraction of the lifetime of a particle (lifetime particle / total lifetime). In the latter case, the first value of a control point lies in the range [0..1]. Syntax:</p>
+  <p><strong><i>since_start_system&nbsp;&nbsp;&nbsp;true | false</i></strong> <br>
+    <br><strong><i>since_start_system</i></strong> is the keyword.
+    <br><strong><i>true | false</i></strong> refers to the time since the Particle System was started (true) or the time fraction of a particle. Default: false.</p>
+
+  <h6>Stop At Flip</h6>
+  <p>When the velocity increases or decreases, the direction is influenced in case the velocity flips from a positive value to a negative value or vice versa. For example, if the direction is set to (1, 0.5, 0) and the velocity is decreased, at some point, the velocity becomes zero. If the affector continues to decrease the velocity, the direction is reversed to (-1, -0.5, 0) and the particle goes the opposite direction. To prevent this, the 'Stop At Flip' value can be set to 'true'. Syntax:</p>
+  <p><strong><i>stop_at_flip&nbsp;&nbsp;&nbsp;true | false</i></strong> <br>
+    <br><strong><i>stop_at_flip</i></strong> is the keyword.
+    <br><strong><i>true | false</i></strong> defines whether the affector continues to increase/decrease, when the velocity 'flips' from positive to negative or vice versa. Default: false.</p>
+  
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>

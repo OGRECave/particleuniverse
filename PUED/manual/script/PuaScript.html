@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <title>Particle Universe</title>
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="FXpression" />
+ <link rel="stylesheet" type="text/css" href="files/css/style.css" />
+</head>
+
+<body>
+
+<h1>Particle Universe</h1>
+<h5><a href="index.html">Home&nbsp;&nbsp;&nbsp;</a></h5>
+
+<div id="maincol"> 
+  <h2 id="content">*.pua script</h2>
+  <p>The Particle Universe plugin distinguishes 2 types of scripts *.pua and *.pu 
+    scripts, which are also compiled in this order. *.pua stands for <strong>P</strong>article 
+    <strong>U</strong>niverse <strong>A</strong>lias script and is particularly 
+    used to define pieces of scripts that can be reused in other scripts. These 
+    reusable scripts are identified by means of a unique aliasname.</p>
+  <p>Aliasses can be defined for the following components:</p>
+  
+  <ul>
+  <li>Renderers
+  <li>Techniques
+  <li>Emitters
+  <li>Affectors
+  <li>Observers
+  <li>Handlers
+  <li>Behaviour
+  </ul>
+  <br>
+  
+  <p>The syntax of an alias is:</p>
+  <p><strong><i>alias&nbsp;&nbsp;&nbsp;aliasname&nbsp;&nbsp;&nbsp;{componentdefinition}</i></strong></p>
+  <p>Example:</p>
+  <pre>alias                             myEmitterAlias
+{
+   emitter                        Point
+   {
+      emission_rate               40
+      angle                       40
+      direction                   0 1 0
+      velocity                    100
+      time_to_live                dyn_random
+      {
+         min                      2
+         max                      6
+      }
+   }
+}</pre>
+  <p>The component definition is the same as in a regular particle script (*.pu). So, instead of using the whole emitter 
+  definition in multiple Particle Systems, we simply refer to it by means of its alias name 'myEmitterAlias'.</p>
+</div>
+
+<h4>Copyright &copy; 2011</h4>
+
+</body>
+
+</html>	
