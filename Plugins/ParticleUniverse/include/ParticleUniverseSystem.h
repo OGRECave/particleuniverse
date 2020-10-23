@@ -528,11 +528,11 @@ namespace ParticleUniverse
 
 			/** Return number of all emitted particles
 			*/
-			inline size_t getNumberOfEmittedParticles(void);
+			size_t getNumberOfEmittedParticles(void);
 
 			/** Return number of emitted particles of a certain type
 			*/
-			inline size_t getNumberOfEmittedParticles(Particle::ParticleType particleType);
+			size_t getNumberOfEmittedParticles(Particle::ParticleType particleType);
 
 			/** Get/set a category. See 'mCategory' for a description of its use.
 			*/
