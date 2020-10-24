@@ -45,6 +45,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "ParticleUniverseAnimationWindow.h"
 #include "ParticleUniverseRoot.h"
 
+#include "OgreOverlaySystem.h"
+
 // Global Particle System for editor
 static const ParticleUniverse::String CURRENT_PS_NAME = "currentParticleSystemName";
 
@@ -332,6 +334,7 @@ public:
     {
         // Initialize Ogre render system
 		new ParticleUniverse::ParticleUniverseRoot();
+		new Ogre::OverlaySystem();
 		ParticleUniverse::ParticleUniverseRoot::getSingleton().initialise();
         m_rsys->Initialise();
 
