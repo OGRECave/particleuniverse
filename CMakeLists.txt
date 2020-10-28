@@ -6,6 +6,8 @@ cmake_minimum_required(VERSION 3.3)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_CXX_VISIBILITY_PRESET hidden)
+set(CMAKE_VISIBILITY_INLINES_HIDDEN TRUE)
 
 # Avoid source tree pollution
 if(CMAKE_SOURCE_DIR STREQUAL CMAKE_BINARY_DIR)
@@ -18,6 +20,10 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 
 # Append _d for debug builds
 set(CMAKE_DEBUG_POSTFIX "_d")
+
+if(UNIX)
+  add_definitions(-DOGRE_GCC_VISIBILITY)
+endif()
 
 # Add the libraries
 # OGRE

@@ -26,7 +26,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 namespace ParticleUniverse
 {
-	template<> ParticleUniverseRoot* Ogre::Singleton<ParticleUniverseRoot>::msSingleton = 0;
+	template<> _ParticleUniverseExport
+	ParticleUniverseRoot* Ogre::Singleton<ParticleUniverseRoot>::msSingleton = 0;
 
 	//---------------------------------------------------------------------
 	void ParticleUniverseRoot::initialise()

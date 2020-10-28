@@ -116,7 +116,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 namespace ParticleUniverse
 {
 	/** Root instance for Particle Universe */
-	class ParticleUniverseRoot : public Ogre::Singleton<ParticleUniverseRoot>
+	class _ParticleUniverseExport ParticleUniverseRoot : public Ogre::Singleton<ParticleUniverseRoot>
 	{
 	public:
 		void initialise(void);
