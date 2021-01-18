@@ -26,8 +26,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "ParticleUniversePrerequisites.h"
 #include "ParticleUniverseSection.h"
-#include "ParticleUniverseLogManager.h"
-#include "ParticleUniverseException.h"
 
 namespace ParticleUniverse
 {

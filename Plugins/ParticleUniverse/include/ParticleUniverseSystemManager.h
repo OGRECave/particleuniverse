@@ -51,7 +51,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "ParticleUniverseCameraDependencyTokens.h"
 #include "ParticleUniverseAttachableTokens.h"
 #include "OgreRenderTargetListener.h"
-#include "ParticleUniverseSingleton.h"
 
 #include <OgreRenderQueue.h>
 

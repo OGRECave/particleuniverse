@@ -27,8 +27,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #define PARTICLE_UNIVERSE_EXPORTS
 #endif
 
-#include "ParticleUniverseControllerManager.h"
-#include "ParticleUniverseController.h"
 #include "OgreSceneManager.h"
 #include "OgreRoot.h"
 #include "OgreSceneNode.h"

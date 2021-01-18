@@ -32,7 +32,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "ParticleUniverseIElement.h"
 #include "ParticleUniverseDynamicAttribute.h"
 #include "ParticleUniverseDynamicAttributeFactory.h"
-#include "ParticleUniverseMath.h"
 
 namespace ParticleUniverse
 {
@@ -573,7 +572,7 @@ namespace ParticleUniverse
 				and NOT between the camera and the ParticleEmitter position. This means that it will not be accurate
 				if the emitter is emitted itself. The reason is to reduce the number of calculations.
 			@par
-				This should be typically used for a 1 camera setup, since using 2 camera´s would result in wrong 
+				This should be typically used for a 1 camera setup, since using 2 cameraï¿½s would result in wrong 
 				calculations (mixed values).
 			*/
 			CameraDependency* mEmissionRateCameraDependency;

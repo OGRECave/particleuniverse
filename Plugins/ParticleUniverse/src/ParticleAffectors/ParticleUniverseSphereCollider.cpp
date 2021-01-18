@@ -28,7 +28,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #endif
 
 #include "ParticleAffectors/ParticleUniverseSphereCollider.h"
-#include "ParticleUniverseAxisAlignedBox.h"
 
 namespace ParticleUniverse
 {

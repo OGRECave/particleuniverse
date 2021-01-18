@@ -27,7 +27,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "ParticleUniversePrerequisites.h"
 #include "OgreMovableObject.h"
 #include "OgreRenderable.h"
-#include "ParticleUniverseAxisAlignedBox.h"
 
 namespace ParticleUniverse
 {

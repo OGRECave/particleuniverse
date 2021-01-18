@@ -28,7 +28,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #endif
 
 #include "ParticleUniverseAtlasImage.h"
-#include "ParticleUniverseMath.h"
 
 namespace ParticleUniverse
 {

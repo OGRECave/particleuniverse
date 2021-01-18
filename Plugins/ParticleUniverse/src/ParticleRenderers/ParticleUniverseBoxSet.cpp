@@ -31,9 +31,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "ParticleRenderers/ParticleUniverseBox.h"
 #include "OgreNode.h"
 #include "OgreHardwareBufferManager.h"
-#include "ParticleUniverseCamera.h"
 #include "OgreRoot.h"
-#include "ParticleUniverseSimpleSphere.h"
 
 namespace ParticleUniverse
 {

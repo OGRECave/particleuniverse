@@ -26,10 +26,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "ParticleUniversePrerequisites.h"
 #include "ParticleUniverseParticlePool.h"
-#include "ParticleUniverseCamera.h"
 #include "ParticleUniverseIAlias.h"
 #include "ParticleUniverseIElement.h"
-#include "ParticleUniverseRadixSort.h"
 
 namespace ParticleUniverse
 {
@@ -129,7 +127,7 @@ namespace ParticleUniverse
 	        */
 			bool mNotifiedDepthMap;
 
-			/** Determines visibility of the renderer. This means that particles aren´t renderer anymore.
+			/** Determines visibility of the renderer. This means that particles arenï¿½t renderer anymore.
 	        */
 			bool mVisible;
 

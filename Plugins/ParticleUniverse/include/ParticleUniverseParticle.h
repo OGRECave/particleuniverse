@@ -27,7 +27,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "ParticleUniversePrerequisites.h"
 #include "ParticleUniverseBehaviour.h"
 #include "ParticleUniverseIVisualData.h"
-#include "ParticleUniverseAny.h"
 #include "ParticleUniversePhysicsActor.h"
 
 namespace ParticleUniverse
@@ -278,7 +277,7 @@ namespace ParticleUniverse
 	        */
 			bool mEnabled;
 
-			/** Determines whether a particle is 'freezed'. This means that the particle doesn´t move anymore.
+			/** Determines whether a particle is 'freezed'. This means that the particle doesnï¿½t move anymore.
 	        */
 			bool mFreezed;
 
@@ -290,7 +289,7 @@ namespace ParticleUniverse
 	        */
 			bool mOriginalEnabledSet;
 
-			/** Because the public attribute ´position´ is sometimes used for both localspace and worldspace
+			/** Because the public attribute ï¿½positionï¿½ is sometimes used for both localspace and worldspace
 				position, the mDerivedPosition attribute is introduced.
 	        */
 			Vector3 mDerivedPosition;

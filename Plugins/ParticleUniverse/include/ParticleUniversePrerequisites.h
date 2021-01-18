@@ -30,7 +30,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #define PU_RENDERER_OGRE 1
 
 #include "ParticleUniverseTypes.h"
-#include "ParticleUniverseAlloc.h"
 
 #if (PU_RENDERER_OGRE)
 	#if (OGRE_PLATFORM == OGRE_PLATFORM_WIN32) && !defined(OGRE_STATIC_LIB)

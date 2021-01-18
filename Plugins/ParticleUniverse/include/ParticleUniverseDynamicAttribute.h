@@ -27,7 +27,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "ParticleUniversePrerequisites.h"
 #include "ParticleUniverseIElement.h"
 #include "ParticleUniverseCommon.h"
-#include "ParticleUniverseSimpleSpline.h"
 
 namespace ParticleUniverse
 {
@@ -172,8 +171,8 @@ namespace ParticleUniverse
 	/* This is a more complex usage of the DynamicAttribute principle. This class returns a value on an curve.
 	@remarks
 		After setting a number of control points, this class is able to interpolate a point on the curve that is based
-		on these control points. Interpolation is done in different flavours. ´Linear´ provides linear interpolation
-		of a value on the curve, while ´Spline´ generates a smooth curve and the returns a value that lies on that curve.
+		on these control points. Interpolation is done in different flavours. ï¿½Linearï¿½ provides linear interpolation
+		of a value on the curve, while ï¿½Splineï¿½ generates a smooth curve and the returns a value that lies on that curve.
 	*/
 	class _ParticleUniverseExport DynamicAttributeCurved : public DynamicAttribute
     {

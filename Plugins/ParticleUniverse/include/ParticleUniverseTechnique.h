@@ -40,7 +40,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "ParticleUniverseCameraDependency.h"
 #include "ParticleUniverseCameraDependencyFactory.h"
 #include "ParticleUniverseTechniqueListener.h"
-#include "ParticleUniverseAxisAlignedBox.h"
 
 namespace ParticleUniverse
 {
@@ -190,7 +189,7 @@ namespace ParticleUniverse
 	        */
 			void addEmitter (ParticleEmitter* emitter);
 
-			/** Remove a ParticleEmitter from the ParticleTechnique, but don´t delete it.
+			/** Remove a ParticleEmitter from the ParticleTechnique, but donï¿½t delete it.
 			@param
 				Pointer to a ParticleEmitter object.
 	        */
@@ -238,7 +237,7 @@ namespace ParticleUniverse
 	        */
 			void addAffector (ParticleAffector* affector);
 
-			/** Remove a ParticleAffector from the ParticleTechnique, but don´t delete it.
+			/** Remove a ParticleAffector from the ParticleTechnique, but donï¿½t delete it.
 			@param
 				Pointer to a ParticleAffector object.
 	        */
@@ -286,7 +285,7 @@ namespace ParticleUniverse
 	        */
 			void addObserver (ParticleObserver* observer);
 
-			/** Remove a ParticleObserver from the ParticleTechnique, but don´t delete it.
+			/** Remove a ParticleObserver from the ParticleTechnique, but donï¿½t delete it.
 			@param
 				Pointer to a ParticleObserver object.
 	        */
@@ -382,7 +381,7 @@ namespace ParticleUniverse
 	        */
 			void addExtern (Extern* externObject);
 
-			/** Remove an Extern from the ParticleTechnique, but don´t delete it.
+			/** Remove an Extern from the ParticleTechnique, but donï¿½t delete it.
 			@param
 				Pointer to an Extern object.
 	        */
@@ -543,7 +542,7 @@ namespace ParticleUniverse
 			/** Perform activities when a ParticleTechnique is started.
 			@remarks
 				This is only used to set some attributes to their default value, so a re-start can be performed.
-				Note, that one cannot assume that the _prepare() function has been called, so don´t perform 
+				Note, that one cannot assume that the _prepare() function has been called, so donï¿½t perform 
 				initialisation activities on objects that are not created yet (for instance the renderer).
 			*/
 			void _notifyStart (void);
@@ -909,7 +908,7 @@ namespace ParticleUniverse
 			*/
 			void _initParticleForExpiration(Particle* particle, Real timeElapsed);
 
-			/** Observers are classes that ´watch´ at a particle and perform an action as soon as a certain 
+			/** Observers are classes that ï¿½watchï¿½ at a particle and perform an action as soon as a certain 
 				threshold is exceeded. This function calls all observers.
 			*/
 			void _processObservers(Particle* particle, Real timeElapsed, bool firstParticle);
@@ -1038,10 +1037,10 @@ namespace ParticleUniverse
 			/** Distance between the latest camera that updated the renderqueue and the particle system.
 			@remarks
 				This is really only usable with a 1 camera set-up, because it always calculates the square
-				distance between the technique and the latest camera update and you´ll never know which
+				distance between the technique and the latest camera update and youï¿½ll never know which
 				camera it was.
 				The reason to have this attribute is to be able to apply LOD to a Particle System and Particle
-				System LOD is only effective with 1 camera (otherwise, with more camera´s there is a risk that 
+				System LOD is only effective with 1 camera (otherwise, with more cameraï¿½s there is a risk that 
 				more than 1 Particle Technique is emitting)
 	        */
 			Real mCameraSquareDistance;

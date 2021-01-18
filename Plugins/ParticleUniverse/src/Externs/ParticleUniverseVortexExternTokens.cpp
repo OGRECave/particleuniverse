@@ -30,7 +30,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "Externs/ParticleUniverseVortexExtern.h"
 #include "Externs/ParticleUniverseVortexExternTokens.h"
 #include "ParticleUniverseScriptDeserializerTokens.h"
-#include "ParticleUniverseAny.h"
 
 namespace ParticleUniverse
 {

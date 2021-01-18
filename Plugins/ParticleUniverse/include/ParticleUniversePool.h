@@ -25,7 +25,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #define __PU_POOL_H__
 
 #include "ParticleUniversePrerequisites.h"
-#include "ParticleUniverseException.h"
 #include <list>
 
 namespace ParticleUniverse
@@ -76,7 +75,7 @@ namespace ParticleUniverse
 			//-----------------------------------------------------------------------
 			/** Reset the iterator, so that traversing through the pool starts from the beginning.
 			@remarks
-				Objects in the pool are ´locked´ (unused) by default. If an object is released (´unlocked´) it is exposed 
+				Objects in the pool are ï¿½lockedï¿½ (unused) by default. If an object is released (ï¿½unlockedï¿½) it is exposed 
 				to the outside world. Traversing through the pool implies traversing through the 'released' objects.
 			*/
 			inline void resetIterator (void)
@@ -127,7 +126,7 @@ namespace ParticleUniverse
 			/** Clear the pool.
 			@remarks
 				The elements in the pool are all removed but not deleted. Clearing a pool is only interesting if the 
-				pool doesn´t manage the elements itself (creation and destruction of elements is done outside the pool).
+				pool doesnï¿½t manage the elements itself (creation and destruction of elements is done outside the pool).
 			*/
 			inline void clear (void)
 			{
@@ -148,7 +147,7 @@ namespace ParticleUniverse
 			//-----------------------------------------------------------------------
 			/** Retrieve an object from the pool.
 			@remarks
-				This function does not only retrieve an object, but the object is also marked as ´released´. This means
+				This function does not only retrieve an object, but the object is also marked as ï¿½releasedï¿½. This means
 				that the object is exposed to the outside world. If objects in pool are traversed, only the released objects
 				are taken into account.
 			*/
@@ -182,7 +181,7 @@ namespace ParticleUniverse
 				Performance is also the reason that there is no lockElement() function with an element as argument, since this
 				would include a search for each element that will be locked.
 				The alternative is the lockLatestElement() function. This function can be used while iterating the pool.
-				In the iteration-loop every ´released´ element is validated and if a certain condition exists, the element 
+				In the iteration-loop every ï¿½releasedï¿½ element is validated and if a certain condition exists, the element 
 				can be locked by means of lockLatestElement().
 			*/
 			inline void lockLatestElement (void)

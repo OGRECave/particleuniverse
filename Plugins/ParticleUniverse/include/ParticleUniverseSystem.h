@@ -30,7 +30,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "ParticleUniverseIElement.h"
 #include "ParticleUniverseSystemListener.h"
 #include "OgreMovableObject.h"
-#include "ParticleUniverseController.h"
 
 namespace ParticleUniverse
 {

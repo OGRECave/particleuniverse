@@ -26,7 +26,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "ParticleUniversePrerequisites.h"
 #include "ParticleUniverseExtern.h"
-#include "ParticleUniverseCamera.h"
 #include "OgreMovableObject.h"
 
 namespace ParticleUniverse
