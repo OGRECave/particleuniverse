@@ -27,7 +27,7 @@ endif()
 
 # Add the libraries
 # OGRE
-find_package(OGRE 1.11 REQUIRED)
+find_package(OGRE REQUIRED CONFIG)
 link_directories(${OGRE_LIBRARY_DIRS})
 include_directories(${OGRE_INCLUDE_DIRS})
 list(APPEND LIBS ${OGRE_LIBRARIES})

@@ -25,6 +25,8 @@ public:
 
 	OgreBites::TrayManager* mTrayMgr;
 
+	OgreBites::InputListenerChain mInputListners;
+
 	// ApplicationContext Boilerplate
 	Sample_ParticleUniverseDemo() : OgreBites::ApplicationContext("PU Demo") {
 	}
@@ -47,7 +49,6 @@ public:
 		camNode->attachObject(mCamera);
 		mCameraMan = new OgreBites::CameraMan(camNode);
 		mCameraMan->setStyle(OgreBites::CS_ORBIT);
-		addInputListener(mCameraMan);
 
 		mCamera->setFarClipDistance(10000);
 		mCamera->setNearClipDistance(5);
@@ -68,7 +69,9 @@ public:
 		ParticleUniverse::ParticleSystem* pSys = pManager->createParticleSystem("pSys1", "mp_torch", mSceneMgr);
 
 		mTrayMgr = new OgreBites::TrayManager("Interface", getRenderWindow(), this);
-		addInputListener(mTrayMgr);
+
+		mInputListners = OgreBites::InputListenerChain({mTrayMgr, mCameraMan});
+		addInputListener(&mInputListners);
 
 		std::vector<String> templateNames;
 		pManager->particleSystemTemplateNames(templateNames);
@@ -100,7 +103,7 @@ public:
 	void itemSelected(OgreBites::SelectMenu* menu)
 	{
 		auto pManager = ParticleUniverse::ParticleSystemManager::getSingletonPtr();
-		auto templateName = menu->getSelectedItem().asUTF8();
+		auto templateName = menu->getSelectedItem();
 
 		pManager->destroyParticleSystem("pSys1", mSceneMgr);
 		auto pSys = pManager->createParticleSystem("pSys1", templateName, mSceneMgr);

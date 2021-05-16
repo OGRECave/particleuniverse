@@ -225,14 +225,12 @@ namespace ParticleUniverse
 					bb.mDirection.normalise();
 				}
 					
-				bb.mColour = particle->colour;
+				bb.setColour(particle->colour);
 				bb.mRotation = particle->zRotation; // Use rotation around the Z-axis (2D rotation)
 
-				if (bb.mOwnDimensions = particle->ownDimensions)
+				if (particle->ownDimensions)
 				{
-					bb.mOwnDimensions = true;
-					bb.mWidth = particle->width;
-					bb.mHeight = particle->height;
+					bb.setDimensions(particle->width, particle->height);
 				}
 
 				// PU 1.4: No validation on max. texture coordinate because of performance reasons.
@@ -278,12 +276,12 @@ namespace ParticleUniverse
 	//-----------------------------------------------------------------------
 	void BillboardRenderer::_notifyParticleResized(void)
 	{
-		mBillboardSet->_notifyBillboardResized();
+		
 	}
 	//-----------------------------------------------------------------------
 	void BillboardRenderer::_notifyParticleZRotated(void)
 	{
-		mBillboardSet->_notifyBillboardRotated();
+		
 	}
 	//-----------------------------------------------------------------------
 	void BillboardRenderer::setRenderQueueGroup(uint8 queueId)
