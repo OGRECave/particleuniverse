@@ -24,11 +24,12 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "ParticleUniversePCH.h"
 #include "ParticleUniverseRoot.h"
 
+template <>
+_ParticleUniverseExport ParticleUniverse::ParticleUniverseRoot*
+    Ogre::Singleton<ParticleUniverse::ParticleUniverseRoot>::msSingleton = 0;
+
 namespace ParticleUniverse
 {
-	template<> _ParticleUniverseExport
-	ParticleUniverseRoot* Ogre::Singleton<ParticleUniverseRoot>::msSingleton = 0;
-
 	//---------------------------------------------------------------------
 	void ParticleUniverseRoot::initialise()
 	{
