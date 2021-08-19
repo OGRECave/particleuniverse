@@ -28,11 +28,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #endif
 
 #include "OgreMaterialManager.h"
+#include "OgreRadixSort.h"
 
 namespace ParticleUniverse
-{
-	RadixSort<Pool<VisualParticle>::PoolList, Particle*, float> ParticleTechnique::mRadixSorter;
-	
+{	
 	// Constants
 	const bool ParticleTechnique::DEFAULT_ENABLED = true;
 	const Vector3 ParticleTechnique::DEFAULT_POSITION(0, 0, 0);
@@ -1555,6 +1554,9 @@ namespace ParticleUniverse
 	{
 		if (mRenderer)
         {
+			/** Sort the particles.
+	        */
+			static Ogre::RadixSort<Pool<VisualParticle>::PoolList, Particle*, float> mRadixSorter;
 			SortMode sortMode = mRenderer->_getSortMode();
 			if (sortMode == SM_DIRECTION)
 			{

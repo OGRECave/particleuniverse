@@ -823,10 +823,6 @@ namespace ParticleUniverse
 				float operator()(Particle* p) const;
 			};
 
-			/** Sort the particles.
-	        */
-			static RadixSort<Pool<VisualParticle>::PoolList, Particle*, float> mRadixSorter;
-
 			/** Initialises a particle by another object (if available).
 	        */
 			void _initParticleForEmission(Particle* particle);

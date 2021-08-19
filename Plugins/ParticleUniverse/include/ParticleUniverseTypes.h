@@ -37,7 +37,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "OgreController.h"
 #include "OgreControllerManager.h"
 #include "OgreCamera.h"
-#include "OgreRadixSort.h"
 #include "OgreMemoryAllocatorConfig.h"
 #include "OgreSimpleSpline.h"
 #include "OgreSphere.h"
@@ -117,9 +116,6 @@ namespace ParticleUniverse
 	using Ogre::Controller;
 	template <typename T> using ControllerValue = Ogre::ControllerValue<T>;
 	typedef Ogre::Camera Camera;
-
-	template <class TContainer, class TContainerValueType, typename TCompValueType>
-	using RadixSort = Ogre::RadixSort<TContainer, TContainerValueType, TCompValueType>;
 
 	typedef Ogre::SortMode SortMode;
 	static const SortMode SM_DIRECTION = Ogre::SM_DIRECTION;
