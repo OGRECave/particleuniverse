@@ -24,8 +24,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "ParticleUniversePCH.h"
 #include "ParticleUniverseRoot.h"
 
-template <>
-_ParticleUniverseExport ParticleUniverse::ParticleUniverseRoot*
+template<> 
+ParticleUniverse::ParticleUniverseRoot*
     Ogre::Singleton<ParticleUniverse::ParticleUniverseRoot>::msSingleton = 0;
 
 namespace ParticleUniverse
