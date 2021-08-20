@@ -44,6 +44,13 @@ public:
 	{
 	    addInputListener(this);
 		mSceneMgr = getRoot()->createSceneManager("DefaultSceneManager");
+
+		LogManager::getSingleton().getDefaultLog()->logMessage("Registering SceneMgr with RTSS");
+		
+		// register our mSceneMgr with the RTSS (GL3+ requires these lines)
+		Ogre::RTShader::ShaderGenerator* shadergen = Ogre::RTShader::ShaderGenerator::getSingletonPtr();
+		shadergen->addSceneManager(mSceneMgr);
+
 		mCamera = mSceneMgr->createCamera("Camera");
 		SceneNode* camNode = mSceneMgr->getRootSceneNode()->createChildSceneNode();
 		camNode->attachObject(mCamera);
