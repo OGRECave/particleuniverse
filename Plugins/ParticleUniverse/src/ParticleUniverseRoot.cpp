@@ -30,6 +30,15 @@ ParticleUniverse::ParticleUniverseRoot*
 
 namespace ParticleUniverse
 {
+	ParticleUniverseRoot::ParticleUniverseRoot() {}
+	ParticleUniverseRoot& ParticleUniverseRoot::getSingleton()
+	{
+		return *msSingleton;
+	}
+	ParticleUniverseRoot* ParticleUniverseRoot::getSingletonPtr()
+	{
+		return msSingleton;
+	}
 	//---------------------------------------------------------------------
 	void ParticleUniverseRoot::initialise()
 	{

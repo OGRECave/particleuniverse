@@ -123,6 +123,10 @@ namespace ParticleUniverse
 
 		void shutdown(void);
 
+		ParticleUniverseRoot();
+		static ParticleUniverseRoot& getSingleton();
+		static ParticleUniverseRoot* getSingletonPtr();
+
 	protected:
 		ParticleSystemManager* mParticleSystemManager;
 #ifdef PU_PHYSICS_PHYSX
