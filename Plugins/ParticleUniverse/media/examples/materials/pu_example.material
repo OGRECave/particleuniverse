@@ -16,6 +16,7 @@ material mp_fire_02
             lighting off
             depth_write off
             scene_blend add
+            diffuse vertexcolour
 
             texture_unit
             {
@@ -243,6 +244,7 @@ material ParticleUniverse/ExplosionFire
             depth_write off
             scene_blend add
             fog_override true
+            diffuse vertexcolour
 
             texture_unit
             {
@@ -262,6 +264,7 @@ material ParticleUniverse/Nucleus
             lighting off
             scene_blend add
             depth_write off
+            diffuse vertexcolour
 
             texture_unit
             {
